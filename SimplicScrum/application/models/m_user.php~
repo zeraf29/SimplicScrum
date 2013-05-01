@@ -1,0 +1,8 @@
+<?php
+class M_user extends CI_Model{
+	function get_login($email,$pw){
+		return 11;
+	}
+	
+}
+?>

@@ -1,0 +1,23 @@
+<?php
+class M_user extends CI_Model{
+
+
+	function get_login($email,$pw){
+		$this->db->from('user');
+		$this->db->where('email' , $name);
+		$this->db->where('pw' , sha1($password));
+		return $this->db->count_all_results();
+	}
+	
+	function isLogin(){
+		if($this->session->userdata('ss_mb_id')){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function setLogin(){
+		
+	}
+}
+?>
