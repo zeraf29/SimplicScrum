@@ -24,8 +24,8 @@ class Login extends CI_Controller {
 	public function getLogin(){
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		$email = "admin@admin.com";
-		$pw="admin";
+		echo $email = "admin@aadmin.com";
+		echo $pw="admin";
 		$this->load->model("M_user");	
 		if($email=="" || $pw==""){
 			echo "0";
