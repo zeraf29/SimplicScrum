@@ -1,5 +1,5 @@
 <?php
-class M_user extends CI_Model{
+class M_user extends SS_Model{
 	function get_login($email,$pw){
                 $this->db->select();
 		$this->db->from("user");

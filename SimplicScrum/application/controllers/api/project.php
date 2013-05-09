@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Login extends SS_Controller {
+class Project extends SS_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,24 +21,13 @@ class Login extends SS_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
-	public function getLogin(){
-		$email=isset($_POST["email"])?$_POST["email"]:"";
-		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		//echo $email = "admin@admin.com";
-		//echo $pw="admin";
-		$this->load->model("M_user");	
-		if($email=="" || $pw==""){
-			echo "0";
-		}else{
-			//echo sha1($pw);
-			$result = $this->M_user->get_login($email,$pw);
-			if($result==1){
-				echo "1";
-			}else{
-				echo "0";
-			}
+	public function getList(){
 
-		}
+		$this->load->model("M_project");	
+		$result = $this->M_project->get_list();
+		foreach($result as $key => $value)
+			echo $key.":".$value."</br";
+
 	}
 	
 }
