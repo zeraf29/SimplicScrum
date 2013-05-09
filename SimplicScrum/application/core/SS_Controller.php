@@ -1,7 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * AD Platform Base Controller
- */
+
 class SS_Controller extends CI_Controller {
 
 	/**
@@ -11,5 +9,27 @@ class SS_Controller extends CI_Controller {
 		parent::__construct();
 	}
 
+	protected function setModel($modelName) {
+		$this->model = $modelName;
+	}
+
+	/**
+	 * Model 
+	 */
+	protected function loadModel() {
+		$this->load->model($this->model);
+	}
+
+	/**
+	 * json view output
+	 */
+	protected function displayJson($viewdata) {
+	   	if ($this->getDevelop() == TRUE) {
+	   		$this->output->set_output(json_encode($viewdata));
+		} else {
+			$this->output->set_content_type('application/json')
+						 ->set_output(json_encode($viewdata));
+		}
+	}
 }
 ?>
