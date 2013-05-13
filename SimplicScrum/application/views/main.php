@@ -1,5 +1,5 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
-<?include_once("common/header.php");?>
+<?include("./common/header.php");?>
 	<script type = "text/javascript">			
 		
 	$(document).ready(function()
