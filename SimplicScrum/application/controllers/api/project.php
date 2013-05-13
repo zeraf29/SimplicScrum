@@ -55,10 +55,6 @@ class Project extends SS_Controller {
 		
 		$this->displayJson($view_data);
 
-		
-		foreach($result as $key => $value)
-			echo $key.":".$value."</br";
-
 	}
 
 
