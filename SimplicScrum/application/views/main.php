@@ -1,9 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
- <HEAD>
-  <TITLE> Simplic Scrum </TITLE>
-  <meta Cahrset="utf-8">
-  <script type = "text/javascript" src = "jquery-1.9.1.min.js"></script>
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+<?include_once("common/header.php");?>
 	<script type = "text/javascript">			
 		
 	$(document).ready(function()
