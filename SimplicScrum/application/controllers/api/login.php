@@ -61,9 +61,9 @@ class Login extends SS_Controller {
 		$mobile=isset($_POST["mobile"])?$_POST["mobile"]:"";
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		//echo $email = "admin@admin.com";
-		//echo $pw="admin";
-		//echo $mobile="y";
+		echo $email = "admin@admin.com";
+		echo $pw="admin";
+		echo $mobile="y";
 		$this->load->model("M_user");	
 		if($email=="" || $pw=="" || $mobile!="y"){
 			$view_data = array(
