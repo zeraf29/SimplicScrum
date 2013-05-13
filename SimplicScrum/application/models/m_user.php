@@ -6,7 +6,7 @@ class M_user extends SS_Model{
 		$this->db->where("email",$email);
 		$this->db->where("pw",sha1("$pw"));
 		$rs  = $this->db->get();
-		return ($rs->num_rows() > 0) ? $rs->row() : array();
+		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 	function get_UserInfo(){
 		$this->db->select('*');
