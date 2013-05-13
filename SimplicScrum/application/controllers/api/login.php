@@ -79,26 +79,26 @@ class Login extends SS_Controller {
 					'value' => $result[0]->id,
 					'expire' => 0,
 					'path' => '/',
-					'secure' => true
+					'secure' => false
 				);
 				$cookieData2 = array(
 					'name' => 'useremail',
 					'value' => $result[0]->email,
 					'expire' => 0,
 					'path' => '/',
-					'secure' => true
+					'secure' => false
 				);
 				$cookieData3 = array(
 					'name' => 'nickname',
 					'value' => $result[0]->nickname,
 					'expire' => 0,
 					'path' => '/',
-					'secure' => true
+					'secure' => false
 				);
 
-				$this->input->set_cookie($cookieData);
-				$this->input->set_cookie($cookieData2);
-				$this->input->set_cookie($cookieData3);
+				$this->input->set_cookie($cookieData,TRUE);
+				$this->input->set_cookie($cookieData2,TRUE);
+				$this->input->set_cookie($cookieData3,TRUE);
 
 				$view_data = array(
 					'code' => '100',
