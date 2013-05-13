@@ -32,8 +32,9 @@ class Login extends SS_Controller {
 				'code' => '200',
 				'msg' => 'FAILURE : Invalid Parameter!'
 			);
+			echo 2;
 		}else{
-			echo sha1($pw);
+			sha1($pw);
 			$result = $this->M_user->get_login($email,$pw);
 			if(count($result)>0){
 				$cookieData = array(
