@@ -64,6 +64,7 @@ class Login extends SS_Controller {
 			}
 
 		}
+		echo $view_data;
 		$this->displayJson($view_data);
 	}
 	
