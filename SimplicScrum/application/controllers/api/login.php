@@ -95,7 +95,7 @@ class Login extends SS_Controller {
 					'path' => '/',
 					'secure' => false
 				);
-				$cookieData3 = array(
+				$cookieData4 = array(
 					'name' => 'mobile',
 					'value' => $mobile,
 					'expire' => 0,
