@@ -1,7 +1,7 @@
 <?php
 	$main_path = '/CI';
 	$index_path = $main_path.'/index.php';
-	$img_path= $main_path.'/img';
+	$img_path= $main_path.'/image';
 	$css_path = $main_path.'/css';
 	$js_path = $main_path.'/js';
 	$common_path = $main_path.'/common';
@@ -18,4 +18,3 @@
   	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
 	
 	<title><?php echo $title;?></title>
-	

@@ -53,8 +53,6 @@
 		});
 
 	</script>
-
-  <link rel="stylesheet" type="text/css" href="SimplicScrum.css">
  </HEAD>
  <BODY>
  
@@ -62,8 +60,8 @@
  <div id = "container_top">
 	<div id = "top_left">
 		<div class="innerdiv">
-		<a href = "./SimplicScrum.html">
-		<img hspace=30px vspace = 15px src = "./image/top_logo.png">
+		<a href = "./">
+		<img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png">
 		</a>
 		</div>
 	</div>
