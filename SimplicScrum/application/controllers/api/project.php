@@ -22,36 +22,6 @@ class Project extends SS_Controller {
 		$this->load->view('welcome_message');
 	}
 	public function getList(){
-
-		$this->load->model("M_project");	
-
-		$result = $this->M_project->get_list();
-		$key = null;
-		$data = null;
-		
-		if (count($result) != 0) {
-			for ($i = 0; $i < count($result); $i++) {
-					$key[$i] = $result[$i]->id;
-					$data[$result[$i]->id] = array(
-						'title' => $result[$i]->title,
-						'desc' => $result[$i]->desc,
-						'puser_id' => $result[$i]->puser_id,
-						'access_key' => $result[$i]->access_key,
-						'openpj' => $openpj
-					);
-			}
-		}
-		$view_data = array(
-			'code' => '200',
-			'msg' => 'SUCCESS',
-			'key' => $key,
-			'item' => $data
-		);
-		
-		$this->displayJson($view_data);
-
-	}
-	public function getList(){
 		echo 22;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
