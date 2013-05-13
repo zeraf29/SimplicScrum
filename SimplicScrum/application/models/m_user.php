@@ -20,15 +20,14 @@ class M_user extends SS_Model{
 		$result = FALSE;
 		$pw = sha1($pw);
 		$data = array(
-		   'email' => 'My title' ,
-		   'nickname' => 'My Name' ,
-		   'pw' => 'My date'
+		   'email' => $nickname ,
+		   'nickname' => $email ,
+		   'pw' => $pw
 		);
 
 		
 		$this->db->trans_start();
 		$this->db->insert('user', $data); 
-		log_message('debug', $this->db->last_query());
 		if ($this->db->trans_status() == FALSE) {
 			$this->db->trans_rollback();	
 		} else {
