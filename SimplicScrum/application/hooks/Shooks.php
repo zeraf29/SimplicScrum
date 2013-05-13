@@ -8,14 +8,14 @@ class Shooks {
 		echo $CI->input->cookie('userid');
 		if ( isset($CI->allow)) {
             if(in_array($CI->router->method, $CI->allow) === false){
-				if ( !$CI->input->cookie('userid') && !$CI->session->userdata("ss_userid") ) { 
+				if ( !$CI->session->userdata("ss_userid") ) { 
 					alert( $CI->input->cookie('userid'),'/~sscrum/SimplicScrum/');
 				}   
 			}else{
 
 			}
         } else{
-			 if ( !$CI->input->cookie('userid') && !$CI->session->userdata("ss_userid") ) { 
+			 if ( !$CI->session->userdata("ss_userid") ) { 
 				alert($CI->input->cookie('userid'),'/~sscrum/SimplicScrum/');
 			 }
 		}
