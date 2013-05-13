@@ -51,5 +51,38 @@ class Login extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+
+
+	public function signUp(){
+		$email=isset($_POST["email"])?$_POST["email"]:"";
+		$nickname=isset($_POST["nickname"])?$_POST["nickname"]:"";
+		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
+
+		$this->load->model("M_user");	
+		if($email=="" || $pw=="" ){
+
+		}else{
+			$result = $this->M_user->sign_Up($nickname,$email,$pw);
+			if(count($result)>0){
+				//echo $result->email;
+				
+				$this->session->set_userdata('ss_userid', $result[0]->id);
+				$this->session->set_userdata('ss_useremail', $result[0]->email);
+				$this->session->set_userdata('ss_pw', $result[0]->pw);
+
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+				);
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Can not found user id or password!'
+				);
+			}
+
+		}
+		$this->displayJson($view_data);
+	}
 	
 }
