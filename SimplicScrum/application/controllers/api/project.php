@@ -32,17 +32,12 @@ class Project extends SS_Controller {
 		if (count($result) != 0) {
 			for ($i = 0; $i < count($result); $i++) {
 					$key[$i] = $result[$i]->id;
-					$priceArray = explode(",",$result[$i]->price);
 					$data[$result[$i]->id] = array(
-						'productname' => $result[$i]->productname,
-						'distributor' => $result[$i]->distributor,
-						'country_code' => $result[$i]->country_code,
-						'pricebox' => $result[$i]->pricebox,
-						'price' => $priceArray,
-						'user_info' => $result[$i]->user_info,
-						'image' => $result[$i]->image,
-						'status' => $result[$i]->status,
-						'reg_date' => $result[$i]->reg_date
+						'title' => $result[$i]->title,
+						'desc' => $result[$i]->desc,
+						'puser_id' => $result[$i]->puser_id,
+						'access_key' => $result[$i]->access_key,
+						'openpj' => $openpj
 					);
 			}
 		}
