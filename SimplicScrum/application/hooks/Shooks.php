@@ -4,14 +4,14 @@ class Shooks {
         $CI =& get_instance();        
 		if ( isset($CI->allow)) {
             if(in_array($CI->router->method, $CI->allow) === false){
-				if (!$CI->user->isLogin() && $this->input->cookie('mobile')) { 
+				if (!$this->input->cookie('mobile') && !$CI->user->isLogin() ) { 
 					alert('You need to login!','/');
 				}   
 			}else{
 
 			}
         } else{
-			 if (!$CI->user->isLogin() && $this->input->cookie('mobile')) { 
+			 if (!$this->input->cookie('mobile') && !$CI->user->isLogin()) { 
 				alert('You need to login!','/'););
 			 }
 		}
