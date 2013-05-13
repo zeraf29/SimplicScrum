@@ -35,6 +35,7 @@ class Login extends SS_Controller {
 		}else{
 			$result = $this->M_user->get_login($email,$pw);
 			if(count($result)>0){
+				echo $result->email;
 				$cookieData = array(
 					'name' => 'useremail',
 					'value' => $result->email,
@@ -62,9 +63,6 @@ class Login extends SS_Controller {
 				);
 			}
 
-		}
-		foreach($view_data as $key => $value){
-			echo $key.":".$value."</br>";
 		}
 		$this->displayJson($view_data);
 	}
