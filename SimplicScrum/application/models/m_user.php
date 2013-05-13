@@ -25,17 +25,15 @@ class M_user extends SS_Model{
 		   'pw' => $pw
 		);
 
-		
 		$this->db->trans_start();
 		$this->db->insert('user', $data); 
 		if ($this->db->trans_status() == FALSE) {
 			$this->db->trans_rollback();	
-		} else {
+		}else {
 			$this->db->trans_commit();
 			$result = TRUE;
 		}
 		$this->db->trans_complete();
-		}
 		return $result;
 	}
 }
