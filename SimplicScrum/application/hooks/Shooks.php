@@ -8,14 +8,14 @@ class Shooks {
 		if ( isset($CI->allow)) {
             if(in_array($CI->router->method, $CI->allow) === false){
 				if ( !$CI->input->cookie('mobile') && !$CI->session->userdata("userid") ) { 
-					alert('You need to login!','/');
+					alert('You need to login!','/~sscrum/SimplicScrum/');
 				}   
 			}else{
 
 			}
         } else{
 			 if ( !$CI->input->cookie('mobile') && !$CI->session->userdata("userid") ) { 
-				alert('You need to login!','/');
+				alert('You need to login!','/~sscrum/SimplicScrum/');
 			 }
 		}
     }   

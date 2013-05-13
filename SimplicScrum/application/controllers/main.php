@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Main extends SS_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,7 +19,6 @@ class Main extends CI_Controller {
 	 */
 	public function index()
 	{
-		echo 222;
 		$this->load->view('welcome_message');
 	}
 }
