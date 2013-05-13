@@ -24,21 +24,47 @@ class Login extends SS_Controller {
 	public function getLogin(){
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		//echo $email = "admin@admin.com";
-		//echo $pw="admin";
+		echo $email = "admin@admin.com";
+		echo $pw="admin";
 		$this->load->model("M_user");	
 		if($email=="" || $pw==""){
-			echo "0";
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Invalid Parameter!'
+			);
 		}else{
 			//echo sha1($pw);
 			$result = $this->M_user->get_login($email,$pw);
-			if($result==1){
-				echo "1";
+			if(count($result)>0){
+				$cookieData = array(
+					'name' => 'useremail',
+					'value' => $result->email,
+					'expire' => 0,
+					'path' => '/',
+					'secure' => false
+				);
+				$cookieData2 = array(
+					'name' => 'nickname',
+					'value' => $result->nickname,
+					'expire' => 0,
+					'path' => '/',
+					'secure' => false
+				);
+				$this->input->set_cookie($cookieData);
+				$this->input->set_cookie($cookieData2);
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'SUCCESS'
+				);
 			}else{
-				echo "0";
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Can not found user id or password!'
+				);
 			}
 
 		}
+		$this->displayJson($view_data);
 	}
 	
 }
