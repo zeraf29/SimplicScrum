@@ -23,8 +23,8 @@ class Login extends SS_Controller {
 	}
 	public function getUserInfo(){
 		if ($this->checkLogin() == TRUE) {
-			$this->load->model("M_project");	
-			$result = $this->M_project->get_list();
+			$this->load->model("M_user");
+			$result = $this->M_user->get_UserInfo();
 			$key = null;
 			$data = null;
 			if (count($result)>0) {
