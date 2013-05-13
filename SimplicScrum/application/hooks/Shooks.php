@@ -12,7 +12,7 @@ class Shooks {
 			}
         } else{
 			 if ( !$this->input->cookie('mobile') && !$CI->user->isLogin()) { 
-				alert('You need to login!','/'););
+				alert('You need to login!','/');
 			 }
 		}
     }   
