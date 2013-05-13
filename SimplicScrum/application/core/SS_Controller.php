@@ -9,7 +9,7 @@ class SS_Controller extends CI_Controller {
 	var $developFlag = FALSE;
 	public function __construct() {
 		parent::__construct();
-		$this->allow = array('main'); // index, method1, 	
+		$this->allow = array('main', 'getLogin', 'login'); // index, method1, 	
 	}
 
 	protected function setModel($modelName) {
