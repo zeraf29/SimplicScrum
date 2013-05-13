@@ -1,6 +1,6 @@
 <?php
 class M_project extends SS_Model{
-	function get_list($email=""){
+	function get_list(){
 		$this->db->select('p.id,p.title,p.desc,p.access_key,p.openpj,r.id as rlevel');
 		$this->db->from('role_table as rt');
 		$this->db->join('project as p', 'rt.pid = p.id', 'left');

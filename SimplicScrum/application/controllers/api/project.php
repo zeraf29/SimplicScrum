@@ -52,6 +52,7 @@ class Project extends SS_Controller {
 
 	}
 	public function getList(){
+		echo 22;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
 			$result = $this->M_project->get_list();
