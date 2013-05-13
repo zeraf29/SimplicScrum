@@ -5,7 +5,8 @@ class SS_Controller extends CI_Controller {
 	/**
 	 * �⺻ Controller ����
 	 */
-	var $developFlag = TRUE;
+	//var $developFlag = TRUE;
+	var $developFlag = FALSE;
 	public function __construct() {
 		parent::__construct();
 	}

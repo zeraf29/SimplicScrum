@@ -24,8 +24,8 @@ class Login extends SS_Controller {
 	public function getLogin(){
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		echo $email = "admin@admin.com";
-		echo $pw="admin";
+		//echo $email = "admin@admin.com";
+		//echo $pw="admin";
 		$this->load->model("M_user");	
 		if($email=="" || $pw==""){
 			$view_data = array(
@@ -35,7 +35,7 @@ class Login extends SS_Controller {
 		}else{
 			$result = $this->M_user->get_login($email,$pw);
 			if(count($result)>0){
-				echo $result->email;
+				//echo $result->email;
 				$cookieData = array(
 					'name' => 'useremail',
 					'value' => $result->email,
