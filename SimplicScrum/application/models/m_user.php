@@ -15,5 +15,29 @@ class M_user extends SS_Model{
 		$rs = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
+	function sign_Up($nickname,$email,$pw){
+
+		$result = FALSE;
+		$pw = sha1($pw);
+		$data = array(
+		   'email' => 'My title' ,
+		   'nickname' => 'My Name' ,
+		   'pw' => 'My date'
+		);
+
+		
+		$this->db->trans_start();
+		$this->db->insert('user', $data); 
+		log_message('debug', $this->db->last_query());
+		if ($this->db->trans_status() == FALSE) {
+			$this->db->trans_rollback();	
+		} else {
+			$this->db->trans_commit();
+			$result = TRUE;
+		}
+		$this->db->trans_complete();
+		}
+		return $result;
+	}
 }
 ?>

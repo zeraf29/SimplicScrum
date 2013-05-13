@@ -59,16 +59,14 @@ class Login extends SS_Controller {
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
 
 		$this->load->model("M_user");	
-		if($email=="" || $pw=="" ){
-
+		if($email=="" || $pw=="" || $nickname=="" ){
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Not Blank!'
+				);
 		}else{
 			$result = $this->M_user->sign_Up($nickname,$email,$pw);
-			if(count($result)>0){
-				//echo $result->email;
-				
-				$this->session->set_userdata('ss_userid', $result[0]->id);
-				$this->session->set_userdata('ss_useremail', $result[0]->email);
-				$this->session->set_userdata('ss_pw', $result[0]->pw);
+			if($result){
 
 				$view_data = array(
 					'code' => '100',
@@ -77,7 +75,7 @@ class Login extends SS_Controller {
 			}else{
 				$view_data = array(
 					'code' => '200',
-					'msg' => 'FAILURE : Can not found user id or password!'
+					'msg' => 'FAILURE : Database Error!'
 				);
 			}
 
