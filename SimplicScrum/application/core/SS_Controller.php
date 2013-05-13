@@ -27,10 +27,11 @@ class SS_Controller extends CI_Controller {
 	 * json view output
 	 */
 	protected function displayJson($viewdata) {
+		echo $viewdata;
 	   	if ($this->getDevelop() == TRUE) {
 	   		echo $this->output->set_output(json_encode($viewdata));
 		} else {
-			$this->output->set_content_type('application/json')
+			echo $this->output->set_content_type('application/json')
 						 ->set_output(json_encode($viewdata));
 		}
 	}
