@@ -76,21 +76,21 @@ class Login extends SS_Controller {
 				//echo $result->email;
 				$cookieData = array(
 					'name' => 'userid',
-					'value' => $result->id,
+					'value' => $result[0]->id,
 					'expire' => 0,
 					'path' => '/',
 					'secure' => false
 				);
 				$cookieData2 = array(
 					'name' => 'useremail',
-					'value' => $result->email,
+					'value' => $result[0]->email,
 					'expire' => 0,
 					'path' => '/',
 					'secure' => false
 				);
 				$cookieData3 = array(
 					'name' => 'nickname',
-					'value' => $result->nickname,
+					'value' => $result[0]->nickname,
 					'expire' => 0,
 					'path' => '/',
 					'secure' => false
