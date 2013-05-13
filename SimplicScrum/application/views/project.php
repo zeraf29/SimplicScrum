@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+癤�<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
  <HEAD>
   <TITLE> Simplic Scrum </TITLE>
@@ -80,15 +80,15 @@
   <link rel="stylesheet" type="text/css" href="SimplicScrum.css">
  </HEAD>
  <BODY>
-	<!--상단 메뉴 시작-->
+	<!--Top Menu Start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "./image/top_logo.png"></div>
-		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>님 환영합니다.  LogOut</div>
+		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>Welcome to SSCRUM!  LogOut</div>
 		
 		<div id = "user_info" title = "user_information">
-		<p>으흐흐흐흐흐</p>
+		<p>kekekekekekekekeke</p>
 		</div>
-		<!--다일얼로그-->
+		<!--dialog-->
 		<div id = "dialog-modal" title = "Basic modal dialog">
 			<p>shit</p>
 		</div>
@@ -99,10 +99,10 @@
 		<div class="sprint_backlog"><a href="#" class = "s_backlog">SPRINT BACKLOG</a></div>
 		<div class="sprint"><a href="#" class = "s_backlog">SPRINT</a></div>
 	</div>
-	<!--상단 메뉴 끝-->
+	<!--Top Menu finish-->
 
 	
-	<!--왼쪽 프로젝트 메뉴 시작-->
+	<!--left Project Menu start-->
 	<div id = "project">
 		<div id = "project_list">
 			<div class ="add_btn"><a href ="#" id=add_btn><img src="./image/project_addBtn.png"></a></div>
@@ -121,12 +121,12 @@
 			<div class ="innerdiv_down"></div>
 		</div>
 	</div>
-	<!--왼쪽 프로젝트 메뉴 끝-->
+	<!--left Project Menu finish-->
   
-  <!--프로젝트 메뉴 열려 있을 때 배경 어둡게  -->
+  <!--Opacity control-->
   <div id="back_opacity"></div> 
   
-	<!--content 시작-->
+	<!--content start-->
 	<div id = "content">
 		<div class="make_product">
 			<div class="ineer_product"><img src="./image/product_btn.png">
@@ -139,10 +139,10 @@
 		</div>
 	</div>
 	</div>
-	<!--content 끝-->
+	<!--content finish-->
 
 	  
-	<!--프로젝트 생성 메뉴 시작-->
+	<!--Creat project start-->
 	<div id = "make_project" style="">
 		<div class = "input_project">
 			<label for = "project_name" class ="label_project">PROJECT NAME</label><input type ="text" id ="project_name" style="wieth=140px;"/>
@@ -154,23 +154,23 @@
 		<div class = "input_project">
 			<label for = "product_backlog" class ="label_project">PRODUCT BACKLOG</label>
 			<select name="product_backlog" style="width:120px;"/>	
-				<option value="1">1일</option>
-				<option value="2">2일</option>
+				<option value="1">1day</option>
+				<option value="2">2days</option>
 			</select>
 
 		</div>
 		<div class = "input_project">
 			<label for = "sprint_backlog" class ="label_project">SPRINT BACKLOG</label>
 			<select name="sprint_backlog" style="width:120px;"/>	
-				<option value="1">1일</option>
-				<option value="2">2일</option>
+				<option value="1">1day</option>
+				<option value="2">2days</option>
 			</select>
 		</div>
 		<div class = "input_project">
 			<label for = "sprint" class ="label_project">SPRINT</label>
 			<select name="sprint" style="width:120px;"/>	
-				<option value="1">1일</option>
-				<option value="2">2일</option>
+				<option value="1">1day</option>
+				<option value="2">2days</option>
 			</select>
 		</div>
 		<div id = "submit_cancel">
@@ -178,7 +178,7 @@
 		<a href ="#" class="submit" id = add_cancel>cancel</a>
 		</div>
 	</div>
-  <!--프로젝트 생성 메뉴 끝-->
+	<!--Creat project start-->
 	
  </BODY>
 </HTML>

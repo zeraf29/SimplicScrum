@@ -1,4 +1,4 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
+ï»¿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <?include("common/header.php");?>
 	<script type = "text/javascript">			
 		
@@ -29,10 +29,9 @@
 						login_flag = 0;
 						}
 					else if(!($.trim($("#login_email").val())) || !($.trim($("#login_pwd").val()))){
-					//µÑÁß ÇÏ³ª°¡ Àß¸øµÈ °ªÀÌ¸é ¿¡·¯ msgÃâ·Â
+					//ë‘˜ì¤‘ í•˜ë‚˜ê°€ ìž˜ëª»ëœ ê°’ì´ë©´ ì—ëŸ¬ë¨¸ì‹œì§€ì¶œë ¥
 					}
-					else{//¸ðµÎ °ªÀÌ µé¾î¿ÔÀ» ¶§
-					//Á¤»óÀûÀ¸·Î ÀÔ·Â‰çÀ¸¸é ·Î±×ÀÎ
+					else{//ë¡œê·¸ì¸ í•˜ë©´ ë˜ê² ì§€
 					}
 				}
 			});
@@ -56,7 +55,7 @@
  </HEAD>
  <BODY>
  
- <!--»ó´Ü ¸Þ´º ½ÃÀÛ-->
+ <!--ìƒë‹¨ë©”ë‰´ ì‹œìž‘-->
  <div id = "container_top">
 	<div id = "top_left">
 		<div class="innerdiv">
@@ -73,9 +72,9 @@
 		</div>
 	</div>
  </div>
-  <!--»ó´Ü ¸Þ´º ³¡-->
+  <!--ìƒë‹¨ë©”ë‰´ ë-->
   
-  <!--·Î±×ÀÎ ¸Þ´º ½ÃÀÛ-->
+  <!--ë¡œê·¸ì¸ ë©”ë‰´ ì‹œìž‘-->
   <div id = "container_Login">
 	<div id = "Login_left">
 		<div class="innerdiv"></div>
@@ -94,9 +93,9 @@
 			<div class="innerdiv"></div>
 		</div>
  </div>
-  <!--·Î±×ÀÎ ¸Þ´º ³¡-->
+ <!--ë¡œê·¸ì¸ ë©”ë‰´ ë-->
   
-  <!-- È¸¿ø°¡ÀÔ -->
+  <!-- SignUp start -->
 <div id = "sign_up" style="">
 <div class = "input_signup"><label for = "user_name" class ="label_signup">NAME</label><input type ="text" id ="user_name"/></div>
 <div class = "input_signup"><label for = "user_mail" class ="label_signup">E-MAIL</label><input type ="text" id ="user_mail"/></div>
@@ -107,10 +106,10 @@
 <a href ="#" class="submit" id = signup_cancel>cancel</a>
 </div>
 </div>
-  <!-- È¸¿ø°¡ÀÔ ³¡-->
+  <!-- SignUp finish-->
   
   
-  <!--Áß¾Ó ¸Þ´º ½ÃÀÛ-->
+  <!--Center_menu_start-->
 <div id = "container_mid">
 	<div id = "mid_left">
 		<div class="innerdiv"></div>
@@ -122,6 +121,6 @@
 		<div class="innerdiv"></div>
 	</div>
  </div>
-   <!--Áß¾Ó ¸Þ´º ³¡-->
+   <!--Center_menu_finish-->
  </BODY>
 </HTML>

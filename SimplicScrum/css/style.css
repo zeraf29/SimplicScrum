@@ -1,4 +1,4 @@
-/*SimplicScrum.html Style Sheet*/ 
+Ôªø/*SimplicScrum.html Style Sheet*/ 
 
 html,body{
 	margin:0;
@@ -40,14 +40,14 @@ html,body{
 #top_menu{
 	position:absolute;
 	left:50%;
-	margin-left:-182px; /*≥–¿Ã¿« π›*/
+	margin-left:-182px; /*ÎÑìÏù¥Ïùò Î∞ò*/
 	width:364px; 
 	background:URL("../image/top_menu.bmp");
 	height:60px;
 }
 menu_text{
 	color:white;
-	font-family:µ∏øÚ;
+	font-family:Arial;
 	font-weight:bold;
 	margin-right:10px;
 }
@@ -91,7 +91,7 @@ a.top_menu:hover{color:yellow;}
 #Login_menu{
 	position:absolute;
 	left:50%;
-	margin-left:-634px; /*≥–¿Ã¿« π›*/
+	margin-left:-634px; /*ÎÑìÏù¥Ïùò Î∞ò*/
 	width:1278px; 
 	background:URL("../image/login.png");
 	height:484px;
@@ -136,7 +136,7 @@ a.top_menu:hover{color:yellow;}
 #mid_menu{
 	position:absolute;
 	left:50%;
-	margin-left:-635px; /*≥–¿Ã¿« π›*/
+	margin-left:-635px; /*ÎÑìÏù¥Ïùò Î∞ò*/
 	width:1270px; 
 	background:URL("../image/main.png");
 	height:733px;
@@ -147,7 +147,7 @@ a.top_menu:hover{color:yellow;}
 
 Login{
 	color:FF007F;
-	font-family:µ∏øÚ;
+	font-family:Arial;
 	font-weight:bold;
 	margin-right:10px;
 }
@@ -167,7 +167,7 @@ a.login:hover{color:yellow;}
 
 
 
-/*»∏ø¯∞°¿‘ ∆‰¿Ã¡ˆ style Sheet*/
+/*Sign Up Page Style Sheet*/
 .label_signup{	
 	color: white;
 	font-weight:bold;
@@ -188,7 +188,8 @@ a.submit:link{ text-decoration:none; color: #808080;}
 a.submit:Visited{ text-decoration:none; color: #808080;}
 a.submit:hover{color:#909090;}
 
-/*∑Œ±◊¿Œ ∆‰¿Ã¡ˆ style Sheet*/
+/*Log-In Page
+ style Sheet*/
 .Login_input{
 	width : 500px;
 	height : 40px;
@@ -363,7 +364,7 @@ a.sprint_link:hover{color:yellow;}
 	left:35px;
 }
 
-/*ƒ¡≈Ÿ√˜*/
+/*Contents*/
 
 #content{
 	position:absolute;
@@ -406,7 +407,7 @@ a.sprint_link:hover{color:yellow;}
 
 /*-------------------------*/
 
-/*«¡∑Œ¡ß∆Æ ª˝º∫ ∆‰¿Ã¡ˆ*/
+/*New Project Page*/
 
 #make_project{
 	position:absolute;
