@@ -14,7 +14,7 @@ class Shooks {
 
 			}
         } else{
-        	 alert(1)
+     		 echo 11;
 			 if ( !$CI->input->cookie('mobile') && !$CI->session->userdata("ss_userid") ) { 
 				alert('You need to login!','/~sscrum/SimplicScrum/');
 			 }
