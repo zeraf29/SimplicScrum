@@ -24,11 +24,44 @@ class Project extends SS_Controller {
 	public function getList(){
 
 		$this->load->model("M_project");	
+
 		$result = $this->M_project->get_list();
+		$key = null;
+		$data = null;
+		
+		if (count($result) != 0) {
+			for ($i = 0; $i < count($result); $i++) {
+					$key[$i] = $result[$i]->id;
+					$priceArray = explode(",",$result[$i]->price);
+					$data[$result[$i]->id] = array(
+						'productname' => $result[$i]->productname,
+						'distributor' => $result[$i]->distributor,
+						'country_code' => $result[$i]->country_code,
+						'pricebox' => $result[$i]->pricebox,
+						'price' => $priceArray,
+						'user_info' => $result[$i]->user_info,
+						'image' => $result[$i]->image,
+						'status' => $result[$i]->status,
+						'reg_date' => $result[$i]->reg_date
+					);
+			}
+		}
+		$view_data = array(
+			'code' => '200',
+			'msg' => 'SUCCESS',
+			'key' => $key,
+			'item' => $data
+		);
+		
+		$this->displayJson($view_data);
+
+		
 		foreach($result as $key => $value)
 			echo $key.":".$value."</br";
 
 	}
+
+
 	
 }
 
