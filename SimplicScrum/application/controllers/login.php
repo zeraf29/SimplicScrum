@@ -27,44 +27,15 @@ class Login extends SS_Controller {
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
 		$this->load->model("M_user");	
 		if($email=="" || $pw=="" ){
-			
+
 		}else{
 			$result = $this->M_user->get_login($email,$pw);
 			if(count($result)>0){
 				//echo $result->email;
-				$cookieData = array(
-					'name' => 'userid',
-					'value' => $result->id,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
-				$cookieData2 = array(
-					'name' => 'useremail',
-					'value' => $result->email,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
-				$cookieData3 = array(
-					'name' => 'nickname',
-					'value' => $result->nickname,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
-				$cookieData3 = array(
-					'name' => 'mobile',
-					'value' => $mobile,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
 				
-				$this->input->set_cookie($cookieData);
-				$this->input->set_cookie($cookieData2);
-				$this->input->set_cookie($cookieData3);
-				$this->input->set_cookie($cookieData4);
+				$this->session->set_userdata('ss_userid', $result[0]->id);
+				$this->session->set_userdata('ss_useremail', $result[0]->email);
+				$this->session->set_userdata('ss_pw', $result[0]->pw);
 
 				$view_data = array(
 					'code' => '100',
