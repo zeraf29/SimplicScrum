@@ -24,6 +24,18 @@ class SS_Controller extends CI_Controller {
 	protected function getDevelop() {
 	  	return $this->developFlag;
 	}
+
+	/**
+	 * checkLogin
+	 */
+	protected function checkLogin() {
+		$result = FALSE;
+		if ($this->input->cookie('userid') != '') {
+			$result = TRUE;
+		}
+		
+		return $result;
+	}
 	/**
 	 * json view output
 	 */

@@ -24,8 +24,8 @@ class Login extends SS_Controller {
 	public function getLogin(){
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		//echo $email = "admin@admin.com";
-		//echo $pw="admin";
+		echo $email = "admin@admin.com";
+		echo $pw="admin";
 		$this->load->model("M_user");	
 		if($email=="" || $pw==""){
 			$view_data = array(
@@ -37,13 +37,20 @@ class Login extends SS_Controller {
 			if(count($result)>0){
 				//echo $result->email;
 				$cookieData = array(
+					'name' => 'userid',
+					'value' => $result->id,
+					'expire' => 0,
+					'path' => '/',
+					'secure' => false
+				);
+				$cookieData2 = array(
 					'name' => 'useremail',
 					'value' => $result->email,
 					'expire' => 0,
 					'path' => '/',
 					'secure' => false
 				);
-				$cookieData2 = array(
+				$cookieData3 = array(
 					'name' => 'nickname',
 					'value' => $result->nickname,
 					'expire' => 0,
@@ -52,6 +59,7 @@ class Login extends SS_Controller {
 				);
 				$this->input->set_cookie($cookieData);
 				$this->input->set_cookie($cookieData2);
+				$this->input->set_cookie($cookieData3);
 				$view_data = array(
 					'code' => '100',
 					'msg' => 'SUCCESS'

@@ -1,10 +1,12 @@
 <?php
 class M_project extends SS_Model{
 	function get_list($email=""){
-		$this->db->select('project.id,title,desc,access_key');
-		$this->db->from('project');
-		$this->db->join('role_table', 'project.id = role_table.pid', 'left');
-
+		$this->db->select('p.id,p.title,p.desc,p.access_key,p.openpj,r.id as rlevel');
+		$this->db->from('role_table as rt');
+		$this->db->join('project as p', 'rt.pid = p.id', 'left');
+		$this->db->join('role as r', 'rt.rid = r.id', 'left');
+		$this->db->where('role_table.uid', $this->input->cookie('userid'));
+		$this->db->order_by('order', 'ASC');
 		$rs = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
