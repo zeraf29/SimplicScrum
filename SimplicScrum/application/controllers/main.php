@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Mainclass extends SS_Controller {
+class Main extends SS_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -18,11 +18,6 @@ class Mainclass extends SS_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->main();
-	}
-
-	public function main()
 	{
 		$this->load->view('welcome_message');
 	}
