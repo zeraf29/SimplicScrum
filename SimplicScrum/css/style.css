@@ -42,7 +42,7 @@ html,body{
 	left:50%;
 	margin-left:-182px; /*≥–¿Ã¿« π›*/
 	width:364px; 
-	background:URL("./image/top_menu.bmp");
+	background:URL("../image/top_menu.bmp");
 	height:60px;
 }
 menu_text{
@@ -93,7 +93,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-634px; /*≥–¿Ã¿« π›*/
 	width:1278px; 
-	background:URL("./image/login.png");
+	background:URL("../image/login.png");
 	height:484px;
 	text-align:center;
 	padding-top:100px;
@@ -112,7 +112,7 @@ a.top_menu:hover{color:yellow;}
 	float:left;
 	width:50%;
 	height:733px;
-	background:URL("./image/back.png");
+	background:URL("../image/back.png");
 }
 #mid_left .innerdiv {
 	margin-right:481px;
@@ -122,7 +122,7 @@ a.top_menu:hover{color:yellow;}
 	float:right;
 	width:50%;
 	height:733px;
-	background:URL("./image/back.png");
+	background:URL("../image/back.png");
 }
 
 #mid_right .innerdiv {
@@ -138,7 +138,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-635px; /*≥–¿Ã¿« π›*/
 	width:1270px; 
-	background:URL("./image/main.png");
+	background:URL("../image/main.png");
 	height:733px;
 	text-align:center;
 	padding-left:10px;
@@ -300,7 +300,7 @@ a.sprint_link:hover{color:yellow;}
 	left:0px;
 	width:418px;
 	Height:100%;
-	background:URL("./image/projectList_close_btn.png");
+	background:URL("../image/projectList_close_btn.png");
 	background-repeat:no-repeat;
 	z-index:9;
 }
@@ -332,7 +332,7 @@ a.sprint_link:hover{color:yellow;}
 #project_list .innerdiv_top{
 	width:377px;
 	Height:800px;
-	background:URL("./image/ProjectList.png");
+	background:URL("../image/ProjectList.png");
 	background-repeat:no-repeat;
 }
 
