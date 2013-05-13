@@ -5,6 +5,7 @@ class SS_Controller extends CI_Controller {
 	/**
 	 * �⺻ Controller ����
 	 */
+	var $developFlag = TRUE;
 	public function __construct() {
 		parent::__construct();
 	}
@@ -19,7 +20,9 @@ class SS_Controller extends CI_Controller {
 	protected function loadModel() {
 		$this->load->model($this->model);
 	}
-
+	protected function getDevelop() {
+	  	return $this->developFlag;
+	}
 	/**
 	 * json view output
 	 */
