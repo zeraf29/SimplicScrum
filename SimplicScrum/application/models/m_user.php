@@ -8,5 +8,12 @@ class M_user extends SS_Model{
 		$rs  = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->row() : array();
 	}
+	function get_UserInfo(){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('id', $this->input->cookie('userid'));
+		$rs = $this->db->get();
+		return ($rs->num_rows() > 0) ? $rs->result() : array();
+	}
 }
 ?>

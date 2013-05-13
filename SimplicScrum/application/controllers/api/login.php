@@ -21,6 +21,42 @@ class Login extends SS_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+	public function getUserInfo(){
+		if ($this->checkLogin() == TRUE) {
+			$this->load->model("M_project");	
+			$result = $this->M_project->get_list();
+			$key = null;
+			$data = null;
+			if (count($result)>0) {
+				$data = array(
+							'uid' => $result[0]->id,
+							'email' => $result[0]->email,
+							'nickname' => $result[0]->nickname,
+							'pw' => $result[0]->pw,
+							'pimage' => $result[0]->pimage,
+							'reg_date' => $result[0]->reg_date
+						);
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS',
+					'item' => $data
+				);
+			}else{
+				$view_data = array(
+					'code' => '300',
+					'msg' => 'SUCCESS',
+					'item' => $data
+				);
+
+			}
+		}else {
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Login required!'
+			);
+		}
+		$this->displayJson($view_data);
+	}
 	public function getLogin(){
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
