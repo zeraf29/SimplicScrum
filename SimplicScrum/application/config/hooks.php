@@ -10,7 +10,12 @@
 |
 */
 
-
+$hook['post_controller_constructor'][] = array(
+    'class'     => 'Shooks', 
+    'function'  => 'checkPermission',
+    'filename'  => 'Shooks.php',
+    'filepath'  => 'hooks'
+);
 
 /* End of file hooks.php */
 /* Location: ./application/config/hooks.php */
