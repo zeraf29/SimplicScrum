@@ -1,5 +1,5 @@
 <?php
-	$main_path = '/CI';
+	$main_path = '/SimplicScrum';
 	$index_path = $main_path.'/index.php';
 	$img_path= $main_path.'/image';
 	$css_path = $main_path.'/css';
