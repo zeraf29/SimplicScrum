@@ -7,15 +7,15 @@ class Shooks {
 		$CI->load->library('session');
 		if ( isset($CI->allow)) {
             if(in_array($CI->router->method, $CI->allow) === false){
-				if ( !$CI->input->cookie('mobile') && !$CI->session->userdata("ss_userid") ) { 
-					alert( $CI->input->cookie('mobile'),'/~sscrum/SimplicScrum/');
+				if ( !$CI->input->cookie('userid') && !$CI->session->userdata("ss_userid") ) { 
+					alert( $CI->input->cookie('userid'),'/~sscrum/SimplicScrum/');
 				}   
 			}else{
 
 			}
         } else{
-			 if ( !$CI->input->cookie('mobile') && !$CI->session->userdata("ss_userid") ) { 
-				alert($CI->input->cookie('mobile'),'/~sscrum/SimplicScrum/');
+			 if ( !$CI->input->cookie('userid') && !$CI->session->userdata("ss_userid") ) { 
+				alert($CI->input->cookie('userid'),'/~sscrum/SimplicScrum/');
 			 }
 		}
     }   
