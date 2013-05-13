@@ -58,14 +58,13 @@ class Login extends SS_Controller {
 		$this->displayJson($view_data);
 	}
 	public function getLogin(){
-		$mobile=isset($_POST["mobile"])?$_POST["mobile"]:"";
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
 		//echo $email = "admin@admin.com";
 		//echo $pw="admin";
 		//echo $mobile="y";
 		$this->load->model("M_user");	
-		if($email=="" || $pw=="" || $mobile!="y"){
+		if($email=="" || $pw=="" ){
 			$view_data = array(
 				'code' => '200',
 				'msg' => 'FAILURE : Invalid Parameter!'
@@ -74,39 +73,10 @@ class Login extends SS_Controller {
 			$result = $this->M_user->get_login($email,$pw);
 			if(count($result)>0){
 				//echo $result->email;
-				$cookieData = array(
-					'name' => 'userid',
-					'value' => $result[0]->id,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
-				$cookieData2 = array(
-					'name' => 'useremail',
-					'value' => $result[0]->email,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
-				$cookieData3 = array(
-					'name' => 'nickname',
-					'value' => $result[0]->nickname,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
-				$cookieData4 = array(
-					'name' => 'mobile',
-					'value' => $mobile,
-					'expire' => 0,
-					'path' => '/',
-					'secure' => false
-				);
 
-				$this->input->set_cookie($cookieData);
-				$this->input->set_cookie($cookieData2);
-				$this->input->set_cookie($cookieData3);
-				$this->input->set_cookie($cookieData4);
+				$this->session->set_userdata('ss_userid', $result[0]->id);
+				$this->session->set_userdata('ss_useremail', $result[0]->email);
+				$this->session->set_userdata('ss_pw', $result[0]->pw);
 
 				$view_data = array(
 					'code' => '100',
