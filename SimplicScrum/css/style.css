@@ -181,7 +181,7 @@ a.login:hover{color:yellow;}
 	text-align : right;
 }
 #submit_cancel{
-	font-size:13px;
+	font-size:16px;
 	text-align : right;
 	padding-right:10px;
 }
@@ -196,6 +196,7 @@ a.submit:hover{color:#909090;}
 	height : 40px;
 	margin-left:400px;
 	margin-top:60px;
+	font-size :25px; 
 	text-align : justify;
 	border-bottom:3px solid white;
 }

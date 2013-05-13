@@ -96,7 +96,7 @@
   
   <!-- SignUp start -->
 <div id = "sign_up" style="">
-<div class = "input_signup"><label for = "user_name" class ="label_signup">NAME</label><input type ="text" id ="user_name"/></div>
+<div class = "input_signup"><label for = "user_name" class ="label_signup">NICKNAME</label><input type ="text" id ="user_name"/></div>
 <div class = "input_signup"><label for = "user_mail" class ="label_signup">E-MAIL</label><input type ="text" id ="user_mail"/></div>
 <div class = "input_signup"><label for = "user_pwd" class ="label_signup">PASSWORD</label><input type ="password" id ="user_pwd"/></div>
 <div class = "input_signup"><label for = "pwd_confirm" class ="label_signup">CONFIRM.PWD</label><input type ="password" id ="pwd_confirm"/></div>
