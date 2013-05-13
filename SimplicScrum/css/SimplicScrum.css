@@ -1,0 +1,459 @@
+/*SimplicScrum.html Style Sheet*/ 
+
+html,body{
+	margin:0;
+	padding:0;
+	background:#d2d1d1;
+	overflow:hidden;
+}
+
+#container_top{
+	position:relative;
+	width:100%;
+	z-index:10;
+	overflow:hidden;
+}
+#top_left{
+	float:left;
+	width:50%;
+	height:60px;
+	background :#808080;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+}
+#top_left .innerdiv {
+	margin-right:481px;
+}
+#top_right{
+	float:right;
+	width:50%;
+	height:60px;
+	background:#38373C;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+}
+#top_right .innerdiv {
+	margin-left:182px;
+	height:60px;
+	float:right;
+	padding-right:10px;
+	padding-top:30px;
+}
+#top_menu{
+	position:absolute;
+	left:50%;
+	margin-left:-182px; /*넓이의 반*/
+	width:364px; 
+	background:URL("./image/top_menu.bmp");
+	height:60px;
+}
+menu_text{
+	color:white;
+	font-family:돋움;
+	font-weight:bold;
+	margin-right:10px;
+}
+a.top_menu:link{ text-decoration:none; color: white;}
+a.top_menu:Visited{ text-decoration:none; color: white;}
+a.top_menu:hover{color:yellow;}
+
+ #container_Login{
+	position:absolute;
+	top:-424px;
+	width:100%;
+	overflow:hidden;
+	Display:show;
+}
+
+#Login_left{
+	float:left;
+	width:50%;
+	height:484px;
+	background:white;
+}
+#Login_left .innerdiv {
+	margin-right:481px;
+}
+
+#Login_right{
+	float:right;
+	width:50%;
+	height:484px;
+	background:white;
+}
+
+#Login_right .innerdiv {
+	margin-left:635px;
+	height:484px;
+	float:right;
+	padding-right:10px;
+	padding-top:30px;
+}
+
+#Login_menu{
+	position:absolute;
+	left:50%;
+	margin-left:-634px; /*넓이의 반*/
+	width:1278px; 
+	background:URL("./image/login.png");
+	height:484px;
+	text-align:center;
+	padding-top:100px;
+}
+/**************************************************/
+ 
+ #container_mid{
+	position:absolute;
+	top:60px;
+	width:100%;
+	overflow:hidden;
+	Display:show;
+}
+
+#mid_left{
+	float:left;
+	width:50%;
+	height:733px;
+	background:URL("./image/back.png");
+}
+#mid_left .innerdiv {
+	margin-right:481px;
+}
+
+#mid_right{
+	float:right;
+	width:50%;
+	height:733px;
+	background:URL("./image/back.png");
+}
+
+#mid_right .innerdiv {
+	margin-left:635px;
+	height:733px;
+	float:right;
+	padding-right:10px;
+	padding-top:30px;
+}
+
+#mid_menu{
+	position:absolute;
+	left:50%;
+	margin-left:-635px; /*넓이의 반*/
+	width:1270px; 
+	background:URL("./image/main.png");
+	height:733px;
+	text-align:center;
+	padding-left:10px;
+	padding-top:30px;
+}
+
+Login{
+	color:FF007F;
+	font-family:돋움;
+	font-weight:bold;
+	margin-right:10px;
+}
+a.login:link{ text-decoration:none; color: FF007F;}
+a.login:Visited{ text-decoration:none; color: FF007F;}
+a.login:hover{color:yellow;}
+
+#sign_up{
+	position:absolute;
+	top:-300px;
+	width:300px;
+	height:300px;
+	overflow:hidden;
+	z-index:9;
+	Display:show;
+}
+
+
+
+/*회원가입 페이지 style Sheet*/
+.label_signup{	
+	color: white;
+	font-weight:bold;
+	padding : 3px;
+	font-size:10;
+}
+.input_signup{
+	margin: 10px;
+	background-color : #808080;
+	text-align : right;
+}
+#submit_cancel{
+	font-size:13px;
+	text-align : right;
+	padding-right:10px;
+}
+a.submit:link{ text-decoration:none; color: #808080;}
+a.submit:Visited{ text-decoration:none; color: #808080;}
+a.submit:hover{color:#909090;}
+
+/*로그인 페이지 style Sheet*/
+.Login_input{
+	width : 500px;
+	height : 40px;
+	margin-left:400px;
+	margin-top:60px;
+	text-align : justify;
+	border-bottom:3px solid white;
+}
+.label_login{
+	color: white;
+	font-weight:bold;
+	padding : 3px;
+	font-size:16;
+	float : left;
+}
+.Login_input  input{
+	border : none;
+	background : none;
+	margin-right : 80px;
+	font-size : 20;
+	color:white;
+	font-weight:bold;
+	width: 300px;
+	float : right;
+}
+
+/*------------------------------------------------*/
+/*SimplicScrum_main.html Style Sheet*/ 
+#top
+{	
+	width:100%;
+	height:60px;
+	background-color:#38363C;
+	text-align:rignt;
+	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+	z-index : 10;
+}
+
+#top .left_innerdiv
+{
+	float:left;
+	width:150px;
+}
+#top .right_innerdiv{
+	padding-top:35px;
+	padding-right:20px;
+	text-align : right;
+	color : white;
+}
+
+#second_top{
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	height: 40px;
+	background-color: #da125c;
+}
+
+#second_top .product_backlog{
+	position: absolute;
+	top: 10px;
+	width : 360px;
+/*	left: 85px;*/
+	color: #FFFFFF;
+	font-weight:bold;
+	z-index: 7;
+}
+
+a.p_backlog:link{ text-decoration:none; color: #FFFFFF;}
+a.p_backlog:Visited{ text-decoration:none; color: #FFFFFF;}
+a.p_backlog:hover{color:yellow;}
+
+#second_top .sprint_backlog{
+	position: absolute;
+	top: 10px;
+	width : 360px;
+/*	left: 520px;*/
+	color: #000000;
+	font-weight:bold;
+	z-index: 7;
+}
+a.s_backlog:link{ text-decoration:none; color: #000000;}
+a.s_backlog:Visited{ text-decoration:none; color: #000000;}
+a.s_backlog:hover{color:yellow;}
+
+
+#second_top .sprint{
+	position: absolute;
+	top: 10px;
+	width : 360px;
+/*	left: 952px;*/
+	color: #000000;
+	font-weight:bold;
+	z-index: 7;
+}
+a.sprint_link:link{ text-decoration:none; color: #000000;}
+a.sprint_link:Visited{ text-decoration:none; color: #000000;}
+a.sprint_link:hover{color:yellow;}
+
+
+#project{
+	width:100%;
+	Height:100%;
+	background : #d2d1d1;
+}
+
+#project_list{
+	position:absolute;
+	left:0px;
+	width:418px;
+	Height:100%;
+	background:URL("./image/projectList_close_btn.png");
+	background-repeat:no-repeat;
+	z-index:9;
+}
+
+#list_sortable { 
+	position: absolute;
+	left:45px;
+	top: 150;
+	list-style-type: none;
+	margin: 0;
+	padding: 0; 
+	width: 60%;
+	z-index: 10;
+}  
+
+#list_sortable li {
+	margin: 0 3px 3px 4px;
+	padding: 0.4px;
+	padding-left: 1.5px;
+	font-size: 4px;
+	height: 18px;
+}  
+	
+#list_sortable li span {
+	position: absolute;
+	margin-left: -1.3px; 
+}
+
+#project_list .innerdiv_top{
+	width:377px;
+	Height:800px;
+	background:URL("./image/ProjectList.png");
+	background-repeat:no-repeat;
+}
+
+#project_list .innerdiv_down{
+	width:377px;
+	Height:100%;
+	background:#CE4F4F;
+}
+#project_list .innerdiv_btn{
+	float : right;
+	font-size: 11px;
+	font-weight:bold;
+	color:white;
+	padding-top:390px;
+	padding-right:5px;
+	}
+
+#project_list .add_btn{
+	position:absolute;
+	top:80px;
+	left:200px;
+
+}
+
+#project_list .list{
+	position:absolute;
+	top:125px;
+	left:35px;
+}
+
+/*컨텐츠*/
+
+#content{
+	position:absolute;
+	top:100px;
+	left:35px;
+	width: 100%;
+	height: 800px;
+
+}
+
+#content .make_product{
+	position:absolute;
+	top:0px;
+/*	left:50px;*/
+	width: 360px;
+	height: 100%;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+#content .make_sprintbacklog{
+	position:absolute;
+	top:0px;
+/*	left:436px;*/
+	width: 360px;
+	height: 100%;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+#content .make_sprint{
+	position:absolute;
+	top:0px;
+/*	left:870px;*/
+	width: 360px;
+	height: 100%;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/*-------------------------*/
+
+/*프로젝트 생성 페이지*/
+
+#make_project{
+	position:absolute;
+	top : 80px;
+	left: -300 px;
+	width:300px;
+	height:300px;
+	background: #FFFFFF; 
+	overflow:hidden;
+	display:none;
+	z-index:9;
+}
+
+.input_project{
+	width: 250px;
+	margin: 10px;
+	background-color : #3b3a3f;
+	text-align : right;
+}
+
+.label_project{	
+	color: white;
+	font-weight:bold;
+	padding : 3px;
+	font-size:10;
+	text-align:left;
+
+}
+
+.input_term{
+	background-color : #3b3a3f;
+	text-align : right;
+	width:100px; 
+	height:25px;
+
+}
+
+/*-------------------------------------*/
+
+#back_opacity {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+	width: 100%;
+	height: 100%;
+    background-color: #333333;
+	z-index: 8;
+	filter: alpha(opacity=3); opacity: 0.3;
+}
+
