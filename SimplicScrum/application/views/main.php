@@ -67,7 +67,6 @@
 	<div id = "top_menu" style=""></div>
 	<div id = "top_right">
 		<div class="innerdiv">
-		<menu_text><a class="top_menu" href = "">Log-In</a></menu_text>
 		<menu_text><a class="top_menu" href = "#" id = signup_btn>SignUp</a></menu_text>
 		</div>
 	</div>

@@ -149,6 +149,7 @@ Login{
 	color:FF007F;
 	font-family:Arial;
 	font-weight:bold;
+	font-size:25px;
 	margin-right:10px;
 }
 a.login:link{ text-decoration:none; color: FF007F;}
