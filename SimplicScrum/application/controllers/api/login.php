@@ -53,7 +53,7 @@ class Login extends SS_Controller {
 				$this->input->set_cookie($cookieData);
 				$this->input->set_cookie($cookieData2);
 				$view_data = array(
-					'code' => '200',
+					'code' => '100',
 					'msg' => 'SUCCESS'
 				);
 			}else{
