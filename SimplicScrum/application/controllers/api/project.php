@@ -22,13 +22,11 @@ class Project extends SS_Controller {
 		$this->load->view('welcome_message');
 	}
 	public function getList(){
-		echo 22;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
 			$result = $this->M_project->get_list();
 			$key = null;
 			$data = null;
-			echo 11;
 			echo $this->input->cookie('userid');
 			if (count($result)>0) {
 				for ($i = 0; $i < count($result); $i++) {
