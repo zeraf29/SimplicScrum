@@ -9,6 +9,7 @@ class SS_Controller extends CI_Controller {
 	var $developFlag = FALSE;
 	public function __construct() {
 		parent::__construct();
+		$this->load->library('session');
 		$this->allow = array('main', 'getLogin', 'login','index'); // index, method1, 	
 	}
 
