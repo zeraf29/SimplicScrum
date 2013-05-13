@@ -19,7 +19,7 @@ class Mainclass extends SS_Controller {
 	 */
 	public function index()
 	{
-		$this->main();
+		$this->$this->load->view('welcome_message');
 	}
 
 	public function main()
