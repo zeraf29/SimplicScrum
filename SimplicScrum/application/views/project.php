@@ -2,9 +2,7 @@
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
-<?php
-					foreach($list as $key)
-							echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );?>
+
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
@@ -146,14 +144,13 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							/*
 							foreach($list as $key){
 								if($cnt>0)
 									$str .=",";
-								$sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
-								$edate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
-								$sdate2 = explode("/");
-								$sdate2 = explode("/");
+								$sdate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
+								$edate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
+								$sdate2 = explode("-");
+								$sdate2 = explode("-");
 								$sdate2[1] = strval(intval($sdate2[1])-1);
 								$edate2[1] = strval(intval($edate2[1])-1);
 								$str .= "{";
@@ -163,7 +160,6 @@
 								$str .= "}";
 							}
 							echo $str;
-							*/
 						?>
 					]
 				});
