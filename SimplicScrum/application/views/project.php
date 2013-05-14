@@ -150,8 +150,6 @@
 				});
 			});
 	</script>
-	
-  <link rel="stylesheet" type="text/css" href="SimplicScrum.css">
  </HEAD>
  <BODY>
 	<!--Top Menu Start-->
