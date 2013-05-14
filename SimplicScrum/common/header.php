@@ -16,4 +16,8 @@
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />  
 	<link href="<?=$css_path?>/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="<?=$css_path?>/jquery.pnotify.min.js"></script>
+	<link href="<?=$css_path?>/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />
+<!-- Include this file if you are using Pines Icons. -->
+	<link href="<?=$css_path?>/jquery.pnotify.default.icons.css" media="all" rel="stylesheet" type="text/css" />
 	<title><?php echo $title;?></title>
