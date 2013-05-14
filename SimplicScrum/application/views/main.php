@@ -5,7 +5,7 @@
 	$(document).ready(function()
 		{
 			var login_flag = 0;
-			
+			var result;
 			var left_p = ($(window).width()) - 300+'px';
 			$("#sign_up").css({left:left_p});
 			
@@ -35,17 +35,18 @@
 					//둘중 하나가 잘못된 값이면 에러머시지출력
 					}*/
 					else{//로그인 하면 되겠지
-						var result;
 						$.ajax({
 					        url: '/~sscrum/SimplicScrum/login/getLogin',
 					        type: "POST",
+					        async : false,
 					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
 					        dataType: 'json',
-					        success: function (data) {
-					            result = data[0].code;
+					        success: function (rdata) {
+					        	result = rdata.msg;
+					        	alert(rdata.code);
 					        }
 					    });
-						alert(result);
+					    alert(result);
 					}
 				}
 			});
