@@ -140,9 +140,28 @@
 					calendar.fullCalendar('unselect');
 					},
 					editable: false,
-			//		events: [
-
-			//		]
+					events: [
+						<?php
+							$str = "";
+							$cnt = 0;
+							foreach($list as $key){
+								$sdate1 = explode(" ",$key["sdate"]);
+								$edate1 = explode(" ",$key["edate"]);
+								$sdate2 = explode("-",$sdate1);
+								$edate2 = explode("-",$edate1);
+								$sdate2[1] = strval((intval($sdate2[1])-1));
+								$edate2[1] = strval((intval($edate2[1])-1));
+								if($cnt>0)
+									$str .= ",";
+								$str .= "{";
+								$str .= "title: '".$key["title"]."',";
+								$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2]."),";
+								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
+								$str .= "}";
+								$cnt++;
+							}
+						?>
+					]
 				});
 
 				$(".listDelete").click(function(){
