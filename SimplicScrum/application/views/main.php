@@ -41,8 +41,9 @@
 					        type: "POST",
 					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
 					        dataType: 'json',
-					        success: function (data) {
-					            result = data.code;
+					        success: function (rdata) {
+					        	alert(rdata);
+					            result = rdata.code;
 					        }
 					    });
 						alert(result);
