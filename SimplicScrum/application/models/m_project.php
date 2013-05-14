@@ -42,6 +42,5 @@ class M_project extends SS_Model{
 
 		return $result;
 	}
-	}
 }
 ?>
