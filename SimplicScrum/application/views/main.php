@@ -42,7 +42,7 @@
 					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
 					        dataType: 'json',
 					        success: function (data) {
-					            result = data[0].code;
+					            result = data.code;
 					        }
 					    });
 						alert(result);
