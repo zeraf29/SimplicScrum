@@ -19,7 +19,8 @@ class Project extends SS_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('project');
+		$data["list"] = $this->getList();
+		$this->load->view('project',$data);
 	}
 	
 	public function makeProject(){
@@ -54,7 +55,7 @@ class Project extends SS_Controller {
 		$this->displayJson($view_data);
 	}
 
-	public function getList(){
+	protected function getList(){
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
 			$result = $this->M_project->get_list();
@@ -62,8 +63,8 @@ class Project extends SS_Controller {
 			$data = null;
 			if (count($result)>0) {
 				for ($i = 0; $i < count($result); $i++) {
-						$key[$i] = $result[$i]->id;
-						$data[$result[$i]->id] = array(
+						$data[$i] = array(
+							'id'	=>$result[$i]->id,
 							'title' => $result[$i]->title,
 							'desc' => $result[$i]->desc,
 							'access_key' => $result[$i]->access_key,
@@ -71,31 +72,12 @@ class Project extends SS_Controller {
 							'rlevel' => $result[$i]->rlevel
 						);
 					}
-				$view_data = array(
-					'code' => '100',
-					'msg' => 'SUCCESS',
-					'key' => $key,
-					'item' => $data
-				);
-			}else{
-				$view_data = array(
-					'code' => '300',
-					'msg' => 'SUCCESS',
-					'key' => $key,
-					'item' => $data
-				);
-
+				
 			}
-		}else {
-			$view_data = array(
-				'code' => '200',
-				'msg' => 'FAILURE : Login required!'
-			);
 		}
-		$this->displayJson($view_data);
-
+		return $data;
 	}
-	
+
 	public function editProject(){
 
 	}

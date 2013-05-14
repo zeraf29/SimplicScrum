@@ -137,13 +137,11 @@
 			<pro>MY PROJECT</pro>
 			<p_add_btn><a href ="#" id = "add_btn"><img src ="<?=$img_path?>/project_addBtn.png"></a></p_add_btn>
 			<ul id="list_sortable">  
-					<li class="ui-state-default">Item 1</li>
-					<li class="ui-state-default">Item 2</li>  
-					<li class="ui-state-default">Item 3</li>  
-					<li class="ui-state-default">Item 4</li>  
-					<li class="ui-state-default">Item 5</li>  
-					<li class="ui-state-default">Item 6</li>  
-					<li class="ui-state-default">Item 7</li>
+					<?php
+						foreach($list as $key){
+							echo "<li class=\"ui-state-default\">".$key[title]."</li>";
+						}
+					?>
 			</ul>
 			</div>
 			<div id='calendar'></div>

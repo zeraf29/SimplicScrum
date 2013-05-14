@@ -91,5 +91,34 @@ class Login extends SS_Controller {
 		}
 		goto_url('/~sscrum/SimplicScrum');
 	}
+	public function findUser(){
+		$email=isset($_POST["email"])?$_POST["email"]:"";
+
+		$this->load->model("M_user");	
+		if($email=="" ){
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Not Blank!'
+				);
+		}else{
+			$result = $this->M_user->find_User($email);
+			if($result){
+
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+					'userid' => $result[0]->id;
+					'nickname' => $result[0]->nickname;
+				);
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Database Error!'
+				);
+			}
+
+		}
+		$this->displayJson($view_data);
+	}
 	
 }
