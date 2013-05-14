@@ -145,8 +145,8 @@
 							$str = "";
 							$cnt = 0;
 							foreach($list as $key){
-								$sdate1 = explode(" ",$key["sdate"]);
-								$edate1 = explode(" ",$key["edate"]);
+								$sdate1 = explode(" ",strval($key["sdate"]));
+								$edate1 = explode(" ",strval($key["edate"]));
 								$sdate2 = explode("-",$sdate1);
 								$edate2 = explode("-",$edate1);
 								$sdate2[1] = strval((intval($sdate2[1])-1));
