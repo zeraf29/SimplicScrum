@@ -145,12 +145,10 @@
 							$str = "";
 							$cnt = 0;
 							foreach($list as $key){
-								$sdate1 = explode(" ",strval($key["sdate"]));
-								$edate1 = explode(" ",strval($key["edate"]));
+								$sdate1 = date(  "F j, Y", strtotime( $key["sdate"] ) );
+								$edate1 = date(  "F j, Y", strtotime( $key["edate"] ) );
 								$sdate2 = explode("-",$sdate1);
 								$edate2 = explode("-",$edate1);
-								$sdate2[1] = strval((intval($sdate2[1])-1));
-								$edate2[1] = strval((intval($edate2[1])-1));
 								if($cnt>0)
 									$str .= ",";
 								$str .= "{";
