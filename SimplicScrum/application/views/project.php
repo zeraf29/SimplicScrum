@@ -3,8 +3,8 @@
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
   <?php
-  echo $sdate1 = date(  "F j, Y", strtotime( $key["sdate"] ) );
-								echo $edate1 = date(  "F j, Y", strtotime( $key["edate"] ) );
+  echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
+								echo $edate1 = date(  "l jS \of F Y", strtotime( $key["edate"] ) );
   ?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
