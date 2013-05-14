@@ -31,7 +31,7 @@ class SS_Controller extends CI_Controller {
 	 */
 	protected function checkLogin() {
 		$result = FALSE;
-		if ($this->input->cookie('userid') != '') {
+		if ( $this->session->userdata('ss_userid') != '') {
 			$result = TRUE;
 		}
 		

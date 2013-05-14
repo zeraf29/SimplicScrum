@@ -60,8 +60,8 @@ class Login extends SS_Controller {
 	public function getLogin(){
 		$email=isset($_POST["email"])?$_POST["email"]:"";
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
-		//echo $email = "admin@admin.com";
-		//echo $pw="admin";
+		//$email = "admin@admin.com";
+		//$pw="admin";
 		//echo $mobile="y";
 		$this->load->model("M_user");	
 		if($email=="" || $pw=="" ){

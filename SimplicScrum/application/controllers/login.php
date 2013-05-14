@@ -51,5 +51,36 @@ class Login extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+
+
+	public function signUp(){
+		$email=isset($_POST["email"])?$_POST["email"]:"";
+		$nickname=isset($_POST["nickname"])?$_POST["nickname"]:"";
+		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
+
+		$this->load->model("M_user");	
+		if($email=="" || $pw=="" || $nickname=="" ){
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Not Blank!'
+				);
+		}else{
+			$result = $this->M_user->sign_Up($nickname,$email,$pw);
+			if($result){
+
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+				);
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Database Error!'
+				);
+			}
+
+		}
+		$this->displayJson($view_data);
+	}
 	
 }
