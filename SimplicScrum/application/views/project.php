@@ -144,6 +144,8 @@
 						<?php
 							$str = "";
 							$cnt = 0;
+							echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
+							/*
 							foreach($list as $key){
 								if($cnt>0)
 									$str .=",";
@@ -160,6 +162,7 @@
 								$str .= "}";
 							}
 							echo $str;
+							*/
 						?>
 					]
 				});
