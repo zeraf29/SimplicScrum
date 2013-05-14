@@ -32,7 +32,7 @@
 					//둘중 하나가 잘못된 값이면 에러머시지출력
 					}*/
 					else{//로그인 하면 되겠지
-						result;
+						var result;
 						$.ajax({
 					        url: '/~sscrum/SimplicScrum/login/getLogin',
 					        type: "POST",
