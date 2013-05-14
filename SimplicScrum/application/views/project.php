@@ -192,7 +192,6 @@
 				<close id="_close">
 				<a href = "#" id = "close_btn" class ="project_close">close</a>
 				</close>
-			</div>
 		</div>
 	</div>
 	<!--left Project Menu finish-->
