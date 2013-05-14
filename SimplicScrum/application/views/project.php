@@ -26,6 +26,9 @@
 					$(".product_backlog").css({'margin-left':$left_p + 'px'});
 					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
 					$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
+					
+					$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
+					$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
 					$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
 				
 				$(window).resize(function(){
