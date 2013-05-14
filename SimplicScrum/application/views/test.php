@@ -1,8 +1,11 @@
-﻿<?include("common/header.php");?>
+<?include("common/header.php");?>
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
-
+  <?php
+  echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
+								echo $edate1 = date(  "l jS \of F Y", strtotime( $key["edate"] ) );
+  ?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
@@ -144,23 +147,6 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							foreach($list as $key){
-								if($cnt>0)
-									$str .=",";
-								$sdate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
-								$edate1 = date(  "Y-n-j", strtotime( $key["edate"] ) );
-								$sdate2 = explode("-",$sdate1);
-								$edate2 = explode("-",$edate1);
-								$sdate2[1] = strval(intval($sdate2[1])-1);
-								$edate2[1] = strval(intval($edate2[1])-1);
-								$str .= "{";
-								$str .= "title:'".$key["title"]."',";
-								$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2]."),";
-								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
-								$str .= "}";
-								$cnt++;
-							}
-							echo $str;
 						?>
 					]
 				});
@@ -237,38 +223,47 @@
 	  
 	<!--Creat project start-->
 	<div id = "make_project" style="">
+		<div class="project_tiltle_bar">ADD PROJECT</div>
 		<div class = "input_project">
-			<label for = "project_name" class ="label_project">PROJECT NAME</label><input type ="text" id ="project_name" style="wieth=140px;"/>
+			<label for = "project_name" class ="label_project">PROJECT NAME</label><input type ="text" id ="project_name" style="width=140px; align=right;"/>
 		</div>
-		<div class = "input_project">
-			<label for = "add_member" class ="label_project">MEMBER</label><input type ="text" id ="member" style="wieth=140px; align=right;"/>
-		</div>
-		<div style="width:95px; height:25px; margin-left:10px; background-color:#3b3a3f; text-align:right;"><label for = "term" class ="label_project">TERM</label></div>
-		<div class = "input_project">
-			<label for = "product_backlog" class ="label_project">PRODUCT BACKLOG</label>
-			<select name="product_backlog" style="width:120px;"/>	
-				<option value="1">1day</option>
-				<option value="2">2days</option>
-			</select>
 
+<!--
+		<div class ="member_block">
+			<div class = "input_member">
+				<label for = "add_member" class ="label_project">MEMBER</label><input type ="text" id ="member" style="wieth=140px;"/>
+				<input type ="button" id="search_btn" value="search">
+			</div>
+			<div class = "check_email">이메일 검색결과란</div>
+			<div class = "member_list">
+				<div class="label_projet"><label for = "add_member" class ="label_project">MEMBER LIST</label></div>
+				<div class ="list"><input type ="text" id ="member_list" style="wieth=140px;"/></div>
+			</div>
 		</div>
-		<div class = "input_project">
-			<label for = "sprint_backlog" class ="label_project">SPRINT BACKLOG</label>
-			<select name="sprint_backlog" style="width:120px;"/>	
-				<option value="1">1day</option>
-				<option value="2">2days</option>
-			</select>
+-->		
+
+		<div style="width:95px; height:25px; margin-left:10px; background-color:#3b3a3f; text-align:left;">
+			<label for = "term" class ="label_project">TERM</label>
 		</div>
-		<div class = "input_project">
-			<label for = "sprint" class ="label_project">SPRINT</label>
-			<select name="sprint" style="width:120px;"/>	
-				<option value="1">1day</option>
-				<option value="2">2days</option>
-			</select>
+
+		<div style=" width: 280px; height:25px; margin-left:10px; background-color:#3b3a3f; text-align:left; color:white">
+			<label for = "start" class ="project_start">START DATE &nbsp;&nbsp;</label>
+			<input type="text" id="project_year" style="width:50px;"/>
+			<input type="text" id="project_month" style="width:50px;"/>
+			<input type="text" id="project_day" style="width:50px;"/>
 		</div>
+
+		<div style=" width: 280px; height:25px; margin-left:10px; background-color:#3b3a3f; text-align:left; color:white">
+			<label for = "start" class ="project_end">END DATE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input type="text" id="project_year" style="width:50px;"/>
+			<input type="text" id="project_month" style="width:50px;"/>
+			<input type="text" id="project_day" style="width:50px;"/>
+		</div>
+		
+		</br>
 		<div id = "submit_cancel">
-		<a href ="#" class="submit" id = add_submit>make</a>
-		<a href ="#" class="submit" id = add_cancel>cancel</a>
+			<a href ="#" class="submit" id = add_submit>Make</a>
+			<a href ="#" class="submit" id = add_cancel>Cancel</a>
 		</div>
 	</div>
 	<!--Creat project start-->
