@@ -2,7 +2,9 @@
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
+<?php
 
+							echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
@@ -144,7 +146,6 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
 							/*
 							foreach($list as $key){
 								if($cnt>0)
