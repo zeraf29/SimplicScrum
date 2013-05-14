@@ -13,7 +13,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
  	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
   	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
-	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script> 
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />  
 	<link href="<?=$css_path?>/style.css" rel="stylesheet" type="text/css" />
 	<title><?php echo $title;?></title>

@@ -79,12 +79,12 @@
 					        success: function (rdata) {
 					        	result = rdata.code;
 					        }
-					    });
-					    if(result==100){
-					    	location.href="/~sscrum/SimplicScrum/project/";
-					    }else{
-					    	alert("Confirming Your Email or Password, Please.");
-					    }
+						    });
+						    if(result==100){
+						    	location.href="/~sscrum/SimplicScrum/project/";
+						    }else{
+						    	alert("Confirming Your Email or Password, Please.");
+						    }
 						}
 					}
 				}
@@ -123,6 +123,51 @@
 				$("#user_pwd").val("");
 				$("#pwd_confirm").val("");
 			});
+			$("#signup_submit").click(function()
+			{
+
+				email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+	
+				if($("#user_pwd").val()!=$("#pwd_confirm").val()){
+					alert("password not match");
+					$("#pwd_confirm").focus();
+					return false;
+				}
+				if($("#user_name").val()==""){
+					alert("input nickname,please");
+					$("#user_name").focus();
+					return false;
+				}
+
+				if(!email_regex.test($("#user_mail").val())){ 
+					alert("check your email,please");
+					$("#user_mail").focus();
+					return false; 
+				}
+
+				var user_name = $("#user_name").val();
+				var user_mail = $("#user_mail").val();
+				var user_pwd = $("#user_pwd").val();
+				var pwd_confirm = $("#pwd_confirm").val();
+				var result;
+				$.ajax({
+					        url: '/~sscrum/SimplicScrum/login/signUp/',
+					        type: "POST",
+					        async : false,
+					        data: {email: user_mail, pw: user_pwd, nickname: user_name },
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        }
+						    });
+						    if(result==100){
+						    	alert("Success Sign Up. Please, retry login.")
+						    	location.href="/~sscrum/SimplicScrum/";
+						    }else{
+						    	alert("Error");
+						    }
+
+			});
 		});
 
 		
@@ -142,8 +187,8 @@
 	<div id = "top_menu" style=""></div>
 	<div id = "top_right">
 		<div class="innerdiv">
-		<menu_text><a class="top_menu" href = "#" id = Cancel_btn>Cancel</a></menu_text>
-		<menu_text><a class="top_menu" href = "#" id = signup_btn>SignUp</a></menu_text>
+		<menu_text><a class="top_menu" href = "#" id = "Cancel_btn">Cancel</a></menu_text>
+		<menu_text><a class="top_menu" href = "#" id = "signup_btn">SignUp</a></menu_text>
 		</div>
 	</div>
  </div>
@@ -177,8 +222,8 @@
 <div class = "input_signup"><label for = "user_pwd" class ="label_signup">PASSWORD</label><input type ="password" id ="user_pwd"/></div>
 <div class = "input_signup"><label for = "pwd_confirm" class ="label_signup">CONFIRM.PWD</label><input type ="password" id ="pwd_confirm"/></div>
 <div id = "submit_cancel">
-<a href ="#" class="submit" id = signup_submit>submit</a>
-<a href ="#" class="submit" id = signup_cancel>cancel</a>
+<a href ="#" class="submit" id = "signup_submit">submit</a>
+<a href ="#" class="submit" id = "signup_cancel">cancel</a>
 </div>
 </div>
   <!-- SignUp finish-->
