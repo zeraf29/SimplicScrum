@@ -303,19 +303,19 @@ a.sprint_link:hover{color:yellow;}
 	background : #d2d1d1;
 }
 
-#project_list{
+#project_background{
 	position:absolute;
-	left:0px;
+	/*left:0px;*/
 	Height:100%;
-	width:1380px;
-	background-color:#CE4F4F;
+	/*width:70%;*/
+	background : URL("/~sscrum/SimplicScrum/image/background_project.png");
 	z-index:9;
 }
 	
 #project_list .projectList_close_btn{
 	position: absolute;
-	left: 375px;
-	width:418px;
+	left: 70%;
+	/*width:418px;*/
 	height: 500px;
 	background:URL("/~sscrum/SimplicScrum/image/projectList_close_btn.png");
 	background-repeat:no-repeat;
@@ -331,7 +331,7 @@ a.sprint_link:hover{color:yellow;}
 
 #project_list .innerdiv_top{
 	position: absolute;
-	left: 1000px;
+	left: 60%;
 	width:418px;
 	Height:800px;
 	background:URL("/~sscrum/SimplicScrum/image/Project_List.png");
@@ -350,7 +350,6 @@ a.sprint_link:hover{color:yellow;}
 close{
 	position: absolute;
 	margin-left:380px;
-	padding-top:385px;
 	font-family:Arial;
 	font-size:8px;
 
@@ -367,7 +366,7 @@ a.project_close:hover{color:white;}
 	list-style-type: none;
 	margin-top: 15px;
 	padding: 15px; 
-	width: 400px;
+	width: 30%;
 	z-index: 10;
 }  
 

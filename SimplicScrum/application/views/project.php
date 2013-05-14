@@ -15,6 +15,7 @@
 
 				var $close_flag = 0;
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
+				var $before_windowsWidth = ($(window).width());
 				
 				var $left_p = (($(window).width()) - 1080)/4;
 				
@@ -27,10 +28,7 @@
 					$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
 				
 				$(window).resize(function(){
-				//	var top_p = ($(window).height()) -670+'px';
 					var $left_p = (($(window).width()) - 1080)/4;
-					
-					//$("#make_project").css({top:top_p});
 					
 					$(".make_product").css({'margin-left':$left_p + 'px'});
 					$(".make_sprintbacklog").css({'margin-left':(($left_p)+360) +'px'});
@@ -39,6 +37,15 @@
 					$(".product_backlog").css({'margin-left':$left_p + 'px'});
 					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
 					$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
+					
+					if($close_flag == 0){
+						$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
+						$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
+					}else if($close_flag == 1){
+						$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
+						$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
+					}
+					$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
 				});
 				
 				
@@ -48,7 +55,7 @@
 				$("#close_btn").click(function()
 				{
 					if($close_flag == 0){
-						$("#project_list").animate({left:'-377px'},500);
+						$("#project_list").animate({left:(-(($(window).width())*(7/10))+40)+'px'},500);
 						$("#project").css({background : 'rgba(56,54,60,0)'});
 						$("#close_btn").text("open");
 						$("#back_opacity").css({display: 'none'});
@@ -61,6 +68,29 @@
 						$close_flag = 0;
 					}
 				});
+				
+				//second_top 시작
+				$("#top_p_backlog_btn").click(function(){
+					$("#second_top").css({'background-color': '#da125c', 'color':'white'});
+					$("#top_p_backlog_btn").css({'color':'white'});
+					$("#top_s_backlog_btn").css({'color':'black'});
+					$("#top_sprint_btn").css({'color':'black'});
+				});
+
+				$("#top_s_backlog_btn").click(function(){
+					$("#second_top").css({'background-color': '#f9b450', 'color':'#FFFFFF'});
+					$("#top_p_backlog_btn").css({'color':'black'});
+					$("#top_s_backlog_btn").css({'color':'white'});
+					$("#top_sprint_btn").css({'color':'black'});
+				});
+
+				$("#top_sprint_btn").click(function(){
+					$("#second_top").css({'background-color': '#33b0aa', 'color':'#FFFFFF'});
+					$("#top_p_backlog_btn").css({'color':'black'});
+					$("#top_s_backlog_btn").css({'color':'black'});
+					$("#top_sprint_btn").css({'color':'white'});
+				});
+				//second_top 끝
 
 				$("#add_btn").click(function(){
 					$("#make_project").animate({left: '400px', display: 'show'},500);
@@ -85,7 +115,7 @@
 					header: {
 						left: 'prev,next today',
 						center: 'title',
-						right: 'month,agendaWeek'
+						//right: 'month,agendaWeek'
 					},
 					selectable: true,
 					selectaHelper: true,
@@ -144,9 +174,7 @@
 	
 	<!--left Project Menu start-->
 	<div id = "project">
-		<div id = "project_list">	
-			<div class ="innerdiv_left">
-			<!--getList-->
+		<div id = "project_background">	
 			<pro>MY PROJECT</pro>
 			<p_add_btn><a href ="#" id = "add_btn"><img src ="<?=$img_path?>/project_addBtn.png"></a></p_add_btn>
 			<ul id="list_sortable">  
@@ -156,13 +184,10 @@
 						}
 					?>
 			</ul>
-			</div>
 			<div id='calendar'></div>
-			<div class ="innerdiv_top">
-				<close>
+				<close id="_close">
 				<a href = "#" id = "close_btn" class ="project_close">close</a>
 				</close>
-			</div>
 		</div>
 	</div>
 	<!--left Project Menu finish-->
