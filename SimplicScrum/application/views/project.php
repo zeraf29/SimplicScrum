@@ -1,13 +1,6 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
- <HEAD>
-  <TITLE> Simplic Scrum </TITLE>
-  <meta Cahrset="utf-8">
+﻿<?include("common/header.php");?>
   <link href='fullcalendar.css' rel='stylesheet' />
-  <link href='fullcalendar.print.css' rel='stylesheet' media='print' />
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />  
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+  <link href='fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='fullcalendar.min.js'></script>
   
 	<script type = "text/javascript">	
