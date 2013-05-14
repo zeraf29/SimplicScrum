@@ -146,7 +146,7 @@
 							$cnt = 0;
 							foreach($list as $key){
 								if($cnt>0)
-									$str .=","
+									$str .=",";
 								$sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
 								$edate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
 								$sdate2 = explode("/");
