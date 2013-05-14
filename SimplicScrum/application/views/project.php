@@ -76,6 +76,7 @@
 				
 				$("#user_info").hide();
 				$("#info").click(function(){
+					$("#user_info").html("<p>html</p>");
 					$("#user_info").dialog({ height: 500,  modal: false});
 				});
 				
