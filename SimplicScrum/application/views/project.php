@@ -110,7 +110,7 @@
 	<!--Top Menu Start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
-		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>Welcome to SSCRUM!  LogOut</div>
+		<div class = "right_innerdiv"><a href = "<?=$main_path?>/login/getLogout" id = "info"> 000 </a>Welcome to SSCRUM!  LogOut</div>
 		
 		<div id = "user_info" title = "user_information">
 		<p>kekekekekekekekeke</p>
