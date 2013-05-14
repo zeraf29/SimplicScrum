@@ -42,11 +42,14 @@
 					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
 					        dataType: 'json',
 					        success: function (rdata) {
-					        	result = rdata.msg;
-					        	alert(rdata.code);
+					        	result = rdata.code;
 					        }
 					    });
-					    alert(result);
+					    if(result==100){
+					    	location.href="/~sscrum/SimplicScrum/project/";
+					    }else{
+					    	alert("Confirming Your Email or Password, Please.");
+					    }
 					}
 				}
 			});
@@ -63,17 +66,20 @@
 						}
 						else{//로그인 하면 되겠지
 							$.ajax({
-								url: '/~sscrum/SimplicScrum/login/getLogin',
-								type: "POST",
-								async : false,
-								data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
-								dataType: 'json',
-								success: function (rdata) {
-									result = rdata.msg;
-									alert(rdata.code);
-								}
-							});
-							alert(result);
+					        url: '/~sscrum/SimplicScrum/login/getLogin',
+					        type: "POST",
+					        async : false,
+					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        }
+					    });
+					    if(result==100){
+					    	location.href="/~sscrum/SimplicScrum/project/";
+					    }else{
+					    	alert("Confirming Your Email or Password, Please.");
+					    }
 						}
 					}
 				}
