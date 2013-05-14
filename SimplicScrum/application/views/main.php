@@ -6,7 +6,11 @@
 	}
 ?>
 	<script type = "text/javascript">			
-		
+	$.pnotify({
+    title: 'Regular Success',
+    text: 'That thing that you were trying to do worked!',
+    type: 'success'
+});
 	$(document).ready(function()
 		{
 			var login_flag = 0;
