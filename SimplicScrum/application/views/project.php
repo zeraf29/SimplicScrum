@@ -148,7 +148,7 @@
 								if($cnt>0)
 									$str .=",";
 								$sdate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
-								$edate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
+								$edate1 = date(  "Y-n-j", strtotime( $key["edate"] ) );
 								$sdate2 = explode("-",$sdate1);
 								$edate2 = explode("-",$edate1);
 								$sdate2[1] = strval(intval($sdate2[1])-1);
