@@ -178,7 +178,7 @@
 	</script>
  </HEAD>
  <BODY>
- <div name="top" id="top" class="top"></div>
+ 
  <!--상단메뉴 시작-->
  <div id = "container_top">
 	<div id = "top_left">
