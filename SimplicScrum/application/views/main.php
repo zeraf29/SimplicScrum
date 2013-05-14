@@ -49,6 +49,7 @@
 					        	result = rdata.code;
 					        }
 					    });
+					    alert(result)
 					    if(result==100){
 					    	location.href="/~sscrum/SimplicScrum/project/";
 					    }else{

@@ -76,7 +76,7 @@
 				
 				$("#user_info").hide();
 				$("#info").click(function(){
-					$("#user_info").dialog({ height: 140,  modal: false});
+					$("#user_info").dialog({ height: 500,  modal: false});
 				});
 				
 				var calendar = $('#calendar').fullCalendar({
@@ -117,10 +117,10 @@
 	<!--Top Menu Start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
-		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>Welcome to SSCRUM!  <a href="<?=$main_path?>/login/getLogout">LogOut</a></div>
+		<div class = "right_innerdiv"><a href = "#" id = "info"> [EDIT] </a>Welcome to SSCRUM!  <a href="<?=$main_path?>/login/getLogout">LogOut</a></div>
 		
 		<div id = "user_info" title = "user_information">
-		<p>kekekekekekekekeke</p>
+		
 		</div>
 		<!--dialog-->
 		<div id = "dialog-modal" title = "Basic modal dialog">
