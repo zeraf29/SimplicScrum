@@ -1,5 +1,10 @@
 ﻿<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');?>
 <?include("common/header.php");?>
+<?php
+	if(isset($this->session->userdata("ss_userid"))){
+		echo "<script>location.href='/~sscrum/SimplicScrum/project/'</script>";
+	}
+?>
 	<script type = "text/javascript">			
 		
 	$(document).ready(function()
