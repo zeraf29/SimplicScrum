@@ -50,6 +50,36 @@
 				}
 			});
 			
+			$("*").keypress(function(e){
+				if(login_flag == 1){				
+					if(e.keyCode == 13)
+					{
+						if(!($.trim($("#login_email").val())) && !($.trim($("#login_pwd").val()))){
+							$("#container_Login").animate({top:'-424px'},500);
+							$("#container_mid").animate({top:'60px'},500);
+							$("#Cancel_btn").hide();
+							login_flag = 0;
+						}
+						else{
+						//함수 실행
+						}
+					}
+				}
+			});
+			/*
+			$("#login_email").keypress(function(e){
+			   if(e.keyCode==13)
+			   {
+					//함수 실행
+			   }
+			 });
+			$("#login_pwd").keypress(function(e){
+			   if(e.keyCode==13)
+			   {
+					//함수 실행
+			   }
+			 });
+			*/
 			$("#Cancel_btn").click(function()
 			{
 					$("#container_Login").animate({top:'-424px'},500);
