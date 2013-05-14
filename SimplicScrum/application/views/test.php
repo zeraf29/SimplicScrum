@@ -1,8 +1,11 @@
-﻿<?include("common/header.php");?>
+<?include("common/header.php");?>
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
-
+  <?php
+  echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
+								echo $edate1 = date(  "l jS \of F Y", strtotime( $key["edate"] ) );
+  ?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
@@ -144,22 +147,6 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							foreach($list as $key){
-								if($cnt>0)
-									$str .=","
-								$sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
-								$edate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );
-								$sdate2 = explode("/");
-								$sdate2 = explode("/");
-								$sdate2[1] = strval(intval($sdate2[1])-1);
-								$edate2[1] = strval(intval($edate2[1])-1);
-								$str .= "{";
-								$str .= "title:".$key["title"]",";
-								$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2].")";
-								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
-								$str .= "}";
-							}
-							echo $str;
 						?>
 					]
 				});
