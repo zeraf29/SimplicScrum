@@ -150,7 +150,7 @@
 								$sdate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
 								$edate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
 								$sdate2 = explode("-",$sdate1);
-								$sdate2 = explode("-",$edate1);
+								$edate2 = explode("-",$edate1);
 								$sdate2[1] = strval(intval($sdate2[1])-1);
 								$edate2[1] = strval(intval($edate2[1])-1);
 								$str .= "{";
