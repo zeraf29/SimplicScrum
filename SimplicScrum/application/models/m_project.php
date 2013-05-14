@@ -11,13 +11,15 @@ class M_project extends SS_Model{
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 
-	function makeProject($title,$desc,$puser_id){
+	function makeProject($title,$desc,$puser_id,$sdate,$edate){
 		$result = FALSE;
 		$pw = sha1($pw);
 		$data = array(
 		   'title' => $title ,
 		   'desc' => $desc ,
-		   'puser_id' => $puser_id
+		   'puser_id' => $puser_id,
+		   'sdate' => $sdate,
+		   'edate' => $edate
 		);
 
 		$this->db->trans_start();

@@ -24,9 +24,11 @@ class Project extends SS_Controller {
 	}
 	
 	public function makeProject(){
-		$title=isset($_GET["title"])?$_GET["title"]:"";
-		$desc=isset($_GET["desc"])?$_GET["desc"]:"";
+		$title=isset($_POST["title"])?$_POST["title"]:"";
+		$desc=isset($_POST["desc"])?$_POST["desc"]:"";
 		$puser_id = $this->session->userdata('ss_userid');
+		$sdate = isset($_POST["sadte"])?$_POST["sdate"]:"";
+		$edate = isset($_POST["edate"])?$_POST["edate"]:"";
 
 
 		$this->load->model("M_project");	
