@@ -37,17 +37,18 @@ html,body{
 	padding-right:10px;
 	padding-top:30px;
 }
+
 #top_menu{
 	position:absolute;
 	left:50%;
 	margin-left:-182px; /*넓이의 반*/
 	width:364px; 
-	background:URL("../image/top_menu.bmp");
+	background:URL("./image/top_menu.bmp");
 	height:60px;
 }
 menu_text{
 	color:white;
-	font-family:Arial;
+	font-family:돋움;
 	font-weight:bold;
 	margin-right:10px;
 }
@@ -93,7 +94,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-634px; /*넓이의 반*/
 	width:1278px; 
-	background:URL("../image/login.png");
+	background:URL("./image/login.png");
 	height:484px;
 	text-align:center;
 	padding-top:100px;
@@ -112,7 +113,7 @@ a.top_menu:hover{color:yellow;}
 	float:left;
 	width:50%;
 	height:733px;
-	background:URL("../image/back.png");
+	background:URL("./image/back.png");
 }
 #mid_left .innerdiv {
 	margin-right:481px;
@@ -122,7 +123,7 @@ a.top_menu:hover{color:yellow;}
 	float:right;
 	width:50%;
 	height:733px;
-	background:URL("../image/back.png");
+	background:URL("./image/back.png");
 }
 
 #mid_right .innerdiv {
@@ -138,7 +139,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-635px; /*넓이의 반*/
 	width:1270px; 
-	background:URL("../image/main.png");
+	background:URL("./image/main.png");
 	height:733px;
 	text-align:center;
 	padding-left:10px;
@@ -147,9 +148,8 @@ a.top_menu:hover{color:yellow;}
 
 Login{
 	color:FF007F;
-	font-family:Arial;
+	font-family:돋움;
 	font-weight:bold;
-	font-size:25px;
 	margin-right:10px;
 }
 a.login:link{ text-decoration:none; color: FF007F;}
@@ -168,12 +168,12 @@ a.login:hover{color:yellow;}
 
 
 
-/*Sign Up Page Style Sheet*/
+/*회원가입 페이지 style Sheet*/
 .label_signup{	
 	color: white;
 	font-weight:bold;
 	padding : 3px;
-	font-size: 10px;
+	font-size:10;
 }
 .input_signup{
 	margin: 10px;
@@ -181,7 +181,7 @@ a.login:hover{color:yellow;}
 	text-align : right;
 }
 #submit_cancel{
-	font-size: 18px;
+	font-size:13px;
 	text-align : right;
 	padding-right:10px;
 }
@@ -189,8 +189,7 @@ a.submit:link{ text-decoration:none; color: #808080;}
 a.submit:Visited{ text-decoration:none; color: #808080;}
 a.submit:hover{color:#909090;}
 
-/*Log-In Page
- style Sheet*/
+/*로그인 페이지 style Sheet*/
 .Login_input{
 	width : 500px;
 	height : 40px;
@@ -210,7 +209,7 @@ a.submit:hover{color:#909090;}
 	border : none;
 	background : none;
 	margin-right : 80px;
-	font-size : 30px;
+	font-size : 20;
 	color:white;
 	font-weight:bold;
 	width: 300px;
@@ -300,57 +299,38 @@ a.sprint_link:hover{color:yellow;}
 #project_list{
 	position:absolute;
 	left:0px;
-	width:418px;
 	Height:100%;
-	background:URL("../image/projectList_close_btn.png");
-	background-repeat:no-repeat;
+	width:1380px;
+	background-color:#CE4F4F;
 	z-index:9;
 }
-
-#list_sortable { 
-	position: absolute;
-	left:45px;
-	top: 150;
-	list-style-type: none;
-	margin: 0;
-	padding: 0; 
-	width: 60%;
-	z-index: 10;
-}  
-
-#list_sortable li {
-	margin: 0 3px 3px 4px;
-	padding: 0.4px;
-	padding-left: 1.5px;
-	font-size: 4px;
-	height: 18px;
-}  
 	
-#list_sortable li span {
+#project_list .projectList_close_btn{
 	position: absolute;
-	margin-left: -1.3px; 
-}
-
-#project_list .innerdiv_top{
-	width:377px;
-	Height:800px;
-	background:URL("../image/ProjectList.png");
+	left: 375px;
+	width:418px;
+	height: 500px;
+	background:URL("./image/projectList_close_btn.png");
 	background-repeat:no-repeat;
+	z-index:100;
 }
 
-#project_list .innerdiv_down{
+#project_list .innerdiv_left{
 	width:377px;
+	float:left;
 	Height:100%;
 	background:#CE4F4F;
 }
-#project_list .innerdiv_btn{
-	float : right;
-	font-size: 11px;
-	font-weight:bold;
-	color:white;
-	padding-top:390px;
-	padding-right:5px;
-	}
+
+#project_list .innerdiv_top{
+	position: absolute;
+	left: 1000px;
+	width:418px;
+	Height:800px;
+	background:URL("./image/Project_List.png");
+	background-repeat:no-repeat;
+}
+
 
 #project_list .add_btn{
 	position:absolute;
@@ -359,13 +339,49 @@ a.sprint_link:hover{color:yellow;}
 
 }
 
+
+close{
+	position: absolute;
+	margin-left:380px;
+	padding-top:385px;
+	font-family:Arial;
+	font-size:8px;
+
+}
+
+a.project_close:link{ text-decoration:none; color: #000000;}
+a.project_close:Visited{ text-decoration:none; color: #000000;}
+a.project_close:hover{color:white;}
+
+#list_sortable { 
+	position: absolute;
+	left:70px;
+	top: 150px;
+	list-style-type: none;
+	margin-top: 15px;
+	padding: 15px; 
+	width: 400px;
+	z-index: 10;
+}  
+
+#list_sortable li {
+	margin: 15px 3px 3px 4px;
+	padding: 0.4px;
+	padding-left: 1.5px;
+	font-size: 25px;
+	height: 25px;
+}  
+
+
+/*
 #project_list .list{
 	position:absolute;
 	top:125px;
 	left:35px;
 }
+*/
 
-/*Contents*/
+/*컨텐츠*/
 
 #content{
 	position:absolute;
@@ -384,6 +400,11 @@ a.sprint_link:hover{color:yellow;}
 	height: 100%;
 	background: #FFFFFF;
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+#content .ineer_product_btn{
+	margin-left:280px;
+
 }
 
 #content .make_sprintbacklog{
@@ -408,7 +429,7 @@ a.sprint_link:hover{color:yellow;}
 
 /*-------------------------*/
 
-/*New Project Page*/
+/*프로젝트 생성 페이지*/
 
 #make_project{
 	position:absolute;
@@ -450,7 +471,7 @@ a.sprint_link:hover{color:yellow;}
 
 #back_opacity {
     position: absolute;
-    top: 0px;
+    top: 60px;
     left: 0px;
 	width: 100%;
 	height: 100%;
@@ -459,3 +480,27 @@ a.sprint_link:hover{color:yellow;}
 	filter: alpha(opacity=3); opacity: 0.3;
 }
 
+pro{
+	position: absolute;
+	margin-top:80px;
+	margin-left:50px;
+	font-family: Arial;
+	font-weight:bold;
+	font-size:35px;
+}
+
+p_add_btn {
+	position: absolute;
+	margin-top:90px;
+	margin-left:290px;
+
+}
+
+#calendar {
+	position: absolute;
+	top:100px;
+	left:600px;
+	width: %50;	/*달력 크기 조절*/
+	background-color:white;
+	z-index : 9;
+	}
