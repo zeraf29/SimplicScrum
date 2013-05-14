@@ -42,7 +42,6 @@
 					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
 					        dataType: 'json',
 					        success: function (data) {
-					        	data = jQuery.parseJSON(data);
 					            result = data[0].code;
 					        }
 					    });
