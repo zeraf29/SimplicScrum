@@ -19,7 +19,7 @@ class Project extends SS_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('project');
 	}
 	
 	public function makeProject(){
@@ -42,7 +42,7 @@ class Project extends SS_Controller {
 					'code' => '100',
 					'msg' => 'SUCCESS'
 				);
-				
+
 			}else{
 				$view_data = array(
 					'code' => '200',
