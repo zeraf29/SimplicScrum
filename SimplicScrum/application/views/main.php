@@ -9,6 +9,7 @@
 			var left_p = ($(window).width()) - 300+'px';
 			$("#sign_up").css({left:left_p});
 			
+			$("#Cancel_btn").hide();
 			$(window).resize(function(){
 				var left_p = ($(window).width())-300+'px';
 				$("#sign_up").css({left:left_p});
@@ -19,6 +20,7 @@
 				if(login_flag == 0){
 					$("#container_Login").animate({top:'60px'},500);
 					$("#container_mid").animate({top:'544px'},500);
+					$("#Cancel_btn").show();
 					login_flag = 1;
 				}
 				
@@ -26,6 +28,7 @@
 					if(!($.trim($("#login_email").val())) && !($.trim($("#login_pwd").val()))){
 						$("#container_Login").animate({top:'-424px'},500);
 						$("#container_mid").animate({top:'60px'},500);
+						$("#Cancel_btn").hide();
 						login_flag = 0;
 						}
 					else if(!($.trim($("#login_email").val())) || !($.trim($("#login_pwd").val()))){
@@ -34,6 +37,13 @@
 					else{//로그인 하면 되겠지
 					}
 				}
+			});
+			
+			$("#Cancel_btn").click(function()
+			{
+					$("#container_Login").animate({top:'-424px'},500);
+					$("#container_mid").animate({top:'60px'},500);
+					$("#Cancel_btn").hide();
 			});
 			
 			$("#signup_btn").click(function()
@@ -67,6 +77,7 @@
 	<div id = "top_menu" style=""></div>
 	<div id = "top_right">
 		<div class="innerdiv">
+		<menu_text><a class="top_menu" href = "#" id = Cancel_btn>Cancel</a></menu_text>
 		<menu_text><a class="top_menu" href = "#" id = signup_btn>SignUp</a></menu_text>
 		</div>
 	</div>
