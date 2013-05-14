@@ -27,7 +27,10 @@ class Login extends SS_Controller {
 		$pw=isset($_POST["pw"])?$_POST["pw"]:"";
 		$this->load->model("M_user");	
 		if($email=="" || $pw=="" ){
-
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'Fail'
+				);
 		}else{
 			$result = $this->M_user->get_login($email,$pw);
 			if(count($result)>0){
