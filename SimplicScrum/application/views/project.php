@@ -76,8 +76,9 @@
 				
 				$("#user_info").hide();
 				$("#info").click(function(){
-					$("#user_info").html("<p>html</p>");
-					$("#user_info").dialog({ height: 500,  modal: false});
+					$("#user_info").append("<p>Nickname</p>&nbsp;<?=$this->session->userdata('ss_nickname')?>");
+					$("#user_info").append("<p>Email</p>&nbsp;<?=$this->session->userdata('ss_useremail')?>");
+					$("#user_info").dialog({ height: 300,  modal: false});
 				});
 				
 				var calendar = $('#calendar').fullCalendar({
