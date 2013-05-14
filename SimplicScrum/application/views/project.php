@@ -176,7 +176,7 @@
 				});
 
 				$(".listDelete").click(function(){
-					temp = split(this.id,"_");
+					temp = this.id.split("_");
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/deleteProject',
 					        type: "POST",
