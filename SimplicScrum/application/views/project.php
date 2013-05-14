@@ -139,7 +139,7 @@
 			<ul id="list_sortable">  
 					<?php
 						foreach($list as $key){
-							echo "<li class=\"ui-state-default\">".$key[title]."</li>";
+							echo "<li class=\"ui-state-default\">".$key["title"]."</li>";
 						}
 					?>
 			</ul>
