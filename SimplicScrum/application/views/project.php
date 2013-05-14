@@ -2,7 +2,10 @@
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
-  
+  <?php
+  echo $sdate1 = date(  "F j, Y", strtotime( $key["sdate"] ) );
+								echo $edate1 = date(  "F j, Y", strtotime( $key["edate"] ) );
+  ?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
@@ -144,18 +147,6 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							foreach($list as $key){
-								$sdate1 = date(  "F j, Y", strtotime( $key["sdate"] ) );
-								$edate1 = date(  "F j, Y", strtotime( $key["edate"] ) );
-								if($cnt>0)
-									$str .= ",";
-								$str .= "{";
-								$str .= "title: '".$key["title"]."',";
-								$str .= "start: new Date(".$sdate1."),";
-								$str .= "end: new Date(".$sdate2.")";
-								$str .= "}";
-								$cnt++;
-							}
 						?>
 					]
 				});
