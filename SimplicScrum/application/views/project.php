@@ -109,7 +109,7 @@
  <BODY>
 	<!--Top Menu Start-->
 	<div id = "top" >
-		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "./image/top_logo.png"></div>
+		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
 		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>Welcome to SSCRUM!  LogOut</div>
 		
 		<div id = "user_info" title = "user_information">
@@ -135,7 +135,7 @@
 			<div class ="innerdiv_left">
 			<!--getList-->
 			<pro>MY PROJECT</pro>
-			<p_add_btn><a href ="#" id = "add_btn"><img src ="./image/project_addBtn.png"></a></p_add_btn>
+			<p_add_btn><a href ="#" id = "add_btn"><img src ="<?=$img_path?>/project_addBtn.png"></a></p_add_btn>
 			<ul id="list_sortable">  
 					<li class="ui-state-default">Item 1</li>
 					<li class="ui-state-default">Item 2</li>  
@@ -162,13 +162,13 @@
 	<!--content start-->
 	<div id = "content">
 		<div class="make_product">
-			<div class="ineer_product"><img src="./image/product_btn.png">
+			<div class="ineer_product"><img src="<?=$img_path?>/product_btn.png">
 		</div>
 		
 		<div class="make_sprintbacklog">sprint backlog</div>
 		
 		<div class="make_sprint">
-			<div class="ineer_product"><img src="./image/sprint_btn.png">
+			<div class="ineer_product"><img src="<?=$img_path?>/sprint_btn.png">
 		</div>
 	</div>
 	</div>
