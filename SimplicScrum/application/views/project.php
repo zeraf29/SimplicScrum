@@ -3,7 +3,8 @@
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <?php
-	if($_GET['type']=='delete'){
+	$type = isset($_GET["type"])?$_GET["type"]:"";
+	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
 	}else{
