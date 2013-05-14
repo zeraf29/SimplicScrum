@@ -43,7 +43,7 @@ html,body{
 	left:50%;
 	margin-left:-182px; /*넓이의 반*/
 	width:364px; 
-	background:URL("../image/top_menu.bmp");
+	background:URL("/~sscrum/SimplicScrum/image/top_menu.bmp");
 	height:60px;
 }
 menu_text{
@@ -94,7 +94,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-634px; /*넓이의 반*/
 	width:1278px; 
-	background:URL("../image/login.png");
+	background:URL("/~sscrum/SimplicScrum/image/login.png");
 	height:484px;
 	text-align:center;
 	padding-top:100px;
@@ -113,7 +113,7 @@ a.top_menu:hover{color:yellow;}
 	float:left;
 	width:50%;
 	height:733px;
-	background:URL("../image/back.png");
+	background:URL("/~sscrum/SimplicScrum/image/back.png");
 }
 #mid_left .innerdiv {
 	margin-right:481px;
@@ -123,7 +123,7 @@ a.top_menu:hover{color:yellow;}
 	float:right;
 	width:50%;
 	height:733px;
-	background:URL("../image/back.png");
+	background:URL("/~sscrum/SimplicScrum/image/back.png");
 }
 
 #mid_right .innerdiv {
@@ -139,7 +139,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-635px; /*넓이의 반*/
 	width:1270px; 
-	background:URL("../image/main.png");
+	background:URL("/~sscrum/SimplicScrum/image/main.png");
 	height:733px;
 	text-align:center;
 	padding-left:10px;
@@ -310,7 +310,7 @@ a.sprint_link:hover{color:yellow;}
 	left: 375px;
 	width:418px;
 	height: 500px;
-	background:URL("../image/projectList_close_btn.png");
+	background:URL("/~sscrum/SimplicScrum/image/projectList_close_btn.png");
 	background-repeat:no-repeat;
 	z-index:100;
 }
@@ -327,7 +327,7 @@ a.sprint_link:hover{color:yellow;}
 	left: 1000px;
 	width:418px;
 	Height:800px;
-	background:URL("../image/Project_List.png");
+	background:URL("/~sscrum/SimplicScrum/image/Project_List.png");
 	background-repeat:no-repeat;
 }
 
