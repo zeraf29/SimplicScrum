@@ -80,7 +80,18 @@
 					        }
 						    });
 						    if(result==100){
-						    	location.href="/~sscrum/SimplicScrum/project/";
+						    	$("#sign_up").animate({top:'-300px'},500);
+						    	$.pnotify({
+								    title: 'SingUp Success',
+								    text: 'Please,Try login.',
+								    hide: false,
+								    sticker: false
+								});
+								
+								$("#user_name").val("");
+								$("#user_mail").val("");
+								$("#user_pwd").val("");
+								$("#pwd_confirm").val("");
 						    }else{
 						    	alert("Confirming Your Email or Password, Please.");
 						    	return false;
@@ -109,11 +120,7 @@
 					$("#container_mid").animate({top:'60px'},500);
 					$("#Cancel_btn").hide();
 			});
-			$.pnotify({
-	    title: 'Regular Success',
-	    text: 'That thing that you were trying to do worked!',
-	    type: 'success'
-	});
+			
 			$("#signup_btn").click(function()
 			{
 				$("#sign_up").animate({top:'60px'},500);
@@ -165,13 +172,13 @@
 					        }
 						    });
 						    if(result==100){
-						    	alert("Success Sign Up. Please, retry login.")
-						    	location.href="/~sscrum/SimplicScrum/";
+						    	
 						    }else{
 						    	alert("Error");
 						    }
 
 			});
+			
 		});
 
 		
