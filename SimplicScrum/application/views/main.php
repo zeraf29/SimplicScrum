@@ -61,8 +61,19 @@
 							$("#Cancel_btn").hide();
 							login_flag = 0;
 						}
-						else{
-						//함수 실행
+						else{//로그인 하면 되겠지
+							$.ajax({
+								url: '/~sscrum/SimplicScrum/login/getLogin',
+								type: "POST",
+								async : false,
+								data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
+								dataType: 'json',
+								success: function (rdata) {
+									result = rdata.msg;
+									alert(rdata.code);
+								}
+							});
+							alert(result);
 						}
 					}
 				}
