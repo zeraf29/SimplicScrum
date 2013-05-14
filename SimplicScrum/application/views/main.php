@@ -166,7 +166,7 @@
 						    	$.pnotify({
 								    title: 'SingUp Success',
 								    text: 'Please,Try login.',
-								    type: 'success'
+								    animate_speed: 'fast'
 								});
 
 								$("#user_name").val("");

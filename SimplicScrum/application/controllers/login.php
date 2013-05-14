@@ -38,6 +38,7 @@ class Login extends SS_Controller {
 				
 				$this->session->set_userdata('ss_userid', $result[0]->id);
 				$this->session->set_userdata('ss_useremail', $result[0]->email);
+				$this->session->set_userdata('ss_nickname', $result[0]->nickname);
 				$this->session->set_userdata('ss_pw', $result[0]->pw);
 
 				$view_data = array(

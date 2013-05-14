@@ -6,6 +6,13 @@
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
+
+				$.pnotify({
+								    title: 'Hi, <?=$this->session->userdata("ss_nickname")?>',
+								    text: 'Welcome to SimplicScrum',
+								    animate_speed: 'fast'
+								});
+
 				var $close_flag = 0;
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				
