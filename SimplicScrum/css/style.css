@@ -349,10 +349,9 @@ a.sprint_link:hover{color:yellow;}
 
 close{
 	position: absolute;
-	margin-left:380px;
+	padding-top:390px;
 	font-family:Arial;
 	font-size:8px;
-
 }
 
 a.project_close:link{ text-decoration:none; color: #000000;}
