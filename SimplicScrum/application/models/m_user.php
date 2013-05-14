@@ -20,8 +20,8 @@ class M_user extends SS_Model{
 		$result = FALSE;
 		$pw = sha1($pw);
 		$data = array(
-		   'email' => $nickname ,
-		   'nickname' => $email ,
+		   'email' => $email ,
+		   'nickname' => $nickname ,
 		   'pw' => $pw
 		);
 

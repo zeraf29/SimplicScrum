@@ -84,6 +84,7 @@
 						    	location.href="/~sscrum/SimplicScrum/project/";
 						    }else{
 						    	alert("Confirming Your Email or Password, Please.");
+						    	return false;
 						    }
 						}
 					}
