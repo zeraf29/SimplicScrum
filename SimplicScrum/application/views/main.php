@@ -43,7 +43,7 @@
 					        dataType: 'json',
 					        success: function (data) {
 					        	data = jQuery.parseJSON(data);
-					            result = data.code;
+					            result = data[0].code;
 					        }
 					    });
 						alert(result);
