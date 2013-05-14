@@ -20,6 +20,4 @@
 	<link href="<?=$css_path?>/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />
 <!-- Include this file if you are using Pines Icons. -->
 	<link href="<?=$css_path?>/jquery.pnotify.default.icons.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="<?=$css_path?>/bootstrap/bootstrap.min.css" rel="stylesheet" media="screen">
-	<script src="<?=$js_path?>/bootstrap/bootstrap.min.js"></script>
 	<title><?php echo $title;?></title>
