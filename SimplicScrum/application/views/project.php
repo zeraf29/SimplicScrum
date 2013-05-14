@@ -26,6 +26,7 @@
 					$(".product_backlog").css({'margin-left':$left_p + 'px'});
 					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
 					$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
+					$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
 				
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
