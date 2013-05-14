@@ -87,7 +87,33 @@ class Project extends SS_Controller {
 	}
 
 	public function deleteProject(){
+		$id=isset($_POST["id"])?$_POST["id"]:"";
 
+
+		$this->load->model("M_project");	
+		if($id==""  ){
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Not Blank!'
+				);
+		}else{
+			$result = $this->M_project->deleteProject($id);
+			if($result){
+
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+				);
+
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Database Error!'
+				);
+			}
+
+		}
+		$this->displayJson($view_data);
 	}
 	
 }

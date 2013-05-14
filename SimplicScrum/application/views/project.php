@@ -2,14 +2,23 @@
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
-
+<?php
+	if($_GET['type']=='delete'){
+		$title = 'Delete Complete';
+		$text = 'Confirm you Project';
+	}else{
+		$title = 'Hi, <?=$this->session->userdata("ss_nickname")?>';
+		$text = 'Welcome to SimplicScrum';
+	}
+?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
 
+
 				$.pnotify({
-								    title: 'Hi, <?=$this->session->userdata("ss_nickname")?>',
-								    text: 'Welcome to SimplicScrum',
+								    title: '<?=$title?>',
+								    text: '<?=$text?>',
 								    animate_speed: 'fast'
 								});
 
@@ -166,7 +175,23 @@
 				});
 
 				$(".listDelete").click(function(){
-					alert(this.id);
+					temp = split(this.id,"_");
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/project/deleteProject',
+					        type: "POST",
+					        async : false,
+					        data: {id: temp[1]},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        }
+						    });
+						    if(result==100){
+						    	location.href="/~sscrum/SimplicScrum/project/?type=delete";
+						    }else{
+						    	alert("Error about Deleting project");
+						    	return false;
+						    }
 				});
 			});
 	</script>
