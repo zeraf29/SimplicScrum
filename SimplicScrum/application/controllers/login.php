@@ -107,9 +107,9 @@ class Login extends SS_Controller {
 
 				$view_data = array(
 					'code' => '100',
-					'msg' => 'SUCCESS'
-					'userid' => $result[0]->id;
-					'nickname' => $result[0]->nickname;
+					'msg' => 'SUCCESS',
+					'userid' => $result[0]->id,
+					'nickname' => $result[0]->nickname
 				);
 			}else{
 				$view_data = array(

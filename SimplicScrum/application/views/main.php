@@ -108,6 +108,7 @@
 			{
 					$("#container_Login").animate({top:'-424px'},500);
 					$("#container_mid").animate({top:'60px'},500);
+					login_flag = 0;
 					$("#Cancel_btn").hide();
 			});
 			
