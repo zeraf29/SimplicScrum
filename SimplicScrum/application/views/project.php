@@ -154,10 +154,11 @@
 								$sdate2[1] = strval(intval($sdate2[1])-1);
 								$edate2[1] = strval(intval($edate2[1])-1);
 								$str .= "{";
-								$str .= "title:".$key["title"].",";
+								$str .= "title:'".$key["title"]."',";
 								$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2]."),";
 								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
 								$str .= "}";
+								$cnt++;
 							}
 							echo $str;
 						?>
