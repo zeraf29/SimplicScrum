@@ -31,10 +31,24 @@
 						$("#Cancel_btn").hide();
 						login_flag = 0;
 						}
-					else if(!($.trim($("#login_email").val())) || !($.trim($("#login_pwd").val()))){
+					/*else if(!($.trim($("#login_email").val())) || !($.trim($("#login_pwd").val()))){
 					//둘중 하나가 잘못된 값이면 에러머시지출력
-					}
+					}*/
 					else{//로그인 하면 되겠지
+						var result;
+						$.ajax({
+					        url: '/~sscrum/SimplicScrum/login/getLogin',
+					        type: "POST",
+					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
+					        dataType: 'json',
+					        success: function (data) {
+					            result = data.code;
+					        }
+					    });
+					    if(result==100)
+					    	alert(1)
+					    else
+					    	alert(2)
 					}
 				}
 			});
@@ -61,6 +75,7 @@
 			});
 		});
 
+		
 	</script>
  </HEAD>
  <BODY>
