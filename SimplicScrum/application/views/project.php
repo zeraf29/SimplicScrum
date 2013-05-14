@@ -151,8 +151,10 @@
 			<p_add_btn><a href ="#" id = "add_btn"><img src ="<?=$img_path?>/project_addBtn.png"></a></p_add_btn>
 			<ul id="list_sortable">  
 					<?php
-						foreach($list as $key){
-							echo "<li class=\"ui-state-default\"><span style=\"width:90%;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;margin-right:-10px;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
+						if(count($list)>0){
+							foreach($list as $key){
+								echo "<li class=\"ui-state-default\"><span style=\"width:90%;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;margin-right:-10px;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
+							}
 						}
 					?>
 			</ul>
