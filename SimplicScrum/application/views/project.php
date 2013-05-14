@@ -3,9 +3,13 @@
  <HEAD>
   <TITLE> Simplic Scrum </TITLE>
   <meta Cahrset="utf-8">
+  <link href='fullcalendar.css' rel='stylesheet' />
+  <link href='fullcalendar.print.css' rel='stylesheet' media='print' />
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />  
   <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
+  <script src='fullcalendar.min.js'></script>
+  
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
@@ -74,6 +78,36 @@
 				$("#info").click(function(){
 					$("#user_info").dialog({ height: 140,  modal: false});
 				});
+				
+				var calendar = $('#calendar').fullCalendar({
+					header: {
+						left: 'prev,next today',
+						center: 'title',
+						right: 'month,agendaWeek'
+					},
+					selectable: true,
+					selectaHelper: true,
+					select: function(title, start, end, clolor) {
+						title = prompt();
+						start = prompt();
+						end = prompt();
+						color = prompt();
+						calendar.fullCalendar('renderEvent',
+							{
+								title: title,
+								start: start,
+								end: end,
+								color: color
+							},
+							true // make the event "stick"
+						);
+					calendar.fullCalendar('unselect');
+					},
+					editable: false,
+			//		events: [
+
+			//		]
+				});
 			});
 	</script>
 	
@@ -104,11 +138,12 @@
 	
 	<!--left Project Menu start-->
 	<div id = "project">
-		<div id = "project_list">
-			<div class ="add_btn"><a href ="#" id=add_btn><img src="./image/project_addBtn.png"></a></div>
-			<div class ="innerdiv_btn"><a href = "#" id ="close_btn">close</a></div>
-			<div class ="innerdiv_top">
-				<ul id="list_sortable">  
+		<div id = "project_list">	
+			<div class ="innerdiv_left">
+			<!--getList-->
+			<pro>MY PROJECT</pro>
+			<p_add_btn><a href ="#" id = "add_btn"><img src ="./image/project_addBtn.png"></a></p_add_btn>
+			<ul id="list_sortable">  
 					<li class="ui-state-default">Item 1</li>
 					<li class="ui-state-default">Item 2</li>  
 					<li class="ui-state-default">Item 3</li>  
@@ -116,9 +151,14 @@
 					<li class="ui-state-default">Item 5</li>  
 					<li class="ui-state-default">Item 6</li>  
 					<li class="ui-state-default">Item 7</li>
-				</ul>
+			</ul>
 			</div>
-			<div class ="innerdiv_down"></div>
+			<div id='calendar'></div>
+			<div class ="innerdiv_top">
+				<close>
+				<a href = "#" id = "close_btn" class ="project_close">close</a>
+				</close>
+			</div>
 		</div>
 	</div>
 	<!--left Project Menu finish-->
