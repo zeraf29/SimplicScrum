@@ -45,10 +45,7 @@
 					            result = data.code;
 					        }
 					    });
-					    if(result==100)
-					    	alert(1)
-					    else
-					    	alert(2)
+						alert(result);
 					}
 				}
 			});
