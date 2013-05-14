@@ -10,5 +10,26 @@ class M_project extends SS_Model{
 		$rs = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
+
+	function makeProject($title,$desc,$puser_id){
+		$result = FALSE;
+		$pw = sha1($pw);
+		$data = array(
+		   'title' => $title ,
+		   'desc' => $desc ,
+		   'puser_id' => $puser_id
+		);
+
+		$this->db->trans_start();
+		$this->db->insert('project', $data); 
+		if ($this->db->trans_status() == FALSE) {
+			$this->db->trans_rollback();	
+		}else {
+			$this->db->trans_commit();
+			$result = TRUE;
+		}
+		$this->db->trans_complete();
+		return $result;
+	}
 }
 ?>
