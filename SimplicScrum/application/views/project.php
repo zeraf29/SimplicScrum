@@ -110,6 +110,10 @@
 
 			//		]
 				});
+
+				$(".listDelete").click(function(){
+					alert(this.id);
+				});
 			});
 	</script>
 	
