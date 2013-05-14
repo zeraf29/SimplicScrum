@@ -71,7 +71,9 @@ class Project extends SS_Controller {
 							'desc' => $result[$i]->desc,
 							'access_key' => $result[$i]->access_key,
 							'openpj' => $result[$i]->openpj,
-							'rlevel' => $result[$i]->rlevel
+							'rlevel' => $result[$i]->rlevel,
+							'sdate' => $result[$i]->sdate,
+							'edate' => $result[$i]->edate,
 						);
 					}
 				
