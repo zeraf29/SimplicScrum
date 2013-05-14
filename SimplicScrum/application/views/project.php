@@ -3,7 +3,7 @@
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <?php
-
+					foreach($list as $key)
 							echo $sdate1 = date(  "l jS \of F Y", strtotime( $key["sdate"] ) );?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
