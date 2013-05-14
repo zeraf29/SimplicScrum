@@ -6,11 +6,6 @@
 	}
 ?>
 	<script type = "text/javascript">			
-	$.pnotify({
-	    title: 'Regular Success',
-	    text: 'That thing that you were trying to do worked!',
-	    type: 'success'
-	});
 	$(document).ready(function()
 		{
 			var login_flag = 0;
@@ -114,7 +109,11 @@
 					$("#container_mid").animate({top:'60px'},500);
 					$("#Cancel_btn").hide();
 			});
-			
+			$.pnotify({
+	    title: 'Regular Success',
+	    text: 'That thing that you were trying to do worked!',
+	    type: 'success'
+	});
 			$("#signup_btn").click(function()
 			{
 				$("#sign_up").animate({top:'60px'},500);
