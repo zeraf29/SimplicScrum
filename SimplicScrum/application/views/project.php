@@ -1,7 +1,7 @@
 ﻿<?include("common/header.php");?>
-  <link href='$css_path/fullcalendar.css' rel='stylesheet' />
-  <link href='$css_path/fullcalendar.print.css' rel='stylesheet' media='print' /> 
-  <script src='$js_path/fullcalendar.min.js'></script>
+  <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
+  <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
+  <script src='<?=$js_path?>/fullcalendar.min.js'></script>
   
 	<script type = "text/javascript">	
 		$(document).ready(function()
