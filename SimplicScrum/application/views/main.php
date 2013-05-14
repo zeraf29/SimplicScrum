@@ -42,11 +42,9 @@
 					        data: {email: $.trim($("#login_email").val()), pw: $.trim($("#login_pwd").val()) },
 					        dataType: 'json',
 					        success: function (rdata) {
-					        	alert(rdata);
-					            result = rdata.code;
+					            alert(rdata.msg);
 					        }
 					    });
-						alert(result);
 					}
 				}
 			});
