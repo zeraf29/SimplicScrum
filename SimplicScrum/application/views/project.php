@@ -59,13 +59,13 @@
 				$("#close_btn").click(function()
 				{
 					if($close_flag == 0){
-						$("#project_list").animate({left:(-(($(window).width())*(7/10))+40)+'px'},500);
+						$("#project_background").animate({left:(-(($(window).width())*(7/10))+40)+'px'},500);
 						$("#project").css({background : 'rgba(56,54,60,0)'});
 						$("#close_btn").text("open");
 						$("#back_opacity").css({display: 'none'});
 						$close_flag = 1;
 					}else if($close_flag == 1){
-						$("#project_list").animate({left:'0px'},500);
+						$("#project_background").animate({left:'0px'},500);
 						$("#close_btn").text("close");
 						$("#project").css({background : 'rgba(56,54,60,0.5)'});
 						$("#back_opacity").css({display: 'block'});
@@ -119,7 +119,7 @@
 					header: {
 						left: 'prev,next today',
 						center: 'title',
-						//right: 'month,agendaWeek'
+						right: 'month,agendaWeek'
 					},
 					selectable: true,
 					selectaHelper: true,
