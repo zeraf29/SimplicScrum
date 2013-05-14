@@ -148,7 +148,7 @@
 			<ul id="list_sortable">  
 					<?php
 						foreach($list as $key){
-							echo "<li class=\"ui-state-default\">".$key["title"]."<span id=\"list_".$key["id"]."\" style=\"cursor:pointer;margin-right:-10px;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
+							echo "<li class=\"ui-state-default\"><span style=\"width:90%;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;margin-right:-10px;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
 						}
 					?>
 			</ul>
