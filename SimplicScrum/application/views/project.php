@@ -147,14 +147,12 @@
 							foreach($list as $key){
 								$sdate1 = date(  "F j, Y", strtotime( $key["sdate"] ) );
 								$edate1 = date(  "F j, Y", strtotime( $key["edate"] ) );
-								$sdate2 = explode("-",$sdate1);
-								$edate2 = explode("-",$edate1);
 								if($cnt>0)
 									$str .= ",";
 								$str .= "{";
 								$str .= "title: '".$key["title"]."',";
-								$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2]."),";
-								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
+								$str .= "start: new Date(".$sdate1."),";
+								$str .= "end: new Date(".$sdate2.")";
 								$str .= "}";
 								$cnt++;
 							}
