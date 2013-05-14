@@ -93,12 +93,7 @@ class Login extends SS_Controller {
 		$this->displayJson($view_data);
 	}
 
-	public function getLogout(){
-		if($this->session->userdata('ss_userid')){
-			$this->session->sess_destroy();
-		}
-		goto_url('/~sscrum/SimplicScrum');
-	}
+	
 	
 }
 
