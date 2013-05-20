@@ -161,6 +161,7 @@
 						<?php
 							$str = "";
 							$cnt = 0;
+							if(is_array($list){
 							foreach($list as $key){
 								if($cnt>0)
 									$str .=",";
@@ -178,6 +179,7 @@
 								$cnt++;
 							}
 							echo $str;
+							}
 						?>
 					]
 				});
