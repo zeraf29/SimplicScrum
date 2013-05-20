@@ -375,18 +375,7 @@ a.project_close:hover{color:white;}
 	padding-left: 1.5px;
 	font-size: 25px;
 	height: 25px;
-}  
-
-
-/*
-#project_list .list{
-	position:absolute;
-	top:125px;
-	left:35px;
-}
-*/
-
-/*컨텐츠*/
+} 
 
 #content{
 	position:absolute;
@@ -504,8 +493,8 @@ p_add_btn {
 #calendar {
 	position: absolute;
 	top:100px;
-	left:580px;
-	width: %50;	/*달력 크기 조절*/
+	left:50%;
+	width: 40%;	/*달력 크기 조절*/
 	background-color:white;
 	z-index : 9;
 	}
