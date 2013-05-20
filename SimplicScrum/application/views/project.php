@@ -134,9 +134,9 @@
 				
 				var calendar = $('#calendar').fullCalendar({
 					header: {
-						left: 'prev,next today',
+						left: 'prev,next',
 						center: 'title',
-						right: 'month,agendaWeek'
+						right: ''
 					},
 					selectable: true,
 					selectaHelper: true,
