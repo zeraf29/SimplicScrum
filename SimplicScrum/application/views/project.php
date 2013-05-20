@@ -2,14 +2,24 @@
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
-
+<?php
+	$type = isset($_GET["type"])?$_GET["type"]:"";
+	if($type=='delete'){
+		$title = 'Delete Complete';
+		$text = 'Confirm you Project';
+	}else{
+		$title = 'Hi, <?=$this->session->userdata("ss_nickname")?>';
+		$text = 'Welcome to SimplicScrum';
+	}
+?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
 			{
 
+
 				$.pnotify({
-								    title: 'Hi, <?=$this->session->userdata("ss_nickname")?>',
-								    text: 'Welcome to SimplicScrum',
+								    title: '<?=$title?>',
+								    text: '<?=$text?>',
 								    animate_speed: 'fast'
 								});
 
@@ -166,7 +176,23 @@
 				});
 
 				$(".listDelete").click(function(){
-					alert(this.id);
+					temp = this.id.split("_");
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/project/deleteProject',
+					        type: "POST",
+					        async : false,
+					        data: {id: temp[1]},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        }
+						    });
+						    if(result==100){
+						    	location.href="/~sscrum/SimplicScrum/project/?type=delete";
+						    }else{
+						    	alert("Error about Deleting project");
+						    	return false;
+						    }
 				});
 			});
 	</script>
@@ -235,42 +261,7 @@
 	<!--content finish-->
 
 	  
-	<!--Creat project start-->
-	<div id = "make_project" style="">
-		<div class = "input_project">
-			<label for = "project_name" class ="label_project">PROJECT NAME</label><input type ="text" id ="project_name" style="wieth=140px;"/>
-		</div>
-		<div class = "input_project">
-			<label for = "add_member" class ="label_project">MEMBER</label><input type ="text" id ="member" style="wieth=140px; align=right;"/>
-		</div>
-		<div style="width:95px; height:25px; margin-left:10px; background-color:#3b3a3f; text-align:right;"><label for = "term" class ="label_project">TERM</label></div>
-		<div class = "input_project">
-			<label for = "product_backlog" class ="label_project">PRODUCT BACKLOG</label>
-			<select name="product_backlog" style="width:120px;"/>	
-				<option value="1">1day</option>
-				<option value="2">2days</option>
-			</select>
-
-		</div>
-		<div class = "input_project">
-			<label for = "sprint_backlog" class ="label_project">SPRINT BACKLOG</label>
-			<select name="sprint_backlog" style="width:120px;"/>	
-				<option value="1">1day</option>
-				<option value="2">2days</option>
-			</select>
-		</div>
-		<div class = "input_project">
-			<label for = "sprint" class ="label_project">SPRINT</label>
-			<select name="sprint" style="width:120px;"/>	
-				<option value="1">1day</option>
-				<option value="2">2days</option>
-			</select>
-		</div>
-		<div id = "submit_cancel">
-		<a href ="#" class="submit" id = add_submit>make</a>
-		<a href ="#" class="submit" id = add_cancel>cancel</a>
-		</div>
-	</div>
+	
 	<!--Creat project start-->
 	
  </BODY>

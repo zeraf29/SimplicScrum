@@ -33,5 +33,14 @@ class M_project extends SS_Model{
 		$this->db->trans_complete();
 		return $result;
 	}
+
+	function deleteProject($id){
+		$result = FALSE;
+		$this->db->where('id', $id);
+		if($this->db->delete('project'))
+			$result = TRUE;
+
+		return $result;
+	}
 }
 ?>

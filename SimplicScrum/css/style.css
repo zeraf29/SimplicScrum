@@ -311,7 +311,7 @@ a.sprint_link:hover{color:yellow;}
 	background : URL("/~sscrum/SimplicScrum/image/background_project.png");
 	z-index:9;
 }
-	
+
 #project_list .projectList_close_btn{
 	position: absolute;
 	left: 70%;
