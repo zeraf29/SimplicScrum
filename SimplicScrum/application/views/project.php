@@ -161,7 +161,6 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							if(is_array($list){
 							foreach($list as $key){
 								if($cnt>0)
 									$str .=",";
@@ -177,8 +176,6 @@
 								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
 								$str .= "}";
 								$cnt++;
-							}
-							echo $str;
 							}
 						?>
 					]
