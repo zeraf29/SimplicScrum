@@ -8,7 +8,7 @@
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
 	}else{
-		$title = 'Hi, <?=$this->session->userdata("ss_nickname")?>';
+		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
 ?>
@@ -161,21 +161,23 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							foreach($list as $key){
-								if($cnt>0)
-									$str .=",";
-								$sdate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
-								$edate1 = date(  "Y-n-j", strtotime( $key["edate"] ) );
-								$sdate2 = explode("-",$sdate1);
-								$edate2 = explode("-",$edate1);
-								$sdate2[1] = strval(intval($sdate2[1])-1);
-								$edate2[1] = strval(intval($edate2[1])-1);
-								$str .= "{";
-								$str .= "title:'".$key["title"]."',";
-								$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2]."),";
-								$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
-								$str .= "}";
-								$cnt++;
+							if(count($list)>0){
+								foreach($list as $key){
+									if($cnt>0)
+										$str .=",";
+									$sdate1 = date(  "Y-n-j", strtotime( $key["sdate"] ) );
+									$edate1 = date(  "Y-n-j", strtotime( $key["edate"] ) );
+									$sdate2 = explode("-",$sdate1);
+									$edate2 = explode("-",$edate1);
+									$sdate2[1] = strval(intval($sdate2[1])-1);
+									$edate2[1] = strval(intval($edate2[1])-1);
+									$str .= "{";
+									$str .= "title:'".$key["title"]."',";
+									$str .= "start: new Date(".$sdate2[0].",".$sdate2[1].",".$sdate2[2]."),";
+									$str .= "end: new Date(".$edate2[0].",".$edate2[1].",".$edate2[2].")";
+									$str .= "}";
+									$cnt++;
+								}
 							}
 						?>
 					]
