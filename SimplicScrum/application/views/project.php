@@ -161,7 +161,6 @@
 						<?php
 							$str = "";
 							$cnt = 0;
-							if(!empty($list){
 							foreach($list as $key){
 								if($cnt>0)
 									$str .=",";
@@ -179,7 +178,6 @@
 								$cnt++;
 							}
 							echo $str;
-							}
 						?>
 					]
 				});
