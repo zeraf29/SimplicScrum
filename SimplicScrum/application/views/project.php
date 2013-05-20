@@ -239,6 +239,10 @@
 								echo "<li class=\"ui-state-default\"><span style=\"width:90%;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;margin-right:-10px;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
 							}
 						}
+						else if(count($list == 0)
+						{
+							echo "<li class=\"ui-state-default\"><span style=\"width:90%;\">프로젝트가 없습니다.</span>";
+						}
 					?>
 			</ul>
 			<div id='calendar'></div>
