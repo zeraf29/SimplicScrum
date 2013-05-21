@@ -333,7 +333,7 @@
 			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
 		</div>
 
-		<div id="project_member" style="height:110px; width:305px; margin-left:10px; background-color:#3b3a3f; color:white; margin-top:10px; margin-bottom:10px;">
+		<div id="project_member" style="height:110px; width:310px; margin-left:10px; background-color:#3b3a3f; color:white; margin-top:10px; margin-bottom:10px;">
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
@@ -350,11 +350,11 @@
 			</div>
 		</div>
 		  
-		<div style="width:305px; height:25px; margin-left:10px; background-color:#3b3a3f;">
+		<div style="width:310px; height:25px; margin-left:10px; background-color:#3b3a3f;">
 			<label for = "term" class ="label_project">TERM</label>
 		</div>
 
-		<div style=" width: 305px; height:30px; margin-left:10px; background-color:#3b3a3f; color:white;">
+		<div style=" width: 310px; height:30px; margin-left:10px; background-color:#3b3a3f; color:white;">
 			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
 			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
 		</div>
