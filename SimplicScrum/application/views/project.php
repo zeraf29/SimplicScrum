@@ -270,7 +270,48 @@
 	</div>
 	<!--content finish-->
 
-	  
+	<!--프로젝트 생성 메뉴 시작-->
+	
+	<div id = "make_project" style="">
+		<div class="project_tiltle_bar">ADD PROJECT</div>
+		<div class = "input_project">
+			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
+		</div>
+
+		<div id="project_member" style="height:110px; width:305px; margin-left:10px; background-color:#3b3a3f; color:white; margin-top:10px; margin-bottom:10px;">
+			<div class="add_member">
+				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
+				<a href="#" id="plus_projectbtn"><img src="./image/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
+			</div>
+			<div class="check_member">
+				<input type="text" id="check_email_box" value="" style="background-color:#3b3a3f; width:305px; height:15px; border:none; color:#afafaf; font-size:8px; text-align:right; margin-right:8px;"></br>-------------------------------------</div>
+			<div class="member_list">
+				<div><label for = "member_list" class ="label_memberlist" style="margin-left:5px;">MY MEMBER</label></div>
+				<div id="members">
+					<input type ="text" id ="member_name" value="" style="width:272px; margin-left:5px;"/>
+					<img src="./image/member_deletebtn.png" style="vertical-align: middle; margin-top: -4px"/>
+				</div>
+			</div>
+		</div>
+		  
+		<div style="width:305px; height:25px; margin-left:10px; background-color:#3b3a3f;">
+			<label for = "term" class ="label_project">TERM</label>
+		</div>
+
+		<div style=" width: 305px; height:30px; margin-left:10px; background-color:#3b3a3f; color:white;">
+			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
+			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
+		</div>
+		 
+		
+		</br>
+		<div id = "submit_cancel">
+			<a href ="#" class="submit" id ="add_submit">Make</a>
+			<a href ="#" class="submit" id ="add_cancel">Cancel</a>
+		</div>
+	</div>
+  <!--프로젝트 생성 메뉴 끝-->
 	
 	<!--Creat project start-->
 	
