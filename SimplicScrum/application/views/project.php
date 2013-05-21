@@ -332,7 +332,7 @@
 		<div class = "input_project">
 			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
 		</div>
-
+		
 		<div id="project_member" style="height:110px; width:310px; margin-left:10px; background-color:#3b3a3f; color:white; margin-top:10px; margin-bottom:10px;">
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>

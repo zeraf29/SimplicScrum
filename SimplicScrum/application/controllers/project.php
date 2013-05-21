@@ -38,7 +38,7 @@ class Project extends SS_Controller {
 					'msg' => 'FAILURE : Not Blank!'
 				);
 		}else{
-			$result = $this->M_project->makeProject($title,$desc,$puser_id);
+			$result = $this->M_project->makeProject($title,$desc,$puser_id,$sdate,$edate);
 			if($result){
 
 				$view_data = array(
