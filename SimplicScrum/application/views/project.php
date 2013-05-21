@@ -29,20 +29,38 @@
 				
 				var $left_p = (($(window).width()) - 1080)/4;
 				
-					$(".make_product").css({'margin-left':$left_p + 'px'});
-					$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
-					$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
+				//---------추가-----------------------------------------------------------------------------------------
+				var clareCalendar = {
+					monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+					dayNamesMin: ['일','월','화','수','목','금','토'],
+					weekHeader: 'Wk',
+					dateFormat: 'yymmdd', //형식(20120303)
+					autoSize: false, //오토리사이즈(body등 상위태그의 설정에 따른다)
+					changeMonth: true, //월변경가능
+					changeYear: true, //년변경가능
+					showMonthAfterYear: true, //년 뒤에 월 표시
+					buttonImageOnly: true, //이미지표시
+					buttonText: '달력선택', //버튼 텍스트 표시
+					buttonImage: 'image/datepicker.png', //이미지주소
+					showOn: "both", //엘리먼트와 이미지 동시 사용(both,button)
+					yearRange: '1990:2020' //1990년부터 2020년까지
+					};
+
+					//---------추가 끝------------------------------------------------------------------------------------
+				$(".make_product").css({'margin-left':$left_p + 'px'});
+				$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
+				$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
 					
 					
-					$(".product_backlog").css({'margin-left':$left_p + 'px'});
-					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
-					$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
+				$(".product_backlog").css({'margin-left':$left_p + 'px'});
+				$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
+				$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
 					/*backlog 위치 조정을 위한 Script*/
 					
-					$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
-					$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
+				$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
+				$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
 					/*프로젝트 현황 메뉴 위치 설정*/
-					$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
+				$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
 					/*close 버튼 위치 설정*/
 				
 				$(window).resize(function(){
@@ -204,6 +222,43 @@
 						    	return false;
 						    }
 				});
+				//---------추가-----------------------------------------------------------------------------------------
+				$("#start_date").datepicker(clareCalendar);
+				$("#end_date").datepicker(clareCalendar);
+				$("img.ui-datepicker-trigger").attr("style"," vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
+				$("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김 
+				
+
+				$("#plus_projectbtn").click(function(){
+
+					var $email_check_flag = 1;	//이메일이 DB에 존재하는지 여부 (0:존재X, 1:존재)
+					
+					count += 1;
+
+					for(; count>1; count--){
+						var add_textbox = document.createElement("input");
+
+						add_textbox.type = "text";
+						add_textbox.id = "member_name" + count;
+						add_textbox.value ="";
+						add_textbox.style.width = "272px";
+						add_textbox.style.margin = "5px";
+
+						var br = document.createElement("br");
+						members.appendChild(add_textbox);
+
+//						$("#project_height").css({'height' = '+30px'});
+					}
+
+					if($email_check_flag == 1){
+						member_name.value += document.getElementById("email").value;
+						check_email_box.value += "추가되었습니다";
+						email.value = "";
+					}else{
+						check_email_box.value += "존재하지 않는 회원입니다.";}
+
+				});
+				//---------추가 끝------------------------------------------------------------------------------------
 			});
 	</script>
  </HEAD>
