@@ -11,7 +11,6 @@
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
-	echo count($list);
 ?>
 	<script type = "text/javascript">	
 		$(document).ready(function()
@@ -179,6 +178,7 @@
 									$str .= "}";
 									$cnt++;
 								}
+								echo $str;
 							}
 						?>
 					]
