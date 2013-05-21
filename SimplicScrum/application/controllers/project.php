@@ -98,17 +98,22 @@ class Project extends SS_Controller {
 				);
 		}else{
 			$result = $this->M_project->deleteProject($id);
-			if($result){
+			if($result==2){
 
 				$view_data = array(
 					'code' => '100',
 					'msg' => 'SUCCESS'
 				);
 
-			}else{
+			}else if($result==1){
 				$view_data = array(
 					'code' => '200',
-					'msg' => 'FAILURE : Database Error!'
+					'msg' => 'FAILURE : Member exists.!'
+				);
+			}else{
+				$view_data = array(
+					'code' => '300',
+					'msg' => 'FAILURE : You don\' have permission!'
 				);
 			}
 

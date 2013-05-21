@@ -194,12 +194,13 @@
 					        dataType: 'json',
 					        success: function (rdata) {
 					        	result = rdata.code;
+					        	msg = rdata.msg;
 					        }
 						    });
 						    if(result==100){
 						    	location.href="/~sscrum/SimplicScrum/project/?type=delete";
 						    }else{
-						    	alert("Error about Deleting project");
+						    	alert(msg);
 						    	return false;
 						    }
 				});

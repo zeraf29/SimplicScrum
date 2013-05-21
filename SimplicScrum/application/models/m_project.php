@@ -35,10 +35,24 @@ class M_project extends SS_Model{
 	}
 
 	function deleteProject($id){
-		$result = FALSE;
+		$result = 0;
+
+		$this->db->where('puser_id', $this->session->userdata("ss_userid"));
 		$this->db->where('id', $id);
-		if($this->db->delete('project'))
-			$result = TRUE;
+		$this->db->from('project');
+		$num = $this->db->count_all_results();
+
+		if($num>0){
+			$this->db->where('pid', $id);
+			$this->db->from('role_table');
+			$num = $this->db->count_all_results();
+			if($num==1){
+				$this->db->where('id', $id);
+				if($this->db->delete('project'))
+				$result = 2;
+			}elseif($num>1){
+				$result = 1;
+		}
 
 		return $result;
 	}
