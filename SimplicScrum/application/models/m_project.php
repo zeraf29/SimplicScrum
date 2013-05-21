@@ -49,9 +49,10 @@ class M_project extends SS_Model{
 			if($num==1){
 				$this->db->where('id', $id);
 				if($this->db->delete('project'))
-				$result = 2;
-			}elseif($num>1){
+					$result = 2;
+			}else if($num>1){
 				$result = 1;
+			}
 		}
 
 		return $result;
