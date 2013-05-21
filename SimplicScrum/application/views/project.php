@@ -282,7 +282,7 @@
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
-				<a href="#" id="plus_projectbtn"><img src="./image/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
+				<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
 			</div>
 			<div class="check_member">
 				<input type="text" id="check_email_box" value="" style="background-color:#3b3a3f; width:305px; height:15px; border:none; color:#afafaf; font-size:8px; text-align:right; margin-right:8px;"></br>-------------------------------------</div>
@@ -290,7 +290,7 @@
 				<div><label for = "member_list" class ="label_memberlist" style="margin-left:5px;">MY MEMBER</label></div>
 				<div id="members">
 					<input type ="text" id ="member_name" value="" style="width:272px; margin-left:5px;"/>
-					<img src="./image/member_deletebtn.png" style="vertical-align: middle; margin-top: -4px"/>
+					<img src="<?=$img_path?>/member_deletebtn.png" style="vertical-align: middle; margin-top: -4px"/>
 				</div>
 			</div>
 		</div>
