@@ -277,9 +277,9 @@
 	</div>
 
 	<div id = "second_top">
-		<div class="product_backlog"><a href="#" class = "p_backlog" id="product_btn">PRODUCT BACKLOG</a></div>
-		<div class="sprint_backlog"><a href="#" class = "s_backlog">SPRINT BACKLOG</a></div>
-		<div class="sprint"><a href="#" class = "s_backlog">SPRINT</a></div>
+		<div class="product_backlog"><a href="#" class = "p_backlog" id="top_p_backlog_btn">PRODUCT BACKLOG</a></div>
+		<div class="sprint_backlog"><a href="#" class = "s_backlog" id="top_s_backlog_btn">SPRINT BACKLOG</a></div>
+		<div class="sprint"><a href="#" class = "s_backlog" id="top_sprint_btn">SPRINT</a></div>
 	</div>
 	<!--Top Menu finish-->
 
