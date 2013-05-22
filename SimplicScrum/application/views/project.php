@@ -315,7 +315,7 @@
 			<div class="ineer_product"><img src="<?=$img_path?>/product_btn.png">
 		</div>
 		
-		<div class="make_sprintbacklog">sprint backlog</div>
+		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png"></div>
 		
 		<div class="make_sprint">
 			<div class="ineer_product"><img src="<?=$img_path?>/sprint_btn.png">
@@ -357,7 +357,7 @@
 			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
 			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
 		</div>
-		 
+	 
 		
 		</br>
 		<div id = "submit_cancel">
