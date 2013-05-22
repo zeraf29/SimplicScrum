@@ -331,14 +331,14 @@
 			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
 		</div>
 		
-		<div id="project_member" style="height:110px; width:310px; margin-left:10px; background-color:#3b3a3f; color:white; margin-top:10px; margin-bottom:10px;">
+		<div id="project_member">
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
 				<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
 			</div>
 			<div class="check_member">
-				<input type="text" id="check_email_box" value="" style="background-color:#3b3a3f; width:305px; height:15px; border:none; color:#afafaf; font-size:8px; text-align:right; margin-right:8px;"></br>-------------------------------------</div>
+				<input type="text" id="check_email_box" value="" ></br>-------------------------------------</div>
 			<div class="member_list">
 				<div><label for = "member_list" class ="label_memberlist" style="margin-left:5px;">MY MEMBER</label></div>
 				<div id="members">
@@ -348,11 +348,11 @@
 			</div>
 		</div>
 		  
-		<div style="width:310px; height:25px; margin-left:10px; background-color:#3b3a3f;">
+		<div id="id_term">
 			<label for = "term" class ="label_project">TERM</label>
 		</div>
 
-		<div style=" width: 310px; height:30px; margin-left:10px; background-color:#3b3a3f; color:white;">
+		<div id="id_date">
 			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
 			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
 		</div>

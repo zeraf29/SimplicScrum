@@ -464,6 +464,43 @@ a.project_close:hover{color:white;}
 	text-align : left;
 }
 
+#project_member{
+	height: 110px;
+	width:310px; 
+	margin-left:10px; 
+	background-color:#3b3a3f; 
+	color:white; 
+	margin-top:10px; 
+	margin-bottom:10px;
+
+}
+
+#project_member .check_member{
+	background-color:#3b3a3f;
+	width:305px; 
+	height:15px; 
+	border:none; 
+	color:#afafaf; 
+	font-size:8px; 
+	text-align:right;
+	margin-right:8px;
+}
+
+#id_term{
+	width:310px; 
+	height:25px;
+	margin-left:10px; 
+	background-color:#3b3a3f;
+}
+
+#id_date{
+	width: 310px;
+	height:30px;
+	margin-left:10px; 
+	background-color:#3b3a3f; 
+	color:white;"
+}
+
 /*-------------------------------------*/
 
 #back_opacity {
