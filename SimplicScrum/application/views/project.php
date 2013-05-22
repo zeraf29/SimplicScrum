@@ -24,6 +24,7 @@
 				var $close_flag = 0;
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				var $before_windowsWidth = ($(window).width());
+				var count = 1;	//멤버 입력하는 div추가하기위한 변수
 				
 				var $left_p = (($(window).width()) - 1080)/4;
 				
