@@ -349,6 +349,10 @@
 				$("img.ui-datepicker-trigger").attr("style"," vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
 				$("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김 
 				
+				$('#members').on('click', '.delAddMem', function() {
+					if(confirm("정말로 삭제하시겠습니까?"))
+						$(this).parent().remove();
+				});
 
 				$("#plus_projectbtn").click(function(){
 
@@ -368,7 +372,7 @@
 						    if(result==100){
 						    	check=true;
 						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
-
+						    		check = false;
 						    	}else{
 							    	$(".addMlists .addNickname").each(function() {
 									    if($(this).html()==nickname)
@@ -379,15 +383,15 @@
 						    		$("#amEmail").val("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
-						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'></span></div>");
+						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'>&nbsp;</span></div>");
 						    	}
 								
 						    }else{
+						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
 
 				});
-				
 				//product_backlog list 동적생성
 				$("#pbacklog_add_btn").click(function()
 				{

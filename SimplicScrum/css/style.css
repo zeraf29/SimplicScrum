@@ -496,6 +496,7 @@ a.project_close:hover{color:white;}
 	background-image : url("/~sscrum/SimplicScrum/image/member_deletebtn.png");
 	background-repeat: no-repeat;
 	float:right;
+	cursor: pointer;
 }
 
 #id_term{
