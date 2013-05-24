@@ -378,7 +378,7 @@
 					
 					 new_list.id = "new_list" + productBacklog_count;
 
-					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat'})
+					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
 
 					 with(new_list.style){
 						 position = "absoulte";
@@ -390,7 +390,7 @@
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
-				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'width':'286px'})			
+				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'width':'286px'})			
 			});
 	});
 	</script>
