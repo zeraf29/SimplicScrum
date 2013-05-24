@@ -489,6 +489,15 @@ a.project_close:hover{color:white;}
 	overflow-y:auto;
 }
 
+#project_member .member_list #members .addMlists .delAddMem{
+	width:23px;
+	height:24px;
+	line-height: 24px;
+	background-image : url("/~sscrum/SimplicScrum/image/member_deletebtn.png");
+	background-repeat: no-repeat;
+	float:right;
+}
+
 #id_term{
 	width:310px; 
 	height:25px;
