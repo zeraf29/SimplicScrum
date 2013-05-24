@@ -1,9 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
- <head>
-  <title> Simplic Scrume </title>
-  <meta Cahrset="utf-8">
-  <link rel="stylesheet" href="style.css" />
+<?include("common/header.php");?>
+   <link href='<?=$css_path?>/style.css' rel='stylesheet' />
 
   <script type = "text/javascript">
 	$(document).ready(function()
