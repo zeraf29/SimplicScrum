@@ -684,3 +684,36 @@ p_add_btn {
 	top : 300px;
 	left : 25px;
 }
+/*-------------------sprint-----------------*/
+#second_top_sprint{
+	position: absolute;
+	top: 60px;
+	width: 100%;
+	height: 40px;
+	background-color: #33b0aa;
+}
+#second_top_sprint .sprint{
+	position: absolute;
+	top: 10px;
+	width : 360px;
+	color: #FFFFFF;
+	font-weight:bold;
+	margin-left: 103px;
+	z-index: 7;
+}
+
+#content .sprint_content{
+	text-align: center;
+	font-weight:bold;
+	margin-bottom: 25px;
+}
+
+#content .sprint{
+	position:absolute;
+	top:0px;
+	width: 360px;
+	height: 100%;
+	background: #FFFFFF;
+	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+/*-----------------------------------------*/
