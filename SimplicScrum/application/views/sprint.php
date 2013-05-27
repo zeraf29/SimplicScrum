@@ -24,6 +24,45 @@
 		  $("#sprint_doing").css({'margin-left':(($left_p*2)+360) +'px'});
 		  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
 		  });
+
+		  $('.nlClass').draggable({
+//		connectToSortable: "#id_sprint_todo_list",
+//		axis: 'x',
+		stack: ".nlClass",
+		cursor: "move",
+		opacity: 0.7,
+//		grid: [50,20]
+	  });
+
+	  
+
+/*	  //When drag start,
+	 $(".nlClass").bind("dragstart",function(event, ui){
+
+	 });
+*/
+	 
+	//When drag stop,
+	 $(".nlClass").bind("dragstop", function(){
+		 var list_position= $(this).position().left + $left_p + 37;
+
+		 if((list_position > $left_p) && (list_position < $left_p+360)){
+			 $(this).css({'left': '0px'});
+
+		 }
+		 else if((list_position > ($left_p*2)+360) && (list_position < ($left_p*2)+720)){
+			 $(this).css({'left': ($left_p+360)+'px'});
+
+		 }
+		 else if((list_position > ($left_p*3)+720) && (list_position < ($left_p*3)+1080)){
+			 $(this).css({'left': ($left_p*2+720)+'px'});
+
+		 }
+		 else{
+			 alert("NO!!!!!!!");
+		 }
+
+	 });
   });
   </script>
 
