@@ -268,7 +268,7 @@
 					
 					 new_list.id = "new_list" + p_backlog_count;
 
-					 $(new_list).css({'background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat'})
+					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat'})
 
 					 with(new_list.style){
 						 position = "absoulte";
