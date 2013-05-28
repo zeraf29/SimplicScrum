@@ -25,6 +25,7 @@
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				var $before_windowsWidth = ($(window).width());
 				var count = 1;	//멤버 입력하는 div추가하기위한 변수
+				var p_backlog_count = 0; //product backlog에서 list 추가 위한 변수
 				
 				var $left_p = (($(window).width()) - 1080)/4;
 				
@@ -221,7 +222,8 @@
 						    	return false;
 						    }
 				});
-				//---------추가-----------------------------------------------------------------------------------------
+
+				//달력
 				$("#start_date").datepicker(clareCalendar);
 				$("#end_date").datepicker(clareCalendar);
 				$("img.ui-datepicker-trigger").attr("style"," vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
@@ -257,7 +259,40 @@
 						check_email_box.value += "존재하지 않는 회원입니다.";}
 
 				});
-				//---------추가 끝------------------------------------------------------------------------------------
+
+				//product_backlog list 동적생성
+				$("#pbacklog_add_btn").click(function()
+				{
+					p_backlog_count ++;
+					var new_list = document.createElement("div");
+					
+					 new_list.id = "new_list" + p_backlog_count;
+
+					 $(new_list).css({'background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat'})
+
+					 with(new_list.style){
+						 position = "absoulte";
+	//					 background="#FFFFFF";
+						 width="286px";
+						 height="40px";	 					
+				 }
+				 members.appendChild(new_list);
+
+				 var new_inputbox = document.createElement("input");
+			
+					new_inputbox.id = "input" + p_backlog_count;
+					with(new_inputbox.style){
+						background="transparent";
+						border="0px";
+						width="200px";
+						height="35px";
+					}
+							
+				new_list.appendChild(new_inputbox);	
+
+			});
+
+				
 			});
 	</script>
  </HEAD>
