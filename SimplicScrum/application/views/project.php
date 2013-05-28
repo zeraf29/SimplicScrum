@@ -47,7 +47,7 @@
 					};
 
 					//---------추가 끝------------------------------------------------------------------------------------
-				$(".make_product").css({'margin-left':$left_p + 'px'});
+				$("#make_product").css({'margin-left':$left_p + 'px'});
 				$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
 				$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
 					
@@ -66,7 +66,7 @@
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
 					
-					$(".make_product").css({'margin-left':$left_p + 'px'});
+					$("#make_product").css({'margin-left':$left_p + 'px'});
 					$(".make_sprintbacklog").css({'margin-left':(($left_p)+360) +'px'});
 					$(".make_sprint").css({'margin-left':(($left_p*2)+720) +'px'});
 					
@@ -346,7 +346,7 @@
   
 	<!--content start-->
 	<div id = "content">
-		<div class="make_product">
+		<div id="make_product">
 			<div class="ineer_product">
 				<img src="<?=$img_path?>/product_btn.png">
 			</div>
