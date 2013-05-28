@@ -276,7 +276,7 @@
 						 width="286px";
 						 height="40px";	 					
 				 }
-				 members.appendChild(new_list);
+				 make_product.appendChild(new_list);
 
 				 var new_inputbox = document.createElement("input");
 			
@@ -347,18 +347,21 @@
 	<!--content start-->
 	<div id = "content">
 		<div class="make_product">
-			<div class="ineer_product"><img src="<?=$img_path?>/product_btn.png"></div>
+			<div class="ineer_product">
+				<img src="<?=$img_path?>/product_btn.png">
+			</div>
 			<div class="ineer_product_btn">
 				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
+		</div>
 		
-		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png"></div>
+		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
+		</div>
 		
 		<div class="make_sprint">
 			<div class="ineer_product"><img src="<?=$img_path?>/sprint_btn.png">
 		</div>
-	</div>
 	</div>
 	<!--content finish-->
 
