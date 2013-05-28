@@ -312,8 +312,11 @@
 	<!--content start-->
 	<div id = "content">
 		<div class="make_product">
-			<div class="ineer_product"><img src="<?=$img_path?>/product_btn.png">
-		</div>
+			<div class="ineer_product"><img src="<?=$img_path?>/product_btn.png"></div>
+			<div class="ineer_product_btn">
+				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
+				<img src="<?=$img_path?>/p_backlog.png">
+			</div>
 		
 		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png"></div>
 		
