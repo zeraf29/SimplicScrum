@@ -55,7 +55,7 @@ class M_project extends SS_Model{
 		$this->db->from('role_table as rt');
 		$this->db->join('user as u', 'rt.uid = u.id', 'left');
 		$this->db->join('role as r', 'rt.rid = r.id', 'left');
-		$this->db->where('rt.pid', $id));
+		$this->db->where('rt.pid', $id);
 		$this->db->order_by('rt.rid', 'ASC');
 		$rs = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
