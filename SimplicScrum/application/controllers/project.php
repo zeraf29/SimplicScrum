@@ -58,7 +58,8 @@ class Project extends SS_Controller {
 		$this->displayJson($view_data);
 	}
 
-	public function getProjectUsers($pid){
+	public function getProjectUsers(){
+		$pid=isset($_GET["pid"])?$_GET["pid"]:"";
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
 			$result = $this->M_project->get_proUsers($pid);
