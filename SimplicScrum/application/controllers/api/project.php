@@ -79,7 +79,20 @@ class Project extends SS_Controller {
 							'role' => $result[$i]->role
 						);
 					}
-				
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+			}else{
+				$view_data = array(
+					'code' => '300',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+
 			}
 		}else {
 			$view_data = array(
