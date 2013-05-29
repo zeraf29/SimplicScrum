@@ -72,8 +72,8 @@ class Project extends SS_Controller {
 			$data = null;
 			if (count($result)>0) {
 				for ($i = 0; $i < count($result); $i++) {
+						$key[$i] = $result[$i]->id;
 						$data[$i] = array(
-							'id'	=>$result[$i]->id,
 							'email' => $result[$i]->email,
 							'nickname' => $result[$i]->nickname,
 							'role' => $result[$i]->role
