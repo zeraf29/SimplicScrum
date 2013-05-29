@@ -64,7 +64,7 @@ class Project extends SS_Controller {
 	}
 
 	public function getProjectUsers(){
-		$pid=isset($_GET["pid"])?$_GET["pid"]:"";
+		$pid=isset($_POST["pid"])?$_POST["pid"]:"";
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
 			$result = $this->M_project->get_proUsers($pid);
