@@ -58,28 +58,6 @@ class Project extends SS_Controller {
 		$this->displayJson($view_data);
 	}
 
-	public function getProjectUsers(){
-		$pid=isset($_GET["pid"])?$_GET["pid"]:"";
-		if ($this->checkLogin() == TRUE) {
-			$this->load->model("M_project");	
-			$result = $this->M_project->get_proUsers($pid);
-			$key = null;
-			$data = null;
-			if (count($result)>0) {
-				for ($i = 0; $i < count($result); $i++) {
-						$data[$i] = array(
-							'id'	=>$result[$i]->id,
-							'email' => $result[$i]->email,
-							'nickname' => $result[$i]->nickname,
-							'role' => $result[$i]->role
-						);
-					}
-				
-			}
-		}
-		return $data;
-	} 
-
 	protected function getList(){
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_project");	
