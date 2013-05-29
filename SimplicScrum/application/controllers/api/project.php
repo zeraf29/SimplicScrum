@@ -100,7 +100,7 @@ class Project extends SS_Controller {
 				'msg' => 'FAILURE : Login required!'
 			);
 		}
-		return $data;
+		$this->displayJson($view_data);
 	} 
 	
 }
