@@ -30,8 +30,35 @@ class M_project extends SS_Model{
 			$this->db->trans_commit();
 			$result = TRUE;
 		}
+		if($result==TRUE){
+			$this->db->trans_start();
+			$data = array(
+					'pid' => $this->db->insert_id();
+					'uid' => $puser_id,
+					'rid' => '1'
+				);
+			$this->db->insert('role_table', $data); 
+			if ($this->db->trans_status() == FALSE) {
+				$this->db->trans_rollback();	
+				$result = FALSE;
+			}else {
+				$this->db->trans_commit();
+				$result = TRUE;
+			}
+		}
 		$this->db->trans_complete();
 		return $result;
+	}
+
+	function get_proUsers($id){
+		$this->db->select('u.id, u.email, nickname, r.name');
+		$this->db->from('role_table as rt');
+		$this->db->join('user as u', 'rt.uid = u.id', 'left');
+		$this->db->join('role as r', 'rt.rid = r.id', 'left');
+		$this->db->where('rt.pid', $id));
+		$this->db->order_by('rt.rid', 'ASC');
+		$rs = $this->db->get();
+		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 
 	function deleteProject($id){
