@@ -81,6 +81,11 @@ class Project extends SS_Controller {
 					}
 				
 			}
+		}else {
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Login required!'
+			);
 		}
 		return $data;
 	} 
