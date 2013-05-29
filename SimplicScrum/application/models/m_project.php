@@ -51,7 +51,7 @@ class M_project extends SS_Model{
 	}
 
 	function get_proUsers($id){
-		$this->db->select('u.id, u.email, nickname, r.name');
+		$this->db->select('u.id, u.email, nickname, r.name as role');
 		$this->db->from('role_table as rt');
 		$this->db->join('user as u', 'rt.uid = u.id', 'left');
 		$this->db->join('role as r', 'rt.rid = r.id', 'left');
