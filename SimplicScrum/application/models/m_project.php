@@ -33,7 +33,7 @@ class M_project extends SS_Model{
 		if($result==TRUE){
 			$this->db->trans_start();
 			$data = array(
-					'pid' => $this->db->insert_id();
+					'pid' => $this->db->insert_id(),
 					'uid' => $puser_id,
 					'rid' => '1'
 				);
