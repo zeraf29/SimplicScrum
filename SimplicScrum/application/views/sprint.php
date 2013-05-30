@@ -36,7 +36,7 @@
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
 			 $(this).switchClass("nlClass","extText");
-			 $(this).html("<div style = 'font-weight:bold; font-size:10'>WHO</div><div style = 'font-weight:bold; font-size:10'>AUTHOR</div><div style = 'font-weight:bold; font-size:10'>DUE DATE</div><div style = 'font-weight:bold; font-size:10'>TARGET DATE</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
+			 $(this).html("<div style = 'font-weight:bold; font-size:10'>WHO</div><div style = 'font-weight:bold; font-size:10'>AUTHOR</div><div style = 'font-weight:bold; font-size:10'>DUE DATE</div><div style = 'font-weight:bold; font-size:10'>TARGET DATE</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div>");
 		 }
 	 });
 
@@ -77,6 +77,7 @@
 			<div class="sprint_content">DOING</div>
 			<div id="id_sprint_doing_list">
 				<ul class = "items">
+					<li class = "nlClass"></li>
 					<li class = "nlClass"></li>
 					<li class = "nlClass"></li>
 					<li class = "nlClass"></li>
