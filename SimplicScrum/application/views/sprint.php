@@ -36,7 +36,7 @@
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
 			 $(this).switchClass("nlClass_sprint","extText_sprint");
-			 $(this).html("<div style = 'font-weight:bold; font-size:10'>WHO</div><div style = 'font-weight:bold; font-size:10'>AUTHOR</div><div style = 'font-weight:bold; font-size:10'>DUE DATE</div><div style = 'font-weight:bold; font-size:10'>TARGET DATE</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div>");
+			 $(this).html("<div style = 'font-size:9'>WHO</div><div style = 'font-size:9'>AUTHOR</div><div style = 'font-size:9'>DUE DATE</div><div style = 'font-size:9'>TARGET DATE</div><div style><div style = 'font-size:9'>DISCRIPTION</div>");
 		 }
 	 });
 
@@ -64,6 +64,10 @@
 			<div class="sprint_content">TO DO</div>
 			<div id="id_sprint_todo_list">
 			<ul class = "items">	
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
 				<li class = "nlClass_sprint"></li>
 				<li class = "nlClass_sprint"></li>
 				<li class = "nlClass_sprint"></li>
