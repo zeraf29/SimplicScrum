@@ -60,11 +60,10 @@
 	<!--content start-->
 	<div id = "content">
 		<div id="sprint_todo" class="sprint">
-			<div class="ineer_product"><img src="./image/sprint_detail_btn.png"></div>
+			<div class="ineer_product"><img src="<?=$img_path?>/sprint_detail_btn.png"></div>
 			<div class="sprint_content">TO DO</div>
 			<div id="id_sprint_todo_list">
 			<ul class = "items">	
-				<li class = "nlClass"></li>
 				<li class = "nlClass"></li>
 				<li class = "nlClass"></li>
 				<li class = "nlClass"></li>
