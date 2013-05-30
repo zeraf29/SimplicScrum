@@ -105,4 +105,30 @@ class Backloglist extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+	public function setVote(){
+		$sid = $this->input->post("sid")?$this->input->post("sid"):-1;
+		$sid=1;
+		if ($this->checkLogin() == TRUE) {
+			$this->load->model("M_backlog");
+			$result = $this->M_backlog->setSprint($sid);
+			if($result){
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+				);
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Database Error!'
+				);
+			}
+		}
+		else {
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Login required!'
+			);
+		}
+		$this->displayJson($view_data);
+	}
 }

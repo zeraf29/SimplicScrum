@@ -44,7 +44,24 @@ class M_backlog extends SS_Model{
 		*/
 		return $data;
 	}
-
+	function setSprint($sid){
+		$result = FALSE;
+		$data = array(
+				'vote' => 'vote+1'
+			);
+		$this->db->where('id',$sid);
+		$this->db->trans_start();
+		$this->db->update('sprintback',$data);
+		if ($this->db->trans_status() == FALSE) {
+			$this->db->trans_rollback();	
+		}else {
+			$this->db->trans_commit();
+			$result = TRUE;
+		}
+		$this->db->trans_complete();
+		$this->db->last_query();
+		return $result;
+	}
 	function makeProduct($json){
 
 		$result = FALSE;
