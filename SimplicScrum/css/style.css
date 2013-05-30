@@ -765,3 +765,8 @@ p_add_btn {
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 /*-----------------------------------------*/
+
+.items{
+	list-style : none;
+	margin-left:-30px;
+}
