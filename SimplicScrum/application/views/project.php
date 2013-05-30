@@ -95,7 +95,7 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
-							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin:10px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".$key->pd_title."</div>";
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin:16px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".$key->pd_title."</div>";
 							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->pd_desc."</div><div><a href = '#' style='margin-left:225px; font-size:8px'>MODIFY</a></div></div></div>";
 							$cnt++;
 						}
