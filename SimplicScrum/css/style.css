@@ -478,13 +478,16 @@ a.project_close:hover{color:white;}
 	width : 10px;
 }
 .extText{
-	background-color : #cccccc !important;
-	margin-top:13px !important;
-	height : 200px !important;
-	width : 286px !important; 
+	background-color : #cccccc;
+	margin-left:34px;
+	margin-top:13px;
+	height : 200px;
+	width : 286px; 
+	line-height:40px;
 }
 
  .nlClass{
+	background-color : #cccccc;
 	margin-left:34px;
 	margin-top:13px;
 	width:286px;
