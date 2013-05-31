@@ -1,6 +1,9 @@
 <?php
 
 class M_backlog extends SS_Model{
+	function set_makeSprintbl(){
+
+	}
 	function get_backlist($pid){
 		$this->db->select('pd.id as pd_id,pd.title as pd_title, pd.desc as pd_desc,u.nickname as pd_user,pj.id as pj_id, pj.title as pj_title, pd.reg_date as reg_date,pd.vote as vote');
 		$this->db->from('product as pd');
@@ -90,6 +93,31 @@ class M_backlog extends SS_Model{
 		}
 		$this->db->trans_complete();
 		return $result;
+	}
+	function makeSprintbl($json){
+		$result = FALSE;
+
+		$data = array(
+		   'title' => $json->title ,
+		   'desc' => $json->desc ,
+		   'pid' => $json->pid ,
+		   'mid' => $json->mid ,
+		   'bid' => $json->mid ,
+		   'level' => $json->level ,
+		   'vote' => 0
+		);
+
+		$this->db->trans_start();
+		$this->db->insert('sprintback', $data); 
+		if ($this->db->trans_status() == FALSE) {
+			$this->db->trans_rollback();	
+		}else {
+			$this->db->trans_commit();
+			$result = TRUE;
+		}
+		$this->db->trans_complete();
+		return $result;
+
 	}
 }
 ?>

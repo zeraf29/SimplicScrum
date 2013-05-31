@@ -17,6 +17,9 @@
 	else if($this->input->get("pm")){
 		$title = $this->input->get("pm");
 		$text = 'Product Backlog was maked';
+	}else if($this->input->get("sm")){
+		$title = $this->input->get("sm");
+		$text = 'Sprint Backlog was maked';
 	}
 ?>
  </HEAD>
@@ -123,7 +126,7 @@
 				</div>
 				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
-				<div class = "input_makeBacklog label_backlog" style="border-bottom:3px solid #808080;">Relation_Backlog</div>
+				<div class = "input_makeBacklog label_backlog" style="border-bottom:3px dotted #808080;">Relation_Backlog</div>
 				<div class = "input_makeBacklog">
 					<div id = "Relation_Backlog_List">
 						<div class = "Relation_Backlog_offList">
@@ -132,7 +135,7 @@
 							$str = "";
 							if(isset($backlog["porduct"])){
 								$str .= "<select name='sfblist' id='sfblist'>";
-								$str .= "<option value='' selected></option>";
+								$str .= "<option value=\" \" selected> </option>";
 								foreach($backlog["porduct"] as $key){
 									$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
 								}
@@ -164,12 +167,6 @@
 						echo $str;
 					}
 				?>
-				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData1</div>
-						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
-				<div id = "new_slist2" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData2</div>
-						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
-				<div id = "new_slist3" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData3</div>
-						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
 			</div>
 		</div>
 <!--수정 20130607 끝-->	
@@ -599,6 +596,58 @@
 						    }else{
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
+						    }
+				});
+
+				$("#make_sbacklog_submit").click(function(){
+					if($("#sbacklog_discription").val() == ""){
+						alert("Description을 넣어주세요.");
+						$("#sbacklog_discription").focus();
+						return false;
+					}
+					if($("#sbacklog_name").val() == ""){
+						alert("Title 넣어주세요.");
+						$("#sbacklog_name").focus();
+						return false;
+					}
+					if( $("#sfblist").val() == "" ){
+						alert("연결되는 Product Backlog를 선택하세요.");
+						$("#sfblist").focus();
+						return false;
+					}
+					datafilter = new Array();
+					datafilter[0] = "title";
+					datafilter[1] = "level";
+					datafilter[2] = "desc";
+					datafilter[3] = "bid";
+					datafilter[4] = "pid";
+					datafilter[5] = "mid";
+					data = new Object();
+					data.title = $("#sbacklog_name").val();
+					data.level = $("#sbacklog_level").val();
+					data.desc = $("#sbacklog_discription").val();
+					data.mid = '<?=$this->session->userdata("ss_userid")?>';
+					data.pid = $project_id;
+					alert($("#sfblist").val())
+					data.bid = $("#sfblist").val();
+
+					jsonObject = JSON.stringify(data,datafilter,"\t");
+					
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/backloglist/makeSprintbl',
+					        type: "POST",
+					        async : false,
+					        data: {data:jsonObject},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        	msg = rdata.msg;
+					        	}
+						    });
+							if(result==100){
+						    	location.href="/~sscrum/SimplicScrum/project/?pid="+$project_id+"&sm="+$("#sbacklog_name").val();
+						    }else{
+						    	alert("생성실패");
 						    }
 				});
 				
