@@ -197,7 +197,7 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["spList"] as $key){
-							$cnt++;
+							$str .= "<div><input type='checkbox' id='sLists' name='sLists' value='".$key->id."'>".$key->title."</div>";
 						}
 						echo $str;
 					}
