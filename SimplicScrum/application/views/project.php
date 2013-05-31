@@ -96,7 +96,7 @@
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
 <<<<<<< HEAD
-							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin-left:36px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:2px; border-bottom:1px solid font-size:13px; margin-left:6px'>".word_limiter($key->pd_title,3)."</div>";
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin-left:36px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:2px; border-bottom:1px solid; font-size:13px; margin-left:6px'>".word_limiter($key->pd_title,3)."</div>";
 =======
 							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin:16px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".word_limiter($key->pd_title,3)."</div>";
 >>>>>>> a13f5b983d25d6e75ed40ec829ac08b773a4ce6a
