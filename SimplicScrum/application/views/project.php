@@ -214,7 +214,7 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["sprint"] as $key){
-							$str .= "<div id = 'new_slist".$key->id."' class = 'splint_list nlClass' style='cursor:pointer;'><a href='/~sscrum/SimplicScrum/sprint/?pid=".$project_id."&phase=".$key->id."'>".$key->title."</a></div>";
+							$str .= "<div id = 'new_slist".$key->phase."' class = 'splint_list nlClass' style='cursor:pointer;'><a href='/~sscrum/SimplicScrum/sprint/?pid=".$project_id."&phase=".$key->phase."'>Phase_".$key->phase."</a></div>";
 						}
 						echo $str;
 					}
