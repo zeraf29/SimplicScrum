@@ -36,7 +36,7 @@
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
 			 $(this).switchClass("nlClass_sprint","extText_sprint");
-			 $(this).html("<div style='background-image:URL('/~sscrum/SimplicScrum/image/sprint_bar.png'); font-size:14px; padding-left:20px; padding-top:20px';><div><div style='font-weight:bold; margin-top:15px; display:inline;'>WHO</div><div style='display:inline; left-margin:10px; dorder-bottom:1px solid'>Admin</div></div><div><div style='display:inline; padding:7px;' >AUTHOR</div><div style='display:inline'>author_admin</div></div><div><div display='inline'>DUE DATE</div><div style='display:inline; border-bottom:1px solid'>2013-02-01</div></div><div><div style='display:inline'>TARGET DATE</div><div style='display:inline; border-bottom:1px solid;'>2013-08-08</div></div><div>DISCRIPTION</div></div>");
+			 $(this).html("<div style='background-image:URL('/~sscrum/SimplicScrum/image/sprint_bar.png'); font-size:14px; padding-left:20px; padding-top:20px';><div><div style='font-weight:bold; margin-top:68px; display:inline; padding:7px'>WHO</div><div style='display:inline; margin-left:15px; border-bottom:1px solid'>Admin</div></div><div><div style='display:inline; padding:7px; font-weight'>AUTHOR</div><div style='display:inline; border-bottom:1px solid'>author_admin</div></div><div><div style='display:inline; padding:7px; font-weight:bold'>DUE DATE</div><div style='display:inline; border-bottom:1px solid; padding-left:15px;'>2013-02-01</div></div><div><div style='display:inline; font-weight:bold;padding:7px'>TARGET DATE</div><div style='display:inline; border-bottom:1px solid;'>2013-08-08</div></div><div>DISCRIPTION</div></div>");
 		 }
 	 });
 
