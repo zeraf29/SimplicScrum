@@ -95,7 +95,11 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
-							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin-left:36px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:2px; border-bottom:1px solid font-size:13px; margin-left:6px'>".word_limiter($key->pd_title,3)."</div>";
+<<<<<<< HEAD
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin-left:36px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:2px; border-bottom:1px solid font-size:13px; margin-left:6px;'>".word_limiter($key->pd_title,3)."</div>";
+=======
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin:16px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".word_limiter($key->pd_title,3)."</div>";
+>>>>>>> a13f5b983d25d6e75ed40ec829ac08b773a4ce6a
 							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:270px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->pd_title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:270px;' readonly>".$key->pd_desc."</textarea></div><div><a href = '#' style='margin-left:225px; font-size:8px'>MODIFY</a></div></div></div>";
 							$cnt++;
 						}
@@ -124,18 +128,33 @@
 				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
-				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;border-bottom:5px dotted black;width:100px;"></div>
+				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;border-bottom:5px dotted #808080;width:250px;"></div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
 						<div class = "Relation_Backlog_onList">
 						<!--리스트가 들어가는 DIVISION-->
 						</div>
 					</div>
-				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;border-bottom:5px dotted black;width:100px;"></div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;width:250px;"></div>	
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
-				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;border-bottom:5px dotted black;width:100px;"></div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;border-bottom:5px dotted #808080;width:250px;"></div>
 				<div class = "input_makeBacklog">
 					<div id = "Relation_Backlog_List">
 						<div class = "Relation_Backlog_offList">
+							<?php
+								if(isset($backlog["porduct"])){
+									$str = "";
+									$cnt = 1;
+									foreach($backlog["porduct"] as $key){
+										$str .= "<div>";
+										$str .= "<div style = 'float:left; width:250px; height:24px'></div>";
+										$str .= "</div>";
+										$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin:16px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".word_limiter($key->pd_title,3)."</div>";
+										$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:270px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->pd_title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:270px;' readonly>".$key->pd_desc."</textarea></div><div><a href = '#' style='margin-left:225px; font-size:8px'>MODIFY</a></div></div></div>";
+										$cnt++;
+									}
+									echo $str;
+								}
+							?>
 							<div>
 								<div style = "float:left; width:250px; height:24px">Product_Backlog_name</div>
 								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
@@ -767,7 +786,7 @@
 			/*플러스 버튼 눌렀을떙*/
 			$(".Relation_Backlog_offList").delegate("img", "click", function()
 			{
-				$(".Relation_Backlog_onList").append("<div><div style = 'float:left; width:250px; height:24px'>Product_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
+				$(".Relation_Backlog_onList").append($(this).html());
 			});
 			
 			/*마이너스 버튼 눌렀을떙*/
