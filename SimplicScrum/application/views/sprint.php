@@ -36,7 +36,7 @@
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
 			 $(this).switchClass("nlClass_sprint","extText_sprint");
-			 $(this).html("<div style='background-image:URL('/~sscrum/SimplicScrum/image/sprint_bar.png'); font-size:14px; padding-left:20px; padding-top:20px';><div><div style='font-weight:bold; margin-top:68px; display:inline; padding:7px'>WHO:</div><div style='display:inline; margin-left:15px; border-bottom:1px solid'>Admin</div></div><div><div style='display:inline; padding:7px; font-weight:bold'>AUTHOR:</div><div style='display:inline; border-bottom:1px solid; margin-left:21px'>author_admin</div></div><div><div style='display:inline; padding:7px; font-weight:bold'>DUE DATE:</div><div style='display:inline; border-bottom:1px solid; margin-left:32px;'>2013-02-01</div></div><div><div style='display:inline; font-weight:bold;padding:7px'>TARGET DATE:</div><div style='display:inline; border-bottom:1px solid;'>2013-08-08</div></div><div style='font-weight:bold'>DISCRIPTION</div><textarea style='height:90px;width:268px;'></div>");
+			 $(this).html("<div style='background-image:URL('/~sscrum/SimplicScrum/image/sprint_bar.png'); font-size:14px; padding-left:20px; padding-top:20px';><div><div style='font-weight:bold; margin-top:68px; display:inline; padding:7px'>WHO:</div><div style='display:inline; margin-left:15px; border-bottom:1px solid'>Admin</div></div><div><div style='display:inline; padding:7px; font-weight:bold'>AUTHOR:</div><div style='display:inline; border-bottom:1px solid; margin-left:21px'>author_admin</div></div><div><div style='display:inline; padding:7px; font-weight:bold'>DUE DATE:</div><div style='display:inline; border-bottom:1px solid; margin-left:32px;'>2013-02-01</div></div><div><div style='display:inline; font-weight:bold;padding:7px'>TARGET DATE:</div><div style='display:inline; border-bottom:1px solid;'>2013-08-08</div></div><div style='font-weight:bold; padding:7px'>DISCRIPTION</div><textarea style='height:90px;width:268px;margin-left:5px'></div>");
 		 }
 	 });
 
@@ -64,13 +64,13 @@
 			<div class="sprint_content">TO DO</div>
 			<div id="id_sprint_todo_list">
 			<ul class = "items">	
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint">todo1</li>
+				<li class = "nlClass_sprint">todo2</li>
+				<li class = "nlClass_sprint">todo3</li>
+				<li class = "nlClass_sprint">todo4</li>
+				<li class = "nlClass_sprint">todo5</li>
+				<li class = "nlClass_sprint">todo6</li>
+				<li class = "nlClass_sprint">todo7</li>
 				<li class = "bottom" style = "visibility : hidden"></li>
 			</ul>
 			</div>
@@ -81,10 +81,10 @@
 			<div class="sprint_content">DOING</div>
 			<div id="id_sprint_doing_list">
 				<ul class = "items">
-					<li class = "nlClass_sprint"></li>
-					<li class = "nlClass_sprint"></li>
-					<li class = "nlClass_sprint"></li>
-					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint">doing1</li>
+					<li class = "nlClass_sprint">doing2</li>
+					<li class = "nlClass_sprint">doing3</li>
+					<li class = "nlClass_sprint">doing4</li>
 					<li class = "bottom" style = "visibility : hidden"></li>
 				</ul>
 			</div>
@@ -95,9 +95,9 @@
 			<div class="sprint_content">DONE</div>
 			<div id="id_sprint_done_list">
 				<ul class = "items">
-					<li class = "nlClass_sprint"></li>
-					<li class = "nlClass_sprint"></li>
-					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint">done1</li>
+					<li class = "nlClass_sprint">done2</li>
+					<li class = "nlClass_sprint">done3</li>
 					<li class = "bottom" style = "visibility : hidden"></li>
 				</ul>
 			</div>
