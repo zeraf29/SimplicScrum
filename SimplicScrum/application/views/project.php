@@ -748,10 +748,10 @@
 			
 			$("#id_sprintBacklog_list").children(".sbacklog_list").click(function(){
 				if($(this).hasClass("extText")){
-//					$(this).switchClass("extText","nlClass");
+					$(this).switchClass("nlClass","extText");
 					$(this).children(".pbacklog_list").children(".bContent").hide();
 				}else{
-//					$(this).switchClass("nlClass","extText");
+					$(this).switchClass("nlClass","extText");
 				}
 			});
 			
