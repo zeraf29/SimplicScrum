@@ -436,6 +436,12 @@ a.project_close:hover{color:white;}
 	height : 200px;
 	width : 286px;
 }
+
+.nlClass{
+	position:absoulte;
+	width:286px;
+	height:40px;	
+}
 /*======================추가 20130605_0204 끝===========*/
 
 
