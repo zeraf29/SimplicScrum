@@ -155,9 +155,11 @@
 
 				var $close_flag = 0;
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
+				
 				/*--------추가(20130605_0200)시작---------*/
 				var $make_backlog_flag = 0;	//backlog 생성창 위한  flag
 				/*--------추가(20130605_0200) 끝---------*/
+				
 				var $before_windowsWidth = ($(window).width());
 				var count = 1;	//멤버 입력하는 div추가하기위한 변수
 				var productBacklog_count = 0; //product backlog에서 list 추가 위한 변수
@@ -496,7 +498,8 @@
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
-				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'width':'286px'})			
+				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'padding':'10px','width':'286px'})
+				$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME</div>")
 			});
 			
 			$("#make_backlog_cancel").click(function(){
