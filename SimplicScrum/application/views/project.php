@@ -485,7 +485,7 @@
 					var new_list = document.createElement("div");
 					
 					 new_list.id = "new_list" + productBacklog_count;
-					 new_list.class = "nlClass";
+					 new_list.className = "nlClass";
 
 					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
 
