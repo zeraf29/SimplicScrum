@@ -72,6 +72,17 @@
 				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
+			<!-- 추가 20130605 0200 -->
+			<div class = "plus_product_backlog" id = "make_backlog_window">
+				<p>MAKE PRODUCT BACKLOG</p>
+				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
+				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
+				<div class = "submit_cancel_class">
+					<a href ="#" class="submit" id = "make_backlog_submit">submit</a>
+					<a href ="#" class="submit" id = "make_backlog_cancel">cancel</a>
+				</div>
+			</div>
+			
 			<div id="id_productBacklog_list">
 			</div>
 		</div>
@@ -138,6 +149,9 @@
 
 				var $close_flag = 0;
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
+				/*--------추가(20130605_0200)시작---------*/
+				var $make_backlog_flag = 0;	//backlog 생성창 위한  flag
+				/*--------추가(20130605_0200) 끝---------*/
 				var $before_windowsWidth = ($(window).width());
 				var count = 1;	//멤버 입력하는 div추가하기위한 변수
 				var productBacklog_count = 0; //product backlog에서 list 추가 위한 변수
@@ -462,7 +476,7 @@
 					});
 
 				//product_backlog list 동적생성
-				$("#pbacklog_add_btn").click(function()
+				$("#make_backlog_submit").click(function()
 				{
 					productBacklog_count ++;
 
@@ -484,6 +498,26 @@
 			{
 				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'width':'286px'})			
 			});
+			
+			$("#make_backlog_cancel").click(function(){
+				$( "#make_backlog_window" ).hide( "fold","", 1000);
+				$make_backlog_flag = 0;
+			});
+			/*--------추가(2013-06-05, 0200)시작----------*/
+			//프로덕트 백로그 생성창 컨트롤=========
+				$( "#make_backlog_window" ).hide();
+				$( "#pbacklog_add_btn" ).click(function() {
+					if($make_backlog_flag == 1){
+						$( "#make_backlog_window" ).hide( "fold","", 1000);
+						$make_backlog_flag = 0;
+						}
+					else if($make_backlog_flag ==0){
+						$( "#make_backlog_window" ).show( "fold","", 1000);
+						$make_backlog_flag = 1;
+					}
+				});
+				//=====================================
+			/*--------추가(2013-06-05, 0200)끝----------*/
 	});
 	</script>
 </HTML>
