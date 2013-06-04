@@ -456,12 +456,16 @@
 					        data: {data:jsonObject},
 					        dataType: 'json',
 					        success: function (rdata) {
+					        	alert(rdata)
+					        	/*
 					        	result = rdata.code;
 					        	msg = rdata.msg;
 					        	nickname = rdata.nickname;
 					        	email = rdata.email;
+					        	*/
 					        	}
 						    });
+					/*
 						    if(result==100){
 						    	check=true;
 						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
@@ -483,7 +487,7 @@
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
-					
+					*/
 					});
 
 				//product_backlog list 동적생성
