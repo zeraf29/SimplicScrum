@@ -85,6 +85,10 @@
 	<!--프로젝트 생성 메뉴 시작-->
 	
 	<div id = "make_project" style="">
+		<div id = "submit_cancel">
+			<a href ="#" class="submit" id ="add_submit">Make</a>
+			<a href ="#" class="submit" id ="add_cancel">Cancel</a>
+		</div>
 		<div class="project_tiltle_bar">ADD PROJECT</div>
 		<div class = "input_project">
 			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
@@ -113,15 +117,7 @@
 				</div>
 			</div>
 		</div>
-		  
-
-	 
 		
-		</br>
-		<div id = "submit_cancel">
-			<a href ="#" class="submit" id ="add_submit">Make</a>
-			<a href ="#" class="submit" id ="add_cancel">Cancel</a>
-		</div>
 	</div>
   <!--프로젝트 생성 메뉴 끝-->
 	
