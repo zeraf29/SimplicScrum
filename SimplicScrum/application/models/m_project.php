@@ -25,7 +25,6 @@ class M_project extends SS_Model{
 
 		$this->db->trans_start();
 		$this->db->insert('project', $data); 
-		echo $this->db->last_query();
 		if ($this->db->trans_status() == FALSE) {
 			$this->db->trans_rollback();	
 		}else {
@@ -47,7 +46,6 @@ class M_project extends SS_Model{
 					'rid' => '2'
 				);
 				$this->db->insert('role_table', $data); 
-				echo $this->db->last_query();
 			}
 			
 			if ($this->db->trans_status() == FALSE) {
