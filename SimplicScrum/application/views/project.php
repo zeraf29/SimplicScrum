@@ -514,7 +514,7 @@
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
 				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'width':'286px'})
-				$(this).html({"<p>NAME</p><p>DISCRIPTION</p>"})
+				$(this).html("Asdfasdfasdf")
 			});
 			
 			$("#make_backlog_cancel").click(function(){
