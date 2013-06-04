@@ -377,13 +377,16 @@
 						    		$("#amEmail").val("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
-						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'></span></div>");
+						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'>&nbsp;</span></div>");
 						    	}
 								
 						    }else{
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
 
+				});
+				$(".delAddMem").click(function(){
+					alert(1)
 				});
 				
 				//product_backlog list 동적생성
