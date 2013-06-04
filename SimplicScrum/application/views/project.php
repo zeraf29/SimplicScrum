@@ -351,7 +351,9 @@
 					if(confirm("정말로 삭제하시겠습니까?"))
 						$(this).parent().remove();
 				});
-
+				$("#amEmail").click(function(){
+					$(this).val("");
+				});
 				$("#plus_projectbtn").click(function(){
 
 					$.ajax({
@@ -378,7 +380,55 @@
 									});
 							    }
 						    	if(check==false){
-						    		$("#amEmail").val("");
+						    		amEmailval("");
+						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
+						    	}else{
+						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'>&nbsp;</span></div>");
+						    	}
+								
+						    }else{
+						    	$("#amEmail").val("");
+						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
+						    }
+
+				});
+				$("#add_submit").click(function(){
+					if($("#project_name").val() == ""){
+						alert("프로젝트 이름을 넣어주세요");
+						$("#project_name").focus();
+					}
+					if($("#start_date").val() == ""){
+						alert("시작날짜를 정해주세요");
+						$("#start_date").focus();
+					}if($("#end_date").val() == ""){
+						alert("완료날짜를 정해주세요");
+						$("#end_date").focus();
+					}
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/project/isMember',
+					        type: "POST",
+					        async : false,
+					        data: {email: $("#amEmail").val()},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        	msg = rdata.msg;
+					        	nickname = rdata.nickname;
+					        	email = rdata.email;
+					        	}
+						    });
+						    if(result==100){
+						    	check=true;
+						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
+						    		check = false;
+						    	}else{
+							    	$(".addMlists .addNickname").each(function() {
+									    if($(this).html()==nickname)
+									    	check = false;
+									});
+							    }
+						    	if(check==false){
+						    		amEmailval("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
 						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'>&nbsp;</span></div>");
