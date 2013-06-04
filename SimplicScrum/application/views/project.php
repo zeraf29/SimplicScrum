@@ -385,8 +385,10 @@
 		<div id="project_member">
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
-				<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
+				<div>
+					<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
 				<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
+				</div>
 			</div>
 			<div class="check_member">
 				<input type="text" id="check_email_box" value="" ></br>-------------------------------------</div>
