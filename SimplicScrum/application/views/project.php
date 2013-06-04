@@ -361,6 +361,7 @@
 					        	}
 						    });
 						    if(result==100){
+						    	check=true;
 						    	$(".addMlists .addNickname").each(function() {
 								    if($(this).html()==nickname)
 								    	check = false;
