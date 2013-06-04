@@ -26,6 +26,12 @@ class M_project extends SS_Model{
 		$this->db->trans_start();
 		$this->db->insert('project', $data); 
 		$pid = $this->db->insert_id();
+		$data = array(
+					'pid' => $pid,
+					'uid' => $m_id,
+					'rid' => '1'
+		);
+		$this->db->insert('role_table', $data); 
 		if ($this->db->trans_status() == FALSE) {
 			$this->db->trans_rollback();	
 		}else {
