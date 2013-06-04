@@ -107,7 +107,13 @@
 		<div class = "input_project">
 			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
 		</div>
-				<div id="id_term">
+		<div id="id_desc">
+			<label for = "desc" class ="label_project">DESC</label>
+			<div>
+				<textarea id="mpDesc"></textarea>
+			</div>
+		</div>
+		<div id="id_term">
 			<label for = "term" class ="label_project">TERM</label>
 		</div>
 		<div id="id_date">
@@ -198,8 +204,8 @@
 					var $left_p = (($(window).width()) - 1080)/4;
 					
 					$(".make_product").css({'margin-left':$left_p + 'px'});
-					$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
-					$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
+					$(".make_sprintbacklog").css({'margin-left':(($left_p)+360) +'px'});
+					$(".make_sprint").css({'margin-left':(($left_p*2)+720) +'px'});
 					
 					$(".product_backlog").css({'margin-left':$left_p + 'px'});
 					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
@@ -389,11 +395,11 @@
 						    });
 						    if(result==100){
 						    	check=true;
-						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
+						    	if(email=='<?=$this->session->userdata("ss_useremail")?>'){
 						    		check = false;
 						    	}else{
-							    	$(".addMlists .addNickname").each(function() {
-									    if($(this).html()==nickname)
+							    	$(".addMlists .addEmail").each(function() {
+									    if($(this).html()==email)
 									    	check = false;
 									});
 							    }
@@ -401,7 +407,7 @@
 						    		amEmailval("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
-						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'>&nbsp;</span></div>");
+						    		$("#members").append("<div class='addMlists'><span class='addEmail'>"+email+"</span><span class='delAddMem'>&nbsp;</span></div>");
 						    	}
 								
 						    }else{
@@ -437,14 +443,16 @@
 					datafilter[2] = "end_date";
 					datafilter[3] = "master";
 					datafilter[4] = "member";
+					datafilter[5] = "desc"
 					data = new Object();
 					data.title = $("#project_name").val();
 					data.start_date = $("#start_date").val();
 					data.end_date = $("#end_date").val();
 					data.master = '<?=$this->session->userdata("ss_nickname")?>';
+					data.desc = $("#mpDesc").val();
 					sub  = new Array();
 					cnt = 0;
-					$(".addMlists .addNickname").each(function() {
+					$(".addMlists .addEmail").each(function() {
 						sub[cnt] = $(this).html();
 						cnt++;
 					});
@@ -456,40 +464,17 @@
 					        type: "POST",
 					        async : false,
 					        data: {data:jsonObject},
-					        dataType: 'html',
+					        dataType: 'json',
 					        success: function (rdata) {
-					        	alert(rdata)
-					        	/*
 					        	result = rdata.code;
 					        	msg = rdata.msg;
-					        	nickname = rdata.nickname;
-					        	email = rdata.email;
-					        	*/
 					        	}
 						    });
-					/*
-						    if(result==100){
-						    	check=true;
-						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
-						    		check = false;
-						    	}else{
-							    	$(".addMlists .addNickname").each(function() {
-									    if($(this).html()==nickname)
-									    	check = false;
-									});
-							    }
-						    	if(check==false){
-						    		amEmailval("");
-						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
-						    	}else{
-						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'>&nbsp;</span></div>");
-						    	}
-								
+							if(result==100){
+						    	location.href="/~sscrum/SimplicScrum/project/";
 						    }else{
-						    	$("#amEmail").val("");
-						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
+						    	alert("생성실패");
 						    }
-					*/
 					});
 
 				//product_backlog list 동적생성

@@ -24,11 +24,33 @@ class Project extends SS_Controller {
 	}
 	
 	public function makeProject(){
-		$json = $_POST["data"];
-		$json = stripslashes($json);
-		$json = json_decode($json);
+		$json=isset($_POST["data"])?$_POST["data"]:"";
+		$this->load->model("M_project");	
+		$this->load->model("M_user");	
+		if($json==""){
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Not Blank!'
+				);
+		}else{
+			$json = stripslashes($json);
+			$json = json_decode($json);
+			$user_id = $this->M_user->find_User($json->master);
+			$result = $this->M_project->makeProject($json,$user_id[0]->id);
+			if($result){
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+				);
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Database Error!'
+				);
+			}
 
-		echo $json->title;
+		}
+		$this->displayJson($view_data);
 	}
 
 	protected function getList(){
