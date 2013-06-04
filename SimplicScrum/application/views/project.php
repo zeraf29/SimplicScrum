@@ -501,10 +501,10 @@
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
+					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
+					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
 				}
 
 			});
