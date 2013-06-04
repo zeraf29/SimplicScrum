@@ -421,7 +421,7 @@
 						cnt++;
 					});
 					data["member"] = sub;
-					jsonObject = toJSON(data);
+					jsonObject = JSON.stringify(data);
 					alert(jsonObject);
 					/*
 					$.ajax({
