@@ -36,6 +36,7 @@ class Project extends SS_Controller {
 			$json = stripslashes($json);
 			$json = json_decode($json);
 			$user_id = $this->M_user->find_User($json->master);
+			echo $user_id;
 			$result = $this->M_project->makeProject($json,$user_id[0]->id);
 			if($result){
 				$view_data = array(
