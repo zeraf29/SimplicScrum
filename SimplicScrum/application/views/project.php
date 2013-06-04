@@ -374,6 +374,13 @@
 		<div class = "input_project">
 			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
 		</div>
+				<div id="id_term">
+			<label for = "term" class ="label_project">TERM</label>
+		</div>
+		<div id="id_date">
+			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
+			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
+		</div>
 		
 		<div id="project_member">
 			<div class="add_member">
@@ -392,14 +399,7 @@
 			</div>
 		</div>
 		  
-		<div id="id_term">
-			<label for = "term" class ="label_project">TERM</label>
-		</div>
 
-		<div id="id_date">
-			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
-			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
-		</div>
 	 
 		
 		</br>
