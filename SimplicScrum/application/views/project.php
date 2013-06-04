@@ -361,13 +361,19 @@
 					        	}
 						    });
 						    if(result==100){
-								$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'><img src='<?=$img_path?>/member_deletebtn.png'></span></div>");
+						    	if($(".addMlists").html()==nickname){
+						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
+						    	}else{
+						    		$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'><img src='<?=$img_path?>/member_deletebtn.png'></span></div>");
+						    	}
+								
 						    }else{
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
 
 				});
 				$(".delAddMem").click(function(){
+					alert(1)
 					alert(this.parent().html());
 				});
 				//product_backlog list 동적생성
