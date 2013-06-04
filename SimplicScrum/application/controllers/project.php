@@ -127,7 +127,7 @@ class Project extends SS_Controller {
 
 		$this->load->model("M_user");
 
-		if($id==""  ){
+		if($email==""  ){
 			$view_data = array(
 					'code' => '200',
 					'msg' => 'FAILURE : Not Blank!'

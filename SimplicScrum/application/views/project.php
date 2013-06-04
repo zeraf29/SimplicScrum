@@ -106,7 +106,7 @@
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<div>
-					<input type ="text" id ="amEmail" style="width:270px;" value="E-mail을 입력하세요."/>
+					<input type ="text" id ="amEmail" style="width:270px;" placeholder="E-mail을 입력하세요."/>
 					<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
 				</div>
 			</div>
