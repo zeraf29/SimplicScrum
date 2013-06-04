@@ -356,11 +356,14 @@
 					        success: function (rdata) {
 					        	result = rdata.code;
 					        	msg = rdata.msg;
-					        	rdata = rdata;
+					        	if(result==100){
+					        		nickname = rdata.nickname;
+					        		email = rdata.email;
+					        	}
 					        }
 						    });
 						    if(result==100){
-								$("#members").append("<div class='addMlists'>"+rdata.nickname+"</div>");
+								$("#members").append("<div class='addMlists'>"+nickname+"</div>");
 						    }else{
 						    	$("#amEmail").val("없는 Email 정보입니다.");
 						    }
