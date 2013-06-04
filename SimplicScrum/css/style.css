@@ -484,6 +484,11 @@ a.project_close:hover{color:white;}
 	margin-right:8px;
 }
 
+#project_member .member_list #members{
+	height:160px;
+	overflow-y:auto;
+}
+
 #id_term{
 	width:310px; 
 	height:25px;
