@@ -347,6 +347,9 @@
 				$("img.ui-datepicker-trigger").attr("style"," vertical-align:middle; cursor:pointer;"); //이미지버튼 style적용
 				$("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김 
 				
+				$('#members').on('click', '.delAddMem', function() {
+					alert(1)
+				});
 
 				$("#plus_projectbtn").click(function(){
 
@@ -385,10 +388,6 @@
 						    }
 
 				});
-				$(".delAddMem").click(function(){
-					alert(1)
-				});
-				
 				//product_backlog list 동적생성
 				/*보류
 				$("#pbacklog_add_btn").click(function()
