@@ -1,6 +1,7 @@
 ﻿<?include("common/header.php");?>
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
-  <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' /> 
+  <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' />
+  <link rel='stylesheet' href='<?=$css_path?>/cupertino/theme.css' />
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <?php
 	$type = isset($_GET["type"])?$_GET["type"]:"";
@@ -263,6 +264,7 @@
 				});
 				
 				var calendar = $('#calendar').fullCalendar({
+					theme: true,
 					header: {
 						left: 'prev,next',
 						center: 'title',
