@@ -25,6 +25,7 @@ class M_project extends SS_Model{
 
 		$this->db->trans_start();
 		$this->db->insert('project', $data); 
+		$pid = $this->db->insert_id();
 		if ($this->db->trans_status() == FALSE) {
 			$this->db->trans_rollback();	
 		}else {
@@ -41,7 +42,7 @@ class M_project extends SS_Model{
 				$rs = $this->db->get()->result();
 
 				$data = array(
-					'pid' => $this->db->insert_id(),
+					'pid' => $pid,
 					'uid' => $rs[0]->id,
 					'rid' => '2'
 				);
