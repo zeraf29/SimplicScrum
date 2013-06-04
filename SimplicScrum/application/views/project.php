@@ -404,24 +404,36 @@
 						alert("시작날짜를 정해주세요");
 						$("#start_date").focus();
 						return false;
-					}if($("#end_date").val() == ""){
+					}
+					if($("#end_date").val() == ""){
 						alert("완료날짜를 정해주세요");
 						$("#end_date").focus();
 						return false;
 					}
-					data = new Array();
-					data["title"] = $("#project_name").val();
-					data["start_date"] = $("#start_date").val();
-					data["end_date"] = $("#end_date").val();
-					data["master"] = '<?=$this->session->userdata("ss_nickname")?>';
+					if($("#start_date").val() > $("#end_date").val() ){
+						alert("잘못된 기간 입니다.");
+						$("#end_date").focus();
+						return false;
+					}
+					datafilter = new Array();
+					datafilter[0] = "title";
+					datafilter[1] = "start_date";
+					datafilter[2] = "end_date";
+					datafilter[3] = "master";
+					datafilter[4] = "member";
+					data = new Object();
+					data.title = $("#project_name").val();
+					data.start_date = $("#start_date").val();
+					data.end_date = $("#end_date").val();
+					data.master = '<?=$this->session->userdata("ss_nickname")?>';
 					sub  = new Object();
 					cnt = 0;
 					$(".addMlists .addNickname").each(function() {
 						sub[cnt] = $(this).html();
 						cnt++;
 					});
-					data["member"] = sub;
-					jsonObject = JSON.stringify(data);
+					data.member = sub;
+					jsonObject = JSON.stringify(data,datafilter,"\t");
 					alert(jsonObject);
 					/*
 					$.ajax({
