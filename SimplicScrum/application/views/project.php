@@ -443,28 +443,29 @@
 					sub  = new Array();
 					cnt = 0;
 					$(".addMlists .addNickname").each(function() {
-						alert($(this).html())
 						sub[cnt] = $(this).html();
-						alert(sub)
 						cnt++;
 					});
 					data.member = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
-					alert(jsonObject);
-					/*
+					
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/makeProject',
 					        type: "POST",
 					        async : false,
-					        data: {title: },
+					        data: {data:jsonObject},
 					        dataType: 'json',
 					        success: function (rdata) {
+					        	alert(rdata)
+					        	/*
 					        	result = rdata.code;
 					        	msg = rdata.msg;
 					        	nickname = rdata.nickname;
 					        	email = rdata.email;
+					        	*/
 					        	}
 						    });
+					/*
 						    if(result==100){
 						    	check=true;
 						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
