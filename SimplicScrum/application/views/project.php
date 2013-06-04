@@ -443,20 +443,17 @@
 					sub  = new Array();
 					cnt = 0;
 					$(".addMlists .addNickname").each(function() {
-						alert($(this).html())
 						sub[cnt] = $(this).html();
-						alert(sub)
 						cnt++;
 					});
 					data.member = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
-					alert(jsonObject);
-					/*
+					
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/makeProject',
 					        type: "POST",
 					        async : false,
-					        data: {title: },
+					        data: {data:jsonObject},
 					        dataType: 'json',
 					        success: function (rdata) {
 					        	result = rdata.code;
@@ -486,7 +483,7 @@
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
-					*/
+					
 					});
 
 				//product_backlog list 동적생성
