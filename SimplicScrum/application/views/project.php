@@ -356,20 +356,20 @@
 					        success: function (rdata) {
 					        	result = rdata.code;
 					        	msg = rdata.msg;
-					        	if(result==100){
-					        		nickname = rdata.nickname;
-					        		email = rdata.email;
+					        	nickname = rdata.nickname;
+					        	email = rdata.email;
 					        	}
-					        }
 						    });
 						    if(result==100){
-								$("#members").append("<div class='addMlists'>"+nickname+"</div>");
+								$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'></span></div>");
 						    }else{
 						    	$("#amEmail").val("없는 Email 정보입니다.");
 						    }
 
 				});
-
+				$(".delAddMem").click(function(){
+					alert(this.parent().html());
+				});
 				//product_backlog list 동적생성
 				/*보류
 				$("#pbacklog_add_btn").click(function()

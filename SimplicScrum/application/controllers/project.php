@@ -134,17 +134,21 @@ class Project extends SS_Controller {
 				);
 		}else{
 			$result = $this->M_user->find_User($email);
-			if($result==TRUE){
+			if(count($result)>0){
 
 				$view_data = array(
 					'code' => '100',
-					'msg' => 'SUCCESS'
+					'msg' => 'SUCCESS',
+					'email' =>$result[0]->email,
+					'nickname' =>$result[0]->nickname
 				);
 
 			}else{
 				$view_data = array(
 					'code' => '200',
-					'msg' => 'FAILURE : .!'
+					'msg' => 'FAILURE : .!',
+					'email' =>'',
+					'nickname' =>''
 				);
 			}
 		}
