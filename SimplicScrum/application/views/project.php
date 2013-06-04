@@ -361,7 +361,7 @@
 					        	}
 						    });
 						    if(result==100){
-						    	alert($("div").hasClass("addMlists").val());
+						    	alert($("div").hasClass("addMlists").html());
 						    	if($("div").hasClass("addMlists").val()==nickname){
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
