@@ -361,8 +361,8 @@
 					        	}
 						    });
 						    if(result==100){
-						    	alert($("div").find("addMlists").val());
-						    	if($("div").find("addMlists").val()==nickname){
+						    	alert($("div").find("addMlists").html());
+						    	if($("div").find("addMlists").html()==nickname){
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
 						    		$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'><img src='<?=$img_path?>/member_deletebtn.png'></span></div>");
