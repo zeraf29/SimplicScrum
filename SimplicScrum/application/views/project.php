@@ -361,9 +361,9 @@
 					        	}
 						    });
 						    if(result==100){
-								$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'></span></div>");
+								$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'><img src='<?=$img_path?>/member_deletebtn.png'></span></div>");
 						    }else{
-						    	$("#amEmail").val("없는 Email 정보입니다.");
+						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
 
 				});
