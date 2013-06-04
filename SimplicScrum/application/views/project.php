@@ -440,7 +440,7 @@
 					data.start_date = $("#start_date").val();
 					data.end_date = $("#end_date").val();
 					data.master = '<?=$this->session->userdata("ss_nickname")?>';
-					sub  = new Object();
+					sub  = new Array();
 					cnt = 0;
 					$(".addMlists .addNickname").each(function() {
 						alert($(this).html())
