@@ -427,6 +427,13 @@ a.project_close:hover{color:white;}
 	text-align : right;
 	padding-right:10px;
 }
+
+.extText{
+	background-image : URL("/~sscrum/SimplicScrum/image/p_backlog_bar.png.png");
+	background-repeat: no-repeat;
+	background-position : right bottom;
+	height : 200px;
+}
 /*======================추가 20130605_0204 끝===========*/
 
 
