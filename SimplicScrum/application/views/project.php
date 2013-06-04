@@ -448,7 +448,7 @@
 					data.title = $("#project_name").val();
 					data.start_date = $("#start_date").val();
 					data.end_date = $("#end_date").val();
-					data.master = '<?=$this->session->userdata("ss_nickname")?>';
+					data.master = '<?=$this->session->userdata("ss_useremail")?>';
 					data.desc = $("#mpDesc").val();
 					sub  = new Array();
 					cnt = 0;
