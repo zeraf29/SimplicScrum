@@ -485,6 +485,7 @@
 					var new_list = document.createElement("div");
 					
 					 new_list.id = "new_list" + productBacklog_count;
+					 new_list.class = "nlClass";
 
 					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
 
@@ -501,7 +502,9 @@
 				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'padding':'10px','width':'286px'})
 				$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME</div>")
 			});
-			
+			$('#id_productBacklog_list').on('click', '.nlClass', function() {
+					$(this).css({'height':'0px','background':'#cccccc','background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'padding':'10px','width':'286px'})
+				});
 			$("#make_backlog_cancel").click(function(){
 				$( "#make_backlog_window" ).hide( "fold","", 1000);
 				$make_backlog_flag = 0;
