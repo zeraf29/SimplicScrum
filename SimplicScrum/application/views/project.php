@@ -513,7 +513,7 @@
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
-				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'width':'286px'})
+				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'padding':'10px','width':'286px'})
 				$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME</div>")
 			});
 			
