@@ -315,7 +315,10 @@
 						?>
 					]
 				});
-
+				
+				$(".delAddMem").click(function(){
+					alert(1)
+				});
 
 				$(".listDelete").click(function(){
 					temp = this.id.split("_");
@@ -362,12 +365,16 @@
 						    });
 						    if(result==100){
 						    	check=true;
-						    	$(".addMlists .addNickname").each(function() {
-								    if( ($(this).html()==nickname) || $(this).html()=='<?=$this->session->userdata("ss_nickname")?>' )
-								    	check = false;
-								});
+						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
+
+						    	}else{
+							    	$(".addMlists .addNickname").each(function() {
+									    if($(this).html()==nickname)
+									    	check = false;
+									});
+							    }
 						    	if(check==false){
-						    		$("#amEmail").val();
+						    		$("#amEmail").val("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
 						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'></span></div>");
@@ -378,10 +385,7 @@
 						    }
 
 				});
-				$(".delAddMem").click(function(){
-					alert(1)
-					alert(this.parent().html());
-				});
+				
 				//product_backlog list 동적생성
 				/*보류
 				$("#pbacklog_add_btn").click(function()
