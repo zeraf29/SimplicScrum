@@ -20,7 +20,7 @@ class M_user extends SS_Model{
 		$this->db->from('user');
 		$this->db->where('email', $email);
 		$rs = $this->db->get();
-		return ($rs->num_rows() > 0) ? TRUE : FALSE;
+		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 	function sign_Up($nickname,$email,$pw){
 
