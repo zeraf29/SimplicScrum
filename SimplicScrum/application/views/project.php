@@ -395,11 +395,11 @@
 						    });
 						    if(result==100){
 						    	check=true;
-						    	if(nickname=='<?=$this->session->userdata("ss_useremail")?>'){
+						    	if(email=='<?=$this->session->userdata("ss_useremail")?>'){
 						    		check = false;
 						    	}else{
-							    	$(".addMlists .addNickname").each(function() {
-									    if($(this).html()==nickname)
+							    	$(".addMlists .addEmail").each(function() {
+									    if($(this).html()==email)
 									    	check = false;
 									});
 							    }
@@ -407,7 +407,7 @@
 						    		amEmailval("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
-						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+email+"</span><span class='delAddMem'>&nbsp;</span></div>");
+						    		$("#members").append("<div class='addMlists'><span class='addEmail'>"+email+"</span><span class='delAddMem'>&nbsp;</span></div>");
 						    	}
 								
 						    }else{
@@ -452,7 +452,7 @@
 					data.desc = $("#mpDesc").val();
 					sub  = new Array();
 					cnt = 0;
-					$(".addMlists .addNickname").each(function() {
+					$(".addMlists .addEmail").each(function() {
 						sub[cnt] = $(this).html();
 						cnt++;
 					});
