@@ -348,7 +348,7 @@
 				$("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김 
 				
 				$('#members').on('click', '.delAddMem', function() {
-					alert($(this).parent().class)
+					alert(this.parent().html())
 				});
 
 				$("#plus_projectbtn").click(function(){
@@ -369,7 +369,7 @@
 						    if(result==100){
 						    	check=true;
 						    	if(nickname=='<?=$this->session->userdata("ss_nickname")?>'){
-
+						    		check = false;
 						    	}else{
 							    	$(".addMlists .addNickname").each(function() {
 									    if($(this).html()==nickname)
@@ -384,6 +384,7 @@
 						    	}
 								
 						    }else{
+						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
 
