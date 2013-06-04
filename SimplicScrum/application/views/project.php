@@ -500,10 +500,10 @@
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
 				if($(this).hasClass("extText")){
-					$(this).removeClass("extText");
+					$(this).switchClass("extText","nlClass");
 					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div>")
 				}else{
-					$(this).addClass("extText");
+					$(this).switchClass("nlClass","extText");
 					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME2</div>")
 				}
 
