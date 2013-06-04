@@ -106,7 +106,7 @@
 				</div>
 			</div>
 			<div class="check_member">
-				<input type="text" id="check_email_box" value="" ></br>-------------------------------------</div>
+			</br>-------------------------------------</div>
 			<div class="member_list">
 				<div><label for = "member_list" class ="label_memberlist" style="margin-left:5px;">MY MEMBER</label></div>
 				<div id="members">
