@@ -401,8 +401,7 @@ a.project_close:hover{color:white;}
 /*백로그 생성창*/
 	position : absolute;
 	margin-left : 300px;
-	width : 300px;
-	height : 300px;
+	width : 350px;
 	background : #FFFFFF;
 	padding : 5px;
 	z-index : 5;
