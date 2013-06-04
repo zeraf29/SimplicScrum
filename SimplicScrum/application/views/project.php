@@ -454,7 +454,7 @@
 					        type: "POST",
 					        async : false,
 					        data: {data:jsonObject},
-					        dataType: 'json',
+					        dataType: 'html',
 					        success: function (rdata) {
 					        	alert(rdata)
 					        	/*
