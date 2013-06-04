@@ -517,6 +517,11 @@
 				$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME</div>")
 			});
 			
+			$("#id_productBacklog_list").delegate("div", "doubleclick", function()
+			{
+				$(this).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
+			});
+			
 			$("#make_backlog_cancel").click(function(){
 				$( "#make_backlog_window" ).hide( "fold","", 1000);
 				$make_backlog_flag = 0;
