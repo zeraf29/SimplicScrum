@@ -72,6 +72,8 @@
 				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
+			<div id="id_productBacklog_list">
+			</div>
 		</div>
 		
 		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
@@ -138,7 +140,7 @@
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				var $before_windowsWidth = ($(window).width());
 				var count = 1;	//멤버 입력하는 div추가하기위한 변수
-				var p_backlog_count = 0; //product backlog에서 list 추가 위한 변수
+				var productBacklog_count = 0; //product backlog에서 list 추가 위한 변수
 				
 				var $left_p = (($(window).width()) - 1080)/4;
 				
@@ -441,40 +443,28 @@
 
 				});
 				//product_backlog list 동적생성
-				/*보류
 				$("#pbacklog_add_btn").click(function()
 				{
-					p_backlog_count ++;
+					productBacklog_count ++;
+
 					var new_list = document.createElement("div");
 					
-					 new_list.id = "new_list" + p_backlog_count;
+					 new_list.id = "new_list" + productBacklog_count;
 
-					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat'})
+					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
 
 					 with(new_list.style){
 						 position = "absoulte";
-	//					 background="#FFFFFF";
 						 width="286px";
 						 height="40px";	 					
 				 }
-				 make_product.appendChild(new_list);
-
-				 var new_inputbox = document.createElement("input");
-			
-					new_inputbox.id = "input" + p_backlog_count;
-					with(new_inputbox.style){
-						background="transparent";
-						border="0px";
-						width="200px";
-						height="35px";
-					}
-							
-				new_list.appendChild(new_inputbox);	
-
+				 id_productBacklog_list.appendChild(new_list);
 			});
-			*/
 
-				
+			$("#id_productBacklog_list").delegate("div", "click", function()
+			{
+				$(this).css({'height':'100px','background':'#cccccc','background-image':'URL(p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-bottom':'5px', 'margin-left':'34px', 'margin-top':'13px', 'width':'286px'})			
 			});
+	});
 	</script>
 </HTML>
