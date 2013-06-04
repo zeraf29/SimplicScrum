@@ -24,7 +24,7 @@ class Project extends SS_Controller {
 	}
 	
 	public function makeProject(){
-		$json = $this->input->post('data');
+		$json = $_POST["data"];
 		$json = stripslashes($json);
 		$json = json_decode($json);
 
