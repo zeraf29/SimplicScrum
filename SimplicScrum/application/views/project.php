@@ -421,11 +421,8 @@
 						cnt++;
 					});
 					data["member"] = sub;
-					jsonObject = {list:data};
-					for(var i=0; i<jsonObject.list.length; i++) {
-					    var obj = jsonObject.list[i];
-					    alert(obj.key1+" , "+obj.key2 + " , " + obj.key3);
-					}
+					jsonObject = toJSON(data);
+					alert(jsonObject);
 					/*
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/makeProject',
