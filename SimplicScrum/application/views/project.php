@@ -404,7 +404,7 @@
 									});
 							    }
 						    	if(check==false){
-						    		amEmailval("");
+						    		$("#amEmail").val("");
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
 						    		$("#members").append("<div class='addMlists'><span class='addEmail'>"+email+"</span><span class='delAddMem'>&nbsp;</span></div>");
