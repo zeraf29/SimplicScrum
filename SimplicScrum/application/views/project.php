@@ -204,8 +204,8 @@
 					var $left_p = (($(window).width()) - 1080)/4;
 					
 					$(".make_product").css({'margin-left':$left_p + 'px'});
-					$(".make_sprintbacklog").css({'margin-left':(($left_p)+360) +'px'});
-					$(".make_sprint").css({'margin-left':(($left_p*2)+720) +'px'});
+					$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
+					$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
 					
 					$(".product_backlog").css({'margin-left':$left_p + 'px'});
 					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
