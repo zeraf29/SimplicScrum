@@ -422,6 +422,12 @@ a.project_close:hover{color:white;}
 	font-size:10;
 	text-align:left;
 }
+
+.submit_cancel_class{
+	font-size:13px;
+	text-align : right;
+	padding-right:10px;
+}
 /*======================추가 20130605_0204 끝===========*/
 
 
