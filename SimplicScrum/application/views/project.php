@@ -12,7 +12,123 @@
 		$text = 'Welcome to SimplicScrum';
 	}
 ?>
-	<script type = "text/javascript">	
+ </HEAD>
+ <BODY>
+	<!--Top Menu Start-->
+	<div id = "top" >
+		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
+		<div class = "right_innerdiv"><a href = "#" id = "info"> [EDIT] </a>Welcome to SSCRUM!  <a href="<?=$main_path?>/login/getLogout">LogOut</a></div>
+		
+		<div id = "user_info" title = "user_information">
+		
+		</div>
+		<!--dialog-->
+		<div id = "dialog-modal" title = "Basic modal dialog">
+			<p>shit</p>
+		</div>
+	</div>
+
+	<div id = "second_top">
+		<div class="product_backlog"><a href="#" class = "p_backlog" id="top_p_backlog_btn">PRODUCT BACKLOG</a></div>
+		<div class="sprint_backlog"><a href="#" class = "s_backlog" id="top_s_backlog_btn">SPRINT BACKLOG</a></div>
+		<div class="sprint"><a href="#" class = "s_backlog" id="top_sprint_btn">SPRINT</a></div>
+	</div>
+	<!--Top Menu finish-->
+
+	
+	<!--left Project Menu start-->
+	<div id = "project">
+		<div id = "project_background">	
+			<pro>MY PROJECT</pro>
+			<p_add_btn><a href ="#" id = "add_btn"><img src ="<?=$img_path?>/project_addBtn.png"></a></p_add_btn>
+			<ul id="list_sortable">  
+					<?php
+						if(count($list)>0){
+							foreach($list as $key){
+								echo "<li class=\"ui-state-default listbar\"><span style=\"width:90%;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;float:right;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
+							}
+						}
+					?>
+			</ul>
+			<div id='calendar'></div>
+				<close id="_close">
+				<a href = "#" id = "close_btn" class ="project_close">close</a>
+				</close>
+		</div>
+	</div>
+	<!--left Project Menu finish-->
+  
+  <!--Opacity control-->
+  <div id="back_opacity"></div> 
+  
+	<!--content start-->
+	<div id = "content">
+		<div class="make_product">
+			<div class="ineer_product">
+				<img src="<?=$img_path?>/product_btn.png">
+			</div>
+			<div class="ineer_product_btn">
+				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
+				<img src="<?=$img_path?>/p_backlog.png">
+			</div>
+		</div>
+		
+		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
+		</div>
+		
+		<div class="make_sprint">
+			<div class="ineer_product"><img src="<?=$img_path?>/sprint_btn.png">
+		</div>
+	</div>
+	<!--content finish-->
+
+	<!--프로젝트 생성 메뉴 시작-->
+	
+	<div id = "make_project" style="">
+		<div class="project_tiltle_bar">ADD PROJECT</div>
+		<div class = "input_project">
+			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
+		</div>
+				<div id="id_term">
+			<label for = "term" class ="label_project">TERM</label>
+		</div>
+		<div id="id_date">
+			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
+			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
+		</div>
+		
+		<div id="project_member">
+			<div class="add_member">
+				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<div>
+					<input type ="text" id ="email" style="width:270px;" value="E-mail을 입력하세요."/>
+					<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
+				</div>
+			</div>
+			<div class="check_member">
+				<input type="text" id="check_email_box" value="" ></br>-------------------------------------</div>
+			<div class="member_list">
+				<div><label for = "member_list" class ="label_memberlist" style="margin-left:5px;">MY MEMBER</label></div>
+				<div id="members">
+				</div>
+			</div>
+		</div>
+		  
+
+	 
+		
+		</br>
+		<div id = "submit_cancel">
+			<a href ="#" class="submit" id ="add_submit">Make</a>
+			<a href ="#" class="submit" id ="add_cancel">Cancel</a>
+		</div>
+	</div>
+  <!--프로젝트 생성 메뉴 끝-->
+	
+	<!--Creat project start-->
+	
+ </BODY>
+ <script type = "text/javascript">	
 		$(document).ready(function()
 			{
 				$.pnotify({
@@ -297,122 +413,4 @@
 				
 			});
 	</script>
- </HEAD>
- <BODY>
-	<!--Top Menu Start-->
-	<div id = "top" >
-		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
-		<div class = "right_innerdiv"><a href = "#" id = "info"> [EDIT] </a>Welcome to SSCRUM!  <a href="<?=$main_path?>/login/getLogout">LogOut</a></div>
-		
-		<div id = "user_info" title = "user_information">
-		
-		</div>
-		<!--dialog-->
-		<div id = "dialog-modal" title = "Basic modal dialog">
-			<p>shit</p>
-		</div>
-	</div>
-
-	<div id = "second_top">
-		<div class="product_backlog"><a href="#" class = "p_backlog" id="top_p_backlog_btn">PRODUCT BACKLOG</a></div>
-		<div class="sprint_backlog"><a href="#" class = "s_backlog" id="top_s_backlog_btn">SPRINT BACKLOG</a></div>
-		<div class="sprint"><a href="#" class = "s_backlog" id="top_sprint_btn">SPRINT</a></div>
-	</div>
-	<!--Top Menu finish-->
-
-	
-	<!--left Project Menu start-->
-	<div id = "project">
-		<div id = "project_background">	
-			<pro>MY PROJECT</pro>
-			<p_add_btn><a href ="#" id = "add_btn"><img src ="<?=$img_path?>/project_addBtn.png"></a></p_add_btn>
-			<ul id="list_sortable">  
-					<?php
-						if(count($list)>0){
-							foreach($list as $key){
-								echo "<li class=\"ui-state-default listbar\"><span style=\"width:90%;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;float:right;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
-							}
-						}
-					?>
-			</ul>
-			<div id='calendar'></div>
-				<close id="_close">
-				<a href = "#" id = "close_btn" class ="project_close">close</a>
-				</close>
-		</div>
-	</div>
-	<!--left Project Menu finish-->
-  
-  <!--Opacity control-->
-  <div id="back_opacity"></div> 
-  
-	<!--content start-->
-	<div id = "content">
-		<div class="make_product">
-			<div class="ineer_product">
-				<img src="<?=$img_path?>/product_btn.png">
-			</div>
-			<div class="ineer_product_btn">
-				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
-				<img src="<?=$img_path?>/p_backlog.png">
-			</div>
-		</div>
-		
-		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
-		</div>
-		
-		<div class="make_sprint">
-			<div class="ineer_product"><img src="<?=$img_path?>/sprint_btn.png">
-		</div>
-	</div>
-	<!--content finish-->
-
-	<!--프로젝트 생성 메뉴 시작-->
-	
-	<div id = "make_project" style="">
-		<div class="project_tiltle_bar">ADD PROJECT</div>
-		<div class = "input_project">
-			<label for = "project_name" class ="label_project">PROJECT NAME&nbsp;&nbsp;</label><input type ="text" id ="project_name" style="width:151px; align=right;"/>
-		</div>
-				<div id="id_term">
-			<label for = "term" class ="label_project">TERM</label>
-		</div>
-		<div id="id_date">
-			<input type="text" id="start_date" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"> ~ 
-			<input type="text" id="end_date" size="9" maxlength="8" title="END DATE"style="width:118px;">
-		</div>
-		
-		<div id="project_member">
-			<div class="add_member">
-				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
-				<div>
-					<input type ="text" id ="email" style="width:151px;" value="E-mail을 입력하세요."/>
-				<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
-				</div>
-			</div>
-			<div class="check_member">
-				<input type="text" id="check_email_box" value="" ></br>-------------------------------------</div>
-			<div class="member_list">
-				<div><label for = "member_list" class ="label_memberlist" style="margin-left:5px;">MY MEMBER</label></div>
-				<div id="members">
-					<input type ="text" id ="member_name" value="" style="width:272px; margin-left:5px;"/>
-					<img src="<?=$img_path?>/member_deletebtn.png" style="vertical-align: middle; margin-top: -4px"/>
-				</div>
-			</div>
-		</div>
-		  
-
-	 
-		
-		</br>
-		<div id = "submit_cancel">
-			<a href ="#" class="submit" id ="add_submit">Make</a>
-			<a href ="#" class="submit" id ="add_cancel">Cancel</a>
-		</div>
-	</div>
-  <!--프로젝트 생성 메뉴 끝-->
-	
-	<!--Creat project start-->
-	
- </BODY>
 </HTML>
