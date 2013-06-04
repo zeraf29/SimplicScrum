@@ -398,19 +398,40 @@
 					if($("#project_name").val() == ""){
 						alert("프로젝트 이름을 넣어주세요");
 						$("#project_name").focus();
+						return false;
 					}
 					if($("#start_date").val() == ""){
 						alert("시작날짜를 정해주세요");
 						$("#start_date").focus();
+						return false;
 					}if($("#end_date").val() == ""){
 						alert("완료날짜를 정해주세요");
 						$("#end_date").focus();
+						return false;
 					}
+					data = new Array();
+					data["title"] = $("#project_name").val();
+					data["start_date"] = $("#start_date").val();
+					data["end_date"] = $("#end_date").val();
+					data["master"] = '<?=$this->session->userdata("ss_nickname")?>';
+					sub  = new Object();
+					cnt = 0;
+					$(".addMlists .addNickname").each(function() {
+						sub[cnt] = $(this).html();
+						cnt++;
+					});
+					data["member"] = sub;
+					jsonObject = {list:main};
+					for(var i=0; i<jsonObject.list.length; i++) {
+					    var obj = jsonObject.list[i];
+					    alert(obj.key1+" , "+obj.key2 + " , " + obj.key3);
+					}
+					/*
 					$.ajax({
-					        url: '/~sscrum/SimplicScrum/project/isMember',
+					        url: '/~sscrum/SimplicScrum/project/makeProject',
 					        type: "POST",
 					        async : false,
-					        data: {email: $("#amEmail").val()},
+					        data: {title: },
 					        dataType: 'json',
 					        success: function (rdata) {
 					        	result = rdata.code;
@@ -440,8 +461,9 @@
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
+					*/
+					});
 
-				});
 				//product_backlog list 동적생성
 				$("#pbacklog_add_btn").click(function()
 				{
