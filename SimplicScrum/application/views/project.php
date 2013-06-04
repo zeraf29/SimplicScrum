@@ -315,6 +315,10 @@
 						?>
 					]
 				});
+				
+				$("#plus_projectbtn").click(function(){
+					$("#members").append("<div>test</div>");
+				});
 
 				$(".listDelete").click(function(){
 					temp = this.id.split("_");
