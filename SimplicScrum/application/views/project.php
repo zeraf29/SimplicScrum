@@ -348,7 +348,7 @@
 				$("#ui-datepicker-div").hide(); //자동으로 생성되는 div객체 숨김 
 				
 				$('#members').on('click', '.delAddMem', function() {
-					alert(1)
+					alert($(this).parent().class)
 				});
 
 				$("#plus_projectbtn").click(function(){
