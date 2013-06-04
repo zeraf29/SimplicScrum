@@ -361,11 +361,14 @@
 					        	}
 						    });
 						    if(result==100){
-						    	alert($("div").find("addMlists").html());
-						    	if($("div").find("addMlists").html()==nickname){
+						    	$(".addMlists .addNickname").each(function() {
+								    if($(this).html()==nickname)
+								    	check = false;
+								});
+						    	if(check==false){
 						    		$("#amEmail").attr("placeholder", "이미 등록되어 있는 멤버입니다.");
 						    	}else{
-						    		$("#members").append("<div class='addMlists'>"+nickname+"<span class='delAddMem'><img src='<?=$img_path?>/member_deletebtn.png'></span></div>");
+						    		$("#members").append("<div class='addMlists'><span class='addNickname'>"+nickname+"</span><span class='delAddMem'><img src='<?=$img_path?>/member_deletebtn.png'></span></div>");
 						    	}
 								
 						    }else{
