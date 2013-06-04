@@ -471,7 +471,7 @@
 					        	}
 						    });
 							if(result==100){
-						    	//location.href="/~sscrum/SimplicScrum/project/";
+						    	location.href="/~sscrum/SimplicScrum/project/";
 						    }else{
 						    	alert("생성실패");
 						    }
