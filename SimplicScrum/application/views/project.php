@@ -429,7 +429,9 @@
 					sub  = new Object();
 					cnt = 0;
 					$(".addMlists .addNickname").each(function() {
+						alert($(this).html())
 						sub[cnt] = $(this).html();
+						alert(sub)
 						cnt++;
 					});
 					data.member = sub;
