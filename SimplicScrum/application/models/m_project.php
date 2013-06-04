@@ -11,15 +11,16 @@ class M_project extends SS_Model{
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 
-	function makeProject($title,$desc,$puser_id,$sdate,$edate){
+	function makeProject($json,$m_id){
+
 		$result = FALSE;
-		$pw = sha1($pw);
+
 		$data = array(
-		   'title' => $title ,
-		   'desc' => $desc ,
-		   'puser_id' => $puser_id,
-		   'sdate' => $sdate,
-		   'edate' => $edate
+		   'title' => $json->title ,
+		   'desc' => $json->desc ,
+		   'puser_id' => $m_id,
+		   'sdate' => $json->start_date,
+		   'edate' => $json->end_date
 		);
 
 		$this->db->trans_start();
@@ -32,12 +33,21 @@ class M_project extends SS_Model{
 		}
 		if($result==TRUE){
 			$this->db->trans_start();
-			$data = array(
+			foreach($json->member as $key){
+
+				$this->db->select('id');
+				$this->db->from('user');
+				$this->db->where('email',$key);
+				$rs = $this->db->get()->result();
+
+				$data = array(
 					'pid' => $this->db->insert_id(),
-					'uid' => $puser_id,
-					'rid' => '1'
+					'uid' => $rs[0]->id,
+					'rid' => '2'
 				);
-			$this->db->insert('role_table', $data); 
+				$this->db->insert('role_table', $data); 
+			}
+			
 			if ($this->db->trans_status() == FALSE) {
 				$this->db->trans_rollback();	
 				$result = FALSE;
