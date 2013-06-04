@@ -106,7 +106,7 @@
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<div>
-					<input type ="text" id ="email" style="width:270px;" value="E-mail을 입력하세요."/>
+					<input type ="text" id ="amEmail" style="width:270px;" value="E-mail을 입력하세요."/>
 					<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
 				</div>
 			</div>
@@ -315,10 +315,7 @@
 						?>
 					]
 				});
-				
-				$("#plus_projectbtn").click(function(){
-					$("#members").append("<div>test</div>");
-				});
+
 
 				$(".listDelete").click(function(){
 					temp = this.id.split("_");
@@ -350,31 +347,23 @@
 
 				$("#plus_projectbtn").click(function(){
 
-					var $email_check_flag = 1;	//이메일이 DB에 존재하는지 여부 (0:존재X, 1:존재)
-					
-					count += 1;
-
-					for(; count>1; count--){
-						var add_textbox = document.createElement("input");
-
-						add_textbox.type = "text";
-						add_textbox.id = "member_name" + count;
-						add_textbox.value ="";
-						add_textbox.style.width = "272px";
-						add_textbox.style.margin = "5px";
-
-						var br = document.createElement("br");
-						members.appendChild(add_textbox);
-
-//						$("#project_height").css({'height' = '+30px'});
-					}
-
-					if($email_check_flag == 1){
-						member_name.value += document.getElementById("email").value;
-						check_email_box.value += "추가되었습니다";
-						email.value = "";
-					}else{
-						check_email_box.value += "존재하지 않는 회원입니다.";}
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/project/isMember',
+					        type: "POST",
+					        async : false,
+					        data: {email: $("#amEmail").val()},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        	msg = rdata.msg;
+					        }
+						    });
+						    if(result==100){
+						    	alert(1)
+								$("#members").append("<div>test</div>");
+						    }else{
+						    	$("#amEmail").val("없는 Email 정보입니다.");
+						    }
 
 				});
 

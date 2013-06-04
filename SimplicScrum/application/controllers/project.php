@@ -121,5 +121,35 @@ class Project extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+
+	public function isMember(){
+		$email=isset($_POST["email"])?$_POST["email"]:"";
+
+		$this->load->model("M_user");
+
+		if($id==""  ){
+			$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : Not Blank!'
+				);
+		}else{
+			$result = $this->M_user->find_User($email);
+			if($result==TRUE){
+
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS'
+				);
+
+			}else{
+				$view_data = array(
+					'code' => '200',
+					'msg' => 'FAILURE : .!'
+				);
+			}
+		}
+		$this->displayJson($view_data);	
+
+	}
 	
 }

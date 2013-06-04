@@ -15,6 +15,13 @@ class M_user extends SS_Model{
 		$rs = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
+	function find_User($email){
+		$this->db->select('*');
+		$this->db->from('user');
+		$this->db->where('email', $email);
+		$rs = $this->db->get();
+		return ($rs->num_rows() > 0) ? TRUE : FALSE;
+	}
 	function sign_Up($nickname,$email,$pw){
 
 		$result = FALSE;
