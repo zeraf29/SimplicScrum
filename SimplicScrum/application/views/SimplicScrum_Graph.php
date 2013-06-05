@@ -6,7 +6,7 @@
  </HEAD>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
    <script type="text/javascript">
-      google.load('visualization', '1', {packages: ['corechart']});	//±¸±Û chart ·Îµå
+      google.load('visualization', '1', {packages: ['corechart']});	//êµ¬ê¸€ chart ë¡œë“œ
    </script>
 	<script type = "text/javascript">
 	$(document).ready(function()
@@ -14,26 +14,26 @@
 				var $windowsWidth = ($(window).width());
 				var $windowsHeight = ($(window).height());
 				
-				//graph_page »çÀÌÁî(³ôÀÌ)¸¦ window »çÀÌÁî¿¡ ¸Â°Ô ¼³Á¤
+				//graph_page ì‚¬ì´ì¦ˆ(ë†’ì´)ë¥¼ window ì‚¬ì´ì¦ˆì— ë§ê²Œ ì„¤ì •
 				$(".graph_page").css({'height':$windowsHeight - 160 + 'px'});
-				$(".graph_left").css({'top': $windowsHeight/2 -160 + 'px'});	//¹öÆ°À§Ä¡Á¶Á¤
+				$(".graph_left").css({'top': $windowsHeight/2 -160 + 'px'});	//ë²„íŠ¼ìœ„ì¹˜ì¡°ì •
 				
-				$(".graph_discription").css({'height': ($windowsHeight-160)-60 + 'px'});	//graph_discription »çÀÌÁî Á¶Á¤
+				$(".graph_discription").css({'height': ($windowsHeight-160)-60 + 'px'});	//graph_discription ì‚¬ì´ì¦ˆ ì¡°ì •
 				
-				//±×·¡ÇÁ ºäÆ÷Æ® Å©±â Á¶Àı
+				//ê·¸ë˜í”„ ë·°í¬íŠ¸ í¬ê¸° ì¡°ì ˆ
 				$(".graph_show").css({'height': ($windowsHeight-160)-60 + 'px'});
 				$(".graph_show").css({'width': ($windowsWidth-500 )+ 'px'});
 				
 				$(window).resize(function(){
-					//graph_page »çÀÌÁî Å©±â°¡ º¯°æµÉ¶§¸¶´Ù Á¶Àı
+					//graph_page ì‚¬ì´ì¦ˆ í¬ê¸°ê°€ ë³€ê²½ë ë•Œë§ˆë‹¤ ì¡°ì ˆ
 					$(".graph_page").css({'height':($(window).height()) - 160 + 'px'});
 					
-					//¹öÆ° À§Ä¡ Á¶Á¤ risize½Ã
+					//ë²„íŠ¼ ìœ„ì¹˜ ì¡°ì • risizeì‹œ
 					$(".graph_left").css({'top': ($(window).height())/2 -160 + 'px'});	
 					
-					//graph_discription »çÀÌÁî Á¶Á¤ resize½Ã
+					//graph_discription ì‚¬ì´ì¦ˆ ì¡°ì • resizeì‹œ
 					$(".graph_discription").css({'height': (($(window).height())-160)-60 + 'px'});
-					//±×·¡ÇÁ ºäÆ÷Æ® Å©±â Á¶Àı
+					//ê·¸ë˜í”„ ë·°í¬íŠ¸ í¬ê¸° ì¡°ì ˆ
 					$(".graph_show").css({'height': (($(window).height())-160)-60 + 'px'});
 					$(".graph_show").css({'width': (($(window).width())-500 )+ 'px'});
 					drawVisualization();
@@ -66,17 +66,17 @@
 			  ['12-05-19',  0,  0,  100],
 			  ['12-05-20',  0,  0,  50],
 			  ['12-05-21',  0,  0,  0]			  
-			]);	/*Data´Â ,¹è¿­·Î ÁöÁ¤, for¹®À» »ç¿ë... ³¯Â¥´Â ÇÁ·ÎÁ§Æ® ±â°£¸¸Å­ ÀÏ´ÜÀ§·Î ÀÔ·ÂÇÏ¸ç, Ã³À½ »ı¼º½Ã¿¡´Â 0À¸·Î ÃÊ±âÈ­, 
-			DB·ÎºÎÅÍ ³²¾ÆÀÖ´Â task°³¼ö, ³¯Â¥, ÀÌ»óÀûÀÎ »óÅÂ°ªÀ» ¹Ş¾Æ¿È.*/
-			//Ã­Æ® Äİ¹é ÇÔ¼ö ¼³Á¤
+			]);	/*DataëŠ” ,ë°°ì—´ë¡œ ì§€ì •, forë¬¸ì„ ì‚¬ìš©... ë‚ ì§œëŠ” í”„ë¡œì íŠ¸ ê¸°ê°„ë§Œí¼ ì¼ë‹¨ìœ„ë¡œ ì…ë ¥í•˜ë©°, ì²˜ìŒ ìƒì„±ì‹œì—ëŠ” 0ìœ¼ë¡œ ì´ˆê¸°í™”, 
+			DBë¡œë¶€í„° ë‚¨ì•„ìˆëŠ” taskê°œìˆ˜, ë‚ ì§œ, ì´ìƒì ì¸ ìƒíƒœê°’ì„ ë°›ì•„ì˜´.*/
+			//ì± íŠ¸ ì½œë°± í•¨ìˆ˜ ì„¤ì •
 			
 			var options = {
 			  title : 'Scrum Burndown Chart',
-			  vAxis: {title: "task"},	//yÃà
-			  hAxis: {title: "date"},	//zÃà
+			  vAxis: {title: "task"},	//yì¶•
+			  hAxis: {title: "date"},	//zì¶•
 			  seriesType: "bars",
 			  series: {1: {type : "line"}, 2: {type: "line"}}
-			};	//¿É¼Ç
+			};	//ì˜µì…˜
 
 			var chart = new google.visualization.ComboChart(document.getElementById('graph_div'));
 			chart.draw(data, options);
@@ -88,15 +88,15 @@
   <link rel="stylesheet" type="text/css" href="<?=$css_path?>/SimplicScrum.css">
  </HEAD>
  <BODY>
-	<!--»ó´Ü ¸Ş´º ½ÃÀÛ-->
+	<!--ìƒë‹¨ ë©”ë‰´ ì‹œì‘-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
-		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>´Ô È¯¿µÇÕ´Ï´Ù.  LogOut</div>
+		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤.  LogOut</div>
 	</div>
 
 	<div id = "second_top">	
 	</div>
-	<!--»ó´Ü ¸Ş´º ³¡-->
+	<!--ìƒë‹¨ ë©”ë‰´ ë-->
 	<div class = "graph_page">
 		<div class = "graph_left">	
 		<img src = "<?=$img_path?>/backbtn.png" usemap = "#back_button">
@@ -106,12 +106,12 @@
 		</div>
 			<div class = "graph_right">
 				<div class = "graph_discription">
-					<div class = "graph_Project_name">ÇÃÁ§ÀÌ¸§ »ÑÀ×»ÑÀ×</div>
-					<div class = "graph_User_name">»ç¿ëÀÚ ÀÌ¸§ÀÌ µé¾î°©´Ï´Ù »ÑÀ×»ÑÀ×</div>
-					<div class = "graph_Term">±â°£ÀÌ µé¾î°©´Ï´Ù »ÑÀ×»ÑÀ×</div>
-					<div class = "graph_Term_bar">±â°£¿¡ µû¸¥ ¹Ù°¡ µé¾î°©´Ï´Ù »ÑÀ×»ÑÀ×</div>
+					<div class = "graph_Project_name">í”Œì ì´ë¦„ ë¿Œì‰ë¿Œì‰</div>
+					<div class = "graph_User_name">ì‚¬ìš©ì ì´ë¦„ì´ ë“¤ì–´ê°‘ë‹ˆë‹¤ ë¿Œì‰ë¿Œì‰</div>
+					<div class = "graph_Term">ê¸°ê°„ì´ ë“¤ì–´ê°‘ë‹ˆë‹¤ ë¿Œì‰ë¿Œì‰</div>
+					<div class = "graph_Term_bar">ê¸°ê°„ì— ë”°ë¥¸ ë°”ê°€ ë“¤ì–´ê°‘ë‹ˆë‹¤ ë¿Œì‰ë¿Œì‰</div>
 				</div>
-				<div id = "graph_div" class = "graph_show">ÀÚ·á¸¦ °¡Áö°í ±×·¡ÇÁ¸¦ »ı¼º</div>
+				<div id = "graph_div" class = "graph_show">ìë£Œë¥¼ ê°€ì§€ê³  ê·¸ë˜í”„ë¥¼ ìƒì„±</div>
 			</div>
 	</div>
 	
