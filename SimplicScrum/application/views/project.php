@@ -84,6 +84,12 @@
 			</div>
 			
 			<div id="id_productBacklog_list">
+				<div id = "pList1" class = "nlClass"></div>
+				<div id = "pList2" class = "nlClass"></div>
+				<div id = "pList3" class = "nlClass"></div>
+				<div id = "pList4" class = "nlClass"></div>
+				<div id = "pList5" class = "nlClass"></div>
+				<div id = "pList6" class = "nlClass"></div>
 			</div>
 		</div>
 		
