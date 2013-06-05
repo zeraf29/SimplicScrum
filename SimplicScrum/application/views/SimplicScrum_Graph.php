@@ -85,12 +85,12 @@
       google.setOnLoadCallback(drawVisualization);
 	</script>
 	
-  <link rel="stylesheet" type="text/css" href="SimplicScrum.css">
+  <link rel="stylesheet" type="text/css" href="<?=$css_path?>/SimplicScrum.css">
  </HEAD>
  <BODY>
 	<!--상단 메뉴 시작-->
 	<div id = "top" >
-		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "./image/top_logo.png"></div>
+		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
 		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>님 환영합니다.  LogOut</div>
 	</div>
 
@@ -99,7 +99,7 @@
 	<!--상단 메뉴 끝-->
 	<div class = "graph_page">
 		<div class = "graph_left">	
-		<img src = "./image/backbtn.png" usemap = "#back_button">
+		<img src = "<?=$img_path?>/backbtn.png" usemap = "#back_button">
 			<map name = "back_button">
 				<area shape = "rect" coords = "10, 35, 38, 45" href = "http://www.naver.com">
 			</map>
