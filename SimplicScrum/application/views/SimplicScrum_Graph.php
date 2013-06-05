@@ -108,7 +108,7 @@
 				<div class = "graph_discription">
 					<div class = "graph_Project_name">Project Name</div>
 					<div class = "graph_User_name">User names</div>
-					<div class = "graph_Term">Period(xx/xx~xx/xx</div>
+					<div class = "graph_Term">Period(xx/xx~xx/xx)</div>
 					<div class = "graph_Term_bar">slide Bar</div>
 				</div>
 				<div id = "graph_div" class = "graph_show"></div>
