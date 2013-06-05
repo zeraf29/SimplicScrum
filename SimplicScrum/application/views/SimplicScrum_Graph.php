@@ -1,15 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
- <HEAD>
-  <TITLE> Simplic Scrum </TITLE>
-  <meta Cahrset="utf-8">
-  <link href='fullcalendar.css' rel='stylesheet' />
-<link href='fullcalendar.print.css' rel='stylesheet' media='print' />
-
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />  
-  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>  
-  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-  <script src='fullcalendar.min.js'></script>
+<?include("common/header.php");?>
+  <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
+  <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' />
+  <link rel='stylesheet' href='<?=$css_path?>/cupertino/theme.css' />
+  <script src='<?=$js_path?>/fullcalendar.min.js'></script>
+ </HEAD>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
    <script type="text/javascript">
       google.load('visualization', '1', {packages: ['corechart']});	//구글 chart 로드
