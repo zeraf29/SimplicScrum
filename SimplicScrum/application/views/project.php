@@ -84,10 +84,21 @@
 			</div>
 			
 			<div id="id_productBacklog_list">
+				<div id = "pList1" class = "nlClass"></div>
+				<div id = "pList2" class = "nlClass"></div>
+				<div id = "pList3" class = "nlClass"></div>
+				<div id = "pList4" class = "nlClass"></div>
+				<div id = "pList5" class = "nlClass"></div>
+				<div id = "pList6" class = "nlClass"></div>
 			</div>
 		</div>
 		
 		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
+			<div id="id_sprintBacklog_list">
+				<div id = "new_slist1" class = "nlClass"></div>
+				<div id = "new_slist2" class = "nlClass"></div>
+				<div id = "new_slist3" class = "nlClass"></div>
+			</div>
 		</div>
 		
 		<div class="make_sprint">
@@ -204,8 +215,8 @@
 					var $left_p = (($(window).width()) - 1080)/4;
 					
 					$(".make_product").css({'margin-left':$left_p + 'px'});
-					$(".make_sprintbacklog").css({'margin-left':(($left_p)+360) +'px'});
-					$(".make_sprint").css({'margin-left':(($left_p*2)+720) +'px'});
+					$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
+					$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
 					
 					$(".product_backlog").css({'margin-left':$left_p + 'px'});
 					$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
@@ -487,31 +498,43 @@
 					 new_list.id = "new_list" + productBacklog_count;
 					 new_list.className = "nlClass";
 
-					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
-
+				//	 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
+/*
 					 with(new_list.style){
 						 position = "absoulte";
 						 width="286px";
 						 height="40px";	 					
-				 }
+				 }*/
 				 id_productBacklog_list.appendChild(new_list);
 			});
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
 				if($(this).hasClass("extText")){
-					$(this).removeClass("extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div>")
+					$(this).switchClass("extText","nlClass");
+					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 				}else{
-					$(this).addClass("extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME2</div>")
+					$(this).switchClass("nlClass","extText");
+					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
 				}
-
 			});
+			
+			$("#id_sprintBacklog_list").delegate("div", "click", function()
+			{
+				if($(this).hasClass("extText")){
+					$(this).switchClass("extText","nlClass");
+					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
+				}else{
+					$(this).switchClass("nlClass","extText");
+					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
+				}
+			});
+			
 			$("#make_backlog_cancel").click(function(){
 				$( "#make_backlog_window" ).hide( "fold","", 1000);
 				$make_backlog_flag = 0;
 			});
+			
 			/*--------추가(2013-06-05, 0200)시작----------*/
 			//프로덕트 백로그 생성창 컨트롤=========
 				$( "#make_backlog_window" ).hide();

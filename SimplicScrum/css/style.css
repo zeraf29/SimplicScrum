@@ -427,6 +427,28 @@ a.project_close:hover{color:white;}
 	text-align : right;
 	padding-right:10px;
 }
+
+.extText{
+	background-image : URL("/~sscrum/SimplicScrum/image/p_backlog_bar.png");
+	background-repeat: no-repeat;
+	background-position : right bottom;
+	background-color : #cccccc;
+	margin-left:34px;
+	margin-top:13px;
+	position:absoulte;
+	height : 200px;
+	width : 286px;
+}
+
+.nlClass{
+	background-image:URL("/~sscrum/SimplicScrum/image/p_backlog_bar.png");
+	background-repeat: no-repeat;
+	margin-left:34px;
+	margin-top:13px;
+	position:absoulte;
+	width:286px;
+	height:40px;	
+}
 /*======================추가 20130605_0204 끝===========*/
 
 
