@@ -635,7 +635,7 @@ p_add_btn {
 	position : absolute;
 	float:left;
 	width : 293px;
-	background:URL("./image/graph_left.png");
+	background:URL("/~sscrum/SimplicScrum/image/graph_left.png");
 	background-repeat:no-repeat;
 	background-color : #EF4B4B;
 }
