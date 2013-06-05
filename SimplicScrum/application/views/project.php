@@ -88,6 +88,11 @@
 		</div>
 		
 		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
+			<div id="id_sprintBacklog_list">
+				<div id = "new_slist1" class = "nlClass"></div>
+				<div id = "new_slist2" class = "nlClass"></div>
+				<div id = "new_slist3" class = "nlClass"></div>
+			</div>
 		</div>
 		
 		<div class="make_sprint">
@@ -498,6 +503,17 @@
 			});
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
+			{
+				if($(this).hasClass("extText")){
+					$(this).switchClass("extText","nlClass");
+					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
+				}else{
+					$(this).switchClass("nlClass","extText");
+					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
+				}
+			});
+			
+			$("#id_sprintBacklog_list").delegate("div", "click", function()
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
