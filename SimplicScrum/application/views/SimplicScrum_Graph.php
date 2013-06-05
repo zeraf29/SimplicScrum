@@ -106,12 +106,12 @@
 		</div>
 			<div class = "graph_right">
 				<div class = "graph_discription">
-					<div class = "graph_Project_name">플젝이름 뿌잉뿌잉</div>
-					<div class = "graph_User_name">사용자 이름이 들어갑니다 뿌잉뿌잉</div>
-					<div class = "graph_Term">기간이 들어갑니다 뿌잉뿌잉</div>
-					<div class = "graph_Term_bar">기간에 따른 바가 들어갑니다 뿌잉뿌잉</div>
+					<div class = "graph_Project_name">Project Name</div>
+					<div class = "graph_User_name">User names</div>
+					<div class = "graph_Term">Period(xx/xx~xx/xx</div>
+					<div class = "graph_Term_bar">slide Bar</div>
 				</div>
-				<div id = "graph_div" class = "graph_show">자료를 가지고 그래프를 생성</div>
+				<div id = "graph_div" class = "graph_show"></div>
 			</div>
 	</div>
 	
