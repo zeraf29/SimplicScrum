@@ -85,7 +85,6 @@
       google.setOnLoadCallback(drawVisualization);
 	</script>
 	
-  <link rel="stylesheet" type="text/css" href="<?=$css_path?>/SimplicScrum.css">
  </HEAD>
  <BODY>
 	<!--상단 메뉴 시작-->
