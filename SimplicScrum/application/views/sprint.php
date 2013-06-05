@@ -1,78 +1,72 @@
 <?include("common/header.php");?>
-   <link href='<?=$css_path?>/style.css' rel='stylesheet' />
+  <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
+  <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' />
+  <link rel='stylesheet' href='<?=$css_path?>/cupertino/theme.css' />
+  <script src='<?=$js_path?>/fullcalendar.min.js'></script>
+<script type = "text/javascript">	
+  $(document).ready(function(){
 
-  <script type = "text/javascript">
-	$(document).ready(function()
-	{
-		var $left_p = (($(window).width()) - 1080)/4;
+	  var $left_p = (($(window).width()) - 1080)/4;
 
-		$(".make_product").css({'margin-left':$left_p + 'px'});
-		$(".make_sprintbacklog").css({'margin-left':(($left_p*2)+360) +'px'});
-		$(".make_sprint").css({'margin-left':(($left_p*3)+720) +'px'});
-					
-		$(".product_backlog").css({'margin-left':$left_p + 'px'});
-		$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
-		$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
+	  $("#sprint_todo").css({'margin-left':$left_p + 'px'});
+	  $("#sprint_doing").css({'margin-left':(($left_p*2)+360) +'px'});
+	  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
+	  $("#sprint_todo").css({'margin-left':$left_p + 'px'});
+	  $("#sprint_doing").css({'margin-left':(($left_p*2)+360) +'px'});
+	  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
 
-		$(window).resize(function(){
-
-		var $left_p = (($(window).width()) - 1080)/4;	
-
-		$(".make_product").css({'margin-left':$left_p + 'px'});
-		$(".make_sprintbacklog").css({'margin-left':(($left_p)+360) +'px'});
-		$(".make_sprint").css({'margin-left':(($left_p*2)+720) +'px'});
-					
-		$(".product_backlog").css({'margin-left':$left_p + 'px'});
-		$(".sprint_backlog").css({'margin-left':(($left_p*2)+360) +'px'});
-		$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
-		});
-	});
-
+	  $(window).resize(function(){
+		  
+		  $("#sprint_todo").css({'margin-left':$left_p + 'px'});
+		  $("#sprint_doing").css({'margin-left':(($left_p*2)+360) +'px'});
+		  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
+		  $("#sprint_todo").css({'margin-left':$left_p + 'px'});
+		  $("#sprint_doing").css({'margin-left':(($left_p*2)+360) +'px'});
+		  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
+		  });
+  });
   </script>
 
  </head>
 
- <body>
- <!--상단 메뉴 시작-->
+  <BODY>
+	<!--Top Menu start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
-		<div class = "right_innerdiv"><a href = "#" id = "info"> [EDIT] </a>Welcome to SSCRUM!  <a href="<?=$main_path?>/login/getLogout">LogOut</a></div>
-		
+		<div class = "right_innerdiv"><a href = "#" id = "info"> 000 </a>welcome  LogOut</div>
 	</div>
 
-	<div id = "second_top">
-		<div class="product_backlog">SPRINT</div>
+	<div id = "second_top_sprint">
+		<div class="sprint">SPRINT</div>
 	</div>
-	<!--상단 메뉴 끝-->
+	<!--Top Menu end -->
   
-	<!--content 시작-->
+	<!--content start-->
 	<div id = "content">
-		<div class="make_product">
-			<div class="ineer_product">
-				<img src="./image/productb_btn.png">
-			</div>
-			<div class="ineer_product_btn">
-				<a href="#" id="pbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
-				<img src="<?=$img_path?>/p_backlog.png">
-			</div>
-			<div id="id_productBacklog_list">
+		<div id="sprint_todo" class="sprint">
+			<div class="ineer_product"><img src="<?=$img_path?>/sprint_detail_btn.png"></div>
+			<div class="sprint_content">TO DO</div>
+			<div id="id_sprint_todo_list">
+				<div id = "pList1" class = "nlClass"></div>
+				<div id = "pList2" class = "nlClass"></div>
+				<div id = "pList3" class = "nlClass"></div>
 			</div>
 		</div>
 
-		<div class="make_sprintbacklog">
-			<div class="inner_sprintbacklog">
-			</div>
+		<div id="sprint_doing" class="sprint">
+			<div class="ineer_product" style='margin-top:30px;'></div>
+			<div class="sprint_content">DOING</div>
+			<div id="id_sprint_doing_list"></div>
 		</div>
 		
-		<div class="make_sprint">
-			<div class="ineer_product">
-			</div>
+		<div id="sprint_done" class="sprint">
+			<div class="ineer_product" style='margin-top:30px;'></div>
+			<div class="sprint_content">DONE</div>
+			<div id="id_sprint_done_list"></div>
 		</div>
 	</div>
 
-	<!--content 끝-->
-
-	</div>
-  
- </body>
+	<!--content end-->
+	
+ </BODY>
 </html>
