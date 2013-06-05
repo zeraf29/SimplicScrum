@@ -432,7 +432,7 @@ a.project_close:hover{color:white;}
 	background-image : URL("/~sscrum/SimplicScrum/image/p_backlog_bar.png.png");
 	background-repeat: no-repeat;
 	background-position : right bottom;
-	background-color : #808080;
+	background-color : #cccccc;
 	height : 200px;
 	width : 286px;
 }

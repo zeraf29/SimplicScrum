@@ -506,12 +506,13 @@
 					$(this).switchClass("nlClass","extText");
 					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
 				}
-
 			});
+			
 			$("#make_backlog_cancel").click(function(){
 				$( "#make_backlog_window" ).hide( "fold","", 1000);
 				$make_backlog_flag = 0;
 			});
+			
 			/*--------추가(2013-06-05, 0200)시작----------*/
 			//프로덕트 백로그 생성창 컨트롤=========
 				$( "#make_backlog_window" ).hide();
