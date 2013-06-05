@@ -487,7 +487,7 @@
 					 new_list.id = "new_list" + productBacklog_count;
 					 new_list.className = "nlClass";
 
-					 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
+				//	 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
 /*
 					 with(new_list.style){
 						 position = "absoulte";
