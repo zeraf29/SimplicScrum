@@ -433,6 +433,9 @@ a.project_close:hover{color:white;}
 	background-repeat: no-repeat;
 	background-position : right bottom;
 	background-color : #cccccc;
+	margin-left:34px;
+	margin-top:13px;
+	position:absoulte;
 	height : 200px;
 	width : 286px;
 }
