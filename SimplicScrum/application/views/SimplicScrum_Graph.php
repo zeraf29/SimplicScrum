@@ -3,7 +3,7 @@
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' />
   <link rel='stylesheet' href='<?=$css_path?>/cupertino/theme.css' />
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
- </HEAD>
+ <HEAD>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
    <script type="text/javascript">
       google.load('visualization', '1', {packages: ['corechart']});	//구글 chart 로드
