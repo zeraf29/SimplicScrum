@@ -84,12 +84,12 @@
 			</div>
 			
 			<div id="id_productBacklog_list">
-				<div id = "pList1" class = "nlClass"></div>
-				<div id = "pList2" class = "nlClass"></div>
-				<div id = "pList3" class = "nlClass"></div>
-				<div id = "pList4" class = "nlClass"></div>
-				<div id = "pList5" class = "nlClass"></div>
-				<div id = "pList6" class = "nlClass"></div>
+				<div id = "pList1" class = "pbacklog_list nlClass"></div>
+				<div id = "pList2" class = "pbacklog_list nlClass"></div>
+				<div id = "pList3" class = "pbacklog_list nlClass"></div>
+				<div id = "pList4" class = "pbacklog_list nlClass"></div>
+				<div id = "pList5" class = "pbacklog_list nlClass"></div>
+				<div id = "pList6" class = "pbacklog_list nlClass"></div>
 			</div>
 		</div>
 	
@@ -111,9 +111,9 @@
 			</div>
 			
 			<div id="id_sprintBacklog_list">
-				<div id = "new_slist1" class = "nlClass"></div>
-				<div id = "new_slist2" class = "nlClass"></div>
-				<div id = "new_slist3" class = "nlClass"></div>
+				<div id = "new_slist1" class = "sbacklog_list nlClass"></div>
+				<div id = "new_slist2" class = "sbacklog_list nlClass"></div>
+				<div id = "new_slist3" class = "sbacklog_list nlClass"></div>
 			</div>
 		</div>
 <!--수정 20130607 끝-->	
