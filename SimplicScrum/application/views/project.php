@@ -100,8 +100,8 @@
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
 	
-			<div class = "plus_product_backlog" id = "make_backlog_window">
-				<p>MAKE PRODUCT BACKLOG</p>
+			<div class = "plus_product_backlog" id = "make_sbacklog_window">
+				<p>MAKE SPRINT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
 				<div class = "submit_cancel_class">
@@ -547,6 +547,18 @@
 			
 			/*--------추가(2013-06-05, 0200)시작----------*/
 			//프로덕트 백로그 생성창 컨트롤=========
+				$( "#make_backlog_window" ).hide();
+				$( "#pbacklog_add_btn" ).click(function() {
+					if($make_backlog_flag == 1){
+						$( "#make_backlog_window" ).hide( "fold","", 1000);
+						$make_backlog_flag = 0;
+						}
+					else if($make_backlog_flag ==0){
+						$( "#make_backlog_window" ).show( "fold","", 1000);
+						$make_backlog_flag = 1;
+					}
+				});
+				
 				$( "#make_backlog_window" ).hide();
 				$( "#pbacklog_add_btn" ).click(function() {
 					if($make_backlog_flag == 1){
