@@ -96,8 +96,8 @@
 <!--수정 20130607 시작-->	
 		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
 			<div class="ineer_product_btn">
-				<a href="#" id="sbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
-				<img src="<?=$img_path?>/p_backlog.png">
+				<a href="#" id="sbacklog_add_btn"><img src="<?=$img_path?>/s_backlog_add.png"></a>
+				<img src="<?=$img_path?>/s_backlog.png">
 			</div>
 	
 			<div class = "plus_product_backlog" id = "make_sbacklog_window">
