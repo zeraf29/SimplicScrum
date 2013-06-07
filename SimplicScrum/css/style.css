@@ -428,10 +428,19 @@ a.project_close:hover{color:white;}
 	padding-right:10px;
 }
 
-.extText{
+.pbacklog_list
+{
 	background-image : URL("/~sscrum/SimplicScrum/image/p_backlog_bar.png");
 	background-repeat: no-repeat;
 	background-position : right bottom;
+}
+.sbacklog_list
+{
+	background-image : URL("/~sscrum/SimplicScrum/image/s_backlog_bar.png");
+	background-repeat: no-repeat;
+	background-position : right bottom;
+}
+.extText{
 	background-color : #cccccc;
 	margin-left:34px;
 	margin-top:13px;
@@ -441,8 +450,6 @@ a.project_close:hover{color:white;}
 }
 
 .nlClass{
-	background-image:URL("/~sscrum/SimplicScrum/image/p_backlog_bar.png");
-	background-repeat: no-repeat;
 	margin-left:34px;
 	margin-top:13px;
 	position:absoulte;

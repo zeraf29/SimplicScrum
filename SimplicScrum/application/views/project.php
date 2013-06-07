@@ -506,6 +506,7 @@
 						    }
 					});
 
+					
 				//product_backlog list 동적생성
 				$("#make_pbacklog_submit").click(function()
 				{
@@ -514,10 +515,10 @@
 					var new_list = document.createElement("div");
 					
 					 new_list.id = "new_plist" + productBacklog_count;
-					 new_list.className = "nlClass";
+					 new_list.className = "pbacklog_list nlClass";
 					 
 				 id_productBacklog_list.appendChild(new_list);
-			});
+				});
 			
 							//product_backlog list 동적생성
 				$("#make_sbacklog_submit").click(function()
@@ -527,10 +528,10 @@
 					var new_list = document.createElement("div");
 					
 					 new_list.id = "new_slist" + productBacklog_count;
-					 new_list.className = "nlClass";
+					 new_list.className = "sbacklog_list nlClass";
 					 
 				 id_sprintBacklog_list.appendChild(new_list);
-			});
+				});
 			
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
