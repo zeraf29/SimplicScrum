@@ -513,7 +513,7 @@
 
 					var new_list = document.createElement("div");
 					
-					 new_list.id = "new_list" + productBacklog_count;
+					 new_list.id = "new_plist" + productBacklog_count;
 					 new_list.className = "nlClass";
 					 
 				 id_productBacklog_list.appendChild(new_list);
@@ -526,10 +526,10 @@
 
 					var new_list = document.createElement("div");
 					
-					 new_list.id = "new_list" + productBacklog_count;
+					 new_list.id = "new_slist" + productBacklog_count;
 					 new_list.className = "nlClass";
 					 
-				 id_productBacklog_list.appendChild(new_list);
+				 id_sprintBacklog_list.appendChild(new_list);
 			});
 			
 
