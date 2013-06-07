@@ -548,7 +548,7 @@
 			/*--------추가(2013-06-05, 0200)시작----------*/
 			//프로덕트 백로그 생성창 컨트롤=========
 				$( "#make_backlog_window" ).hide();
-				$( "#sbacklog_add_btn" ).click(function() {
+				$( "#pbacklog_add_btn" ).click(function() {
 					if($make_backlog_flag == 1){
 						$( "#make_backlog_window" ).hide( "fold","", 1000);
 						$make_backlog_flag = 0;
@@ -560,7 +560,7 @@
 				});
 				
 				$( "#make_sbacklog_window" ).hide();
-				$( "#pbacklog_add_btn" ).click(function() {
+				$( "#sbacklog_add_btn" ).click(function() {
 					if($make_backlog_flag == 1){
 						$( "#make_sbacklog_window" ).hide( "fold","", 1000);
 						$make_backlog_flag = 0;
