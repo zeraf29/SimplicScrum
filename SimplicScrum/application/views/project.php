@@ -92,15 +92,32 @@
 				<div id = "pList6" class = "nlClass"></div>
 			</div>
 		</div>
-		
+	
+<!--수정 20130607 시작-->	
 		<div class="make_sprintbacklog"><img src="<?=$img_path?>/sprintb_btn.png">
+			<div class="ineer_product_btn">
+				<a href="#" id="sbacklog_add_btn"><img src="<?=$img_path?>/p_backlog_add.png"></a>
+				<img src="<?=$img_path?>/p_backlog.png">
+			</div>
+	
+			<div class = "plus_product_backlog" id = "make_backlog_window">
+				<p>MAKE PRODUCT BACKLOG</p>
+				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
+				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
+				<div class = "submit_cancel_class">
+					<a href ="#" class="submit" id = "make_backlog_submit">submit</a>
+					<a href ="#" class="submit" id = "make_backlog_cancel">cancel</a>
+				</div>
+			</div>
+			
 			<div id="id_sprintBacklog_list">
 				<div id = "new_slist1" class = "nlClass"></div>
 				<div id = "new_slist2" class = "nlClass"></div>
 				<div id = "new_slist3" class = "nlClass"></div>
 			</div>
 		</div>
-		
+<!--수정 20130607 끝-->	
+
 		<div class="make_sprint">
 			<div class="ineer_product"><img src="<?=$img_path?>/sprint_btn.png">
 		</div>
@@ -497,14 +514,7 @@
 					
 					 new_list.id = "new_list" + productBacklog_count;
 					 new_list.className = "nlClass";
-
-				//	 $(new_list).css({'background-image':'URL(<?=$img_path?>/p_backlog_bar.png)','background-repeat': 'no-repeat', 'margin-left':'34px', 'margin-top':'13px'})
-/*
-					 with(new_list.style){
-						 position = "absoulte";
-						 width="286px";
-						 height="40px";	 					
-				 }*/
+					 
 				 id_productBacklog_list.appendChild(new_list);
 			});
 

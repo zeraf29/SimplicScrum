@@ -1,4 +1,4 @@
-<?include("common/header.php");?>
+﻿<?include("common/header.php");?>
   <link href='<?=$css_path?>/fullcalendar.css' rel='stylesheet' />
   <link href='<?=$css_path?>/fullcalendar.print.css' rel='stylesheet' media='print' />
   <link rel='stylesheet' href='<?=$css_path?>/cupertino/theme.css' />
