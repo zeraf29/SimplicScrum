@@ -570,11 +570,11 @@
 				$( "#make_pbacklog_window" ).hide();
 				$( "#pbacklog_add_btn" ).click(function() {
 					if($make_pbacklog_flag == 1){
-						$( "#make_backlog_window" ).hide( "fold","", 1000);
+						$( "#make_pbacklog_window" ).hide( "fold","", 1000);
 						$make_pbacklog_flag = 0;
 						}
 					else if($make_pbacklog_flag ==0){
-						$( "#make_backlog_window" ).show( "fold","", 1000);
+						$( "#make_pbacklog_window" ).show( "fold","", 1000);
 						$make_pbacklog_flag = 1;
 					}
 				});
