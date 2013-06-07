@@ -73,13 +73,13 @@
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
 			<!-- 추가 20130605 0200 -->
-			<div class = "plus_product_backlog" id = "make_backlog_window">
+			<div class = "plus_product_backlog" id = "make_pbacklog_window">
 				<p>MAKE PRODUCT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
 				<div class = "submit_cancel_class">
-					<a href ="#" class="submit" id = "make_backlog_submit">submit</a>
-					<a href ="#" class="submit" id = "make_backlog_cancel">cancel</a>
+					<a href ="#" class="submit" id = "make_pbacklog_submit">submit</a>
+					<a href ="#" class="submit" id = "make_pbacklog_cancel">cancel</a>
 				</div>
 			</div>
 			
@@ -105,8 +105,8 @@
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
 				<div class = "submit_cancel_class">
-					<a href ="#" class="submit" id = "make_backlog_submit">submit</a>
-					<a href ="#" class="submit" id = "make_backlog_cancel">cancel</a>
+					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
+					<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
 				</div>
 			</div>
 			
@@ -185,7 +185,8 @@
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				
 				/*--------추가(20130605_0200)시작---------*/
-				var $make_backlog_flag = 0;	//backlog 생성창 위한  flag
+				var $make_pbacklog_flag = 0;	//backlog 생성창 위한  flag
+				var $make_sbacklog_flag = 0;	//backlog 생성창 위한  flag
 				/*--------추가(20130605_0200) 끝---------*/
 				
 				var $before_windowsWidth = ($(window).width());
@@ -506,7 +507,7 @@
 					});
 
 				//product_backlog list 동적생성
-				$("#make_backlog_submit").click(function()
+				$("#make_pbacklog_submit").click(function()
 				{
 					productBacklog_count ++;
 
@@ -517,6 +518,20 @@
 					 
 				 id_productBacklog_list.appendChild(new_list);
 			});
+			
+							//product_backlog list 동적생성
+				$("#make_sbacklog_submit").click(function()
+				{
+					productBacklog_count ++;
+
+					var new_list = document.createElement("div");
+					
+					 new_list.id = "new_list" + productBacklog_count;
+					 new_list.className = "nlClass";
+					 
+				 id_productBacklog_list.appendChild(new_list);
+			});
+			
 
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
@@ -540,34 +555,39 @@
 				}
 			});
 			
-			$("#make_backlog_cancel").click(function(){
-				$( "#make_backlog_window" ).hide( "fold","", 1000);
-				$make_backlog_flag = 0;
+			$("#make_pbacklog_cancel").click(function(){
+				$( "#make_pbacklog_window" ).hide( "fold","", 1000);
+				$make_pbacklog_flag = 0;
+			});
+			
+			$("#make_sbacklog_cancel").click(function(){
+				$( "#make_sbacklog_window" ).hide( "fold","", 1000);
+				$make_sbacklog_flag = 0;
 			});
 			
 			/*--------추가(2013-06-05, 0200)시작----------*/
 			//프로덕트 백로그 생성창 컨트롤=========
-				$( "#make_backlog_window" ).hide();
+				$( "#make_pbacklog_window" ).hide();
 				$( "#pbacklog_add_btn" ).click(function() {
-					if($make_backlog_flag == 1){
+					if($make_pbacklog_flag == 1){
 						$( "#make_backlog_window" ).hide( "fold","", 1000);
-						$make_backlog_flag = 0;
+						$make_pbacklog_flag = 0;
 						}
-					else if($make_backlog_flag ==0){
+					else if($make_pbacklog_flag ==0){
 						$( "#make_backlog_window" ).show( "fold","", 1000);
-						$make_backlog_flag = 1;
+						$make_pbacklog_flag = 1;
 					}
 				});
 				
 				$( "#make_sbacklog_window" ).hide();
 				$( "#sbacklog_add_btn" ).click(function() {
-					if($make_backlog_flag == 1){
+					if($make_sbacklog_flag == 1){
 						$( "#make_sbacklog_window" ).hide( "fold","", 1000);
-						$make_backlog_flag = 0;
+						$make_sbacklog_flag = 0;
 						}
-					else if($make_backlog_flag ==0){
+					else if($make_sbacklog_flag ==0){
 						$( "#make_sbacklog_window" ).show( "fold","", 1000);
-						$make_backlog_flag = 1;
+						$make_sbacklog_flag = 1;
 					}
 				});
 				//=====================================
