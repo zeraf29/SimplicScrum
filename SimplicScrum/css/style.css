@@ -442,7 +442,7 @@ a.project_close:hover{color:white;}
 }
 
 .sprintBacklog_card_name{
-	position : absolute;
+	position : absoulte;
 	float : left;
 	width : 250ox;
 }
