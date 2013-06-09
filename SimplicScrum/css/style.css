@@ -440,6 +440,12 @@ a.project_close:hover{color:white;}
 	background-repeat: no-repeat;
 	background-position : right bottom;
 }
+
+.sprintBacklog_card_name{
+	position : absolute;
+	float : left;
+	width : 250ox;
+}
 .extText{
 	background-color : #cccccc;
 	margin-left:34px;
