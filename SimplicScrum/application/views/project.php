@@ -88,13 +88,13 @@
 			<div id="id_productBacklog_list">
 				<?php
 					if(isset($backlog["porduct"])){
-						echo 1;;
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
 							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\">".$key->pd_title."</div>";
 							$cnt++;
 						}
+						echo $str;
 					}
 				?>
 			</div>
