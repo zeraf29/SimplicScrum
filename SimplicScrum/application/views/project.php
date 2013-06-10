@@ -291,7 +291,7 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
-				$pid = <?=$project_id?>;
+				$project_id = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
 					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
@@ -380,7 +380,7 @@
 				
 				$("#close_btn").click(function()
 				{
-					if($pid == ""){
+					if($project_id == ""){
 						alert("Selecting your Project.");
 						return false;
 					}
