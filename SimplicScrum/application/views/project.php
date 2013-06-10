@@ -92,7 +92,7 @@
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
 							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div class='title'>".$key->pd_title."</div>";
-							$str .= "<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</div></div></div>";
+							$str .= "<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</a></div></div></div>";
 							$cnt++;
 						}
 						echo $str;
