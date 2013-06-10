@@ -111,7 +111,7 @@
 			</div>
 			
 			<div id="id_sprintBacklog_list">
-				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData1</div></div>
+				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData1</div><div>12</div><div>25</div></div>
 				<div id = "new_slist2" class = "sbacklog_list nlClass"></div>
 				<div id = "new_slist3" class = "sbacklog_list nlClass"></div>
 			</div>
