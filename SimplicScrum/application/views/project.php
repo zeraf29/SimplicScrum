@@ -12,6 +12,7 @@
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
+	echo $project_id;
 ?>
  </HEAD>
  <BODY>
@@ -301,7 +302,7 @@
 								    text: '<?=$text?>',
 								    animate_speed: 'fast'
 								});
-				$.pnotify.defaults.delay -= 2000;
+				$.pnotify.defaults.delay -= 3000;
 				var $close_flag = 0;
 
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
