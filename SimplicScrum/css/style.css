@@ -463,7 +463,7 @@ a.project_close:hover{color:white;}
 	float : left;
 	width : 10px;
 }
-.extText{
+#id_productBacklog_list .extText{
 	background-color : #cccccc;
 	margin-left:34px;
 	margin-top:13px;
@@ -472,13 +472,24 @@ a.project_close:hover{color:white;}
 	width : 286px;
 }
 
-.nlClass{
+#id_sprintBacklog_list .extText{
+	background-color : #cccccc;
+	margin-left:34px;
+	margin-top:13px;
+	position:absoulte;
+	height : 600px;
+	width : 286px;
+}
+
+ .nlClass{
 	margin-left:34px;
 	margin-top:13px;
 	position:absoulte;
 	width:286px;
 	height:40px;	
 }
+
+
 /*======================추가 20130605_0204 끝===========*/
 
 
