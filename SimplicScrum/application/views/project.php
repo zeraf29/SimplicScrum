@@ -66,7 +66,7 @@
   
 	<!--content start-->
 	<div id = "content">
-		<div class="make_product" style="overflow-y:auto;" >
+		<div class="make_product" >
 			<div class="ineer_product">
 				<img src="<?=$img_path?>/product_btn.png">
 			</div>
@@ -184,7 +184,7 @@
 			<div class = "plus_backlog" id = "make_splint_window">
 				<p>MAKE SPRINT</p>
 				<div class = "input_makeBacklog"><label for = "splint_name" class ="label_backlog">NAME</label><input type ="text" id ="splint_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "splint_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="splint_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
+				<div class = "input_makeBacklog"><label for = "splint_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sprint_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
 				<div class = "input_makeBacklog"><label for = "splint_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="splint_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">SPLINT BACKLOG</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
@@ -197,7 +197,7 @@
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
 				<div class = "input_makeBacklog">
-					<div id = "splint_backlog_list">
+					<div id = "Splint_backlog_list">
 						<div class = "splint_Backlog_offList">
 							<div>
 								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
@@ -683,9 +683,10 @@
 
 			$("#id_productBacklog_list").children(".pbacklog_list").click(function(){
 				if($(this).hasClass("extText")){
-					$(this).children(".pbacklog_list").children(".bContent").hide('slow',function(){ $(this).removeClass("extText");});
+					$(this).switchClass("extText","nlClass");
+					$(this).children(".pbacklog_list").children(".bContent").hide();
 				}else{
-					$(this).addClass("extText", {duration:500});
+					$(this).switchClass("nlClass","extText");
 				}
 			});
 			
@@ -717,7 +718,7 @@
 			/*플러스 버튼 눌렀을떙*/
 			$(".splint_Backlog_offList").delegate("img", "click", function()
 			{
-				$(".splint_Backlog_offList").append("<div><div style = 'float:left; width:250px; height:24px'>Splint_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
+				$(".splint_Backlog_onList").append("<div><div style = 'float:left; width:250px; height:24px'>Splint_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
 			});
 			
 			/*마이너스 버튼 눌렀을떙*/
@@ -763,7 +764,21 @@
 					}
 				});
 				
+				$( "#make_splint_window" ).hide();
+				$( "#splint_add_btn" ).click(function() {
+					if($make_sbacklog_flag == 1){
+						$( "#make_splint_window" ).hide( "blind","", 1000);
+						$make_sbacklog_flag = 0;
+						}
+					else if($make_sbacklog_flag ==0){
+						$( "#make_splint_window" ).show( "blind","", 1000);
+						$make_sbacklog_flag = 1;
+					}
+				});
+				
+				
 				$("#backlog_dueDate").datepicker(clareCalendar);
+				$("#sprint_dueDate").datepicker(clareCalendar);
 				//=====================================
 				
 				

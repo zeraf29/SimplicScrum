@@ -29,14 +29,14 @@
         });
 
 		
-	 $(".nlClass").click(function()
+	 $(".nlClass_sprint").click(function()
 	 {
-		 if($(this).hasClass("extText")){
-			 $(this).switchClass("extText","nlClass");
+		 if($(this).hasClass("extText_sprint")){
+			 $(this).switchClass("extText_sprint","nlClass_sprint");
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
-			 $(this).switchClass("nlClass","extText");
-			 $(this).html("<div style = 'font-weight:bold; font-size:10'>WHO</div><div style = 'font-weight:bold; font-size:10'>AUTHOR</div><div style = 'font-weight:bold; font-size:10'>DUE DATE</div><div style = 'font-weight:bold; font-size:10'>TARGET DATE</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
+			 $(this).switchClass("nlClass_sprint","extText_sprint");
+			 $(this).html("<div style='font-size:14px; padding-left:20px; padding-top:20px';><div style='font-weight:bold'>WHO</div><div >AUTHOR</div><div>DUE DATE</div><div>TARGET DATE</div><div>DISCRIPTION</div></div>");
 		 }
 	 });
 
@@ -58,15 +58,19 @@
 	<!--Top Menu end -->
   
 	<!--content start-->
-	<div id = "content">
+	<div id = "content" style="overflow-y:auto">
 		<div id="sprint_todo" class="sprint">
 			<div class="ineer_product"><img src="<?=$img_path?>/sprint_detail_btn.png"></div>
 			<div class="sprint_content">TO DO</div>
 			<div id="id_sprint_todo_list">
 			<ul class = "items">	
-				<li class = "nlClass"></li>
-				<li class = "nlClass"></li>
-				<li class = "nlClass"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
+				<li class = "nlClass_sprint"></li>
 				<li class = "bottom" style = "visibility : hidden"></li>
 			</ul>
 			</div>
@@ -77,9 +81,10 @@
 			<div class="sprint_content">DOING</div>
 			<div id="id_sprint_doing_list">
 				<ul class = "items">
-					<li class = "nlClass"></li>
-					<li class = "nlClass"></li>
-					<li class = "nlClass"></li>
+					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint"></li>
 					<li class = "bottom" style = "visibility : hidden"></li>
 				</ul>
 			</div>
@@ -90,9 +95,9 @@
 			<div class="sprint_content">DONE</div>
 			<div id="id_sprint_done_list">
 				<ul class = "items">
-					<li class = "nlClass"></li>
-					<li class = "nlClass"></li>
-					<li class = "nlClass"></li>
+					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint"></li>
+					<li class = "nlClass_sprint"></li>
 					<li class = "bottom" style = "visibility : hidden"></li>
 				</ul>
 			</div>
