@@ -115,8 +115,8 @@
 				<div class = "input_makeBacklog">
 					<div id = "Relation_Backlog_List">
 						<div class = "Relation_Backlog_onList">
-							<div style = "position:absolute; float:left; width:250px;">괋괋괋괋</div>
-							<div style = "position:absolute; float:left; width:100px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
+							<div style = "float:left; width:250px; height:24px">Product_Backlog_name</div>
+							<div style = "float:Right; width:100px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
 					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION-->
 						</div>
 					</div>
