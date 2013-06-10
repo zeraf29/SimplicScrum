@@ -23,6 +23,12 @@ class Project extends SS_Controller {
 		$pid = isset($_GET["pid"])?$_GET["pid"]:-1;
 		$data["project_id"] = $pid;
 		$data["list"] = $this->getList();
+
+		if($pid!=-1){
+			$data["backlog"]["porduct"]="";
+			$data["backlog"]["sprintback"]="";
+			$data["backlog"]["sprint"]="";
+		}
 		$this->load->view('project',$data);
 	}
 	

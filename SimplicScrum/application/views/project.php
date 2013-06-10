@@ -8,11 +8,10 @@
 	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
-	}else if($project_id!=-1){
+	}else if($project_id==-1){
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
-	echo $project_id;
 ?>
  </HEAD>
  <BODY>
