@@ -6,7 +6,7 @@ class Backloglist extends SS_Controller {
 		$this->load->view('welcome_message');
 	}
 	public function getBacklogLists(){
-		$pid = isset($this->input->post("pid"))?$this->input->post("pid"):-1;
+		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
 		$pid = $pid!=""?$pid:-1;
 		$pid = 1;
 		if ($this->checkLogin() == TRUE) {
