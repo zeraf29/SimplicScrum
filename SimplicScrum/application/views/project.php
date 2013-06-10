@@ -5,10 +5,12 @@
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <?php
 	$type = isset($_GET["type"])?$_GET["type"]:"";
+	$title="";
+	$text="";
 	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
-	}else{
+	}else if($project_id==-1){
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
@@ -83,13 +85,19 @@
 				</div>
 			</div>
 
-			<div id="id_productBacklog_list">
-				<div id = "pList1" class = "pbacklog_list nlClass"></div>
-				<div id = "pList2" class = "pbacklog_list nlClass"></div>
-				<div id = "pList3" class = "pbacklog_list nlClass"></div>
-				<div id = "pList4" class = "pbacklog_list nlClass"></div>
-				<div id = "pList5" class = "pbacklog_list nlClass"></div>
-				<div id = "pList6" class = "pbacklog_list nlClass"></div>
+			<div id="id_productBacklog_list" style="overflow-y:auto;">
+				<?php
+					if(isset($backlog["porduct"])){
+						$str = "";
+						$cnt = 1;
+						foreach($backlog["porduct"] as $key){
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div class='title'>".$key->pd_title."</div>";
+							$str .= "<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</div></div></div>";
+							$cnt++;
+						}
+						echo $str;
+					}
+				?>
 			</div>
 		</div>
 	
@@ -236,6 +244,7 @@
 				<div id = "new_slist3" class = "splint_list nlClass">TestData3</div>
 			</div>
 		</div>
+		
 	</div>
 	<!--content finish-->
 
@@ -290,21 +299,18 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
-				project_id = <?=$project_id?>;
+				var $project_id = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
 					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
 				});
-				$.pnotify({
-								    title: '<?=$title?>',
-								    text: '<?=$text?>',
-								    animate_speed: 'fast'
-								});
-
-				var close_flag = 0;
-				if(project_id!=-1){
-					close_flag = 1;
+				<?php
+				if($title!=""){
+					echo "$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast'});$.pnotify.defaults.delay -= 3000;";
 				}
+				?>
+				
+				var $close_flag = 0;
 
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				
@@ -347,12 +353,25 @@
 				$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
 					/*backlog 위치 조정을 위한 Script*/
 					
+
 				$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
 				$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
 					/*프로젝트 현황 메뉴 위치 설정*/
 				$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
 					/*close 버튼 위치 설정*/
 				
+				/**/
+				if($project_id!=-1){
+					$("#project_background").css({left:(-(($(window).width())*(7/10))+40)+'px'});
+					$("#project").css({background : 'rgba(56,54,60,0)'});
+					$("#close_btn").text("open");
+					$("#back_opacity").css({display: 'none'});
+
+					$close_flag = 1;
+				}
+				/**/
+
+
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
 					
@@ -666,10 +685,9 @@
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>");
+					$(this).children(".bContent").hide();
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
 				}
 			});
 			
