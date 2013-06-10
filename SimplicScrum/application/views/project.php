@@ -225,7 +225,7 @@
 		$(document).ready(function()
 			{
 				$(".listbar").click(function(){
-					alert($(this).("span").id)
+					alert($(this).children("span").attr("id"))
 				});
 				$.pnotify({
 								    title: '<?=$title?>',
