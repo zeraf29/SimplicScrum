@@ -46,9 +46,7 @@ class M_backlog extends SS_Model{
 	}
 	function setSprint($sid){
 		$result = FALSE;
-		$data = array(
-				'vote' => 'vote+1'
-			);
+		$this->db->set('vote','vote+1',FALSE);
 		$this->db->where('id',$sid);
 		$this->db->trans_start();
 		$this->db->update('sprintback',$data);
