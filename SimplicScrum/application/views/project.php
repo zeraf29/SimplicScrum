@@ -86,12 +86,16 @@
 			</div>
 
 			<div id="id_productBacklog_list">
-				<div id = "pList1" class = "pbacklog_list nlClass"></div>
-				<div id = "pList2" class = "pbacklog_list nlClass"></div>
-				<div id = "pList3" class = "pbacklog_list nlClass"></div>
-				<div id = "pList4" class = "pbacklog_list nlClass"></div>
-				<div id = "pList5" class = "pbacklog_list nlClass"></div>
-				<div id = "pList6" class = "pbacklog_list nlClass"></div>
+				<?php
+					if(isset($backlog["porduct"])){
+						$str = "";
+						$cnt = 1;
+						foreach($backlog["porduct"] as $key){
+							$str .= "<div id=\"pList".$cnt."\" class=\"pbacklog_list nlClass\">".$key->title."</div>"
+							$cnt++;
+						}
+					}
+				?>
 			</div>
 		</div>
 	
