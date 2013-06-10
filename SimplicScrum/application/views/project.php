@@ -380,7 +380,7 @@
 				
 				$("#close_btn").click(function()
 				{
-					if($project_id == ""){
+					if($project_id == -1){
 						alert("Selecting your Project.");
 						return false;
 					}

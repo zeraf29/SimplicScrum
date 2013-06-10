@@ -19,14 +19,14 @@ class Project extends SS_Controller {
 	 */
 	public function index()
 	{
-		$pid = isset($pid)?$pid:" ";
-		$id = ($pid!=" ")?$pid:" ";
+		$pid = isset($pid)?$pid:"";
+		$id = ($pid!="")?$pid:"-1";
 		$data["project_id"] = $id;
 		$data["list"] = $this->getList();
 		$this->load->view('project',$data);
 	}
-	public function selectProject($pid=" "){
-		$id = ($pid!=" ")?$pid:" ";
+	public function selectProject($pid=""){
+		$id = ($pid!="")?$pid:"-1";
 		$data["project_id"] = $id;
 		$this->load->view('project',$data);
 	}
