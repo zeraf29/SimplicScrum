@@ -292,7 +292,8 @@
 		$(document).ready(function()
 			{
 				$(".listbar").click(function(){
-					alert($(this).("span").id)
+					pid = $(this).children("span").attr("id");
+					location.href="/~sscrum/SimplicScrum/project/"+pid;
 				});
 				$.pnotify({
 								    title: '<?=$title?>',
