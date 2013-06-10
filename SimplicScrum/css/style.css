@@ -68,7 +68,7 @@ a.top_menu:hover{color:yellow;}
 	top:-424px;
 	width:100%;
 	overflow:hidden;
-	Display:show;
+	display:block;
 }
 
 #Login_left{
@@ -101,7 +101,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-634px; /*넓이의 반*/
 	width:1278px; 
-	background:URL("/~sscrum/SimplicScrum/image/login.png");
+	background:url("/~sscrum/SimplicScrum/image/login.png");
 	height:484px;
 	text-align:center;
 	padding-top:100px;
@@ -113,14 +113,14 @@ a.top_menu:hover{color:yellow;}
 	top:60px;
 	width:100%;
 	overflow:hidden;
-	Display:show;
+	display:block;
 }
 
 #mid_left{
 	float:left;
 	width:50%;
 	height:733px;
-	background:URL("/~sscrum/SimplicScrum/image/back.png");
+	background:url("/~sscrum/SimplicScrum/image/back.png");
 }
 #mid_left .innerdiv {
 	margin-right:481px;
@@ -130,7 +130,7 @@ a.top_menu:hover{color:yellow;}
 	float:right;
 	width:50%;
 	height:733px;
-	background:URL("/~sscrum/SimplicScrum/image/back.png");
+	background:url("/~sscrum/SimplicScrum/image/back.png");
 }
 
 #mid_right .innerdiv {
@@ -146,7 +146,7 @@ a.top_menu:hover{color:yellow;}
 	left:50%;
 	margin-left:-635px; /*넓이의 반*/
 	width:1270px; 
-	background:URL("/~sscrum/SimplicScrum/image/main.png");
+	background:url("/~sscrum/SimplicScrum/image/main.png");
 	height:733px;
 	text-align:center;
 	padding-left:10px;
@@ -160,7 +160,7 @@ Login{
 	margin-right:10px;
 }
 a.login:link{ text-decoration:none; color: FF007F;}
-a.login:Visited{ text-decoration:none; color: FF007F;}
+a.login:visited{ text-decoration:none; color: FF007F;}
 a.login:hover{color:yellow;}
 
 #sign_up{
@@ -170,7 +170,7 @@ a.login:hover{color:yellow;}
 	height:300px;
 	overflow:hidden;
 	z-index:9;
-	Display:show;
+	display:block;
 }
 
 
@@ -193,7 +193,7 @@ a.login:hover{color:yellow;}
 	padding-right:10px;
 }
 a.submit:link{ text-decoration:none; color: #808080;}
-a.submit:Visited{ text-decoration:none; color: #808080;}
+a.submit:visited{ text-decoration:none; color: #808080;}
 a.submit:hover{color:#909090;}
 
 /*로그인 페이지 style Sheet*/
@@ -230,7 +230,7 @@ a.submit:hover{color:#909090;}
 	width:100%;
 	height:60px;
 	background-color:#38363C;
-	text-align:rignt;
+	text-align:right;
 	box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
 	z-index : 10;
 }
@@ -266,7 +266,7 @@ a.submit:hover{color:#909090;}
 }
 
 a.p_backlog:link{ text-decoration:none; color: #FFFFFF;}
-a.p_backlog:Visited{ text-decoration:none; color: #FFFFFF;}
+a.p_backlog:visited{ text-decoration:none; color: #FFFFFF;}
 a.p_backlog:hover{color:yellow;}
 
 #second_top .sprint_backlog{
@@ -279,7 +279,7 @@ a.p_backlog:hover{color:yellow;}
 	z-index: 7;
 }
 a.s_backlog:link{ text-decoration:none; color: #000000;}
-a.s_backlog:Visited{ text-decoration:none; color: #000000;}
+a.s_backlog:visited{ text-decoration:none; color: #000000;}
 a.s_backlog:hover{color:yellow;}
 
 
@@ -293,20 +293,20 @@ a.s_backlog:hover{color:yellow;}
 	z-index: 7;
 }
 a.sprint_link:link{ text-decoration:none; color: #000000;}
-a.sprint_link:Visited{ text-decoration:none; color: #000000;}
+a.sprint_link:visited{ text-decoration:none; color: #000000;}
 a.sprint_link:hover{color:yellow;}
 
 
 #project{
 	width:100%;
-	Height:100%;
+	height:100%;
 	background : #d2d1d1;
 }
 
 #project_background{
 	position:absolute;
 	/*left:0px;*/
-	Height:100%;
+	height:100%;
 	/*width:70%;*/
 	background : URL("/~sscrum/SimplicScrum/image/background_project.png");
 	z-index:9;
@@ -325,7 +325,7 @@ a.sprint_link:hover{color:yellow;}
 #project_list .innerdiv_left{
 	width:377px;
 	float:left;
-	Height:100%;
+	height:100%;
 	background:#CE4F4F;
 }
 
@@ -333,7 +333,7 @@ a.sprint_link:hover{color:yellow;}
 	position: absolute;
 	left: 60%;
 	width:418px;
-	Height:800px;
+	height:800px;
 	background:URL("/~sscrum/SimplicScrum/image/Project_List.png");
 	background-repeat:no-repeat;
 }
@@ -450,38 +450,37 @@ a.project_close:hover{color:white;}
 }
 
 .sprintBacklog_card_name{
-	position : absoulte;
+	position : absolute;
 	float : left;
 	width : 250px;
 }
 
 .sprint_card_name{
-	position : absoulte;
+	position : absolute;
 	float : left;
 	width : 250px;
 }
 
 .sprintBacklog_vote_now{
-	position : absoulte;
+	position : absolute;
 	float : left;
 	width : 10px;
 }
 .sprintBacklong_vote_total{
-	position : absoulte;
+	position : absolute;
 	float : right;
 	padding-top: 10px;
 	width : 10px;
 }
 .sprintBacklog_vote_now{
-	position : absoulte;
+	position : absolute;
 	float : left;
 	width : 10px;
 }
 .extText{
 	background-color : #cccccc;
-	margin-left:34px;
 	margin-top:13px;
-	position:absoulte;
+	position:absolute;
 	height : 200px;
 	width : 286px;
 }
@@ -690,7 +689,7 @@ p_add_btn {
 	position : absolute;
 	float:left;
 	width : 293px;
-	background:URL("/~sscrum/SimplicScrum/image/graph_left.png");
+	background:url("/~sscrum/SimplicScrum/image/graph_left.png");
 	background-repeat:no-repeat;
 	background-color : #EF4B4B;
 }
