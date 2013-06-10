@@ -418,7 +418,7 @@
 					        	}
 						    });
 							if(result==100){
-						    	location.href="<?=my_current_url();?>"+"&pm="+$("#pbacklog_name").val();
+						    	location.href="/~sscrum/SimplicScrum/project/?pid="+$project_id+"&pm="+$("#pbacklog_name").val();
 						    }else{
 						    	alert("생성실패");
 						    }
