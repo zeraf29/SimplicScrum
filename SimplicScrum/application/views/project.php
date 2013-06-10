@@ -66,7 +66,7 @@
   
 	<!--content start-->
 	<div id = "content">
-		<div class="make_product">
+		<div class="make_product" style="overflow-y:auto;" >
 			<div class="ineer_product">
 				<img src="<?=$img_path?>/product_btn.png">
 			</div>
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 
-			<div id="id_productBacklog_list" style="overflow-y:auto;">
+			<div id="id_productBacklog_list">
 				<?php
 					if(isset($backlog["porduct"])){
 						$str = "";

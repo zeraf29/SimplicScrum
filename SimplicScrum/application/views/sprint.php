@@ -5,7 +5,6 @@
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <script type = "text/javascript">	
   $(document).ready(function(){
-
 	  var $left_p = (($(window).width()) - 1080)/4;
 
 	  $("#sprint_todo").css({'margin-left':$left_p + 'px'});
@@ -22,47 +21,25 @@
 		  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
 		  $("#sprint_todo").css({'margin-left':$left_p + 'px'});
 		  $("#sprint_doing").css({'margin-left':(($left_p*2)+360) +'px'});
-		  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px'});
-		  });
+		  $("#sprint_done").css({'margin-left':(($left_p*3)+720) +'px/'});
+	});
 
-		  $('.nlClass').draggable({
-//		connectToSortable: "#id_sprint_todo_list",
-//		axis: 'x',
-		stack: ".nlClass",
-		cursor: "move",
-		opacity: 0.7,
-//		grid: [50,20]
-	  });
+        $("#content .items").sortable({
+                connectWith: "ul"  
+        });
 
-	  
-
-/*	  //When drag start,
-	 $(".nlClass").bind("dragstart",function(event, ui){
-
+		
+	 $(".nlClass").click(function()
+	 {
+		 if($(this).hasClass("extText")){
+			 $(this).switchClass("extText","nlClass");
+			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
+		 }else{
+			 $(this).switchClass("nlClass","extText");
+			 $(this).html("<div style = 'font-weight:bold; font-size:10'>WHO</div><div style = 'font-weight:bold; font-size:10'>AUTHOR</div><div style = 'font-weight:bold; font-size:10'>DUE DATE</div><div style = 'font-weight:bold; font-size:10'>TARGET DATE</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
+		 }
 	 });
-*/
-	 
-	//When drag stop,
-	 $(".nlClass").bind("dragstop", function(){
-		 var list_position= $(this).position().left + $left_p + 37;
 
-		 if((list_position > $left_p) && (list_position < $left_p+360)){
-			 $(this).css({'left': '0px'});
-
-		 }
-		 else if((list_position > ($left_p*2)+360) && (list_position < ($left_p*2)+720)){
-			 $(this).css({'left': ($left_p+360)+'px'});
-
-		 }
-		 else if((list_position > ($left_p*3)+720) && (list_position < ($left_p*3)+1080)){
-			 $(this).css({'left': ($left_p*2+720)+'px'});
-
-		 }
-		 else{
-			 alert("NO!!!!!!!");
-		 }
-
-	 });
   });
   </script>
 
@@ -86,22 +63,39 @@
 			<div class="ineer_product"><img src="<?=$img_path?>/sprint_detail_btn.png"></div>
 			<div class="sprint_content">TO DO</div>
 			<div id="id_sprint_todo_list">
-				<div id = "pList1" class = "nlClass"></div>
-				<div id = "pList2" class = "nlClass"></div>
-				<div id = "pList3" class = "nlClass"></div>
+			<ul class = "items">	
+				<li class = "nlClass"></li>
+				<li class = "nlClass"></li>
+				<li class = "nlClass"></li>
+				<li class = "bottom" style = "visibility : hidden"></li>
+			</ul>
 			</div>
 		</div>
 
 		<div id="sprint_doing" class="sprint">
 			<div class="ineer_product" style='margin-top:30px;'></div>
 			<div class="sprint_content">DOING</div>
-			<div id="id_sprint_doing_list"></div>
+			<div id="id_sprint_doing_list">
+				<ul class = "items">
+					<li class = "nlClass"></li>
+					<li class = "nlClass"></li>
+					<li class = "nlClass"></li>
+					<li class = "bottom" style = "visibility : hidden"></li>
+				</ul>
+			</div>
 		</div>
 		
 		<div id="sprint_done" class="sprint">
 			<div class="ineer_product" style='margin-top:30px;'></div>
 			<div class="sprint_content">DONE</div>
-			<div id="id_sprint_done_list"></div>
+			<div id="id_sprint_done_list">
+				<ul class = "items">
+					<li class = "nlClass"></li>
+					<li class = "nlClass"></li>
+					<li class = "nlClass"></li>
+					<li class = "bottom" style = "visibility : hidden"></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 
