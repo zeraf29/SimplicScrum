@@ -291,7 +291,7 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
-				var project_id = <?=$project_id?>;
+				var $project_id = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
 					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
@@ -302,7 +302,7 @@
 								    animate_speed: 'fast'
 								});
 
-				var close_flag = 0;
+				var $close_flag = 0;
 
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				
@@ -353,13 +353,13 @@
 					/*close 버튼 위치 설정*/
 				
 				/**/
-				if(project_id!=-1){
+				if($project_id!=-1){
 					$("#project_background").css({left:(-(($(window).width())*(7/10))+40)+'px'});
 					$("#project").css({background : 'rgba(56,54,60,0)'});
 					$("#close_btn").text("open");
 					$("#back_opacity").css({display: 'none'});
 
-					close_flag = 1;
+					$close_flag = 1;
 				}
 				/**/
 
