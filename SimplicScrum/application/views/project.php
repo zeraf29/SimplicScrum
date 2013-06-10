@@ -91,8 +91,8 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
-							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div>TITLE</div><div class='title'>".$key->pd_title."</div>";
-							$str .= "<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</a></div></div></div>";
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div style='width:100px; display:inline; margin:10px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; border:1px black solid; padding:5px; background:white'>".$key->pd_title."</div><div id='no' style='font-weight:bold'>NO:</div><div id='no_box'>.$key->pd_id.</div>";
+							$str .= "<div class='bContent'><div style='font-weight:bold'>DESCRIPTION</div><div style = 'width:500px; height:100px; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</a></div></div></div>";
 							$cnt++;
 						}
 						echo $str;
@@ -110,7 +110,14 @@
 			<div class = "plus_backlog" id = "make_sbacklog_window">
 				<p>MAKE SPRINT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "sbacklog_name" class ="label_backlog">NAME</label><input type ="text" id ="sbacklog_name" name="sbacklog_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "sbacklog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sbacklog_dueDate" name="sbacklog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
+				<div class = "input_makeBacklog"><label for = "sbacklog_level" class ="label_backlog">LEVEL</label>
+				<select id = "sbacklog_level">
+					<option value = "3">High</option>
+					<option value = "2">Middle</option>
+					<option value = "1">Low</option>
+				</select>
+				</div>
+				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
