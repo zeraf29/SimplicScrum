@@ -236,6 +236,7 @@
 				<div id = "new_slist3" class = "splint_list nlClass"><div class = "sprint_card_name">TestData3</div>
 			</div>
 		</div>
+		
 	</div>
 	<!--content finish-->
 
@@ -290,7 +291,7 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
-				project_id = <?=$project_id?>;
+				var project_id = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
 					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
@@ -302,7 +303,7 @@
 								});
 
 				var close_flag = 0;
-				if(project_id!=-1){
+				if(project_id!= -1 ){
 					close_flag = 1;
 				}
 
