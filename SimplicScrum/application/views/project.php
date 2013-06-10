@@ -5,6 +5,8 @@
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <?php
 	$type = isset($_GET["type"])?$_GET["type"]:"";
+	$title="";
+	$text="";
 	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';

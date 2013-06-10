@@ -11,7 +11,7 @@ class Backloglist extends SS_Controller {
 		$pid = 1;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_backlog");	
-			$result = $this->M_backlog->get_backlist();
+			$result = $this->M_backlog->get_backlist($pid);
 			$key = null;
 			$data = null;
 			if (count($result)>0) {
