@@ -294,7 +294,9 @@
   <!--프로젝트 생성 메뉴 끝-->
 	
 	<!--Creat project start-->
-	
+<?php
+	echo current_url();
+?>	
  </BODY>
  <script type = "text/javascript">	
 		$(document).ready(function()
@@ -371,6 +373,9 @@
 				}
 				/**/
 
+				$("#make_pbacklog_submit").click(function(){
+
+				});
 
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
