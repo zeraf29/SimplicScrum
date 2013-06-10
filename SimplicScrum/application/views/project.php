@@ -85,13 +85,14 @@
 				</div>
 			</div>
 
-			<div id="id_productBacklog_list">
+			<div id="id_productBacklog_list" style="overflow-y:auto;">
 				<?php
 					if(isset($backlog["porduct"])){
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
-							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div class='title'>".$key->pd_title."</div></div>";
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div class='title'>".$key->pd_title."</div>";
+							$str .= "<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</div></div></div>";
 							$cnt++;
 						}
 						echo $str;
@@ -684,10 +685,9 @@
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>");
+					$(this).children(".bContent").hide();
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).append("<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div></div>");
 				}
 			});
 			
