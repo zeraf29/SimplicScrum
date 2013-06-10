@@ -17,6 +17,9 @@
 ?>
  </HEAD>
  <BODY>
+ 	<?php
+	echo my_current_url();
+	?>	
 	<!--Top Menu Start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
@@ -294,9 +297,7 @@
   <!--프로젝트 생성 메뉴 끝-->
 	
 	<!--Creat project start-->
-<?php
-	echo current_url();
-?>	
+
  </BODY>
  <script type = "text/javascript">	
 		$(document).ready(function()
