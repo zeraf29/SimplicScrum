@@ -480,6 +480,10 @@ a.project_close:hover{color:white;}
 	height:40px;	
 }
 
+#Relation_Backlog_List{
+	height : 100px;
+	overflow : auto;
+}
 
 /*======================추가 20130605_0204 끝===========*/
 

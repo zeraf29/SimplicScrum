@@ -107,11 +107,20 @@
 				<div class = "input_makeBacklog"><label for = "plus_relation_backlog" class = "label_backlog">Relation_Backlog</label>
 					<a href="#" id="plus_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
-					<div id = "relation_backlog_list" style = "margin-top:-15px;" >데헷</div>
+					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
+						<div>크하하하하하하하하하 1</div>
+						<div>크하하하하하하하하하 2</div>
+						<div>크하하하하하하하하하 3</div>
+					</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
-				<div class = "input_makeBacklog"><div id = "Relation_Backlog_List">데헷데헷</div></div>
+				<div class = "input_makeBacklog"><div id = "Relation_Backlog_List">
+				<div>크하하하하하하하하하 1</div>
+				<div>크하하하하하하하하하 2</div>
+				<div>크하하하하하하하하하 3</div>
+				</div>
+				</div>
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
 					<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
