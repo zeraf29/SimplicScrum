@@ -49,7 +49,7 @@ class M_backlog extends SS_Model{
 		$this->db->set('vote','vote+1',FALSE);
 		$this->db->where('id',$sid);
 		$this->db->trans_start();
-		$this->db->update('sprintback',$data);
+		$this->db->update('sprintback');
 		if ($this->db->trans_status() == FALSE) {
 			$this->db->trans_rollback();	
 		}else {
