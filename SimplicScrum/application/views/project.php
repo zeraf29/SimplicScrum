@@ -197,7 +197,7 @@
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
 				<div class = "input_makeBacklog">
-					<div id = "splint_backlog_list">
+					<div id = "Splint_backlog_list">
 						<div class = "splint_Backlog_offList">
 							<div>
 								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>

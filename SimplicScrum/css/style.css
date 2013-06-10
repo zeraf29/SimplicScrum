@@ -483,11 +483,7 @@ a.project_close:hover{color:white;}
 	padding-top: 10px;
 	width : 10px;
 }
-.sprintBacklog_vote_now{
-	position : absolute;
-	float : left;
-	width : 10px;
-}
+
 .extText{
 	background-color : #cccccc;
 	margin-left:34px;
