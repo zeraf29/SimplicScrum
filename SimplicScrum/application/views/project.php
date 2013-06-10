@@ -91,7 +91,7 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
-							$str .= "<div id=\"pList".$cnt."\" class=\"pbacklog_list nlClass\">".$key->title."</div>"
+							$str .= "<div id=\"pList".$cnt."\" class=\"pbacklog_list nlClass\">".$key->title."</div>";
 							$cnt++;
 						}
 					}
