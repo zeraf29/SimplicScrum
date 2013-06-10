@@ -94,7 +94,11 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
+<<<<<<< HEAD
 							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div class='title'>".$key->pd_title."</div>";
+=======
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div style='width:100px; display:inline; margin:10px; font-weight: bold'>TITLE</div><div class='title' style='width:100px; display:inline; border:1px black solid; padding:5px; background:white'>".$key->pd_title."</div>";
+>>>>>>> b5260b7881087097a2516d6c7d036c56b0aee323
 							$str .= "<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>".$key->pd_desc."</div><div><a href = '#'>modify</a></div></div></div>";
 							$cnt++;
 						}
