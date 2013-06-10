@@ -291,10 +291,10 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
-				$project_id = <?=$project_id?>;
+				project_id = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
-					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
+					location.href="/~sscrum/SimplicScrum/selectProject/"+pid;
 				});
 				$.pnotify({
 								    title: '<?=$title?>',
@@ -302,7 +302,11 @@
 								    animate_speed: 'fast'
 								});
 
-				var $close_flag = 0;
+				var close_flag = 0;
+				if(project_id!=-1){
+					close_flag = 1;
+				}
+
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				
 				/*--------추가(20130605_0200)시작---------*/
