@@ -303,9 +303,6 @@
 								});
 
 				var close_flag = 0;
-				if(project_id!= -1 ){
-					close_flag = 1;
-				}
 
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
 				
@@ -356,10 +353,14 @@
 					/*close 버튼 위치 설정*/
 				
 				/**/
-				$("#project_background").css({left:(-(($(window).width())*(7/10))+40)+'px'});
-				$("#project").css({background : 'rgba(56,54,60,0)'});
-				$("#close_btn").text("open");
-				$("#back_opacity").css({display: 'none'});
+				if(project_id!=-1){
+					$("#project_background").css({left:(-(($(window).width())*(7/10))+40)+'px'});
+					$("#project").css({background : 'rgba(56,54,60,0)'});
+					$("#close_btn").text("open");
+					$("#back_opacity").css({display: 'none'});
+
+					close_flag = 1;
+				}
 				/**/
 
 
