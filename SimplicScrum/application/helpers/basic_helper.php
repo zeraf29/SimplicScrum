@@ -23,7 +23,7 @@ function goto_url($url) {
 	exit;
 }
 
-function current_url()
+function my_current_url()
 {
     $CI =& get_instance();
 
