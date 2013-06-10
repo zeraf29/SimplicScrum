@@ -231,12 +231,9 @@
 			</div>
 			
 			<div id="id_sprint_list">
-				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprint_card_name">TestData1</div>
-						<div class = "sprintBacklog_vote_now">12</div><div class = "sprint_vote_total">25</div></div>
-				<div id = "new_slist2" class = "sbacklog_list nlClass"><div class = "sprint_card_name">TestData2</div>
-						<div class = "sprintBacklog_vote_now">12</div><div class = "sprint_vote_total">25</div></div>
-				<div id = "new_slist3" class = "sbacklog_list nlClass"><div class = "sprint_card_name">TestData3</div>
-						<div class = "sprintBacklog_vote_now">12</div><div class = "sprint_vote_total">25</div></div>
+				<div id = "new_slist1" class = "splint_list nlClass"><div class = "sprint_card_name">TestData1</div>
+				<div id = "new_slist2" class = "splint_list nlClass"><div class = "sprint_card_name">TestData2</div>
+				<div id = "new_slist3" class = "splint_list nlClass"><div class = "sprint_card_name">TestData3</div>
 			</div>
 		</div>
 		
