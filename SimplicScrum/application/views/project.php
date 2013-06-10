@@ -291,7 +291,7 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
-				$pid = <?=$pid?>;
+				$pid = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
 					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
