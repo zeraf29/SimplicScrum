@@ -718,7 +718,7 @@
 			/*플러스 버튼 눌렀을떙*/
 			$(".splint_Backlog_offList").delegate("img", "click", function()
 			{
-				$(".splint_Backlog_offList").append("<div><div style = 'float:left; width:250px; height:24px'>Splint_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
+				$(".splint_Backlog_onList").append("<div><div style = 'float:left; width:250px; height:24px'>Splint_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
 			});
 			
 			/*마이너스 버튼 눌렀을떙*/
@@ -778,6 +778,7 @@
 				
 				
 				$("#backlog_dueDate").datepicker(clareCalendar);
+				$("#sprint_dueDate").datepicker(clareCalendar);
 				//=====================================
 				
 				
