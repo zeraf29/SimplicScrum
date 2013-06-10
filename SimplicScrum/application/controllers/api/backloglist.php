@@ -62,6 +62,7 @@ class Backloglist extends SS_Controller {
 			if (count($result)>0) {
 				for ($i = 0; $i < count($result); $i++) {
 						$key[$i] = $result[$i]->id;
+						/*
 						for($j=0;$j<count($result[$i]->user);$j++){
 							$user[$j] = array(
 								'id' => $result[$i]->user[$j]->id,
@@ -69,6 +70,7 @@ class Backloglist extends SS_Controller {
 								'nickname' => $result[$i]->user[$j]->nickname
 							);
 						}
+						*/
 						$data[$result[$i]->id] = array(
 							'id' => $result[$i]->id,
 							'title' => $result[$i]->title,
@@ -77,8 +79,7 @@ class Backloglist extends SS_Controller {
 							'pid' => $result[$i]->pid,
 							'bid' => $result[$i]->bid,
 							'vote' => $result[$i]->vote,
-							'reg_date' => $result[$i]->reg_date,
-							'user' => $user
+							'reg_date' => $result[$i]->reg_date
 						);
 					}
 				$view_data = array(

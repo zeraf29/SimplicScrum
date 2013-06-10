@@ -26,6 +26,7 @@ class M_backlog extends SS_Model{
 		$rs = $this->db->get();
 		$data = ($rs->num_rows() > 0) ? $rs->result() : array();
 		echo $this->db->last_query();
+		/*
 		if(count($data)>0){
 			foreach($data as $key => $value){
 				$this->db->select();
@@ -40,6 +41,7 @@ class M_backlog extends SS_Model{
 				echo $this->db->last_query();
 			}
 		}
+		*/
 		return $data;
 	}
 }
