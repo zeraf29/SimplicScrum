@@ -31,11 +31,11 @@
 		
 	 $(".nlClass_sprint").click(function()
 	 {
-		 if($(this).hasClass("extText")){
-			 $(this).switchClass("extText","nlClass_sprint");
+		 if($(this).hasClass("extText_sprint")){
+			 $(this).switchClass("extText_sprint","nlClass_sprint");
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
-			 $(this).switchClass("nlClass_sprint","extText");
+			 $(this).switchClass("nlClass_sprint","extText_sprint");
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'>WHO</div><div style = 'font-weight:bold; font-size:10'>AUTHOR</div><div style = 'font-weight:bold; font-size:10'>DUE DATE</div><div style = 'font-weight:bold; font-size:10'>TARGET DATE</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div>");
 		 }
 	 });
