@@ -17,9 +17,6 @@
 ?>
  </HEAD>
  <BODY>
- 	<?php
-	echo my_current_url();
-	?>	
 	<!--Top Menu Start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
@@ -80,8 +77,8 @@
 			<!-- 추가 20130605 0200 -->
 			<div class = "plus_backlog" id = "make_pbacklog_window">
 				<p>MAKE PRODUCT BACKLOG</p>
-				<div class = "input_makeBacklog"><label for = "pbacklog_name" class ="label_backlog">NAME</label><input type ="text" id ="pbacklog_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "pbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="pbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
+				<div class = "input_makeBacklog"><label for = "pbacklog_name" class ="label_backlog">NAME</label><input type ="text" id ="pbacklog_name" name="pbacklog_name" style="width:140px;"/></div>
+				<div class = "input_makeBacklog"><label for = "pbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="pbacklog_discription" name="pbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_pbacklog_submit">submit</a>
 					<a href ="#" class="submit" id = "make_pbacklog_cancel">cancel</a>
@@ -112,9 +109,9 @@
 			</div>
 			<div class = "plus_backlog" id = "make_sbacklog_window">
 				<p>MAKE SPRINT BACKLOG</p>
-				<div class = "input_makeBacklog"><label for = "sbacklog_name" class ="label_backlog">NAME</label><input type ="text" id ="sbacklog_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "sbacklog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sbacklog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
-				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
+				<div class = "input_makeBacklog"><label for = "sbacklog_name" class ="label_backlog">NAME</label><input type ="text" id ="sbacklog_name" name="sbacklog_name" style="width:140px;"/></div>
+				<div class = "input_makeBacklog"><label for = "sbacklog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sbacklog_dueDate" name="sbacklog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
+				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
@@ -375,7 +372,46 @@
 				/**/
 
 				$("#make_pbacklog_submit").click(function(){
-
+					if($("#pbacklog_name").val() == ""){
+						alert("product backlog name 넣어주세요");
+						$("#project_name").focus();
+						return false;
+					}
+					if($("#pbacklog_discription").val() == ""){
+						alert("product backlog description 넣어주세요");
+						$("#start_date").focus();
+						return false;
+					}
+					datafilter = new Array();
+					datafilter[0] = "title";
+					datafilter[1] = "desc";
+					datafilter[2] = "pid";
+					datafilter[3] = "mid";
+					data = new Object();
+					data.title = $("#pbacklog_name").val();
+					data.desc = $("#pbacklog_discription").val();
+					data.pid = $project_id;
+					data.mid = '<?=$this->session->userdata("ss_userid")?>';
+					sub  = new Array();
+					jsonObject = JSON.stringify(data,datafilter,"\t");
+					
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/backloglist/makeProduct',
+					        type: "POST",
+					        async : false,
+					        data: {data:jsonObject},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        	msg = rdata.msg;
+					        	}
+						    });
+							if(result==100){
+						    	location.href="<?=my_current_url();?>"+"&pm=1";
+						    }else{
+						    	alert("생성실패");
+						    }
+					});
 				});
 
 				$(window).resize(function(){

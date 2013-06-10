@@ -44,5 +44,29 @@ class M_backlog extends SS_Model{
 		*/
 		return $data;
 	}
+
+	function makeProduct($json){
+
+		$result = FALSE;
+
+		$data = array(
+		   'title' => $json->title ,
+		   'desc' => $json->desc ,
+		   'pid' => $json->pid ,
+		   'mid' => $json->mid ,
+		   'vote' => 0
+		);
+
+		$this->db->trans_start();
+		$this->db->insert('product', $data); 
+		if ($this->db->trans_status() == FALSE) {
+			$this->db->trans_rollback();	
+		}else {
+			$this->db->trans_commit();
+			$result = TRUE;
+		}
+		$this->db->trans_complete();
+		return $result;
+	}
 }
 ?>
