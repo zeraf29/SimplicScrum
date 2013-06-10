@@ -413,7 +413,7 @@ a.project_close:hover{color:white;}
 
 #make_splint_window.plus_backlog{
 	position : absolute;
-	/*margin-left : 300px;*/
+	margin-left : 5px;
 	width : 350px;
 	background : #FFFFFF;
 	padding : 5px;
