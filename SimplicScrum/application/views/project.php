@@ -683,10 +683,10 @@
 
 			$("#id_productBacklog_list").children(".pbacklog_list").click(function(){
 				if($(this).hasClass("extText")){
-					$(this).removeClass("extText",1000);
+					$(this).removeClass("extText", {duration:500});
 					$(this).children(".pbacklog_list").children(".bContent").hide();
 				}else{
-					$(this).addClass("extText",1000);
+					$(this).addClass("extText", {duration:500});
 				}
 			});
 			
