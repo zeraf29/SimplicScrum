@@ -17,7 +17,7 @@ class Backloglist extends SS_Controller {
 			if (count($result)>0) {
 				for ($i = 0; $i < count($result); $i++) {
 						$key[$i] = $result[$i]->pd_id;
-						$data[$result[$i]->id] = array(
+						$data[$result[$i]->pd_id] = array(
 							'id' => $result[$i]->pd_id,
 							'title' => $result[$i]->pd_title,
 							'desc' => $result[$i]->pd_desc,
