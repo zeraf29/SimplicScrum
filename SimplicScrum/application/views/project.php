@@ -8,7 +8,7 @@
 	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
-	}else{
+	}else if($project_id!=-1){
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
@@ -301,7 +301,7 @@
 								    text: '<?=$text?>',
 								    animate_speed: 'fast'
 								});
-
+				$.pnotify.defaults.delay -= 2000;
 				var $close_flag = 0;
 
 				var $dialog_flag = 1; //1,2, 3, 4, 5....etc
