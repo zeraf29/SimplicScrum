@@ -529,10 +529,9 @@
 					productBacklog_count ++;
 
 					var new_list = document.createElement("div");
-					
 					 new_list.id = "new_slist" + productBacklog_count;
 					 new_list.className = "sbacklog_list nlClass";
-					 $(#(new_list.id)).append("<div class = 'sprintBacklog_card_name'>TestData1</div><div class = 'sprintBacklog_vote_now'>12</div><div class = 'sprintBacklong_vote_total'>25</div>");
+					 new_list.innerHTML = "<div class = 'sprintBacklog_card_name'>TestData1</div><div class = 'sprintBacklog_vote_now'>12</div><div class = 'sprintBacklong_vote_total'>25</div>"
 				 id_sprintBacklog_list.appendChild(new_list);
 				});
 			
