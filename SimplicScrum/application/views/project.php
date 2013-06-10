@@ -108,7 +108,7 @@
 					<a href="#" id="plus_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >데헷</div>
-				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
 				<div class = "input_makeBacklog"><div id = "Relation_Backlog_List">데헷데헷</div></div>
