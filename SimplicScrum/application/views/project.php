@@ -46,7 +46,7 @@
 					<?php
 						if(count($list)>0){
 							foreach($list as $key){
-								echo "<li class=\"ui-state-default listbar\"><span style=\"width:90%;cursor:pointer;\">".$key["title"]."<span style='display:hidden' class='pid'>".$key["id"]."</span></span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;float:right;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
+								echo "<li class=\"ui-state-default listbar\"><span id='".$key["id"]."' style=\"width:90%;cursor:pointer;\">".$key["title"]."</span><span id=\"list_".$key["id"]."\" style=\"cursor:pointer;float:right;\" class='listDelete'><img src=\"".$img_path."/delete.png\"></span></li>";
 							}
 						}
 					?>
@@ -294,6 +294,9 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
+				$(".listbar").click(function(){
+					alert($(this).("span").id)
+				});
 				$.pnotify({
 								    title: '<?=$title?>',
 								    text: '<?=$text?>',
