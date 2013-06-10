@@ -371,48 +371,7 @@
 				}
 				/**/
 
-				$("#make_pbacklog_submit").click(function(){
-					if($("#pbacklog_name").val() == ""){
-						alert("product backlog name 넣어주세요");
-						$("#project_name").focus();
-						return false;
-					}
-					if($("#pbacklog_discription").val() == ""){
-						alert("product backlog description 넣어주세요");
-						$("#start_date").focus();
-						return false;
-					}
-					datafilter = new Array();
-					datafilter[0] = "title";
-					datafilter[1] = "desc";
-					datafilter[2] = "pid";
-					datafilter[3] = "mid";
-					data = new Object();
-					data.title = $("#pbacklog_name").val();
-					data.desc = $("#pbacklog_discription").val();
-					data.pid = $project_id;
-					data.mid = '<?=$this->session->userdata("ss_userid")?>';
-					sub  = new Array();
-					jsonObject = JSON.stringify(data,datafilter,"\t");
-					
-					$.ajax({
-					        url: '/~sscrum/SimplicScrum/backloglist/makeProduct',
-					        type: "POST",
-					        async : false,
-					        data: {data:jsonObject},
-					        dataType: 'json',
-					        success: function (rdata) {
-					        	result = rdata.code;
-					        	msg = rdata.msg;
-					        	}
-						    });
-							if(result==100){
-						    	location.href="<?=my_current_url();?>"+"&pm=1";
-						    }else{
-						    	alert("생성실패");
-						    }
-					});
-				});
+				
 
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
