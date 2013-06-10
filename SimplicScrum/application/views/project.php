@@ -231,9 +231,9 @@
 			</div>
 			
 			<div id="id_sprint_list">
-				<div id = "new_slist1" class = "splint_list nlClass"><div class = "sprint_card_name">TestData1</div>
-				<div id = "new_slist2" class = "splint_list nlClass"><div class = "sprint_card_name">TestData2</div>
-				<div id = "new_slist3" class = "splint_list nlClass"><div class = "sprint_card_name">TestData3</div>
+				<div id = "new_slist1" class = "splint_list nlClass">TestData1</div>
+				<div id = "new_slist2" class = "splint_list nlClass">TestData2</div>
+				<div id = "new_slist3" class = "splint_list nlClass">TestData3</div>
 			</div>
 		</div>
 	</div>
