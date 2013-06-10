@@ -397,7 +397,7 @@ a.project_close:hover{color:white;}
 }
 
 /*======================추가 20130605_0204 시작===========*/
-.plus_product_backlog{
+.plus_backlog{
 /*백로그 생성창*/
 	position : absolute;
 	margin-left : 300px;
@@ -463,21 +463,12 @@ a.project_close:hover{color:white;}
 	float : left;
 	width : 10px;
 }
-#id_productBacklog_list .extText{
+.extText{
 	background-color : #cccccc;
 	margin-left:34px;
 	margin-top:13px;
 	position:absoulte;
 	height : 200px;
-	width : 286px;
-}
-
-#id_sprintBacklog_list .extText{
-	background-color : #cccccc;
-	margin-left:34px;
-	margin-top:13px;
-	position:absoulte;
-	height : 600px;
 	width : 286px;
 }
 

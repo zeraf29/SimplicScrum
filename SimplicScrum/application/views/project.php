@@ -73,7 +73,7 @@
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
 			<!-- 추가 20130605 0200 -->
-			<div class = "plus_product_backlog" id = "make_pbacklog_window">
+			<div class = "plus_backlog" id = "make_pbacklog_window">
 				<p>MAKE PRODUCT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
@@ -99,10 +99,10 @@
 				<a href="#" id="sbacklog_add_btn"><img src="<?=$img_path?>/s_backlog_add.png"></a>
 				<img src="<?=$img_path?>/s_backlog.png">
 			</div>
-	
-			<div class = "plus_product_backlog" id = "make_sbacklog_window">
+			<div class = "plus_backlog" id = "make_sbacklog_window">
 				<p>MAKE SPRINT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
+				<div class = "input_makeBacklog"><label for = "backlog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="backlog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
@@ -593,7 +593,11 @@
 						$make_sbacklog_flag = 1;
 					}
 				});
+				
+				$("#backlog_dueDate").datepicker(clareCalendar);
 				//=====================================
+				
+				
 			/*--------추가(2013-06-05, 0200)끝----------*/
 	});
 	</script>
