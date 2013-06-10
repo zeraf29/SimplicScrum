@@ -615,7 +615,7 @@
 			{
 				alert("마이나스 보탄");
 				alert($(this).parent('div'));
-				$(this).parent('div').parent().remove();
+				$(this).parent().parent().parent().remove();
 			});
 			
 			$("#make_pbacklog_cancel").click(function(){
