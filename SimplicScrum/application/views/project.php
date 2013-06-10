@@ -302,7 +302,7 @@
 								    animate_speed: 'fast'
 								});
 
-				var close_flag = 1;
+				var close_flag = 0;
 				if(project_id!= -1 ){
 					close_flag = 1;
 				}
@@ -348,12 +348,21 @@
 				$(".sprint").css({'margin-left':(($left_p*3)+720+30) +'px'});
 					/*backlog 위치 조정을 위한 Script*/
 					
+
 				$("#project_background").css({'width' : ((($(window).width())*(7/10)))+'px'});
 				$("#project_background").css({'background-position-x' : ((($(window).width())*(7/10))+2)+'px'});
 					/*프로젝트 현황 메뉴 위치 설정*/
 				$("#_close").css({'margin-left':($("#project_background").width()-35)+'px'});
 					/*close 버튼 위치 설정*/
 				
+				/**/
+				$("#project_background").css({left:(-(($(window).width())*(7/10))+40)+'px'});
+				$("#project").css({background : 'rgba(56,54,60,0)'});
+				$("#close_btn").text("open");
+				$("#back_opacity").css({display: 'none'});
+				/**/
+
+
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
 					
