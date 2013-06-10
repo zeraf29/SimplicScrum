@@ -236,7 +236,6 @@
 				<div id = "new_slist3" class = "splint_list nlClass"><div class = "sprint_card_name">TestData3</div>
 			</div>
 		</div>
-		
 	</div>
 	<!--content finish-->
 

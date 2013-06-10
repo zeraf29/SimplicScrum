@@ -443,7 +443,7 @@ a.project_close:hover{color:white;}
 
 .splint_list
 {
-	background-image : URL("/~sscrum/SimplicScrum/image/splint_bar.png");
+	background-image : URL("/~sscrum/SimplicScrum/image/sprint_bar.png");
 	background-repeat: no-repeat;
 	background-position : right bottom;
 }
