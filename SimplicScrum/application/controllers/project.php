@@ -25,11 +25,6 @@ class Project extends SS_Controller {
 		$data["list"] = $this->getList();
 		$this->load->view('project',$data);
 	}
-	public function selectProject($pid=""){
-		$id = ($pid!="")?$pid:"-1";
-		$data["project_id"] = $id;
-		$this->load->view('project',$data);
-	}
 	
 	public function makeProject(){
 		$json=isset($_POST["data"])?$_POST["data"]:"";

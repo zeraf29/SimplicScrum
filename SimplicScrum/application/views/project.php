@@ -294,7 +294,7 @@
 				project_id = <?=$project_id?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
-					location.href="/~sscrum/SimplicScrum/project/selectProject/"+pid;
+					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
 				});
 				$.pnotify({
 								    title: '<?=$title?>',
