@@ -394,6 +394,7 @@ a.project_close:hover{color:white;}
 	height: 100%;
 	background: #FFFFFF;
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+	overflow-y:auto;
 }
 
 /*======================추가 20130605_0204 시작===========*/
@@ -492,6 +493,11 @@ a.project_close:hover{color:white;}
 	width:286px;
 	height:40px;
 	line-height:40px;	
+}
+
+.nlClass .bContent{
+	display:none;
+
 }
 
 #Relation_Backlog_List{
