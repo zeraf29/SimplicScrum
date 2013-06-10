@@ -19,7 +19,8 @@ class Project extends SS_Controller {
 	 */
 	public function index()
 	{
-		$pid = isset($pid)?$pid:"-1";
+
+		$pid = isset($_GET["pid"])?$_GET["pid":"-1";
 		$data["project_id"] = $pid;
 		$data["list"] = $this->getList();
 		$this->load->view('project',$data);
