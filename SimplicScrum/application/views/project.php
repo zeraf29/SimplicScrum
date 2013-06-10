@@ -109,7 +109,7 @@
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
 						<div class = "Relation_Backlog_onList">
 						<!--리스트가 들어가는 DIVISION-->
-						</div
+						</div>
 					</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
