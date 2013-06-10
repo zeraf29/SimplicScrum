@@ -82,7 +82,7 @@
 					<a href ="#" class="submit" id = "make_pbacklog_cancel">cancel</a>
 				</div>
 			</div>
-			
+
 			<div id="id_productBacklog_list">
 				<div id = "pList1" class = "pbacklog_list nlClass"></div>
 				<div id = "pList2" class = "pbacklog_list nlClass"></div>
@@ -103,7 +103,9 @@
 				<p>MAKE SPRINT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="backlog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
-				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
+				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
+				<div class = "input_makeBacklog"><label for = "plus_relation_backlog" class = "label_backlog">Relation_Backlog</label>
+					<a href="#" id="plus_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
 					<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
@@ -156,7 +158,7 @@
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<div>
-					<input type ="text" id ="amEmail" style="width:270px;" placeholder="E-mail을 입력하세요."/>
+					<input type ="text" id ="amEmail" style="width:270px;" placeholder = "E-mail을 입력하세요."/>
 					<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
 				</div>
 			</div>
@@ -448,6 +450,7 @@
 						    }
 
 				});
+				
 				$("#add_submit").click(function(){
 					if($("#project_name").val() == ""){
 						alert("프로젝트 이름을 넣어주세요");
