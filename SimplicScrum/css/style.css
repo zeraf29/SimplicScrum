@@ -497,15 +497,6 @@ a.project_close:hover{color:white;}
 
 }
 
-#items .nlClass{
-	background-image:URL("/~sscrum/SimplicScrum/image/sprint_bar.png");
-	background-repeat: no-repeat;
-	margin-left:34px;
-	margin-top:13px;
-	position:absoulte;
-	width:286px;
-	height:40px;
-}
 
 #Relation_Backlog_List{
 	height : 100px;
@@ -538,6 +529,17 @@ a.project_close:hover{color:white;}
 	background: #FFFFFF;
 	box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
+
+#content .nlClass{
+	background-image:URL("/~sscrum/SimplicScrum/image/sprint_bar.png");
+	background-repeat: no-repeat;
+	margin-left:34px;
+	margin-top:13px;
+	position:absoulte;
+	width:286px;
+	height:40px;
+}
+
 
 
 /*-------------------------*/
