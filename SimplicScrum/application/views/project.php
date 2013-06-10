@@ -302,7 +302,7 @@
 								    animate_speed: 'fast'
 								});
 
-				var close_flag = 0;
+				var close_flag = 1;
 				if(project_id!= -1 ){
 					close_flag = 1;
 				}
