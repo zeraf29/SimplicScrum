@@ -17,6 +17,9 @@
 ?>
  </HEAD>
  <BODY>
+ 	<?php
+	echo my_current_url();
+	?>	
 	<!--Top Menu Start-->
 	<div id = "top" >
 		<div class = "left_innerdiv"><img hspace=30px vspace = 15px src = "<?=$img_path?>/top_logo.png"></div>
@@ -294,7 +297,7 @@
   <!--프로젝트 생성 메뉴 끝-->
 	
 	<!--Creat project start-->
-	
+
  </BODY>
  <script type = "text/javascript">	
 		$(document).ready(function()
@@ -371,6 +374,9 @@
 				}
 				/**/
 
+				$("#make_pbacklog_submit").click(function(){
+
+				});
 
 				$(window).resize(function(){
 					var $left_p = (($(window).width()) - 1080)/4;
