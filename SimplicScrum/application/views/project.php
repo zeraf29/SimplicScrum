@@ -14,6 +14,10 @@
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
 	}
+	else if($this->input->get("pm")){
+		$title = $this->input->get("pm");
+		$text = 'Product Backlog was maked';
+	}
 ?>
  </HEAD>
  <BODY>
@@ -414,7 +418,7 @@
 					        	}
 						    });
 							if(result==100){
-						    	location.href="<?=my_current_url();?>"+"&pm=1";
+						    	location.href="<?=my_current_url();?>"+"&pm="+$("#pbacklog_name").val();
 						    }else{
 						    	alert("생성실패");
 						    }
