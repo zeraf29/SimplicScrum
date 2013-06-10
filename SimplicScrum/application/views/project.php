@@ -113,8 +113,10 @@
 			<div id="id_sprintBacklog_list">
 				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData1</div>
 						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
-				<div id = "new_slist2" class = "sbacklog_list nlClass"></div>
-				<div id = "new_slist3" class = "sbacklog_list nlClass"></div>
+				<div id = "new_slist2" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData2</div>
+						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
+				<div id = "new_slist3" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData3</div>
+						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
 			</div>
 		</div>
 <!--수정 20130607 끝-->	
@@ -521,7 +523,7 @@
 				 id_productBacklog_list.appendChild(new_list);
 				});
 			
-							//product_backlog list 동적생성
+							//splint_backlog list 동적생성
 				$("#make_sbacklog_submit").click(function()
 				{
 					productBacklog_count ++;
@@ -530,6 +532,7 @@
 					
 					 new_list.id = "new_slist" + productBacklog_count;
 					 new_list.className = "sbacklog_list nlClass";
+					 new_list.html("<div class = 'sprintBacklog_card_name'>TestData1</div><div class = 'sprintBacklog_vote_now'>12</div><div class = 'sprintBacklong_vote_total'>25</div>");
 					 
 				 id_sprintBacklog_list.appendChild(new_list);
 				});
@@ -550,7 +553,7 @@
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'><div class = "sprintBacklog_card_name">TestData1</div><div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>")
+					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 				}else{
 					$(this).switchClass("nlClass","extText");
 					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
