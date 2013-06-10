@@ -17,9 +17,11 @@ class Project extends SS_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index($pid="")
+	public function index()
 	{
-		$id = ($pid!="")?$pid:"";
+
+		$pid = isset($_GET["pid"])?$_GET["pid":"-1";
+		$data["project_id"] = $pid;
 		$data["list"] = $this->getList();
 		$this->load->view('project',$data);
 	}
