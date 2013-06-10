@@ -12,11 +12,11 @@ class M_backlog extends SS_Model{
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 
-	function get_sprintloglist($pid,$bid=-1){
+	function get_sprintloglist($pid, $bid=0){
 		$this->db->select();
 		$this->db->from('sprintback');
 		$this->db->where('pid',$pid);
-		if($bid==-1){
+		if($bid==0){
 			$this->db->where('bid',$bid);
 		}
 		$this->db->order_by('vote', 'desc');
