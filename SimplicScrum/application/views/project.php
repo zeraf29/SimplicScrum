@@ -184,7 +184,7 @@
 			<div class = "plus_backlog" id = "make_splint_window">
 				<p>MAKE SPRINT</p>
 				<div class = "input_makeBacklog"><label for = "splint_name" class ="label_backlog">NAME</label><input type ="text" id ="splint_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "splint_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="splint_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
+				<div class = "input_makeBacklog"><label for = "splint_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sprint_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
 				<div class = "input_makeBacklog"><label for = "splint_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="splint_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">SPLINT BACKLOG</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
