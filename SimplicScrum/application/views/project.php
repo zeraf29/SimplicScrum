@@ -764,6 +764,19 @@
 					}
 				});
 				
+				$( "#make_splint_window" ).hide();
+				$( "#sbacklog_add_btn" ).click(function() {
+					if($make_sbacklog_flag == 1){
+						$( "#make_sbacklog_window" ).hide( "fold","", 1000);
+						$make_sbacklog_flag = 0;
+						}
+					else if($make_sbacklog_flag ==0){
+						$( "#make_sbacklog_window" ).show( "fold","", 1000);
+						$make_sbacklog_flag = 1;
+					}
+				});
+				
+				
 				$("#backlog_dueDate").datepicker(clareCalendar);
 				//=====================================
 				
