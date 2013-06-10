@@ -681,11 +681,10 @@
 				});
 			
 
-			$("#id_productBacklog_list").delegate("div", "click", function()
-			{
+			$("#id_productBacklog_list").children(".pbacklog_list").click(function(){
 				if($(this).hasClass("extText")){
 					$(this).removeClass("extText");
-					$(this).children(".bContent").hide();
+					$(this).children(".pbacklog_list").children(".bContent").hide();
 				}else{
 					$(this).addClass("extText");
 				}
