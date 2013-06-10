@@ -441,7 +441,20 @@ a.project_close:hover{color:white;}
 	background-position : right bottom;
 }
 
+.splint_list
+{
+	background-image : URL("/~sscrum/SimplicScrum/image/splint_bar.png");
+	background-repeat: no-repeat;
+	background-position : right bottom;
+}
+
 .sprintBacklog_card_name{
+	position : absoulte;
+	float : left;
+	width : 250px;
+}
+
+.sprint_card_name{
 	position : absoulte;
 	float : left;
 	width : 250px;
