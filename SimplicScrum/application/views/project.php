@@ -613,7 +613,7 @@
 			/*마이너스 버튼 눌렀을떙*/
 			$(".Relation_Backlog_onList").delegate("img", "click", function()
 			{
-				$(this).parent().parent().remove();
+				$(this).parent('div').parent('div').remove();
 			});
 			
 			$("#make_pbacklog_cancel").click(function(){
