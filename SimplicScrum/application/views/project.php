@@ -613,6 +613,8 @@
 			/*마이너스 버튼 눌렀을떙*/
 			$(".Relation_Backlog_onList").delegate("img", "click", function()
 			{
+				alert("마이나스 보탄");
+				alert($(this).parent('div'));
 				$(this).parent('div').parent().remove();
 			});
 			
