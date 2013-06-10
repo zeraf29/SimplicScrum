@@ -36,7 +36,7 @@
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
 			 $(this).switchClass("nlClass_sprint","extText_sprint");
-			 $(this).html("<div style = 'font-size:9'>WHO</div><div style = 'font-size:9'>AUTHOR</div><div style = 'font-size:9'>DUE DATE</div><div style = 'font-size:9'>TARGET DATE</div><div style><div style = 'font-size:9'>DISCRIPTION</div>");
+			 $(this).html("<div style='font-size:14px; padding-left:20px; padding-top:20px';><div style='font-weight:bold'>WHO</div><div >AUTHOR</div><div>DUE DATE</div><div>TARGET DATE</div><div>DISCRIPTION</div></div>");
 		 }
 	 });
 
