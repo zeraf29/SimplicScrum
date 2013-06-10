@@ -104,28 +104,21 @@
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="backlog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
-				<div class = "input_makeBacklog"><label for = "plus_relation_backlog" class = "label_backlog">Relation_Backlog</label>
-					<a href="#" id="plus_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
+				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
-						<div>크하하하하하하하하하 1</div>
-						<div>크하하하하하하하하하 2</div>
-						<div>크하하하하하하하하하 3</div>
+						<!--리스트가 들어가는 DIVISION-->
 					</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
-				<div class = "input_makeBacklog"><div id = "Relation_Backlog_List">
-				<div>크하하하하하하하하하 1</div>
-				<div>크하하하하하하하하하 2</div>
-				<div>크하하하하하하하하하 3</div>
-				<div>크하하하하하하하하하 1</div>
-				<div>크하하하하하하하하하 2</div>
-				<div>크하하하하하하하하하 3</div>
-				<div>크하하하하하하하하하 1</div>
-				<div>크하하하하하하하하하 2</div>
-				<div>크하하하하하하하하하 3</div>
-				</div>
+				<div class = "input_makeBacklog">
+					<div id = "Relation_Backlog_List">
+						<div class = "Relation_Backlog_onList">
+						<div style = "position:absolute; float:left; width:100px;">괋괋괋괋</div>
+						<div><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
+					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION-->
+					</div>
 				</div>
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
@@ -469,7 +462,6 @@
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
-
 				});
 				
 				$("#add_submit").click(function(){
