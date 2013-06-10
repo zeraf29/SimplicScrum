@@ -91,7 +91,7 @@
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
-							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\">".$key->pd_title."</div>";
+							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div class='title'>".$key->pd_title."</div></div>";
 							$cnt++;
 						}
 						echo $str;
@@ -687,7 +687,7 @@
 					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>");
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
+					$(this).append("<div class='bContent'><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div></div>");
 				}
 			});
 			
