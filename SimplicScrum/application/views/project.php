@@ -294,9 +294,10 @@
  <script type = "text/javascript">	
 		$(document).ready(function()
 			{
+				$pid = <?=$pid?>;
 				$(".listbar").click(function(){
 					pid = $(this).children("span").attr("id");
-					location.href="/~sscrum/SimplicScrum/project/"+pid;
+					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
 				});
 				$.pnotify({
 								    title: '<?=$title?>',
@@ -382,6 +383,11 @@
 				
 				$("#close_btn").click(function()
 				{
+					if($pid == ""){
+						alert("Selecting your Project.");
+						return false;
+					}
+
 					if($close_flag == 0){
 						$("#project_background").animate({left:(-(($(window).width())*(7/10))+40)+'px'},500);
 						$("#project").css({background : 'rgba(56,54,60,0)'});
