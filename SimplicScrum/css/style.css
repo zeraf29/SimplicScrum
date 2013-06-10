@@ -498,7 +498,7 @@ a.project_close:hover{color:white;}
 }
 
 #items .nlClass{
-	background-image:URL("./image/sprint_bar.png");
+	background-image:URL("/~sscrum/SimplicScrum/image/sprint_bar.png");
 	background-repeat: no-repeat;
 	margin-left:34px;
 	margin-top:13px;
