@@ -455,6 +455,7 @@ a.project_close:hover{color:white;}
 .sprintBacklong_vote_total{
 	position : absoulte;
 	float : right;
+	padding:5px;
 	width : 10px;
 }
 .sprintBacklog_vote_now{
