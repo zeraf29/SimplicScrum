@@ -607,14 +607,12 @@
 			/*플러스 버튼 눌렀을떙*/
 			$(".Relation_Backlog_offList").delegate("img", "click", function()
 			{
-				$(".Relation_Backlog_onList").append("<div><div style = 'float:left; width:250px; height:24px'>Product_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_addbtn.png' style='vertical-align: middle;'/></a></div></div>");
+				$(".Relation_Backlog_onList").append("<div><div style = 'float:left; width:250px; height:24px'>Product_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
 			});
 			
 			/*마이너스 버튼 눌렀을떙*/
 			$(".Relation_Backlog_onList").delegate("img", "click", function()
 			{
-				alert("마이나스 보탄");
-				alert($(this).parent('div'));
 				$(this).parent().parent().parent().remove();
 			});
 			
