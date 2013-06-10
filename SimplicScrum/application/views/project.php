@@ -73,7 +73,7 @@
 				<img src="<?=$img_path?>/p_backlog.png">
 			</div>
 			<!-- 추가 20130605 0200 -->
-			<div class = "plus_product_backlog" id = "make_pbacklog_window">
+			<div class = "plus_backlog" id = "make_pbacklog_window">
 				<p>MAKE PRODUCT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
@@ -82,7 +82,7 @@
 					<a href ="#" class="submit" id = "make_pbacklog_cancel">cancel</a>
 				</div>
 			</div>
-			
+
 			<div id="id_productBacklog_list">
 				<div id = "pList1" class = "pbacklog_list nlClass"></div>
 				<div id = "pList2" class = "pbacklog_list nlClass"></div>
@@ -99,21 +99,70 @@
 				<a href="#" id="sbacklog_add_btn"><img src="<?=$img_path?>/s_backlog_add.png"></a>
 				<img src="<?=$img_path?>/s_backlog.png">
 			</div>
-	
-			<div class = "plus_product_backlog" id = "make_sbacklog_window">
+			<div class = "plus_backlog" id = "make_sbacklog_window">
 				<p>MAKE SPRINT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "backlog_name" class ="label_backlog">NAME</label><input type ="text" id ="backlog_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:150px"></textarea></div>
+				<div class = "input_makeBacklog"><label for = "backlog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="backlog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
+				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
+				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
+				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
+					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
+						<div class = "Relation_Backlog_onList">
+						<!--리스트가 들어가는 DIVISION-->
+						</div>
+					</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
+				<div class = "input_makeBacklog">
+					<div id = "Relation_Backlog_List">
+						<div class = "Relation_Backlog_offList">
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name1</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name2</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name3</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name4</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name5</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name6</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION(from DB)-->
+						</div>
+					</div>
+	
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
 					<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
 				</div>
+				</div>
 			</div>
 			
 			<div id="id_sprintBacklog_list">
-				<div id = "new_slist1" class = "sbacklog_list nlClass"></div>
-				<div id = "new_slist2" class = "sbacklog_list nlClass"></div>
-				<div id = "new_slist3" class = "sbacklog_list nlClass"></div>
+				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData1</div>
+						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
+				<div id = "new_slist2" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData2</div>
+						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
+				<div id = "new_slist3" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData3</div>
+						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
 			</div>
 		</div>
 <!--수정 20130607 끝-->	
@@ -153,7 +202,7 @@
 			<div class="add_member">
 				<label for = "add_member" class ="label_addmember" >ADD MEMBER&nbsp;&nbsp;&nbsp;&nbsp;</label>
 				<div>
-					<input type ="text" id ="amEmail" style="width:270px;" placeholder="E-mail을 입력하세요."/>
+					<input type ="text" id ="amEmail" style="width:270px;" placeholder = "E-mail을 입력하세요."/>
 					<a href="#" id="plus_projectbtn"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a>
 				</div>
 			</div>
@@ -446,8 +495,8 @@
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
-
 				});
+				
 				$("#add_submit").click(function(){
 					if($("#project_name").val() == ""){
 						alert("프로젝트 이름을 넣어주세요");
@@ -523,17 +572,16 @@
 				 id_productBacklog_list.appendChild(new_list);
 				});
 			
-							//product_backlog list 동적생성
+							//splint_backlog list 동적생성
 				$("#make_sbacklog_submit").click(function()
 				{
 					productBacklog_count ++;
 
 					var new_list = document.createElement("div");
-					
 					 new_list.id = "new_slist" + productBacklog_count;
 					 new_list.className = "sbacklog_list nlClass";
-					 
-				 id_sprintBacklog_list.appendChild(new_list);
+					 new_list.innerHTML = "<div class = 'sprintBacklog_card_name'>TestData1</div><div class = 'sprintBacklog_vote_now'>12</div><div class = 'sprintBacklong_vote_total'>25</div>"
+					id_sprintBacklog_list.appendChild(new_list);
 				});
 			
 
@@ -541,10 +589,10 @@
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
+					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>");
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
+					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
 				}
 			});
 			
@@ -555,8 +603,20 @@
 					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>")
+					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
 				}
+			});
+			
+			/*플러스 버튼 눌렀을떙*/
+			$(".Relation_Backlog_offList").delegate("img", "click", function()
+			{
+				$(".Relation_Backlog_onList").append("<div><div style = 'float:left; width:250px; height:24px'>Product_Backlog_name</div><div style = 'float:Right; width:70px;'><a href='#' id='remove_relation_backlog'><img src='<?=$img_path?>/member_deletebtn.png' style='vertical-align: middle;'/></a></div></div>");
+			});
+			
+			/*마이너스 버튼 눌렀을떙*/
+			$(".Relation_Backlog_onList").delegate("img", "click", function()
+			{
+				$(this).parent().parent().parent().remove();
 			});
 			
 			$("#make_pbacklog_cancel").click(function(){
@@ -594,7 +654,11 @@
 						$make_sbacklog_flag = 1;
 					}
 				});
+				
+				$("#backlog_dueDate").datepicker(clareCalendar);
 				//=====================================
+				
+				
 			/*--------추가(2013-06-05, 0200)끝----------*/
 	});
 	</script>

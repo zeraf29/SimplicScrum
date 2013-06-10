@@ -397,7 +397,7 @@ a.project_close:hover{color:white;}
 }
 
 /*======================추가 20130605_0204 시작===========*/
-.plus_product_backlog{
+.plus_backlog{
 /*백로그 생성창*/
 	position : absolute;
 	margin-left : 300px;
@@ -440,6 +440,29 @@ a.project_close:hover{color:white;}
 	background-repeat: no-repeat;
 	background-position : right bottom;
 }
+
+.sprintBacklog_card_name{
+	position : absoulte;
+	float : left;
+	width : 250px;
+}
+
+.sprintBacklog_vote_now{
+	position : absoulte;
+	float : left;
+	width : 10px;
+}
+.sprintBacklong_vote_total{
+	position : absoulte;
+	float : right;
+	padding-top: 10px;
+	width : 10px;
+}
+.sprintBacklog_vote_now{
+	position : absoulte;
+	float : left;
+	width : 10px;
+}
 .extText{
 	background-color : #cccccc;
 	margin-left:34px;
@@ -449,12 +472,23 @@ a.project_close:hover{color:white;}
 	width : 286px;
 }
 
-.nlClass{
+ .nlClass{
 	margin-left:34px;
 	margin-top:13px;
 	position:absoulte;
 	width:286px;
 	height:40px;	
+}
+
+#Relation_Backlog_List{
+	height : 100px;
+	overflow : auto;
+}
+
+.Relation_Backlog_onList{
+}
+
+.Relation_Backlog_offList{
 }
 /*======================추가 20130605_0204 끝===========*/
 
