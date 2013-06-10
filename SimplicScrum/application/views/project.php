@@ -8,11 +8,11 @@
 	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
-		echo "$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast',delay : '-3000'});";
+		echo "<script>$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast'});$.pnotify.defaults.delay -= 3500;</script>";
 	}else if($project_id==-1){
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
-		echo "$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast',delay : '-3000'});";
+		echo "<script>$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast'});$.pnotify.defaults.delay -= 3500;</script>";
 	}
 ?>
  </HEAD>
