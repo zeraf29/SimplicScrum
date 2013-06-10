@@ -50,4 +50,58 @@ class Backloglist extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+	public function getSprintLogLists(){
+		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
+		$bid = $this->input->post("bid")?$this->input->post("bid"):-1;
+		$pid = 1;
+		if ($this->checkLogin() == TRUE) {
+			$this->load->model("M_backlog");	
+			$result = $this->M_backlog->get_sprintloglist($pid,$bid);
+			$key = null;
+			$data = null;
+			if (count($result)>0) {
+				for ($i = 0; $i < count($result); $i++) {
+						$key[$i] = $result[$i]->id;
+						for($j=0;$j<count($result[$i]->user);$j++){
+							$user[$j] = array(
+								'id' => $result[$i]->user[$j]->id,
+								'email' => $result[$i]->user[$j]->email,
+								'nickname' => $result[$i]->user[$j]->nickname
+							);
+						}
+						$data[$result[$i]->id] = array(
+							'id' => $result[$i]->id,
+							'title' => $result[$i]->title,
+							'desc' => $result[$i]->desc,
+							'level' => $result[$i]->level,
+							'pid' => $result[$i]->pid,
+							'bid' => $result[$i]->bid,
+							'vote' => $result[$i]->vote,
+							'reg_date' => $result[$i]->reg_date,
+							'user' => $user
+						);
+					}
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+			}else{
+				$view_data = array(
+					'code' => '300',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+
+			}
+		}else {
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Login required!'
+			);
+		}
+		$this->displayJson($view_data);
+	}
 }
