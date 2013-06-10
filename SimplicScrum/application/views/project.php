@@ -8,11 +8,9 @@
 	if($type=='delete'){
 		$title = 'Delete Complete';
 		$text = 'Confirm you Project';
-		echo "<script>$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast'});$.pnotify.defaults.delay -= 3500;</script>";
 	}else if($project_id==-1){
 		$title = 'Hi, '.$this->session->userdata("ss_nickname");
 		$text = 'Welcome to SimplicScrum';
-		echo "<script>$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast'});$.pnotify.defaults.delay -= 3500;</script>";
 	}
 ?>
  </HEAD>
@@ -298,6 +296,11 @@
 					pid = $(this).children("span").attr("id");
 					location.href="/~sscrum/SimplicScrum/project/?pid="+pid;
 				});
+				<?php
+				if($title!=""){
+					echo "$.pnotify({title: '".$title."',text: '".$text."',animate_speed: 'fast'});$.pnotify.defaults.delay -= 3000;";
+				}
+				?>
 				
 				var $close_flag = 0;
 
