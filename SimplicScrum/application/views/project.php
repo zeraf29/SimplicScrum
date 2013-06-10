@@ -106,7 +106,12 @@
 				<div class = "input_makeBacklog"><label for = "backlog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="backlog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog"><label for = "plus_relation_backlog" class = "label_backlog">Relation_Backlog</label>
 					<a href="#" id="plus_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle; margin-top: -4px"/></a></div>
-				<div class = "input_makeBacklog label_backlog">============================</div>
+				<div class = "input_makeBacklog label_backlog">===================================</div>
+					<div id = "relation_backlog_list">데헷</div>
+				<div class = "input_makeBacklog label_backlog">===================================</div>
+				<div class = "input_makeBacklog label_backlog">Relation_Backlog_List</div>
+				<div class = "input_makeBacklog label_backlog">===================================</div>
+				<div class = "input_makeBacklog"><div id = "Relation_Backlog_List">데헷데헷</div></div>
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
 					<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
