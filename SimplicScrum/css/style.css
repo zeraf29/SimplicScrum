@@ -497,6 +497,16 @@ a.project_close:hover{color:white;}
 
 }
 
+#items .nlClass{
+	background-image:URL("./image/sprint_bar.png");
+	background-repeat: no-repeat;
+	margin-left:34px;
+	margin-top:13px;
+	position:absoulte;
+	width:286px;
+	height:40px;
+}
+
 #Relation_Backlog_List{
 	height : 100px;
 	overflow : auto;
