@@ -684,10 +684,10 @@
 			$("#id_productBacklog_list").delegate("div", "click", function()
 			{
 				if($(this).hasClass("extText")){
-					$(this).switchClass("extText","nlClass");
+					$(this).removeClass("extText");
 					$(this).children(".bContent").hide();
 				}else{
-					$(this).switchClass("nlClass","extText");
+					$(this).addClass("extText");
 				}
 			});
 			
