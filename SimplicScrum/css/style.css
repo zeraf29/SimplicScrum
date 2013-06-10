@@ -446,6 +446,22 @@ a.project_close:hover{color:white;}
 	float : left;
 	width : 250px;
 }
+
+.sprintBacklog_vote_now{
+	position : absoulte;
+	float : left;
+	width : 10px;
+}
+.sprintBacklong_vote_total{
+	position : absoulte;
+	float : right;
+	width : 10px;
+}
+.sprintBacklog_vote_now{
+	position : absoulte;
+	float : left;
+	width : 10px;
+}
 .extText{
 	background-color : #cccccc;
 	margin-left:34px;
