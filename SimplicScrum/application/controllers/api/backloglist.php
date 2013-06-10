@@ -8,7 +8,6 @@ class Backloglist extends SS_Controller {
 	public function getBacklogLists(){
 		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
 		$pid = $pid!=""?$pid:-1;
-		$pid = 1;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_backlog");	
 			$result = $this->M_backlog->get_backlist($pid);
