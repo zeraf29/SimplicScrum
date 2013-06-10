@@ -113,7 +113,7 @@
 			<div class = "plus_backlog" id = "make_sbacklog_window">
 				<p>MAKE SPRINT BACKLOG</p>
 				<div class = "input_makeBacklog"><label for = "sbacklog_name" class ="label_backlog">NAME</label><input type ="text" id ="sbacklog_name" style="width:140px;"/></div>
-				<div class = "input_makeBacklog"><label for = "sbacklog_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sbacklog_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
+				<div class = "input_makeBacklog"><label for = "sbacklog_level" class ="label_backlog">LEVEL</label><select name="level_value"><option value = "2">High</option><option value = "1">Middle</option><option value = "0">Low</option></select></div>
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
@@ -782,8 +782,6 @@
 					}
 				});
 				
-				
-				$("#backlog_dueDate").datepicker(clareCalendar);
 				$("#sprint_dueDate").datepicker(clareCalendar);
 				//=====================================
 				
