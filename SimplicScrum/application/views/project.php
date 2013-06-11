@@ -403,7 +403,54 @@
 				
 				$( "#list_sortable" ).sortable();
 				$( "#list_sortable" ).disableSelection();  
-				
+				$("#make_splint_submit").click(function(){
+					checkd = $("input:checked[name='sLists']").is(":checked");
+
+
+					if(checked.length==0){
+						alert("Sprint Backlog를 선택해주세요");
+						return false;
+					}
+					if($("#sprint_dueDate").val() == ""){
+						alert("완료날짜를 정해주세요");
+						$("#sprint_dueDate").focus();
+						return false;
+					}
+					datafilter = new Array();
+					datafilter[0] = "due";
+					datafilter[1] = "slists";
+					datafilter[2] = "pid";
+					data = new Object();
+					data.due = $("#sprint_dueDate").val();
+					data.pid = $project_id;
+					sub  = new Array();
+					cnt = 0;
+					$("input:checkbox[name='sLists']").each(function(){
+						if(this.checked==true){
+							sub[cnt] = this.value;
+							cnt++;
+						}
+					}
+					data.slists = sub;
+					jsonObject = JSON.stringify(data,datafilter,"\t");
+					alert(jsonObject);
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/project/makeProject',
+					        type: "POST",
+					        async : false,
+					        data: {data:jsonObject},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        	msg = rdata.msg;
+					        	}
+						    });
+							if(result==100){
+						    	//location.href="/~sscrum/SimplicScrum/project/";
+						    }else{
+						    	//alert("생성실패");
+						    }
+					});
 				$("#close_btn").click(function()
 				{
 					if($project_id == -1){
