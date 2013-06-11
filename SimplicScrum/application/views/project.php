@@ -124,7 +124,7 @@
 				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
-				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
+				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;border-bottom:1px dotted black;width:15px;"></div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
 						<div class = "Relation_Backlog_onList">
 						<!--리스트가 들어가는 DIVISION-->
