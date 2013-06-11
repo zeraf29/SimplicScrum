@@ -126,19 +126,7 @@
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
 				<div id = "relation_backlog_list" style = "margin-top:-15px;" >
 					<div class = "Relation_Backlog_onList">
-						<?php
-							if(isset($backlog["porduct"])){
-									$str = "";
-									$cnt = 1;
-									$str .= "<select name='sfblist' id='sfblist'>";
-									$str .= "<option value='' selected></option>";
-									foreach($backlog["porduct"] as $key){
-										$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
-									}
-									echo $str;
-								}
-						?>
-						<!--리스트가 들어가는 DIVISION-->
+						
 					</div>
 				</div>
 				<div class = "input_makeBacklog">
