@@ -191,7 +191,7 @@
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
-				<div class = "input_makeBacklog" style="height:200px;overflow-x:auto;">
+				<div class = "input_makeBacklog" style="height:200px;overflow-y:auto;">
 					<?php
 						if(isset($backlog["spList"])){
 						$str = "";
