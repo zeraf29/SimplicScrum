@@ -135,7 +135,7 @@
 							$str = "";
 							if(isset($backlog["porduct"])){
 								$str .= "<select name='sfblist' id='sfblist'>";
-								$str .= "<option value=' ' selected></option>";
+								$str .= "<option value=\" \" selected> </option>";
 								foreach($backlog["porduct"] as $key){
 									$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
 								}
@@ -628,6 +628,7 @@
 					data.desc = $("#sbacklog_discription").val();
 					data.mid = '<?=$this->session->userdata("ss_userid")?>';
 					data.pid = $project_id;
+					alert($("#sfblist").val())
 					data.bid = $("#sfblist").val();
 
 					jsonObject = JSON.stringify(data,datafilter,"\t");
