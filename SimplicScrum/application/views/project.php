@@ -177,7 +177,7 @@
 			
 			<div id="id_sprintBacklog_list">
 				<?php
-					if(isset($backlog["porduct"])){
+					if(isset($backlog["sprintlog"])){
 						$str = "";
 						$cnt = 1;
 						foreach($backlog["sprintlog"] as $key){
