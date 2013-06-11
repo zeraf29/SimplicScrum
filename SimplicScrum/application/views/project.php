@@ -5,6 +5,7 @@
   <script src='<?=$js_path?>/fullcalendar.min.js'></script>
 <?php
 	$type = isset($_GET["type"])?$_GET["type"]:"";
+	$phase = isset($phase)?$phase:0;
 	$title="";
 	$text="";
 	if($type=='delete'){
@@ -208,6 +209,9 @@
 			</div>
 			
 			<div id="id_sprint_list">
+				<?php
+
+				?>
 				<div id = "new_slist1" class = "splint_list nlClass">TestData1</div>
 				<div id = "new_slist2" class = "splint_list nlClass">TestData2</div>
 				<div id = "new_slist3" class = "splint_list nlClass">TestData3</div>
