@@ -127,62 +127,18 @@
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
 						<div class = "Relation_Backlog_onList">
-						<?php
-								if(isset($backlog["porduct"])){
-									$str = "";
-									$cnt = 1;
-									$str .= "<select name='sfblist' id='sfblist'>";
-									$str .= "<option value='' selected></option>";
-									foreach($backlog["porduct"] as $key){
-										$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
-									}
-									echo $str;
-								}
-							?>
+						<!--리스트가 들어가는 DIVISION-->
 						</div>
 					</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
 				<div class = "input_makeBacklog">
-					<div id = "Relation_Backlog_List">
-						<div class = "Relation_Backlog_offList">
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name1</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name2</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name3</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name4</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name5</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name6</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION(from DB)-->
-						</div>
-					</div>
 	
-				<div class = "submit_cancel_class">
-					<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
-					<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
-				</div>
+					<div class = "submit_cancel_class">
+						<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
+						<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
+					</div>
 				</div>
 			</div>
 			
