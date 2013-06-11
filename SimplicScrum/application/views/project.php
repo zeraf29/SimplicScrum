@@ -425,7 +425,15 @@
 					data.pid = $project_id;
 					sub  = new Array();
 					cnt = 0;
-					
+					$("input:checkbox[name='sLists']").each(function(){
+						if(this.checked){
+							sub[cnt] = this.value;
+							cnt++;
+						}
+					}
+					data.list  = sub;
+					jsonObject = JSON.stringify(data,datafilter,"\t");
+					alert(jsonObject);
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/makeProject',
 					        type: "POST",
