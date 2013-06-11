@@ -183,7 +183,7 @@
 				<img src="<?=$img_path?>/splint.png">
 			</div>
 			<div class = "plus_backlog" id = "make_splint_window">
-				<p>MAKE SPRINT</p><p>Phase_<?=$phase?></p>
+				<p>MAKE SPRINT</p><p>Phase_<?=$phase+1?></p>
 				<div class = "input_makeBacklog"><label for = "splint_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sprint_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
@@ -443,6 +443,9 @@
 						cnt++
 					});
 					data.list  = sub;
+					<?php
+					$phase++;
+					?>
 					data.phase = <?=$phase?>;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
 					$.ajax({
