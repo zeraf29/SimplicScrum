@@ -53,7 +53,7 @@
 	</div>
 
 	<div id = "second_top_sprint">
-		<div class="sprint">SPRINT</div> <div class="sprintGraph">Graph</div><div class="sprintComplete">Complete</div>
+		<div class="sprint">SPRINT</div> <div class="sprintComplete">Complete</div><div class="sprintGraph">Graph</div>
 	</div>
 	<!--Top Menu end -->
   

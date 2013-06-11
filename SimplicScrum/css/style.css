@@ -790,23 +790,21 @@ p_add_btn {
 }
 
 #second_top_sprint .sprintGraph{
-	position: absolute;
 	top: 10px;
 	width : 360px;
 	color: #FFFFFF;
 	font-weight:bold;
-	margin-left: 300px;
 	z-index: 7;
+	padding-top:8px;
 }
 
 
 #second_top_sprint .sprintComplete{
-	position: absolute;
 	top: 10px;
 	width : 360px;
 	color: #FFFFFF;
 	font-weight:bold;
-	margin-left: 400px;
+	padding-top:8px;
 	z-index: 7;
 }
 
