@@ -210,11 +210,14 @@
 			
 			<div id="id_sprint_list">
 				<?php
-
+					if(isset($backlog["sprint"])){
+						$str = "";
+						$cnt = 1;
+						foreach($backlog["sprint"] as $key){
+							$str .= "<div id = 'new_slist".$key->id."' class = 'splint_list nlClass' style='cursor:pointer;'><a href='/~sscrum/SimplicScrum/sprint/?pid=".$project_id."&phase=".$key->id."'>".$key->title."</a></div>";
+						}
+						echo $str;
 				?>
-				<div id = "new_slist1" class = "splint_list nlClass">TestData1</div>
-				<div id = "new_slist2" class = "splint_list nlClass">TestData2</div>
-				<div id = "new_slist3" class = "splint_list nlClass">TestData3</div>
 			</div>
 		</div>
 		
