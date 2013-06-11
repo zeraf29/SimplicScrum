@@ -54,6 +54,7 @@ class M_backlog extends SS_Model{
 		$this->db->select("phase");
 		$this->db->from('sprint');
 		$this->db->where('pid',$pid);
+		$this->db->group_by("phase");
 		$rs = $this->db->get();
 		return $data = ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
