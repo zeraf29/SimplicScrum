@@ -18,7 +18,7 @@ class M_backlog extends SS_Model{
 		$this->db->where("sb.pid",$pid);
 		$this->db->order_by('reg_date', 'desc');
 		$rs = $this->db->get();
-		$data = ($rs->num_rows() > 0) ? $rs->result() : array();
+		return $data = ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 	function get_sprintloglist($pid, $bid=0){
 		$this->db->select();
