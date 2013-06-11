@@ -616,8 +616,7 @@
 						$("#sbacklog_name").focus();
 						return false;
 					}
-					}
-					if($("#sfblist").val() == "" ){
+					if( $("#sfblist").val() == "" ){
 						alert("연결되는 Product Backlog를 선택하세요.");
 						$("#sfblist").focus();
 						return false;
