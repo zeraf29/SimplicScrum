@@ -50,6 +50,45 @@ class Backloglist extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+	public function getSprintList(){
+		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
+		$pid = $pid!=""?$pid:-1;
+		$pid = 1;
+		if ($this->checkLogin() == TRUE) {
+			$this->load->model("M_backlog");	
+			$result = $this->M_backlog->get_sprint($pid);
+			$key = null;
+			$data = null;
+			if (count($result)>0) {
+				for ($i = 0; $i < count($result); $i++) {
+						$data[$result[$i]->phase] = array(
+							'id' => $result[$i]->phase,
+							'title'=>"Phase_".$result[$i]->phase
+						);
+					}
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+			}else{
+				$view_data = array(
+					'code' => '300',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+
+			}
+		}else {
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Login required!'
+			);
+		}
+		$this->displayJson($view_data);
+	}
 	public function getSprintLogLists(){
 		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
 		$bid = $this->input->post("bid")?$this->input->post("bid"):-1;

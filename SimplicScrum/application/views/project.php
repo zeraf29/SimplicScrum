@@ -21,6 +21,10 @@
 		$title = $this->input->get("sm");
 		$text = 'Sprint Backlog was maked';
 	}
+	else if($this->input->get("ssm")){
+		$title = "Phase_".$this->input->get("sm");
+		$text = 'Sprint was maked';
+	}
 ?>
  </HEAD>
  <BODY>
@@ -445,9 +449,9 @@
 					        	}
 						    });
 							if(result==100){
-						    	//location.href="/~sscrum/SimplicScrum/project/";
+						    	location.href="/~sscrum/SimplicScrum/project/?pid="+$project_id+"&ssm=<?=$phase?>";
 						    }else{
-						    	//alert("생성실패");
+						    	alert("생성실패");
 						    }
 					});
 				$("#close_btn").click(function()

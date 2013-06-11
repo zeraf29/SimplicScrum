@@ -41,6 +41,13 @@ class M_backlog extends SS_Model{
 		$rs = $this->db->get();
 		return $data = ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
+	function get_sprint($pid){
+		$this->db->select("phase");
+		$this->db->from('sprint');
+		$this->db->where('pid',$pid);
+		$rs = $this->db->get();
+		return $data = ($rs->num_rows() > 0) ? $rs->result() : array();
+	}
 	function get_sprintloglist($pid, $bid=0){
 		$this->db->select();
 		$this->db->from('sprintback');
