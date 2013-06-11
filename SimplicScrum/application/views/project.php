@@ -431,7 +431,6 @@
 							cnt++;
 						}
 					}
-					data.list  = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
 					alert(jsonObject);
 					$.ajax({
