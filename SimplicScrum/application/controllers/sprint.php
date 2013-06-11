@@ -19,7 +19,18 @@ class Sprint extends SS_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('sprint');
+		$pid = isset($_GET["pid"])?$_GET["pid"]:-1;
+		$phase = isset($_GET["phase"])?$_GET["phase"]:-1;
+		$data["project_id"] = $pid;
+		$data["phase"] = $phase;
+		$this->load->helper('text');
+
+		if($pid!=-1){
+			$this->load->model("M_backlog");	
+			$data["backlog"]["tasks"]=$this->M_backlog->get_tasks($pid,$phase);
+			$data["phase"] = $this->M_backlog->get_Phase($pid);
+		}
+		$this->load->view('sprint',$data);
 	}
 	
 	

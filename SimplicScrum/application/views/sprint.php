@@ -64,13 +64,12 @@
 			<div class="sprint_content">TO DO</div>
 			<div id="id_sprint_todo_list">
 			<ul class = "items">	
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
-				<li class = "nlClass_sprint"></li>
+				<?php
+					$str = "";
+					foreach($backlog["tasks"] as $key){
+						$str .="<li class = 'nlClass_sprint'>".$key->title."</li>"
+					}
+				?>
 				<li class = "bottom" style = "visibility : hidden"></li>
 			</ul>
 			</div>
