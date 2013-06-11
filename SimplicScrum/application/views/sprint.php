@@ -67,7 +67,7 @@
 				<?php
 					$str = "";
 					foreach($backlog["tasks"] as $key){
-						$str .="<li class = 'nlClass_sprint'>".$key->title."</li>"
+						$str .="<li class = 'nlClass_sprint'>".$key->title."</li>";
 					}
 				?>
 				<li class = "bottom" style = "visibility : hidden"></li>
