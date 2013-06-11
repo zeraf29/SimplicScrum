@@ -106,7 +106,6 @@ class M_backlog extends SS_Model{
 		   'level' => $json->level ,
 		   'vote' => 0
 		);
-		print_r($data);
 
 		$this->db->trans_start();
 		$this->db->insert('sprintback', $data); 
@@ -117,6 +116,7 @@ class M_backlog extends SS_Model{
 			$result = TRUE;
 		}
 		$this->db->trans_complete();
+		echo $this->db->last_query();
 		return $result;
 
 	}

@@ -39,7 +39,6 @@ class Backloglist extends SS_Controller {
 		}else{
 			$json = stripslashes($json);
 			$json = json_decode($json);
-			print_r($json);
 			$result = $this->M_backlog->makeSprintbl($json);
 			if($result){
 				$view_data = array(
