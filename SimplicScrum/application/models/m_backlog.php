@@ -11,7 +11,15 @@ class M_backlog extends SS_Model{
 		$rs = $this->db->get();
 		return ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
-
+	function get_speSprintLogLists($pid){
+		$this->db->select("sb.id as id, sb.title as title, sb.desc as sdesc, sb.pid as pid, sb.reg_date as reg_date,sb.level as level, sb.bid as bid, pd.title");
+		$this->db->from("sprintback as sb");
+		$this->db->join('product as pd', 'sb.bid=pd.id', 'left');
+		$this->db->where("pid",$pid);
+		$this->db->order_by('reg_date', 'desc');
+		$rs = $this->db->get();
+		$data = ($rs->num_rows() > 0) ? $rs->result() : array();
+	}
 	function get_sprintloglist($pid, $bid=0){
 		$this->db->select();
 		$this->db->from('sprintback');
