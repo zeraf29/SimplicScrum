@@ -654,7 +654,6 @@
 						    }else{
 						    	alert("생성실패");
 						    }
-					});
 				});
 				
 				$("#add_submit").click(function(){
