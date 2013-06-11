@@ -755,7 +755,6 @@
 			});
 			
 			$("#id_sprintBacklog_list").children(".sbacklog_list").click(function(){
-			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
 					$(this).children(".pbacklog_list").children(".bContent").hide();
