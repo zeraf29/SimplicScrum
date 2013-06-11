@@ -425,7 +425,7 @@
 					data.pid = $project_id;
 					sub  = new Array();
 					cnt = 0;
-					$("input:checkbox[name='sLists']").each(function(){
+					$('input[type=checkbox]').each(function(){
 						if(this.checked){
 							sub[cnt] = this.value;
 							cnt++;
