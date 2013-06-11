@@ -431,6 +431,7 @@
 					});
 					data.list  = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
+					alert(jsonObject);
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/makeProject',
 					        type: "POST",
