@@ -418,17 +418,20 @@
 					}
 					datafilter = new Array();
 					datafilter[0] = "due";
-					datafilter[1] = "list";
-					datafilter[2] = "pid";
+					datafilter[1] = "pid";
+					datafilter[2] = "list";
 					data = new Object();
 					data.due = $("#sprint_dueDate").val();
 					data.pid = $project_id;
 					sub  = new Array();
 					cnt = 0;
 					$("input:checkbox[name='sLists']").each(function(){
-						
+						if(this.checked==true){
+							sub[cnt] = this.value;
+							cnt++;
+						}
 					}
-					data.list = sub;
+					data.list  = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
 					alert(jsonObject);
 					$.ajax({
