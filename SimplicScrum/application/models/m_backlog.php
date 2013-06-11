@@ -96,7 +96,7 @@ class M_backlog extends SS_Model{
 	}
 	function makeSprintbl($json){
 		$result = FALSE;
-
+		
 		$data = array(
 		   'title' => $json->title ,
 		   'desc' => $json->desc ,

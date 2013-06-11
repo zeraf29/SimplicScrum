@@ -24,7 +24,6 @@ class Backloglist extends SS_Controller {
 					'msg' => 'FAILURE : Database Error!'
 				);
 			}
-
 		}
 		$this->displayJson($view_data);	
 	}
