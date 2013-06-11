@@ -627,9 +627,9 @@
 					data.mid = '<?=$this->session->userdata("ss_userid")?>';
 					data.pid = $project_id;
 					alert($("#sfblist").val())
-
+					
 					data.bid = $("#sfblist").val();
-
+					
 					jsonObject = JSON.stringify(data,datafilter,"\t");
 					
 					alert(jsonObject);
@@ -645,9 +645,9 @@
 					        	}
 						    });
 							if(result==100){
-						    	//location.href="/~sscrum/SimplicScrum/project/?pid="+$project_id+"&sm="+$("#sbacklog_name").val();
+						    	location.href="/~sscrum/SimplicScrum/project/?pid="+$project_id+"&sm="+$("#sbacklog_name").val();
 						    }else{
-						    	//alert("생성실패");
+						    	alert("생성실패");
 						    }
 				});
 				

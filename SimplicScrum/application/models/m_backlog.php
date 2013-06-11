@@ -116,7 +116,6 @@ class M_backlog extends SS_Model{
 			$result = TRUE;
 		}
 		$this->db->trans_complete();
-		echo $this->db->last_query();
 		return $result;
 
 	}
