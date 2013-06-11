@@ -790,6 +790,7 @@ p_add_btn {
 }
 
 #second_top_sprint .sprintGraph{
+	float:right;
 	top: 10px;
 	width : 360px;
 	color: #FFFFFF;
@@ -800,6 +801,7 @@ p_add_btn {
 
 
 #second_top_sprint .sprintComplete{
+	float:right;
 	top: 10px;
 	width : 360px;
 	color: #FFFFFF;
