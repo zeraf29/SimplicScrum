@@ -357,9 +357,8 @@
 					data.desc = $("#pbacklog_discription").val();
 					data.pid = $project_id;
 					data.mid = '<?=$this->session->userdata("ss_userid")?>';
-					sub  = new Array();
 					jsonObject = JSON.stringify(data,datafilter,"\t");
-					
+					alert(jsonObject);
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/backloglist/makeProduct',
 					        type: "POST",
