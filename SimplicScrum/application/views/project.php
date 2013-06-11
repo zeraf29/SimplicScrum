@@ -419,7 +419,7 @@
 					datafilter = new Array();
 					datafilter[0] = "due";
 					datafilter[1] = "pid";
-					datafilter[2] = "pid";
+					datafilter[2] = "list";
 					data = new Object();
 					data.due = $("#sprint_dueDate").val();
 					data.pid = $project_id;
