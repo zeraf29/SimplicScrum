@@ -176,6 +176,18 @@
 			</div>
 			
 			<div id="id_sprintBacklog_list">
+				<?php
+					if(isset($backlog["porduct"])){
+						$str = "";
+						$cnt = 1;
+						foreach($backlog["sprintlog"] as $key){
+							$str .= "<div id=\"pList_".$key->id."\" class=\"sbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin:16px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".word_limiter($key->title,3)."</div>";
+							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:270px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:270px;' readonly>".$key->desc."</textarea></div><div><a href = '#' style='margin-left:225px; font-size:8px'>MODIFY</a></div></div></div>";
+							$cnt++;
+						}
+						echo $str;
+					}
+				?>
 				<div id = "new_slist1" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData1</div>
 						<div class = "sprintBacklog_vote_now">12</div><div class = "sprintBacklong_vote_total">25</div></div>
 				<div id = "new_slist2" class = "sbacklog_list nlClass"><div class = "sprintBacklog_card_name">TestData2</div>
@@ -746,10 +758,9 @@
 			{
 				if($(this).hasClass("extText")){
 					$(this).switchClass("extText","nlClass");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
+					$(this).children(".pbacklog_list").children(".bContent").hide();
 				}else{
 					$(this).switchClass("nlClass","extText");
-					$(this).html("<div style = 'font-weight:bold; font-size:10'>Backlog NAME1</div><div style><div style = 'font-weight:bold; font-size:10 margin-top:15px'>discription</div><div><a href = '#'>vote</a> <a href = '#'>modify</div>");
 				}
 			});
 			
