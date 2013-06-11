@@ -147,7 +147,7 @@ class M_backlog extends SS_Model{
 				'sid'=>$key,
 				'phase'=>$json->phase,
 				'limit_date'=>$json->due
-				)
+				);
 			$this->db->insert('sprint', $data); 
 		}
 		if ($this->db->trans_status() == FALSE) {
