@@ -137,5 +137,28 @@ class M_backlog extends SS_Model{
 		return $result;
 
 	}
+	function makeSprint($json){
+		$result = FALSE;
+
+		$this->db->trans_start();
+		foreach($json->list as $key){
+			$data = array(
+				'pid'=>$json->pid,
+				'sid'=>$key,
+				'phase'=>$json->phase,
+				'limit_date'=>$json->due
+				)
+			$this->db->insert('sprint', $data); 
+		}
+		if ($this->db->trans_status() == FALSE) {
+			$this->db->trans_rollback();	
+		}else {
+			$this->db->trans_commit();
+			$result = TRUE;
+		}
+		$this->db->trans_complete();
+		return $result;
+
+	}
 }
 ?>

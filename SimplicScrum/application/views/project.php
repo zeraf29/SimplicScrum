@@ -420,6 +420,7 @@
 					datafilter[0] = "due";
 					datafilter[1] = "pid";
 					datafilter[2] = "list";
+					datafilter[3] = "phase";
 					data = new Object();
 					data.due = $("#sprint_dueDate").val();
 					data.pid = $project_id;
@@ -430,10 +431,10 @@
 						cnt++
 					});
 					data.list  = sub;
-					jsonObject = JSON.stringify(data,datafilter,"\t");
-					alert(jsonObject);
+					data.phase = <?=$phase?>;
+					jsonObject = JSON.stringify(data,datafilter,"\t");\
 					$.ajax({
-					        url: '/~sscrum/SimplicScrum/project/makeProject',
+					        url: '/~sscrum/SimplicScrum/backloglist/makeSprint',
 					        type: "POST",
 					        async : false,
 					        data: {data:jsonObject},
