@@ -404,7 +404,7 @@
 				$( "#list_sortable" ).sortable();
 				$( "#list_sortable" ).disableSelection();  
 				$("#make_splint_submit").click(function(){
-					checkd = $('input[type="checkbox"]:checked');
+					checked = $('input[type="checkbox"]:checked');
 
 
 					if(checked.length==0){
