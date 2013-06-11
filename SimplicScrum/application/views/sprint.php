@@ -69,6 +69,7 @@
 					foreach($backlog["tasks"] as $key){
 						$str .="<li class = 'nlClass_sprint'>".$key->title."</li>";
 					}
+					echo $str;
 				?>
 				<li class = "bottom" style = "visibility : hidden"></li>
 			</ul>
