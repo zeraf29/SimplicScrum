@@ -145,6 +145,7 @@
 								foreach($backlog["porduct"] as $key){
 									$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
 								}
+								$str .= "</select>";
 								echo $str;
 							}
 						?>
