@@ -36,7 +36,7 @@
 			 $(this).html("<div style = 'font-weight:bold; font-size:10'></div>")
 		 }else{
 			 $(this).switchClass("nlClass_sprint","extText_sprint");
-			 $(this).html("<div style='font-size:14px; padding-left:20px; padding-top:20px';><div style='font-weight:bold'>WHO</div><div >AUTHOR</div><div>DUE DATE</div><div>TARGET DATE</div><div>DISCRIPTION</div></div>");
+			 $(this).html("<div style='background-image:URL('/~sscrum/SimplicScrum/image/sprint_bar.png'); font-size:14px; padding-left:20px; padding-top:20px';><div style='font-weight:bold; margin-top:15px'>WHO</div><div >AUTHOR</div><div>DUE DATE</div><div>TARGET DATE</div><div>DISCRIPTION</div></div>");
 		 }
 	 });
 
