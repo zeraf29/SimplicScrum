@@ -53,7 +53,7 @@
 	</div>
 
 	<div id = "second_top_sprint">
-		<div class="sprint">SPRINT</div> <div class="sprintComplete">Complete</div><div class="sprintGraph"><a href src="/~sscrum/SimplicScrum/project/">Graph</a></div>
+		<div class="sprint">SPRINT</div> <div class="sprintComplete">Complete</div><div class="sprintGraph"><a href src="/~sscrum/SimplicScrum/graph/">Graph</a></div>
 	</div>
 	<!--Top Menu end -->
   
