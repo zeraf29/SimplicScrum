@@ -96,16 +96,17 @@ class M_backlog extends SS_Model{
 	}
 	function makeSprintbl($json){
 		$result = FALSE;
-		
+
 		$data = array(
 		   'title' => $json->title ,
 		   'desc' => $json->desc ,
 		   'pid' => $json->pid ,
 		   'mid' => $json->mid ,
-		   'bid' => $json->mid ,
+		   'bid' => $json->bid ,
 		   'level' => $json->level ,
 		   'vote' => 0
 		);
+		print_r($data);
 
 		$this->db->trans_start();
 		$this->db->insert('sprintback', $data); 
