@@ -104,7 +104,8 @@
 						$cnt = 1;
 						foreach($backlog["porduct"] as $key){
 							$str .= "<div id=\"pList_".$key->pd_id."\" class=\"pbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px; margin-left:5px'>NO:</div><div id='no_box' style=' display:inline;'>$key->pd_id</div><div style='width:100px; display:inline; margin-left:32px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:2px; border-bottom:1px solid; font-size:13px; margin-left:6px'>".character_limiter($key->pd_title,3)."</div>";
-							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:268px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->pd_title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:264px;' readonly>".$key->pd_desc."</textarea></div><div><a href = '#' style='margin-left:220px; font-size:8px'>MODIFY</a></div></div></div>";
+							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:268px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->pd_title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:264px;' readonly>".$key->pd_desc."</textarea></div><div><a 
+							= '#' style='margin-left:220px; font-size:8px'>MODIFY</a></div></div></div>";
 							$cnt++;
 						}
 						echo $str;
