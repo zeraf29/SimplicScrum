@@ -626,13 +626,11 @@
 					data.desc = $("#sbacklog_discription").val();
 					data.mid = '<?=$this->session->userdata("ss_userid")?>';
 					data.pid = $project_id;
-					alert($("#sfblist").val())
-					
+
 					data.bid = $("#sfblist").val();
-					
+
 					jsonObject = JSON.stringify(data,datafilter,"\t");
 					
-					alert(jsonObject);
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/backloglist/makeSprintbl',
 					        type: "POST",
