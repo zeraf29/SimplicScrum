@@ -211,19 +211,18 @@
 				<div class = "input_makeBacklog"><label for = "splint_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="splint_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">SPLINT BACKLOG</div>
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
-					<?php
-								if(isset($backlog["porduct"])){
-									$str = "";
-									$cnt = 1;
-									$str .= "<select name='sfblist' id='sfblist'>";
-									$str .= "<option value='' selected></option>";
-									foreach($backlog["porduct"] as $key){
-										$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
-									}
-									echo $str;
-								}
-							?>
+					<div id = "splint_backlog_list" style = "margin-top:-15px;" >
+						<div class = "splint_Backlog_onList">
+						<!--리스트가 들어가는 DIVISION-->
+						</div>
 				</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
+				<div class = "input_makeBacklog">
+					
+					</div>
+	
 				<div class = "submit_cancel_class">
 					<a href ="#" class="submit" id = "make_splint_submit">submit</a>
 					<a href ="#" class="submit" id = "make_splint_cancel">cancel</a>
