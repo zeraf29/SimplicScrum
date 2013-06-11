@@ -127,8 +127,9 @@
 				<div id = "relation_backlog_list" style = "margin-top:-15px;" >
 					<div class = "Relation_Backlog_onList">
 						<?php
+
+							$str = "";
 							if(isset($backlog["porduct"])){
-								$str = "";
 								$str .= "<select name='sfblist' id='sfblist'>";
 								$str .= "<option value='' selected></option>";
 								foreach($backlog["porduct"] as $key){
@@ -140,7 +141,6 @@
 					</div>
 				</div>
 				<div class = "input_makeBacklog">
-	
 					<div class = "submit_cancel_class">
 						<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
 						<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
