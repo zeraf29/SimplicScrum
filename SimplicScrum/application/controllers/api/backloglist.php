@@ -55,8 +55,6 @@ class Backloglist extends SS_Controller {
 		$pid = $pid!=""?$pid:-1;
 		$phase = $this->input->post("phase")?$this->input->post("phase"):-1;
 		$phase = $phase!=""?$phase:-1;
-		$pid=1;
-		$phase=1;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_backlog");	
 			$result = $this->M_backlog->get_tasks($pid,$phase);
