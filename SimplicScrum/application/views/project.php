@@ -419,20 +419,13 @@
 					datafilter = new Array();
 					datafilter[0] = "due";
 					datafilter[1] = "pid";
-					datafilter[2] = "list";
+					datafilter[2] = "pid";
 					data = new Object();
 					data.due = $("#sprint_dueDate").val();
 					data.pid = $project_id;
 					sub  = new Array();
 					cnt = 0;
-					$("input:checkbox[name='sLists']").each(function(){
-						if(this.checked==true){
-							sub[cnt] = this.value;
-							cnt++;
-						}
-					}
-					jsonObject = JSON.stringify(data,datafilter,"\t");
-					alert(jsonObject);
+					
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/project/makeProject',
 					        type: "POST",
