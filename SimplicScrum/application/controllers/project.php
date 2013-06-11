@@ -29,6 +29,7 @@ class Project extends SS_Controller {
 			$this->load->model("M_backlog");	
 			$data["backlog"]["porduct"]=$this->M_backlog->get_backlist($pid);
 			$data["backlog"]["sprintlog"] = $this->M_backlog->get_speSprintLogLists($pid);
+			$data["backlog"]["spList"] = $this->M_backlog->get_notuseSLlists($pid);
 		}
 		$this->load->view('project',$data);
 	}

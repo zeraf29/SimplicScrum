@@ -423,8 +423,6 @@ a.project_close:hover{color:white;}
 	font-weight : bold;
 }
 .input_makeBacklog{
-	height:200px;
-	overflow-x:auto;
 	margin-bottom:10px;
 }
 

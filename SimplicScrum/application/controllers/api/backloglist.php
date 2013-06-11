@@ -107,7 +107,6 @@ class Backloglist extends SS_Controller {
 	}
 	public function setVote(){
 		$sid = $this->input->post("sid")?$this->input->post("sid"):-1;
-		$sid=1;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_backlog");
 			$result = $this->M_backlog->setSprint($sid);
