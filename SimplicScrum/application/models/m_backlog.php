@@ -23,13 +23,22 @@ class M_backlog extends SS_Model{
 		$rs = $this->db->get();
 		return $data = ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
+	function get_Phase($pid){
+		$this->db->select("phase");
+		$this->db->from("sprint");
+		$this->db->where("pid",$pid);
+		$this->db->order_by("phase","DESC");
+		$this->db->limit(1);
+		$rs = $this->db->get();
+		$data = $rs->result();
+		return ($rs->num_rows() > 0) ? $data[0]->phase : 1;
+	}
 	function get_notuseSLlists($pid){
 		$this->db->select("*");
 		$this->db->from("sprintback as sb");
 		$this->db->where("sb.pid",$pid);
 		$this->db->where("sb.complete","N");
 		$rs = $this->db->get();
-		echo $this->db->last_query();
 		return $data = ($rs->num_rows() > 0) ? $rs->result() : array();
 	}
 	function get_sprintloglist($pid, $bid=0){

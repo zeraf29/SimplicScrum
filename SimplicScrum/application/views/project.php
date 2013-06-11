@@ -178,16 +178,8 @@
 				<img src="<?=$img_path?>/splint.png">
 			</div>
 			<div class = "plus_backlog" id = "make_splint_window">
-				<p>MAKE SPRINT</p>
-				<div class = "input_makeBacklog"><label for = "splint_name" class ="label_backlog">NAME</label><input type ="text" id ="splint_name" style="width:140px;"/></div>
+				<p>MAKE SPRINT</p><p>Phase_<?=$phase?></p>
 				<div class = "input_makeBacklog"><label for = "splint_dueDate" class ="label_backlog">Due-Date</label><input type="text" id="sprint_dueDate" size="9" maxlength="8" title="START DATE" style="margin-left:5px; width:118px;"></div>
-				<div class = "input_makeBacklog label_backlog">SPLINT BACKLOG</div>
-				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
-					<div id = "splint_backlog_list" style = "margin-top:-15px;" >
-						<div class = "splint_Backlog_onList">
-						
-						</div>
-				</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
