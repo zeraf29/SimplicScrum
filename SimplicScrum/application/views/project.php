@@ -124,25 +124,46 @@
 				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
-				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;border-bottom:5px dotted #808080;width:250px;"></div>
+				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
 					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
+						<div class = "Relation_Backlog_onList">
+						<!--리스트가 들어가는 DIVISION-->
+						</div>
+					</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
-				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;border-bottom:5px dotted #808080;width:250px;"></div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
 				<div class = "input_makeBacklog">
 					<div id = "Relation_Backlog_List">
 						<div class = "Relation_Backlog_offList">
-							<?php
-								if(isset($backlog["porduct"])){
-									$str = "";
-									$cnt = 1;
-									$str .= "<select name='sfblist' id='sfblist'>";
-									$str .= "<option value='' selected></option>";
-									foreach($backlog["porduct"] as $key){
-										$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
-									}
-									echo $str;
-								}
-							?>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name1</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name2</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name3</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name4</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name5</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
+							<div>
+								<div style = "float:left; width:250px; height:24px">Product_Backlog_name6</div>
+								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
+							</div>
 					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION(from DB)-->
 						</div>
 					</div>
@@ -161,7 +182,7 @@
 						$cnt = 1;
 						foreach($backlog["sprintlog"] as $key){
 							$str .= "<div id=\"pList_".$key->id."\" class=\"sbacklog_list nlClass\"><div id='no' style='font-weight:bold; display:inline; padding:8px'>NO:</div><div id='no_box' style=' display:inline;'>$key->id</div><div style='width:100px; display:inline; margin:16px; font-weight: bold'>TITLE:</div><div class='title' style='width:100px; display:inline; padding:5px; border-bottom:1px solid'>".word_limiter($key->title,3)."</div>";
-							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:270px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:270px;' readonly>".$key->sdesc."</textarea></div><div><a href = '#' style='margin-left:225px; font-size:8px'>MODIFY</a></div></div></div>";
+							$str .= "<div class='bContent'><div style='font-weight:bold; margin-left:8px'>Full Title:</div><div style = 'width:270px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'>".$key->title."</div><div style='font-weight:bold; margin-left:8px'>DESCRIPTION:</div><div style = 'width:270px; height:90px; font-size:10 margin-top:15px border:1px solid; background:white; margin-left:8px'><textarea style='height:90px;width:270px;' readonly>".$key->desc."</textarea></div><div><a href = '#' style='margin-left:225px; font-size:8px'>MODIFY</a></div></div></div>";
 							$cnt++;
 						}
 						echo $str;
@@ -199,38 +220,18 @@
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Splint_Backlog_List</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
 				<div class = "input_makeBacklog">
-					<div id = "Splint_backlog_list">
-						<div class = "splint_Backlog_offList">
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Splint_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION(from DB)-->
-						</div>
+					<?php
+								if(isset($backlog["porduct"])){
+									$str = "";
+									$cnt = 1;
+									$str .= "<select name='sfblist' id='sfblist'>";
+									$str .= "<option value='' selected></option>";
+									foreach($backlog["porduct"] as $key){
+										$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
+									}
+									echo $str;
+								}
+							?>
 					</div>
 	
 				<div class = "submit_cancel_class">
