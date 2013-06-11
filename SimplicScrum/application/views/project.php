@@ -124,9 +124,19 @@
 				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
 				<div class = "input_makeBacklog label_backlog">Relation_Backlog</div>
-				<div id = "relation_backlog_list" style = "margin-top:-15px;" >
-					<div class = "Relation_Backlog_onList">
-						<?php
+				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
+					<div id = "relation_backlog_list" style = "margin-top:-15px;" >
+						<div class = "Relation_Backlog_onList">
+						<!--리스트가 들어가는 DIVISION-->
+						</div>
+					</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">Relation_Backlog_List</div>
+				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-15px;">===================================</div>
+				<div class = "input_makeBacklog">
+					<div id = "Relation_Backlog_List">
+						<div class = "Relation_Backlog_offList">
+							<?php
 
 							$str = "";
 							if(isset($backlog["porduct"])){
@@ -138,9 +148,10 @@
 								echo $str;
 							}
 						?>
+					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION(from DB)-->
+						</div>
 					</div>
-				</div>
-				<div class = "input_makeBacklog">
+	
 					<div class = "submit_cancel_class">
 						<a href ="#" class="submit" id = "make_sbacklog_submit">submit</a>
 						<a href ="#" class="submit" id = "make_sbacklog_cancel">cancel</a>
