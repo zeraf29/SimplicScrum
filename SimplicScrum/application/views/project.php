@@ -426,10 +426,7 @@
 					sub  = new Array();
 					cnt = 0;
 					$("input:checkbox[name='sLists']").each(function(){
-						if(this.checked==true){
-							sub[cnt] = this.value;
-							cnt++;
-						}
+						
 					}
 					data.list = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
