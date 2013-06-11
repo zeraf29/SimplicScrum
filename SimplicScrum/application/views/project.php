@@ -143,34 +143,6 @@
 									echo $str;
 								}
 							?>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name1</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name2</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name3</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name4</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name5</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
-							<div>
-								<div style = "float:left; width:250px; height:24px">Product_Backlog_name6</div>
-								<div style = "float:Right; width:70px;"><a href="#" id="remove_relation_backlog"><img src="<?=$img_path?>/member_addbtn.png" style="vertical-align: middle;"/></a></div>
-							</div>
 					<!--모든 프로덕트 백로그 리스트가 들어가는 DIVISION(from DB)-->
 						</div>
 					</div>
