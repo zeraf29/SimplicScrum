@@ -53,7 +53,6 @@ class Backloglist extends SS_Controller {
 	public function getSprintList(){
 		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
 		$pid = $pid!=""?$pid:-1;
-		$pid = 1;
 		if ($this->checkLogin() == TRUE) {
 			$this->load->model("M_backlog");	
 			$result = $this->M_backlog->get_sprint($pid);
@@ -69,14 +68,12 @@ class Backloglist extends SS_Controller {
 				$view_data = array(
 					'code' => '100',
 					'msg' => 'SUCCESS',
-					'key' => $key,
 					'item' => $data
 				);
 			}else{
 				$view_data = array(
 					'code' => '300',
 					'msg' => 'SUCCESS',
-					'key' => $key,
 					'item' => $data
 				);
 
