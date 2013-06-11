@@ -432,7 +432,7 @@
 					});
 					data.list  = sub;
 					data.phase = <?=$phase?>;
-					jsonObject = JSON.stringify(data,datafilter,"\t");\
+					jsonObject = JSON.stringify(data,datafilter,"\t");
 					$.ajax({
 					        url: '/~sscrum/SimplicScrum/backloglist/makeSprint',
 					        type: "POST",
