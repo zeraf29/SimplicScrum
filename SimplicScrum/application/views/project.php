@@ -418,7 +418,7 @@
 					}
 					datafilter = new Array();
 					datafilter[0] = "due";
-					datafilter[1] = "slist";
+					datafilter[1] = "list";
 					datafilter[2] = "pid";
 					data = new Object();
 					data.due = $("#sprint_dueDate").val();
@@ -431,7 +431,7 @@
 							cnt++;
 						}
 					}
-					data.slist = sub;
+					data.list = sub;
 					jsonObject = JSON.stringify(data,datafilter,"\t");
 					alert(jsonObject);
 					$.ajax({
