@@ -217,6 +217,7 @@
 							$str .= "<div id = 'new_slist".$key->id."' class = 'splint_list nlClass' style='cursor:pointer;'><a href='/~sscrum/SimplicScrum/sprint/?pid=".$project_id."&phase=".$key->id."'>".$key->title."</a></div>";
 						}
 						echo $str;
+					}
 				?>
 			</div>
 		</div>
