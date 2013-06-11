@@ -50,6 +50,59 @@ class Backloglist extends SS_Controller {
 		}
 		$this->displayJson($view_data);
 	}
+	public function getSprintTasks(){
+		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
+		$pid = $pid!=""?$pid:-1;
+		$phase = $this->input->post("phase")?$this->input->post("phase"):-1;
+		$phase = $phase!=""?$phase:-1;
+		$pid=1;
+		$phase=1;
+		if ($this->checkLogin() == TRUE) {
+			$this->load->model("M_backlog");	
+			$result = $this->M_backlog->get_tasks($pid,$phase);
+			$key = null;
+			$data = null;
+			if (count($result)>0) {
+				for ($i = 0; $i < count($result); $i++) {
+						$key[$i] = $result[$i]->pd_id;
+						$data[$result[$i]->pd_id] = array(
+							'id' => $result[$i]->id,
+							'pid' => $result[$i]->pid,
+							'sid' => $result[$i]->sid,
+							'title' => $result[$i]->title,
+							'level' => $result[$i]->level,
+							'process' => $result[$i]->process,
+							'phase' => $result[$i]->phase,
+							'target_date' => $result[$i]->target_date,
+							'vote' => $result[$i]->vote,
+							'complete' => $result[$i]->complete,
+							'bid' => $result[$i]->bid,
+							'limit_date' => $result[$i]->limit_date
+						);
+					}
+				$view_data = array(
+					'code' => '100',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+			}else{
+				$view_data = array(
+					'code' => '300',
+					'msg' => 'SUCCESS',
+					'key' => $key,
+					'item' => $data
+				);
+
+			}
+		}else {
+			$view_data = array(
+				'code' => '200',
+				'msg' => 'FAILURE : Login required!'
+			);
+		}
+		$this->displayJson($view_data);
+	}
 	public function getSprintList(){
 		$pid = $this->input->post("pid")?$this->input->post("pid"):-1;
 		$pid = $pid!=""?$pid:-1;
