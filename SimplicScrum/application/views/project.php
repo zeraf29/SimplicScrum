@@ -17,6 +17,9 @@
 	else if($this->input->get("pm")){
 		$title = $this->input->get("pm");
 		$text = 'Product Backlog was maked';
+	}else if($this->input->get("sm")){
+		$title = $this->input->get("sm");
+		$text = 'Sprint Backlog was maked';
 	}
 ?>
  </HEAD>
@@ -123,7 +126,7 @@
 				</div>
 				
 				<div class = "input_makeBacklog"><label for = "sbacklog_discription" class ="label_backlog">DISCRIPTION</label><textarea id ="sbacklog_discription" name="sbacklog_discription" style="margin-left:40px; margin-top : 10px; padding : 10px; width:250px; height:50px"></textarea></div>
-				<div class = "input_makeBacklog label_backlog" style="border-bottom:3px solid #808080;">Relation_Backlog</div>
+				<div class = "input_makeBacklog label_backlog" style="border-bottom:3px dotted #808080;">Relation_Backlog</div>
 				<div class = "input_makeBacklog">
 					<div id = "Relation_Backlog_List">
 						<div class = "Relation_Backlog_offList">
@@ -600,6 +603,59 @@
 						    	$("#amEmail").val("");
 						    	$("#amEmail").attr("placeholder", "없는 Email 정보입니다.");
 						    }
+				});
+
+				$("#make_sbacklog_submit").click(function(){
+					if($("#sbacklog_discription").val() == ""){
+						alert("Description을 넣어주세요.");
+						$("#sbacklog_discription").focus();
+						return false;
+					}
+					if($("#sbacklog_name").val() == ""){
+						alert("Title 넣어주세요.");
+						$("#sbacklog_name").focus();
+						return false;
+					}
+					}
+					if($("#sfblist").val() == "" ){
+						alert("연결되는 Product Backlog를 선택하세요.");
+						$("#sfblist").focus();
+						return false;
+					}
+					datafilter = new Array();
+					datafilter[0] = "title";
+					datafilter[1] = "level";
+					datafilter[2] = "desc";
+					datafilter[3] = "bid";
+					datafilter[4] = "pid";
+					datafilter[5] = "mid";
+					data = new Object();
+					data.title = $("#sbacklog_name").val();
+					data.level = $("#sbacklog_level").val();
+					data.desc = $("#sbacklog_discription").val();
+					data.mid = '<?=$this->session->userdata("ss_useremail")?>';
+					data.pid = $project_id;
+					data.bid = $("#sfblist").val();
+
+					jsonObject = JSON.stringify(data,datafilter,"\t");
+					
+					$.ajax({
+					        url: '/~sscrum/SimplicScrum/backloglist/makeSprintbl',
+					        type: "POST",
+					        async : false,
+					        data: {data:jsonObject},
+					        dataType: 'json',
+					        success: function (rdata) {
+					        	result = rdata.code;
+					        	msg = rdata.msg;
+					        	}
+						    });
+							if(result==100){
+						    	location.href="/~sscrum/SimplicScrum/project/?pid="+$project_id+"&sm="+$("#sbacklog_name").val();
+						    }else{
+						    	alert("생성실패");
+						    }
+					});
 				});
 				
 				$("#add_submit").click(function(){
