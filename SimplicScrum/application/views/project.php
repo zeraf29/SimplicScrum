@@ -213,7 +213,17 @@
 				<div class = "input_makeBacklog label_backlog" style = "margin-top:-15px;">===================================</div>
 					<div id = "splint_backlog_list" style = "margin-top:-15px;" >
 						<div class = "splint_Backlog_onList">
-						<!--리스트가 들어가는 DIVISION-->
+						 <?php
+								if(isset($backlog["porduct"])){
+									$str = "";
+									$str .= "<select name='sfblist' id='sfblist'>";
+									$str .= "<option value='' selected></option>";
+									foreach($backlog["porduct"] as $key){
+										$str .= "<option value='".$key->pd_id."'>".word_limiter($key->pd_title,5)."</option>";
+									}
+									echo $str;
+								}
+							?>
 						</div>
 				</div>
 				<div class = "input_makeBacklog label_backlog"  style = "margin-top:-10px;">===================================</div>
